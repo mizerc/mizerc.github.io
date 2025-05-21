@@ -48,14 +48,17 @@ The images received are grayscale; however, some software (like SatDump) can pro
 
 ### Images
 
+In the image below, we can see a screenshot of the `gpredict` software, which allows us to view the current position and elevation of satellites, as well as predict their next pass over your location. Based on my experiments, I would target a minimum elevation of 45 degrees to capture a strong signal from NOAA satelittes.
+
 {{< figure src="gpredict.png" caption="Figure: Screenshot of the predict software used to track NOAA satelittles.">}}
 
-{{< figure src="result.png" caption="Figure: First attempt capturing signal from NOAA satelittles.">}}
+Together with gpredict, you can also use Stellarium to get a 3D view of the satellite's position and manually estimate when it will pass over your location. In my opinion, they complement each other, but you can plan your next capture using either one.
 
 {{< figure src="stellarium.png" caption="Figure: Using stellarium to check the position of the NOAA-19 satellite.">}}
 
 {{< figure src="sdr++.png" caption="Figure: Using SDR++ to capture the signal.">}}
 
+{{< figure src="result.png" caption="Figure: First attempt capturing signal from NOAA satelittles.">}}
 
 ### Antenna Design
 

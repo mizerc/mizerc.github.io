@@ -5,6 +5,8 @@ title: 'C Language'
 tags: ['programming']
 ---
 
+Random notes about the C language.
+
 ## Extern
 
 Use `extern` to declare something without defining it.
