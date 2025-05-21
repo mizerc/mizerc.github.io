@@ -1,0 +1,14 @@
+baseURL: https://example.org/
+languageCode: en-us
+title: My New Hugo Site
+theme: ['PaperMod']
+menu:
+  main:
+    - identifier: home
+      name: Home
+      url: /
+      weight: 1
+    - identifier: about
+      name: About
+      url: /about/
+      weight: 2
