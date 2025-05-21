@@ -8,11 +8,11 @@ aliases: ["/about-me/", "/whoami/"]
 
 ### About This Site
 
-This is a collection of notes on random topics that I decided to make public. Keep in mind these are not finished, and I plan to update them over time. I hope this can inspire or helps others.
+This is a collection of posts on random topics, keep in mind these are not finished, and I plan to update them over time. I hope this can inspire or helps others.
 
 I have a genuine curiosity about a wide range of topics. I like to understand how things work under the hood and enjoy building things from scratch as much as possible, because I believe it's one of the best ways to fully grasp the challenges and the steps involved in things aroudn us.
 
-Stay curious, keep building.
+Stay curious, keep building, share.
 
 ### About Me
 
