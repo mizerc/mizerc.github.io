@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Programming on The Mize Collection</title>
+    <link>http://localhost:1313/tags/programming/</link>
+    <description>Recent content in Programming on The Mize Collection</description>
+    <generator>Hugo -- 0.147.4</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 11 May 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/programming/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>C Language</title>
+      <link>http://localhost:1313/posts/c-language/</link>
+      <pubDate>Sun, 11 May 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/c-language/</guid>
+      <description>&lt;h2 id=&#34;extern&#34;&gt;Extern&lt;/h2&gt;
+&lt;p&gt;Use &lt;code&gt;extern&lt;/code&gt; to declare something without defining it.&lt;/p&gt;
+&lt;p&gt;Tells the compiler not to allocate storage, because the variable/function is defined elsewhere (in another file or later in the same file), ie, “this variable or function is defined elsewhere.”&lt;/p&gt;
+&lt;h4 id=&#34;extern-with-variables&#34;&gt;Extern with variables&lt;/h4&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;extern int global_var;	// declared here, defined in another file
+
+// file1.c
+int global_var = 42;
+
+// file2.c
+extern int global_var;  // declaration, no memory allocated
+&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;extern-with-functions&#34;&gt;Extern with functions&lt;/h4&gt;
+&lt;p&gt;In C (including C99), function declarations and definitions at file scope are extern by default.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

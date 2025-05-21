@@ -1,7 +1,12 @@
 baseURL: https://example.org/
 languageCode: en-us
-title: The Ize Stuff
+title: The Mize Collection
 theme: ['PaperMod']
+params:
+  showSocialIcons: true
+  socialIcons:
+    - name: linkedin
+      url: https://www.linkedin.com/in/YOUR_USERNAME/
 menu:
   main:
     - identifier: home
