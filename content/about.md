@@ -16,9 +16,9 @@ Stay curious, keep building.
 
 ### About Me
 
-I'm a software engineer based in [Seattle, WA](https://en.wikipedia.org/wiki/Seattle), with extensive experience in both mobile and backend development. 
+I'm a software engineer based in [Seattle, WA](https://en.wikipedia.org/wiki/Seattle), with extensive experience in both mobile and backend development. Occasionally, I explore areas like computer graphics, physic engines, compilers, and electronics.
+
 
 I hold a Bachelor's degree in Computer Engineering from the [Federal University of Rio Grande do Sul, Brazil](https://www.ufrgs.br/site/), with an international exchange program in Computer Science at the [University of Wisconsin, USA](https://www.wisc.edu/). 
 
-Occasionally, I explore areas like computer graphics, physic engines, compilers, and electronics.
 
