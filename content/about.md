@@ -6,6 +6,9 @@ tags: ["meta", "site"]
 aliases: ["/about-me/", "/whoami/"]
 ---
 
-# About
+I'm a software engineer based in Seattle, WA, with extensive experience in both mobile and backend development. 
 
-This site is built with [Hugo](https://gohugo.io/) using the [PaperMod](https://github.com/adityatelange/hugo-PaperMod) theme.
+I hold a Bachelor's degree in Computer Engineering from the Federal University of Rio Grande do Sul, Brazil, with an international exchange program in Computer Science at the University of Wisconsin, USA. 
+
+Occasionally, I explore areas like computer graphics, physic engines, compilers, and electronics. 
+
