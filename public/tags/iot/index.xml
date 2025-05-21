@@ -14,7 +14,7 @@
       <pubDate>Wed, 21 May 2025 01:24:51 -0700</pubDate>
       <guid>http://localhost:1313/posts/software-defined-radio/</guid>
       <description>&lt;p&gt;When I found out there was an affordable device capable of listening to a wide range of frequencies (10 Hz – 2 GHz from my tests) and giving me a glimpse into the Ham Radio world, which decades ago would have likely cost me thousands and required huge racks of hardware, I knew I had to get my hands on one.&lt;/p&gt;
-&lt;p&gt;I got the RTL-SDR V3, and my main goal was to try to capture signals from old weather satellites that transmit live images of Earth. After browsing the topic, I knew NOAA (National Oceanic and Atmospheric Administration) should be my first target, since all you need is a dipole antenna, an SDR (Software Defined Radio) device, and a computer to get started.&lt;/p&gt;</description>
+&lt;p&gt;I got the &lt;a href=&#34;https://www.rtl-sdr.com/rtl-sdr-blog-v-3-dongles-user-guide/&#34;&gt;RTL-SDR V3&lt;/a&gt;, and my main goal was to try to capture signals from old weather satellites that transmit live images of Earth. After browsing the topic, I knew NOAA (National Oceanic and Atmospheric Administration) should be my first target, since all you need is a dipole antenna, an SDR (Software Defined Radio) device, and a computer to get started.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

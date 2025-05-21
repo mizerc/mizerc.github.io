@@ -3,10 +3,16 @@ languageCode: en-us
 title: The Mize Collection
 theme: ['PaperMod']
 params:
-  showSocialIcons: true
+  homeInfoParams:
+    Title: Hello, I'm Mauricio
   socialIcons:
-    - name: linkedin
-      url: https://www.linkedin.com/in/YOUR_USERNAME/
+  - name: linkedin
+    url: "https://www.linkedin.com/in/izemauricio/"
+  - name: github
+    url: "https://github.com/mizerc/"
+  - name: instagram
+    url: "https://www.instagram.com/mizecollection/"
+
 menu:
   main:
     - identifier: home

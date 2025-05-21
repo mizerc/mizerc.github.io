@@ -14,7 +14,23 @@
       <pubDate>Wed, 21 May 2025 01:24:51 -0700</pubDate>
       <guid>http://localhost:1313/posts/software-defined-radio/</guid>
       <description>&lt;p&gt;When I found out there was an affordable device capable of listening to a wide range of frequencies (10 Hz – 2 GHz from my tests) and giving me a glimpse into the Ham Radio world, which decades ago would have likely cost me thousands and required huge racks of hardware, I knew I had to get my hands on one.&lt;/p&gt;
-&lt;p&gt;I got the RTL-SDR V3, and my main goal was to try to capture signals from old weather satellites that transmit live images of Earth. After browsing the topic, I knew NOAA (National Oceanic and Atmospheric Administration) should be my first target, since all you need is a dipole antenna, an SDR (Software Defined Radio) device, and a computer to get started.&lt;/p&gt;</description>
+&lt;p&gt;I got the &lt;a href=&#34;https://www.rtl-sdr.com/rtl-sdr-blog-v-3-dongles-user-guide/&#34;&gt;RTL-SDR V3&lt;/a&gt;, and my main goal was to try to capture signals from old weather satellites that transmit live images of Earth. After browsing the topic, I knew NOAA (National Oceanic and Atmospheric Administration) should be my first target, since all you need is a dipole antenna, an SDR (Software Defined Radio) device, and a computer to get started.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>DSA</title>
+      <link>http://localhost:1313/posts/dsa/</link>
+      <pubDate>Wed, 21 May 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/dsa/</guid>
+      <description>&lt;h1 id=&#34;linear-containers&#34;&gt;Linear Containers&lt;/h1&gt;
+&lt;h2 id=&#34;array&#34;&gt;Array&lt;/h2&gt;
+&lt;h2 id=&#34;list&#34;&gt;List&lt;/h2&gt;
+&lt;h2 id=&#34;queue&#34;&gt;Queue&lt;/h2&gt;
+&lt;h2 id=&#34;stack&#34;&gt;Stack&lt;/h2&gt;
+&lt;h2 id=&#34;deque&#34;&gt;Deque&lt;/h2&gt;
+&lt;h1 id=&#34;nom-linear-containers&#34;&gt;Nom-Linear Containers&lt;/h1&gt;
+&lt;h2 id=&#34;graphs&#34;&gt;Graphs&lt;/h2&gt;
+&lt;h2 id=&#34;tree&#34;&gt;Tree&lt;/h2&gt;
+&lt;h2 id=&#34;hash-based&#34;&gt;Hash-based&lt;/h2&gt;</description>
     </item>
     <item>
       <title>My 1st Post</title>
@@ -91,11 +107,18 @@ extern int global_var;  // declaration, no memory allocated
       <description></description>
     </item>
     <item>
-      <title></title>
+      <title>Swift Language</title>
       <link>http://localhost:1313/posts/swift-language/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 22 May 2024 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/swift-language/</guid>
       <description></description>
+    </item>
+    <item>
+      <title>Fractals</title>
+      <link>http://localhost:1313/posts/fractals/</link>
+      <pubDate>Wed, 01 Jan 2014 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/fractals/</guid>
+      <description>&lt;p&gt;TODO&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

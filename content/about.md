@@ -2,8 +2,6 @@
 title: "About"
 date: 2025-05-21
 draft: false
-tags: ["about"]
-aliases: ["/about-me/", "/whoami/"]
 ---
 
 ### About This Site
