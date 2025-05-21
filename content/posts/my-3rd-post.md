@@ -1,5 +1,8 @@
 ---
-date: '2025-05-21T00:41:16-07:00'
-draft: true
-title: 'My 3rd Post'
+date: '2025-05-21'
+draft: false
+title: 'My 1st Post'
+tag: ['Hugo']
 ---
+# My First Hugo Post
+This is my first hugo post.
