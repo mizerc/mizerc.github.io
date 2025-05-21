@@ -12,3 +12,6 @@ menu:
       name: About
       url: /about/
       weight: 2
+caches:
+  images:
+    dir: :cacheDir/images
