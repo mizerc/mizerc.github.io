@@ -5,7 +5,7 @@ title: 'Software Defined Radio'
 tags: ['eletronics', 'iot']
 ---
 
-When I found out there was an affordable device capable of listening to a wide range of frequencies (10 Hz – 2 GHz from my tests) and giving me a glimpse into the Ham Radio world, which decades ago would have likely cost me thousands and required huge racks of hardware, I knew I had to get my hands on one.
+When I found out there was an affordable USB device capable of tuning to a wide range of frequencies allowing me to have a glimpse into the Ham Radio world, which decades ago would have likely cost me thousands and required huge racks of hardware, I knew I had to get my hands on one.
 
 I got the [RTL-SDR V3](https://www.rtl-sdr.com/rtl-sdr-blog-v-3-dongles-user-guide/), and my main goal was to try to capture signals from old weather satellites that transmit live images of Earth. After browsing the topic, I knew NOAA (National Oceanic and Atmospheric Administration) should be my first target, since all you need is a dipole antenna, an SDR (Software Defined Radio) device, and a computer to get started.
 
