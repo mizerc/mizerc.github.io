@@ -5,19 +5,17 @@ title: 'My 1st Post'
 tag: ['Hugo']
 ---
 
-# My First Hugo Post
+This is my first Hugo post.
 
-This is my first hugo post.
-
-## Adding Theme
+### Adding Theme
 
 `git clone https://github.com/adityatelange/hugo-PaperMod themes/PaperMod --depth=1`
 
-## Adding New Post
+### Adding New Post
 
 `hugo new content content/posts/my-post-title.md`
 
-## Serving Locally
+### Serving Locally
 
 ```
 hugo server --buildDrafts
