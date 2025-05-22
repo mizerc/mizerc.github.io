@@ -1,6 +1,6 @@
 ---
 date: "2025-05-21"
-draft: true
+draft: false
 title: "Vectors"
 tags: ["math"]
 ---
