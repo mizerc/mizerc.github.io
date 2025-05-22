@@ -7,17 +7,21 @@ tags: ["math"]
 
 # Definition
 
-In math, a vector is object that has a magnitude and a direction. The components of a vector are the numbers that describe the vector in a coordinate system. A common coordinate system is the Cartesian coordinate system which uses the x, y, and z axes. 
+In math, a vector is object that has a magnitude and a direction. 
+The components of a vector are the numbers that describe the vector in a coordinate system. 
+A common coordinate system is the Cartesian coordinate system which uses the x, y, and z axes. 
 
-In programming, we can implement a vector as an array of numbers. A 2D vector, for example, can be defined as an array of 2 floats. A 3D vector can be defined as an array of 3 floats.
+In programming, we can implement a vector as an array of numbers. 
+A 2D vector, for example, can be defined as an array of 2 floats. 
+A 3D vector can be defined as an array of 3 floats.
 
 ```
 vec2 = [x, y]
+vec3 = [x, y, z]
 ```
 
-The `x` and `y` are the components of the vector.
+The `x`, `y`, and `z` are the components of the vector.
 
-With a vector in hand, we can now perform _operations_ on it. Below are some of the operations that can be performed on a vector.
 
 # Addition & Subtraction
 
@@ -32,9 +36,9 @@ a - b = [ax - bx, ay - by]
 
 ![targets](addition.png)
 
-# Scalar Multiplication
+# Scalar Multiplication & Division
 
-The scalar multiplication of a vector is done by multiplying each component of the vector by the scalar.
+The scalar multiplication, also know as Vector Scaling, of a vector is done by multiplying each component of the vector by the scalar.
 
 ```
 a = [ax, ay]
@@ -42,20 +46,49 @@ scalar = 2
 a * scalar = [ax * scalar, ay * scalar]
 ```
 
+The division of a vector by a scalar is done by dividing each component of the vector by the scalar.
+
+```
+a = [ax, ay]
+scalar = 2
+a / scalar = [ax / scalar, ay / scalar]
+```
+
 # Dot Product
 
-The dot product of two vectors is a scalar value. It is calculated by multiplying the corresponding elements of the vectors and summing the results.
+The dot product of two vectors, also know as Scalar Product, is a scalar value. 
+It is calculated by multiplying the corresponding elements of the vectors and summing the results.
+
+```
+a = [ax, ay]
+b = [bx, by]
+dot(a, b) = ax * bx + ay * by
+```
+
+The dot product of two vectors can also be calculated by the magnitude of the vectors multiplied by the cosine of the angle between them.
+
+```
+dot(a, b) = |a| * |b| * cos(theta)
+```
+
+The theta is the angle between the two vectors. 
+The angle is the smallest angle between the two vectors.
 
 # Unit Dot Product
 
-Often in computer graphics, we want to do the dot operation between two vectors which one is a unit vector. This operation is useful when we want to project one vector onto another. In other words, how much of a vector is on the axis defined by the unit vector.
+Often in computer graphics, we want to do the dot operation between two vectors which one is a unit vector. 
+This operation is useful when we want to project one vector onto another. 
+In other words, how much of a vector is on the axis defined by the unit vector.
+
+
 
 ![targets](unit-dot-product.png)
 
 # Cross Product
 
-The cross product of two vectors is a vector that is perpendicular to both of the vectors.
-And the magnitude of the cross product is the area of the parallelogram formed by the two vectors.
+The cross product of two vectors, also know as Vector Product, is a vector that is perpendicular to both of the vectors. 
+The magnitude of the cross product is the area of the parallelogram formed by the two vectors. 
+The direction of the cross product is determined by the right-hand rule.
 
 ![targets](cross-product.png)
 
