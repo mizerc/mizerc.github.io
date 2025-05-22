@@ -187,11 +187,11 @@
       <link>http://localhost:1313/posts/webgl/</link>
       <pubDate>Wed, 21 May 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/webgl/</guid>
-      <description>&lt;h1 id=&#34;webgl&#34;&gt;WebGL&lt;/h1&gt;
-&lt;p&gt;How awesome would be if we could controler the powerful GPU from the browser using JavaScript? Well, we can with WebGL.&lt;/p&gt;
+      <description>&lt;p&gt;How awesome would be if we could controler the powerful GPU from the browser using JavaScript? Well, we can with WebGL.&lt;/p&gt;
 &lt;p&gt;The WebGL is a subset of OpenGL, specifically the ES 2.0. It has limitation if we compare with modern OpenGL, but it is still a powerful API.&lt;/p&gt;
 &lt;h1 id=&#34;canvas-and-webgl-context&#34;&gt;Canvas and WebGL Context&lt;/h1&gt;
-&lt;p&gt;The &lt;code&gt;&amp;lt;canvas&amp;gt;&lt;/code&gt; element is the HTML element that we need to use to access the WebGL context.&lt;/p&gt;</description>
+&lt;p&gt;The &lt;code&gt;&amp;lt;canvas&amp;gt;&lt;/code&gt; element is the HTML element that we need to use to access the WebGL context.&lt;/p&gt;
+&lt;p&gt;The WebGL context is the object that we will use define programs, shaders, buffers, etc.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Ray Tracing</title>
@@ -258,7 +258,19 @@ extern int global_var;  // declaration, no memory allocated
       <link>http://localhost:1313/posts/fractals/</link>
       <pubDate>Wed, 01 Jan 2014 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/fractals/</guid>
-      <description>&lt;p&gt;TODO&lt;/p&gt;</description>
+      <description>&lt;p&gt;For visual folks that also like math, fractals can feel like the cherry of the cake that nature has given us.&lt;/p&gt;
+&lt;p&gt;The basic idea to create a fractal is to use a formula to check how stable the computation is.&lt;/p&gt;
+&lt;p&gt;If after a certain number of iterations the computation is still stable, we can say that the point is in the fractal. Otherwise, the point is not in the fractal.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>ReactJS</title>
+      <link>http://localhost:1313/posts/reactjs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/reactjs/</guid>
+      <description>&lt;p&gt;The ReactJS is a popular library for building user interfaces.&lt;/p&gt;
+&lt;p&gt;We can use it together with the ReactDOM to build a web application. Or with the React Native to build a mobile application. Or with the React Three Fiber to build a 3D application. We can even build console applications using xxx.&lt;/p&gt;
+&lt;h1 id=&#34;the-virtual-dom&#34;&gt;The Virtual DOM&lt;/h1&gt;
+&lt;p&gt;One of the selling points of ReactJS is to reduce the manual DOM manipulation of DOM elements. To achieve this, ReactJS uses multiple techniques. One of them is the idea of the Virtual DOM.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

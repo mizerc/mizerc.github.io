@@ -5,8 +5,6 @@ tags: ['webgl']
 draft: false
 ---
 
-# WebGL
-
 How awesome would be if we could controler the powerful GPU from the browser using JavaScript? Well, we can with WebGL.
 
 The WebGL is a subset of OpenGL, specifically the ES 2.0. It has limitation if we compare with modern OpenGL, but it is still a powerful API.
