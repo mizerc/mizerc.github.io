@@ -15,7 +15,7 @@ I hold a Bachelor's degree in Computer Engineering from the [Federal University 
 ### About This Website
 
 This is a collection of in-progress notes on random topics. 
-Writing never was my strong suit, but I'm challenging myself to write and publish random notes about technology, health, finance, and other topics.
+Writing never was my strong suit, but on May 21, 2025, I challenged myself to write and publish random notes about technology, health, finance, and other topics.
 I hope this can inspire or helps others.
 
 I have a genuine curiosity about how things works under the hood, and to achieve that I enjoy building things from scratch as much as possible.
