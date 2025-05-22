@@ -61,10 +61,10 @@
 &lt;h2 id=&#34;hash-based&#34;&gt;Hash-based&lt;/h2&gt;</description>
     </item>
     <item>
-      <title>My 1st Post</title>
-      <link>http://localhost:1313/posts/my-1st-post/</link>
+      <title>The 1st Post</title>
+      <link>http://localhost:1313/posts/the-1st-post/</link>
       <pubDate>Wed, 21 May 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/my-1st-post/</guid>
+      <guid>http://localhost:1313/posts/the-1st-post/</guid>
       <description>&lt;p&gt;This is my first attempt using &lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt; to generate this website from plain markdown.&lt;/p&gt;
 &lt;h3 id=&#34;installing-hugo-macos&#34;&gt;Installing Hugo (MacOS)&lt;/h3&gt;
 &lt;ul&gt;
@@ -94,14 +94,11 @@
       <pubDate>Wed, 21 May 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/vectors/</guid>
       <description>&lt;h1 id=&#34;definition&#34;&gt;Definition&lt;/h1&gt;
-&lt;h1 id=&#34;addition--subtraction&#34;&gt;Addition &amp;amp; Subtraction&lt;/h1&gt;
-&lt;p&gt;&lt;img alt=&#34;targets&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/posts/vectors/addition.png&#34;&gt;&lt;/p&gt;
-&lt;h1 id=&#34;dot-product&#34;&gt;Dot Product&lt;/h1&gt;
-&lt;h1 id=&#34;unit-dot-product&#34;&gt;Unit Dot Product&lt;/h1&gt;
-&lt;h1 id=&#34;cross-product&#34;&gt;Cross Product&lt;/h1&gt;
-&lt;p&gt;&lt;img alt=&#34;targets&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/posts/vectors/cross-product.png&#34;&gt;&lt;/p&gt;
-&lt;h1 id=&#34;unit&#34;&gt;Unit&lt;/h1&gt;
-&lt;h1 id=&#34;normal&#34;&gt;Normal&lt;/h1&gt;</description>
+&lt;p&gt;A vector, in programming, can be defined as an array of numbers. A 2D vector, for example, can be defined as an array of 2 floats. A 3D vector can be defined as an array of 3 floats.&lt;/p&gt;
+&lt;p&gt;Each float in the array is called a &lt;code&gt;component&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;In math, a vector is defined as an arrow in space. It has a magnitude and a direction.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;vec2 = [x, y]
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The &lt;code&gt;x&lt;/code&gt; and &lt;code&gt;y&lt;/code&gt; are the components of the vector.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Ray Tracing</title>

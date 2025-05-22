@@ -1,7 +1,7 @@
 ---
 date: '2025-05-21'
 draft: false
-title: 'My 1st Post'
+title: 'The 1st Post'
 tag: ['Hugo']
 ---
 
