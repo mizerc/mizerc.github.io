@@ -13,8 +13,27 @@
       <link>http://localhost:1313/posts/software-defined-radio/</link>
       <pubDate>Wed, 21 May 2025 01:24:51 -0700</pubDate>
       <guid>http://localhost:1313/posts/software-defined-radio/</guid>
-      <description>&lt;p&gt;When I found out there was an affordable device capable of listening to a wide range of frequencies (10 Hz – 2 GHz from my tests) and giving me a glimpse into the Ham Radio world, which decades ago would have likely cost me thousands and required huge racks of hardware, I knew I had to get my hands on one.&lt;/p&gt;
-&lt;p&gt;I got the &lt;a href=&#34;https://www.rtl-sdr.com/rtl-sdr-blog-v-3-dongles-user-guide/&#34;&gt;RTL-SDR V3&lt;/a&gt;, and my main goal was to try to capture signals from old weather satellites that transmit live images of Earth. After browsing the topic, I knew NOAA (National Oceanic and Atmospheric Administration) should be my first target, since all you need is a dipole antenna, an SDR (Software Defined Radio) device, and a computer to get started.&lt;/p&gt;</description>
+      <description>&lt;p&gt;When I found out there was an affordable USB device capable of tuning to a wide range of frequencies allowing me to have a glimpse into the Ham Radio world, which decades ago would have likely cost me thousands and required huge racks of hardware, I knew I had to get my hands on one.&lt;/p&gt;
+&lt;p&gt;This is possible with SDR (Software Defined Radios). I got the &lt;a href=&#34;https://www.rtl-sdr.com/rtl-sdr-blog-v-3-dongles-user-guide/&#34;&gt;RTL-SDR V3&lt;/a&gt;, and my main goal was to try to capture signals from old weather satellites that transmit live images of Earth. After browsing the topic, I knew NOAA (National Oceanic and Atmospheric Administration) should be my first target, since all you need is a dipole antenna, an SDR device, and a computer to get started.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>3D Printing</title>
+      <link>http://localhost:1313/posts/3d-printing/</link>
+      <pubDate>Wed, 21 May 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/3d-printing/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;I got this Ender 3 from Microcenter year ago.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;mods&#34;&gt;Mods&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Glass Bed&lt;/li&gt;
+&lt;li&gt;BLTouch&lt;/li&gt;
+&lt;li&gt;Different needle sizes&lt;/li&gt;
+&lt;li&gt;Custom Marlin firmware to support BLTouch&lt;/li&gt;
+&lt;li&gt;Raspberry PI and Octoprint&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;gcodes&#34;&gt;Gcodes&lt;/h2&gt;
+&lt;p&gt;The gcodes are the language used to tell the print what to do. You can save a sequence of gcodes in the memory card or having the Octoprint sending them on the fly while the printer is printing. You can also send single gcodes commands from the terminal of Octoprint.&lt;/p&gt;</description>
     </item>
     <item>
       <title>About</title>
@@ -70,6 +89,21 @@
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Use &lt;code&gt;--buildDrafts&lt;/code&gt; flag to include posts with &lt;code&gt;draft: true&lt;/code&gt;.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>Vectors</title>
+      <link>http://localhost:1313/posts/vectors/</link>
+      <pubDate>Wed, 21 May 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/vectors/</guid>
+      <description>&lt;h1 id=&#34;definition&#34;&gt;Definition&lt;/h1&gt;
+&lt;h1 id=&#34;addition--subtraction&#34;&gt;Addition &amp;amp; Subtraction&lt;/h1&gt;
+&lt;p&gt;&lt;img alt=&#34;targets&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/posts/vectors/addition.png&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;dot-product&#34;&gt;Dot Product&lt;/h1&gt;
+&lt;h1 id=&#34;unit-dot-product&#34;&gt;Unit Dot Product&lt;/h1&gt;
+&lt;h1 id=&#34;cross-product&#34;&gt;Cross Product&lt;/h1&gt;
+&lt;p&gt;&lt;img alt=&#34;targets&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/posts/vectors/cross-product.png&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;unit&#34;&gt;Unit&lt;/h1&gt;
+&lt;h1 id=&#34;normal&#34;&gt;Normal&lt;/h1&gt;</description>
+    </item>
+    <item>
       <title>Ray Tracing</title>
       <link>http://localhost:1313/posts/raytracing/</link>
       <pubDate>Mon, 19 May 2025 00:00:00 +0000</pubDate>
@@ -94,7 +128,8 @@
       <link>http://localhost:1313/posts/c-language/</link>
       <pubDate>Sun, 11 May 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/c-language/</guid>
-      <description>&lt;h2 id=&#34;extern&#34;&gt;Extern&lt;/h2&gt;
+      <description>&lt;p&gt;Random notes about the C language.&lt;/p&gt;
+&lt;h2 id=&#34;extern&#34;&gt;Extern&lt;/h2&gt;
 &lt;p&gt;Use &lt;code&gt;extern&lt;/code&gt; to declare something without defining it.&lt;/p&gt;
 &lt;p&gt;Tells the compiler not to allocate storage, because the variable/function is defined elsewhere (in another file or later in the same file), ie, “this variable or function is defined elsewhere.”&lt;/p&gt;
 &lt;h4 id=&#34;extern-with-variables&#34;&gt;Extern with variables&lt;/h4&gt;
