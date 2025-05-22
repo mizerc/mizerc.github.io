@@ -49,16 +49,100 @@
       <link>http://localhost:1313/posts/dsa/</link>
       <pubDate>Wed, 21 May 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/dsa/</guid>
-      <description>&lt;h1 id=&#34;linear-containers&#34;&gt;Linear Containers&lt;/h1&gt;
+      <description>&lt;h1 id=&#34;strategies&#34;&gt;Strategies&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Brute Force&lt;/li&gt;
+&lt;li&gt;Greedy&lt;/li&gt;
+&lt;li&gt;Divide and Conquer&lt;/li&gt;
+&lt;li&gt;Dynamic Programming&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;linear-containers&#34;&gt;Linear Containers&lt;/h1&gt;
 &lt;h2 id=&#34;array&#34;&gt;Array&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Static Array (Fixed size)&lt;/li&gt;
+&lt;li&gt;Dynamic Array (Growable)&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h2 id=&#34;list&#34;&gt;List&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Single Linked List&lt;/li&gt;
+&lt;li&gt;Double Linked List&lt;/li&gt;
+&lt;li&gt;Circular Linked List&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h2 id=&#34;queue&#34;&gt;Queue&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Simple Queue&lt;/li&gt;
+&lt;li&gt;Circular Queue&lt;/li&gt;
+&lt;li&gt;Priority Queue&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h2 id=&#34;stack&#34;&gt;Stack&lt;/h2&gt;
 &lt;h2 id=&#34;deque&#34;&gt;Deque&lt;/h2&gt;
 &lt;h1 id=&#34;nom-linear-containers&#34;&gt;Nom-Linear Containers&lt;/h1&gt;
 &lt;h2 id=&#34;graphs&#34;&gt;Graphs&lt;/h2&gt;
-&lt;h2 id=&#34;tree&#34;&gt;Tree&lt;/h2&gt;
-&lt;h2 id=&#34;hash-based&#34;&gt;Hash-based&lt;/h2&gt;</description>
+&lt;ul&gt;
+&lt;li&gt;Directed Graph&lt;/li&gt;
+&lt;li&gt;Undirected Graph&lt;/li&gt;
+&lt;li&gt;Weighted Graph&lt;/li&gt;
+&lt;li&gt;Unweighted Graph&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;trees&#34;&gt;&lt;a href=&#34;trees&#34;&gt;Trees&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Binary Tree&lt;/li&gt;
+&lt;li&gt;Binary Search Tree&lt;/li&gt;
+&lt;li&gt;AVL Tree&lt;/li&gt;
+&lt;li&gt;Red-Black Tree&lt;/li&gt;
+&lt;li&gt;B-Tree&lt;/li&gt;
+&lt;li&gt;B+Tree&lt;/li&gt;
+&lt;li&gt;Trie&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;heap&#34;&gt;Heap&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Min Heap&lt;/li&gt;
+&lt;li&gt;Max Heap&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;hash-based&#34;&gt;Hash-based&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Hash Map&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;sets&#34;&gt;Sets&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Union Find&lt;/li&gt;
+&lt;li&gt;Disjoint Set&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;algorithms&#34;&gt;Algorithms&lt;/h1&gt;
+&lt;h2 id=&#34;sorting&#34;&gt;Sorting&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Bubble Sort&lt;/li&gt;
+&lt;li&gt;Selection Sort&lt;/li&gt;
+&lt;li&gt;Insertion Sort&lt;/li&gt;
+&lt;li&gt;Merge Sort&lt;/li&gt;
+&lt;li&gt;Quick Sort&lt;/li&gt;
+&lt;li&gt;Heap Sort&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;searching&#34;&gt;Searching&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Linear Search&lt;/li&gt;
+&lt;li&gt;Binary Search&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;graph-algorithms&#34;&gt;Graph Algorithms&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Binary Search Tree&lt;/li&gt;
+&lt;li&gt;Breadth-First Search (BFS)&lt;/li&gt;
+&lt;li&gt;Depth-First Search (DFS)&lt;/li&gt;
+&lt;li&gt;Dijkstra&amp;rsquo;s Algorithm&lt;/li&gt;
+&lt;li&gt;Kruskal&amp;rsquo;s Algorithm&lt;/li&gt;
+&lt;li&gt;Prim&amp;rsquo;s Algorithm&lt;/li&gt;
+&lt;li&gt;Graph Coloring&lt;/li&gt;
+&lt;li&gt;Travelling Salesman Problem&lt;/li&gt;
+&lt;li&gt;Hamiltonian Cycle&lt;/li&gt;
+&lt;li&gt;Minimum Spanning Tree&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>Latex with Hugo</title>
+      <link>http://localhost:1313/posts/latex/</link>
+      <pubDate>Wed, 21 May 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/latex/</guid>
+      <description>&lt;h1 id=&#34;latex-with-hugo&#34;&gt;Latex with Hugo&lt;/h1&gt;</description>
     </item>
     <item>
       <title>The 1st Post</title>
@@ -66,6 +150,7 @@
       <pubDate>Wed, 21 May 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/the-1st-post/</guid>
       <description>&lt;p&gt;This is my first attempt using &lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt; to generate this website from plain markdown.&lt;/p&gt;
+&lt;p&gt;Hugo is a static site generator made in Go.&lt;/p&gt;
 &lt;h3 id=&#34;installing-hugo-macos&#34;&gt;Installing Hugo (MacOS)&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;brew update&lt;/code&gt;&lt;/li&gt;
@@ -94,11 +179,19 @@
       <pubDate>Wed, 21 May 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/vectors/</guid>
       <description>&lt;h1 id=&#34;definition&#34;&gt;Definition&lt;/h1&gt;
-&lt;p&gt;A vector, in programming, can be defined as an array of numbers. A 2D vector, for example, can be defined as an array of 2 floats. A 3D vector can be defined as an array of 3 floats.&lt;/p&gt;
-&lt;p&gt;Each float in the array is called a &lt;code&gt;component&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;In math, a vector is defined as an arrow in space. It has a magnitude and a direction.&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;vec2 = [x, y]
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The &lt;code&gt;x&lt;/code&gt; and &lt;code&gt;y&lt;/code&gt; are the components of the vector.&lt;/p&gt;</description>
+&lt;p&gt;In math, a vector is object that has a magnitude and a direction. The components of a vector are the numbers that describe the vector in a coordinate system. A common coordinate system is the Cartesian coordinate system which uses the x, y, and z axes.&lt;/p&gt;
+&lt;p&gt;In programming, we can implement a vector as an array of numbers. A 2D vector, for example, can be defined as an array of 2 floats. A 3D vector can be defined as an array of 3 floats.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>WebGL</title>
+      <link>http://localhost:1313/posts/webgl/</link>
+      <pubDate>Wed, 21 May 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/webgl/</guid>
+      <description>&lt;h1 id=&#34;webgl&#34;&gt;WebGL&lt;/h1&gt;
+&lt;p&gt;How awesome would be if we could controler the powerful GPU from the browser using JavaScript? Well, we can with WebGL.&lt;/p&gt;
+&lt;p&gt;The WebGL is a subset of OpenGL, specifically the ES 2.0. It has limitation if we compare with modern OpenGL, but it is still a powerful API.&lt;/p&gt;
+&lt;h1 id=&#34;canvas-and-webgl-context&#34;&gt;Canvas and WebGL Context&lt;/h1&gt;
+&lt;p&gt;The &lt;code&gt;&amp;lt;canvas&amp;gt;&lt;/code&gt; element is the HTML element that we need to use to access the WebGL context.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Ray Tracing</title>
@@ -141,18 +234,24 @@ extern int global_var;  // declaration, no memory allocated
 &lt;p&gt;In C (including C99), function declarations and definitions at file scope are extern by default.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Micro Project: Web Audio</title>
-      <link>http://localhost:1313/posts/web-audio/</link>
-      <pubDate>Wed, 22 May 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/web-audio/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Swift Language</title>
       <link>http://localhost:1313/posts/swift-language/</link>
       <pubDate>Wed, 22 May 2024 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/swift-language/</guid>
       <description></description>
+    </item>
+    <item>
+      <title>Web Audio API</title>
+      <link>http://localhost:1313/posts/web-audio-api/</link>
+      <pubDate>Wed, 22 May 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/web-audio-api/</guid>
+      <description>&lt;h1 id=&#34;web-audio-api&#34;&gt;Web Audio API&lt;/h1&gt;
+&lt;p&gt;Modern web browsers support the Web Audio API, which allows us to create and manipulate audio streams.&lt;/p&gt;
+&lt;h2 id=&#34;audio-context&#34;&gt;Audio Context&lt;/h2&gt;
+&lt;p&gt;The &lt;code&gt;AudioContext&lt;/code&gt; object is the main entry point for the Web Audio API.&lt;/p&gt;
+&lt;h2 id=&#34;audio-nodes-and-chains&#34;&gt;Audio Nodes and Chains&lt;/h2&gt;
+&lt;p&gt;The &lt;code&gt;AudioNode&lt;/code&gt; interface is the base interface for all nodes in the audio processing graph.&lt;/p&gt;
+&lt;p&gt;We can connect audio nodes together to create a chain of nodes. For example, we can start with the &lt;code&gt;OscillatorNode&lt;/code&gt; to generate a sine wave, and then connect it to the &lt;code&gt;GainNode&lt;/code&gt; to control the volume of the sound, and then connect it to the &lt;code&gt;DestinationNode&lt;/code&gt; to play the sound to the speakers (or any other output device connected to the computer).&lt;/p&gt;</description>
     </item>
     <item>
       <title>Fractals</title>

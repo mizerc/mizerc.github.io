@@ -14,14 +14,8 @@
       <pubDate>Wed, 21 May 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/vectors/</guid>
       <description>&lt;h1 id=&#34;definition&#34;&gt;Definition&lt;/h1&gt;
-&lt;h1 id=&#34;addition--subtraction&#34;&gt;Addition &amp;amp; Subtraction&lt;/h1&gt;
-&lt;p&gt;&lt;img alt=&#34;targets&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/posts/vectors/addition.png&#34;&gt;&lt;/p&gt;
-&lt;h1 id=&#34;dot-product&#34;&gt;Dot Product&lt;/h1&gt;
-&lt;h1 id=&#34;unit-dot-product&#34;&gt;Unit Dot Product&lt;/h1&gt;
-&lt;h1 id=&#34;cross-product&#34;&gt;Cross Product&lt;/h1&gt;
-&lt;p&gt;&lt;img alt=&#34;targets&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/posts/vectors/cross-product.png&#34;&gt;&lt;/p&gt;
-&lt;h1 id=&#34;unit&#34;&gt;Unit&lt;/h1&gt;
-&lt;h1 id=&#34;normal&#34;&gt;Normal&lt;/h1&gt;</description>
+&lt;p&gt;In math, a vector is object that has a magnitude and a direction. The components of a vector are the numbers that describe the vector in a coordinate system. A common coordinate system is the Cartesian coordinate system which uses the x, y, and z axes.&lt;/p&gt;
+&lt;p&gt;In programming, we can implement a vector as an array of numbers. A 2D vector, for example, can be defined as an array of 2 floats. A 3D vector can be defined as an array of 3 floats.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

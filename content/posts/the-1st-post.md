@@ -7,6 +7,8 @@ tag: ['Hugo']
 
 This is my first attempt using [Hugo](https://gohugo.io/) to generate this website from plain markdown.
 
+Hugo is a static site generator made in Go.
+
 ### Installing Hugo (MacOS)
 
 - `brew update`

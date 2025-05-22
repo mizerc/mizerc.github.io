@@ -7,11 +7,9 @@ tags: ["math"]
 
 # Definition
 
-A vector, in programming, can be defined as an array of numbers. A 2D vector, for example, can be defined as an array of 2 floats. A 3D vector can be defined as an array of 3 floats.
+In math, a vector is object that has a magnitude and a direction. The components of a vector are the numbers that describe the vector in a coordinate system. A common coordinate system is the Cartesian coordinate system which uses the x, y, and z axes. 
 
-Each float in the array is called a `component`.
-
-In math, a vector is defined as an arrow in space. It has a magnitude and a direction.
+In programming, we can implement a vector as an array of numbers. A 2D vector, for example, can be defined as an array of 2 floats. A 3D vector can be defined as an array of 3 floats.
 
 ```
 vec2 = [x, y]
