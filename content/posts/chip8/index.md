@@ -5,7 +5,7 @@ title: "Chip8"
 tags: ["chip8"]
 ---
 
-The Chip8 is a virtual machine.
+Random notes about the Chip8 virtual machine.
 
 - Chip8 Virtual machine emulator
 - IO (keyboard, screen, speaker, etc)
