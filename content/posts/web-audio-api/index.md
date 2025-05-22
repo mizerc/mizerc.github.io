@@ -43,13 +43,20 @@ The `AudioBufferSourceNode` allows us to create a empty Audio Buffer and populat
 
 ## Microphone
 
-The `MediaStreamAudioSourceNode` allows us to access the microphone of the computer. It is part of the Navigator interface, so it is not exactly a node in the Web Audio API. However, we can still connect it to the audio chain as a source node.
+You can request access to the microphone of the computer using the `navigator.mediaDevices.getUserMedia` method.
+Note that you can't automatically access the microphone like inside a onLoad event.
+For security and privacy reasons, it is necessary a user interaction to start the request.
+On the same reasoning, you can connect the microphone to the audio chain to send the audio stream to the next node.
 
 # Audio Processing
 
-One great thing about the Web Audio API is that we can process the audio stream in real time. The modern way to do this is to use the `AudioWorklet` interface. The old way is using the `ScriptProcessorNode` interface. 
+One great thing about the Web Audio API is that we can process the audio stream in real time. 
+The old way is using the `ScriptProcessorNode` interface. 
+The modern way to do this is to use the `AudioWorklet` interface.
+The problem with the last one is that it runs in the main thread, so it can suffer from performance issues.
+The `AudioWorklet` instead runs in a separate thread, so it avoid blocking the main thread, but on the other hand it requires a bit more of boilerplate code to set up.
 
-The problem with the last one is that it runs in the main thread, so it can suffer from performance issues. The `AudioWorklet` interface runs in a separate thread, so it requires a bit more of boilerplate code to set up. Also we need to use message passing to communicate between the main thread and the audio thread.
+If we need to send data between the main thread and the audio thread, we need to use the messaging approach.
 
 # MIDI
 
