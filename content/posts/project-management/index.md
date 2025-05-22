@@ -1,10 +1,8 @@
 ---
 title: "Project Management"
-date: 2025-05-21
+date: 2020-01-01
 draft: false
 ---
-
-# Project Management
 
 Project management is a structured approach to planning, organizing, and directing resources to achieve specific goals within defined constraints like time, budget, and scope.
 In software development, the goal normally is to deliver the software changes to achieve product or engineering requirements.
