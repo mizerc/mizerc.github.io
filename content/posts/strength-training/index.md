@@ -1,7 +1,7 @@
 ---
 title: "Strength Training"
 date: 2020-01-01
-draft: false
+draft: true
 ---
 
 The strength training involves the use of resistance (like weights) to  improve the strength of the muscles and joints.

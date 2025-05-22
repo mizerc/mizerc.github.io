@@ -1,7 +1,7 @@
 ---
 title: "Project Management"
 date: 2020-01-01
-draft: false
+draft: true
 ---
 
 Project management is a structured approach to planning, organizing, and directing resources to achieve specific goals within defined constraints like time, budget, and scope.
