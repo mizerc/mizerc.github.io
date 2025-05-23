@@ -21,7 +21,7 @@ We can connect audio nodes together to create a chain of nodes. For example, we 
 
 It kind remember me those Modular Synthesizers from the old days where you can plug in different modules together to modify the sound.
 
-![modular synthesizer](modular-synth.png)
+![modular synthesizer](modular-synth.png#center)
 
 # Nodes
 
