@@ -5,6 +5,36 @@ tags: ["hugo"]
 draft: false
 ---
 
+# Starting
+
+## Installing Hugo (MacOS)
+
+- `brew update`
+- `brew install hugo`
+
+## Adding Theme
+
+- `git clone https://github.com/adityatelange/hugo-PaperMod themes/PaperMod --depth=1`
+
+Update `hugo.yaml` to include `theme: ['PaperMod']`.
+
+## Adding New Post
+
+- `hugo new content content/posts/my-post-title.md`
+
+## Troubleshooting
+
+- `hugo --cleanDestinationDir`
+
+## Serving Locally
+
+```
+hugo server --buildDrafts
+```
+
+Use `--buildDrafts` flag to include posts with `draft: true`.
+
+
 # Basics
 
 Hugo is a static site generator written in Go.
@@ -13,7 +43,7 @@ Hugo is a static site generator written in Go.
 
 ## Markdown Rendering
 
-Hugo uses `Goldmark` as the Markdown parser. 
+Hugo uses `Goldmark` as the Markdown parser.
 Files with ending with `.md`, `.mdown`, or `.markdown` are processed as Markdown.
 
 Documentation: https://gohugo.io/configuration/markup/
@@ -45,7 +75,7 @@ The content folder contains the content as markup files (markdown) and assets of
 
 Contains the HTML templates for the site.
 
-## /layouts/_default/baseof.html
+## /layouts/\_default/baseof.html
 
 The parent template.
 The index.html file content.
@@ -59,13 +89,8 @@ It imports `header.html` and `footer.html` partials.
 Contains the HTML for partial content.
 For example, you can add `math.html` to handle math equations using some Latex library like KaTeX.
 
-## /layouts/_default
+## /layouts/\_default
 
 Contains the default layout for the site.
 
-## /layouts/_default/_markup
-
-
-
-
-
+## /layouts/\_default/\_markup
