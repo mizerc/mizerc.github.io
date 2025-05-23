@@ -5,6 +5,7 @@ theme: ['PaperMod']
 # sectionPagesMenu: main
 params:
   custom_css: ["custom.css"]
+  hideMeta: true
   math: true
   homeInfoParams:
     Title: Hello, I'm Mauricio
