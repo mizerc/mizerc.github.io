@@ -5,28 +5,28 @@ tags: ["hugo"]
 draft: false
 ---
 
-# Installation
+## Installation
 
-## Installing Hugo (MacOS)
+### Installing Hugo
 
 - `brew update`
 - `brew install hugo`
 
-## Adding Theme
+### Adding Theme
 
 - `git clone https://github.com/adityatelange/hugo-PaperMod themes/PaperMod --depth=1`
 
 Update `hugo.yaml` to include `theme: ['PaperMod']`.
 
-## Adding New Post
+### Adding New Post
 
 - `hugo new content content/posts/my-post-title.md`
 
-## Troubleshooting
+### Troubleshooting
 
 - `hugo --cleanDestinationDir`
 
-## Serving Locally
+### Serving Locally
 
 ```
 hugo server --buildDrafts
@@ -34,12 +34,12 @@ hugo server --buildDrafts
 
 Use `--buildDrafts` flag to include posts with `draft: true`.
 
-# Latex
+## Latex
 
 \\(
 \begin{bmatrix}
-   a & b \\
-   c & d \\
+   a & b \\\\\\
+   c & d
 \end{bmatrix}
 \\)
 
@@ -52,20 +52,20 @@ Use `--buildDrafts` flag to include posts with `draft: true`.
 \\)
 
 
-# Basics
+## Basics
 
 Hugo is a static site generator written in Go.
 
 ![Hugo](hugo.png){width="350px"}
 
-## Markdown Rendering
+### Markdown Rendering
 
 Hugo uses `Goldmark` as the Markdown parser.
 Files with ending with `.md`, `.mdown`, or `.markdown` are processed as Markdown.
 
 Documentation: https://gohugo.io/configuration/markup/
 
-## HTML Templates
+### HTML Templates
 
 Inside the .html files you will notice a template syntax.
 Templates use variables, functions, and methods to transform the markdown content into a published page.
@@ -74,25 +74,25 @@ Hugo uses the Go [html/template](https://pkg.go.dev/html/template) and [text/tem
 
 Documentation: https://gohugo.io/templates/introduction/
 
-# Directory Structure
+## Directory Structure
 
-## /hugo.toml
+### /hugo.toml
 
 Contains the configuration for the site.
 
-## /public
+### /public
 
 Contains the generated site ready to be published.
 
-## /content
+### /content
 
 The content folder contains the content as markup files (markdown) and assets of your site.
 
-## /layouts
+### /layouts
 
 Contains the HTML templates for the site.
 
-## /layouts/\_default/baseof.html
+### /layouts/\_default/baseof.html
 
 The parent template.
 The index.html file content.
@@ -101,13 +101,13 @@ Contains the base template where the other templates inherit from.
 
 It imports `header.html` and `footer.html` partials.
 
-## /layouts/partials
+### /layouts/partials
 
 Contains the HTML for partial content.
 For example, you can add `math.html` to handle math equations using some Latex library like KaTeX.
 
-## /layouts/\_default
+### /layouts/\_default
 
 Contains the default layout for the site.
 
-## /layouts/\_default/\_markup
+### /layouts/\_default/\_markup

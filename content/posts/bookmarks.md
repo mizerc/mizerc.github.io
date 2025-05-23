@@ -1,10 +1,8 @@
 ---
-title: "Bookmarks"
 date: 2025-05-22
 draft: true
+title: 'Bookmarks'
 ---
-
-# Bookmarks
 
 ## Engineering
 

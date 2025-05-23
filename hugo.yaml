@@ -2,7 +2,9 @@ baseURL: https://example.org/
 languageCode: en-us
 title: The Mize Collection
 theme: ['PaperMod']
+# sectionPagesMenu: main
 params:
+  custom_css: ["custom.css"]
   math: true
   homeInfoParams:
     Title: Hello, I'm Mauricio
@@ -13,7 +15,6 @@ params:
     url: "https://github.com/mizerc/"
   - name: instagram
     url: "https://www.instagram.com/mizecollection/"
-
 menu:
   main:
     - identifier: home

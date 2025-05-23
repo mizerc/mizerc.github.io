@@ -1,11 +1,9 @@
 ---
 date: '2024-05-22'
 draft: false
-title: 'Web Audio API'
 tags: ['audio']
+title: 'Web Audio API'
 ---
-
-# Web Audio API
 
 Modern web browsers support the Web Audio API, which allows us to create and manipulate audio streams.
 
@@ -23,32 +21,32 @@ It kind remember me those Modular Synthesizers from the old days where you can p
 
 ![modular synthesizer](modular-synth.png#center)
 
-# Nodes
+## Nodes
 
-## Oscillator Node
+### Oscillator Node
 
 The `OscillatorNode` allows us to generate a periodic waveform, such as a sine wave, square wave, or triangle wave.
 
-## Gain Node
+### Gain Node
 
 The `GainNode` allows us to control the volume of the audio stream. The gain property is a scalar value.
 
-## Destination Node
+### Destination Node
 
 The `DestinationNode` is the final node in the chain and is responsible for playing the audio stream to the speakers.
 
-## Audio Buffer Source Node
+### Audio Buffer Source Node
 
 The `AudioBufferSourceNode` allows us to create a empty Audio Buffer and populate it with audio data. We can create samples using math functinos like sin or cos to simulate the same behavior of an oscillator node.
 
-## Microphone
+### Microphone
 
 You can request access to the microphone of the computer using the `navigator.mediaDevices.getUserMedia` method.
 Note that you can't automatically access the microphone like inside a onLoad event.
 For security and privacy reasons, it is necessary a user interaction to start the request.
 On the same reasoning, you can connect the microphone to the audio chain to send the audio stream to the next node.
 
-# Audio Processing
+## Audio Processing
 
 One great thing about the Web Audio API is that we can process the audio stream in real time. 
 The old way is using the `ScriptProcessorNode` interface. 
@@ -58,6 +56,6 @@ The `AudioWorklet` instead runs in a separate thread, so it avoid blocking the m
 
 If we need to send data between the main thread and the audio thread, we need to use the messaging approach.
 
-# MIDI
+## MIDI
 
 The MIDI is a protocol that allows us to send and receive MIDI messages. It is a digital protocol that allows us to send and receive MIDI messages between devices. Several devices like keyboards, synthesizers, and controllers can speak MIDI.
