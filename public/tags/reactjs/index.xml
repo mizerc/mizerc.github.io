@@ -12,7 +12,10 @@
       <link>http://localhost:1313/posts/reactjs/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/reactjs/</guid>
-      <description></description>
+      <description>&lt;p&gt;The ReactJS is a popular library for building user interfaces.&lt;/p&gt;
+&lt;p&gt;We can use it together with the ReactDOM to build a web application. Or with the React Native to build a mobile application. Or with the React Three Fiber to build a 3D application. We can even build console applications using xxx.&lt;/p&gt;
+&lt;h1 id=&#34;the-virtual-dom&#34;&gt;The Virtual DOM&lt;/h1&gt;
+&lt;p&gt;One of the selling points of ReactJS is to reduce the manual DOM manipulation of DOM elements. To achieve this, ReactJS uses multiple techniques. One of them is the idea of the Virtual DOM.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

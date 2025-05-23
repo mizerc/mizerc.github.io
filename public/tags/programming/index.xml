@@ -14,19 +14,17 @@
       <pubDate>Sun, 11 May 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/c-language/</guid>
       <description>&lt;p&gt;Random notes about the C language.&lt;/p&gt;
-&lt;h2 id=&#34;extern&#34;&gt;Extern&lt;/h2&gt;
-&lt;p&gt;Use &lt;code&gt;extern&lt;/code&gt; to declare something without defining it.&lt;/p&gt;
-&lt;p&gt;Tells the compiler not to allocate storage, because the variable/function is defined elsewhere (in another file or later in the same file), ie, “this variable or function is defined elsewhere.”&lt;/p&gt;
-&lt;h4 id=&#34;extern-with-variables&#34;&gt;Extern with variables&lt;/h4&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;extern int global_var;	// declared here, defined in another file
-
-// file1.c
-int global_var = 42;
-
-// file2.c
-extern int global_var;  // declaration, no memory allocated
-&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;extern-with-functions&#34;&gt;Extern with functions&lt;/h4&gt;
-&lt;p&gt;In C (including C99), function declarations and definitions at file scope are extern by default.&lt;/p&gt;</description>
+&lt;h1 id=&#34;entry-point&#34;&gt;Entry Point&lt;/h1&gt;
+&lt;p&gt;The &lt;code&gt;main&lt;/code&gt; function is the entry point of the program. It is the first function that is called when the program starts.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;compilation-and-linking&#34;&gt;Compilation and Linking&lt;/h1&gt;
+&lt;p&gt;The C compiler (cc) compiles each source code into object files.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;cc -c file1.c file2.c
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The &lt;code&gt;-c&lt;/code&gt; option tells the compiler to compile only and not to link.&lt;/p&gt;
+&lt;p&gt;The object files are then linked together to form an executable.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Swift Language</title>

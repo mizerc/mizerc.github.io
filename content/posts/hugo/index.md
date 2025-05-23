@@ -5,7 +5,7 @@ tags: ["hugo"]
 draft: false
 ---
 
-# Starting
+# Installation
 
 ## Installing Hugo (MacOS)
 
@@ -33,6 +33,23 @@ hugo server --buildDrafts
 ```
 
 Use `--buildDrafts` flag to include posts with `draft: true`.
+
+# Latex
+
+\\(
+\begin{bmatrix}
+   a & b \\
+   c & d \\
+\end{bmatrix}
+\\)
+
+\\(
+\Theta
+\\)
+
+\\(
+\xcancel{ABC}
+\\)
 
 
 # Basics

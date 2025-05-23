@@ -6,13 +6,18 @@
     <description>Recent content in Webgl on The Mize Collection</description>
     <generator>Hugo -- 0.147.4</generator>
     <language>en-us</language>
+    <lastBuildDate>Wed, 21 May 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/webgl/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>WebGL</title>
       <link>http://localhost:1313/posts/webgl/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 21 May 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/webgl/</guid>
-      <description></description>
+      <description>&lt;p&gt;How awesome would be if we could controler the powerful GPU from the browser using JavaScript? Well, we can with WebGL.&lt;/p&gt;
+&lt;p&gt;The WebGL is a subset of OpenGL, specifically the ES 2.0. It has limitation if we compare with modern OpenGL, but it is still a powerful API.&lt;/p&gt;
+&lt;h1 id=&#34;canvas-and-webgl-context&#34;&gt;Canvas and WebGL Context&lt;/h1&gt;
+&lt;p&gt;The &lt;code&gt;&amp;lt;canvas&amp;gt;&lt;/code&gt; element is the HTML element that we need to use to access the WebGL context.&lt;/p&gt;
+&lt;p&gt;The WebGL context is the object that we will use define programs, shaders, buffers, etc.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

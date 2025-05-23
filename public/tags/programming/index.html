@@ -57,6 +57,28 @@
 
     </style>
 </noscript>
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css"
+  integrity="sha384-5TcZemv2l/9On385z///+d7MSYlvIEw9FuZTIdZ14vJLqWphw7e7ZPuOiCHJcFCP"
+  crossorigin="anonymous"
+/>
+<script
+  defer
+  src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js"
+  integrity="sha384-cMkvdD8LoxVzGF/RPUKAcvmm49FQ0oxwDF3BGKtDXcEc+T1b2N+teh/OJfpU0jr6"
+  crossorigin="anonymous"
+></script>
+<script
+  defer
+  src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/contrib/auto-render.min.js"
+  integrity="sha384-hCXGrW6PitJEwbkoStFjeJxv+fSOOQKOPbJxSfM6G5sWZjAyWhXiTIIAmQqnlLlh"
+  crossorigin="anonymous"
+  onload="renderMathInElement(document.body);"
+></script>
+
+
+
 </head>
 
 <body class="list" id="top">
@@ -126,9 +148,10 @@
   </header>
   <div class="entry-content">
     <p>Random notes about the C language.
-Extern Use extern to declare something without defining it.
-Tells the compiler not to allocate storage, because the variable/function is defined elsewhere (in another file or later in the same file), ie, “this variable or function is defined elsewhere.”
-Extern with variables extern int global_var;	// declared here, defined in another file // file1.c int global_var = 42; // file2.c extern int global_var; // declaration, no memory allocated Extern with functions In C (including C99), function declarations and definitions at file scope are extern by default.
+Entry Point The main function is the entry point of the program. It is the first function that is called when the program starts.
+int main(void) { return 0; } Compilation and Linking The C compiler (cc) compiles each source code into object files.
+cc -c file1.c file2.c The -c option tells the compiler to compile only and not to link.
+The object files are then linked together to form an executable.
 ...</p>
   </div>
   <footer class="entry-footer"><span title='2025-05-11 00:00:00 +0000 UTC'>May 11, 2025</span></footer>

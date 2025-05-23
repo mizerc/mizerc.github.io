@@ -6,15 +6,137 @@
     <description>Recent content on The Mize Collection</description>
     <generator>Hugo -- 0.147.4</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 21 May 2025 01:24:51 -0700</lastBuildDate>
+    <lastBuildDate>Thu, 22 May 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Bookmarks</title>
+      <link>http://localhost:1313/posts/bookmarks/</link>
+      <pubDate>Thu, 22 May 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/bookmarks/</guid>
+      <description>&lt;h1 id=&#34;bookmarks&#34;&gt;Bookmarks&lt;/h1&gt;
+&lt;h2 id=&#34;engineering&#34;&gt;Engineering&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.howstuffworks.com/&#34;&gt;How Stuff Works&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;game-dev&#34;&gt;Game Dev&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://fabiensanglard.net/doomIphone/doomClassicRenderer.php&#34;&gt;Doom Code Review&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.algorithm-archive.org/contents/verlet_integration/verlet_integration.html&#34;&gt;Verlet Integration&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;books&#34;&gt;Books&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.goodreads.com/list/show/1.Best_Books_of_All_Time&#34;&gt;The 100 Best Books of All Time&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;movies&#34;&gt;Movies&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.imdb.com/chart/top/&#34;&gt;IMDB Top 250&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.imdb.com/list/ls055265443/?sort=release_date%2Casc&#34;&gt;All Oscar Winning Movies&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;search-engines&#34;&gt;Search Engines&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://kagi.com/&#34;&gt;Kagi&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://duckduckgo.com/&#34;&gt;DuckDuckGo&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.google.com/&#34;&gt;Google&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>Hugo</title>
+      <link>http://localhost:1313/posts/hugo/</link>
+      <pubDate>Thu, 22 May 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/hugo/</guid>
+      <description>&lt;h1 id=&#34;installation&#34;&gt;Installation&lt;/h1&gt;
+&lt;h2 id=&#34;installing-hugo-macos&#34;&gt;Installing Hugo (MacOS)&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;brew update&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;brew install hugo&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;adding-theme&#34;&gt;Adding Theme&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;git clone https://github.com/adityatelange/hugo-PaperMod themes/PaperMod --depth=1&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Update &lt;code&gt;hugo.yaml&lt;/code&gt; to include &lt;code&gt;theme: [&#39;PaperMod&#39;]&lt;/code&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;adding-new-post&#34;&gt;Adding New Post&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;hugo new content content/posts/my-post-title.md&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;troubleshooting&#34;&gt;Troubleshooting&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;hugo --cleanDestinationDir&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;serving-locally&#34;&gt;Serving Locally&lt;/h2&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;hugo server --buildDrafts
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Use &lt;code&gt;--buildDrafts&lt;/code&gt; flag to include posts with &lt;code&gt;draft: true&lt;/code&gt;.&lt;/p&gt;
+&lt;h1 id=&#34;latex&#34;&gt;Latex&lt;/h1&gt;
+&lt;p&gt;\(
+\begin{bmatrix}
+a &amp;amp; b \
+c &amp;amp; d \
+\end{bmatrix}
+\)&lt;/p&gt;
+&lt;p&gt;\(
+\Theta
+\)&lt;/p&gt;
+&lt;p&gt;\(
+\xcancel{ABC}
+\)&lt;/p&gt;
+&lt;h1 id=&#34;basics&#34;&gt;Basics&lt;/h1&gt;
+&lt;p&gt;Hugo is a static site generator written in Go.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Matrices</title>
+      <link>http://localhost:1313/posts/matrices/</link>
+      <pubDate>Thu, 22 May 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/matrices/</guid>
+      <description>&lt;p&gt;Matrices are structures that condense multiple numbers into a single entity allowing us to perform operations on them as a whole.
+Matrices are a fundamental concept in linear algebra and used a lot in computer graphics.&lt;/p&gt;
+&lt;h1 id=&#34;matrix-operations&#34;&gt;Matrix Operations&lt;/h1&gt;
+&lt;h2 id=&#34;matrix-addition&#34;&gt;Matrix Addition&lt;/h2&gt;
+&lt;h2 id=&#34;matrix-subtraction&#34;&gt;Matrix Subtraction&lt;/h2&gt;
+&lt;h2 id=&#34;matrix-multiplication&#34;&gt;Matrix Multiplication&lt;/h2&gt;
+&lt;h2 id=&#34;identity-matrix&#34;&gt;Identity Matrix&lt;/h2&gt;
+&lt;h2 id=&#34;inverse-matrix&#34;&gt;Inverse Matrix&lt;/h2&gt;
+&lt;h2 id=&#34;transpose-matrix&#34;&gt;Transpose Matrix&lt;/h2&gt;
+&lt;h2 id=&#34;row-order-vs-column-order&#34;&gt;Row Order vs Column Order&lt;/h2&gt;
+&lt;p&gt;Depending on the convention, we can have a row vector or a column vector.
+The row order will organize the matrix in a row-wise manner.
+This means that the first row is the first vector.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Paintings</title>
+      <link>http://localhost:1313/posts/paintings/</link>
+      <pubDate>Thu, 22 May 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/paintings/</guid>
+      <description>&lt;h1 id=&#34;paintings&#34;&gt;Paintings&lt;/h1&gt;
+&lt;h2 id=&#34;johannes-vermeer-dutch-16321675&#34;&gt;Johannes Vermeer (Dutch, 1632–1675)&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;About 36 of his paintings survived&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;girl-with-a-pearl-earring&#34;&gt;Girl with a Pearl Earring&lt;/h3&gt;
+&lt;h3 id=&#34;young-woman-with-a-water-pitcher&#34;&gt;Young Woman with a Water Pitcher&lt;/h3&gt;
+&lt;h3 id=&#34;allegory-of-the-catholic-faith&#34;&gt;Allegory of the Catholic Faith&lt;/h3&gt;
+&lt;h3 id=&#34;the-milkmaid&#34;&gt;The Milkmaid&lt;/h3&gt;
+&lt;h3 id=&#34;young-woman-with-a-lute&#34;&gt;Young Woman with a Lute&lt;/h3&gt;
+&lt;h2 id=&#34;oscar-claude-monet-french-18401926&#34;&gt;Oscar-Claude Monet (French, 1840–1926)&lt;/h2&gt;
+&lt;h3 id=&#34;water-lily-pond&#34;&gt;Water Lily Pond&lt;/h3&gt;
+&lt;h3 id=&#34;on-the-bank-of-the-seine&#34;&gt;On the Bank of the Seine&lt;/h3&gt;
+&lt;h3 id=&#34;apples-and-grapes&#34;&gt;Apples and Grapes&lt;/h3&gt;
+&lt;h2 id=&#34;sandro-botticelli-italian-14451510&#34;&gt;Sandro Botticelli (Italian, 1445–1510)&lt;/h2&gt;
+&lt;h3 id=&#34;birth-of-venus&#34;&gt;Birth of Venus&lt;/h3&gt;
+&lt;h2 id=&#34;leonardo-da-vinci-italian-14521519&#34;&gt;Leonardo da Vinci (Italian, 1452–1519)&lt;/h2&gt;
+&lt;h3 id=&#34;the-last-supper&#34;&gt;The Last Supper&lt;/h3&gt;
+&lt;h3 id=&#34;mona-lisa&#34;&gt;Mona Lisa&lt;/h3&gt;
+&lt;h2 id=&#34;michelangelo-italian-14751564&#34;&gt;Michelangelo (Italian, 1475–1564)&lt;/h2&gt;
+&lt;h3 id=&#34;the-last-judgment&#34;&gt;The Last Judgment&lt;/h3&gt;</description>
+    </item>
     <item>
       <title>Software Defined Radio</title>
       <link>http://localhost:1313/posts/software-defined-radio/</link>
       <pubDate>Wed, 21 May 2025 01:24:51 -0700</pubDate>
       <guid>http://localhost:1313/posts/software-defined-radio/</guid>
       <description>&lt;p&gt;When I found out there was an affordable USB device capable of tuning to a wide range of frequencies allowing me to have a glimpse into the Ham Radio world, which decades ago would have likely cost me thousands and required huge racks of hardware, I knew I had to get my hands on one.&lt;/p&gt;
-&lt;p&gt;This is possible with SDR (Software Defined Radios). I got the &lt;a href=&#34;https://www.rtl-sdr.com/rtl-sdr-blog-v-3-dongles-user-guide/&#34;&gt;RTL-SDR V3&lt;/a&gt;, and my main goal was to try to capture signals from old weather satellites that transmit live images of Earth. After browsing the topic, I knew NOAA (National Oceanic and Atmospheric Administration) should be my first target, since all you need is a dipole antenna, an SDR device, and a computer to get started.&lt;/p&gt;</description>
+&lt;p&gt;This is possible with SDR (Software Defined Radios) receivers.
+I got the &lt;a href=&#34;https://www.rtl-sdr.com/rtl-sdr-blog-v-3-dongles-user-guide/&#34;&gt;RTL-SDR V3&lt;/a&gt;, and after playing with it a bit listeting to different frequencies, my main goal became trying to capture signals from weather satellites that transmit live images of Earth.
+After browsing the topic, I knew NOAA (National Oceanic and Atmospheric Administration) should be my first target, since all you need is a dipole antenna, an SDR device, and a computer to get started.&lt;/p&gt;</description>
     </item>
     <item>
       <title>3D Printing</title>
@@ -40,9 +162,35 @@
       <link>http://localhost:1313/about/</link>
       <pubDate>Wed, 21 May 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/about/</guid>
-      <description>&lt;h3 id=&#34;about-this-site&#34;&gt;About This Site&lt;/h3&gt;
-&lt;p&gt;This is a collection of posts on random topics, keep in mind these are not finished, and I plan to update them over time. I hope this can inspire or helps others.&lt;/p&gt;
-&lt;p&gt;I have a genuine curiosity about a wide range of topics. I like to understand how things work under the hood and enjoy building things from scratch as much as possible, because I believe it&amp;rsquo;s one of the best ways to fully grasp the challenges and the steps involved in things aroudn us.&lt;/p&gt;</description>
+      <description>&lt;h3 id=&#34;about-me&#34;&gt;About Me&lt;/h3&gt;
+&lt;p&gt;I&amp;rsquo;m a software engineer based in &lt;a href=&#34;https://en.wikipedia.org/wiki/Seattle&#34;&gt;Seattle, WA&lt;/a&gt;, with extensive experience in both mobile and backend development.&lt;/p&gt;
+&lt;p&gt;I hold a Bachelor&amp;rsquo;s degree in Computer Engineering from the &lt;a href=&#34;https://www.ufrgs.br/site/&#34;&gt;Federal University of Rio Grande do Sul, Brazil&lt;/a&gt;, with an international exchange program in Computer Science at the &lt;a href=&#34;https://www.wisc.edu/&#34;&gt;University of Wisconsin, USA&lt;/a&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;about-this-website&#34;&gt;About This Website&lt;/h3&gt;
+&lt;p&gt;This is a collection of in-progress notes on random topics.
+Writing never was my strong suit, but on May 21, 2025, I challenged myself to start writing and publishing notes about different subjects.
+I hope this can inspire or helps others.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Chip8</title>
+      <link>http://localhost:1313/posts/chip8/</link>
+      <pubDate>Wed, 21 May 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/chip8/</guid>
+      <description>&lt;p&gt;Random notes about the Chip8 virtual machine.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Chip8 Virtual machine emulator&lt;/li&gt;
+&lt;li&gt;IO (keyboard, screen, speaker, etc)&lt;/li&gt;
+&lt;li&gt;Roms (binary)&lt;/li&gt;
+&lt;li&gt;Assembler (src1 =&amp;gt; rom/binary)&lt;/li&gt;
+&lt;li&gt;Source code 1 (src1)&lt;/li&gt;
+&lt;li&gt;Compiler (src2 =&amp;gt; src1)&lt;/li&gt;
+&lt;li&gt;Source code 2 (src2)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;roms&#34;&gt;Roms&lt;/h1&gt;
+&lt;p&gt;Roms are the programs that the Chip8 can execute.
+Each instruction is 2 bytes.
+The 2 bytes encode the opcode and the operands.&lt;/p&gt;
+&lt;h1 id=&#34;assembler&#34;&gt;Assembler&lt;/h1&gt;
+&lt;p&gt;The assembler is a program that translates the assembly language into the binary language (roms) that the Chip8 can execute.&lt;/p&gt;</description>
     </item>
     <item>
       <title>DSA</title>
@@ -138,40 +286,11 @@
 &lt;/ul&gt;</description>
     </item>
     <item>
-      <title>Latex with Hugo</title>
-      <link>http://localhost:1313/posts/latex/</link>
-      <pubDate>Wed, 21 May 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/latex/</guid>
-      <description>&lt;h1 id=&#34;latex-with-hugo&#34;&gt;Latex with Hugo&lt;/h1&gt;</description>
-    </item>
-    <item>
       <title>The 1st Post</title>
       <link>http://localhost:1313/posts/the-1st-post/</link>
       <pubDate>Wed, 21 May 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/the-1st-post/</guid>
-      <description>&lt;p&gt;This is my first attempt using &lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt; to generate this website from plain markdown.&lt;/p&gt;
-&lt;p&gt;Hugo is a static site generator made in Go.&lt;/p&gt;
-&lt;h3 id=&#34;installing-hugo-macos&#34;&gt;Installing Hugo (MacOS)&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;brew update&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;brew install hugo&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;adding-theme&#34;&gt;Adding Theme&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;git clone https://github.com/adityatelange/hugo-PaperMod themes/PaperMod --depth=1&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Update &lt;code&gt;hugo.yaml&lt;/code&gt; to include &lt;code&gt;theme: [&#39;PaperMod&#39;]&lt;/code&gt;.&lt;/p&gt;
-&lt;h3 id=&#34;adding-new-post&#34;&gt;Adding New Post&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;hugo new content content/posts/my-post-title.md&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;troubleshooting&#34;&gt;Troubleshooting&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;hugo --cleanDestinationDir&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;serving-locally&#34;&gt;Serving Locally&lt;/h3&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;hugo server --buildDrafts
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Use &lt;code&gt;--buildDrafts&lt;/code&gt; flag to include posts with &lt;code&gt;draft: true&lt;/code&gt;.&lt;/p&gt;</description>
+      <description>&lt;p&gt;This is my first attempt using &lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt; to generate this website from plain markdown.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Vectors</title>
@@ -179,8 +298,12 @@
       <pubDate>Wed, 21 May 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/vectors/</guid>
       <description>&lt;h1 id=&#34;definition&#34;&gt;Definition&lt;/h1&gt;
-&lt;p&gt;In math, a vector is object that has a magnitude and a direction. The components of a vector are the numbers that describe the vector in a coordinate system. A common coordinate system is the Cartesian coordinate system which uses the x, y, and z axes.&lt;/p&gt;
-&lt;p&gt;In programming, we can implement a vector as an array of numbers. A 2D vector, for example, can be defined as an array of 2 floats. A 3D vector can be defined as an array of 3 floats.&lt;/p&gt;</description>
+&lt;p&gt;In math, a vector is object that has a magnitude and a direction.
+The components of a vector are the numbers that describe the vector in a coordinate system.
+A common coordinate system is the Cartesian coordinate system which uses the x, y, and z axes.&lt;/p&gt;
+&lt;p&gt;In programming, we can implement a vector as an array of numbers.
+A 2D vector, for example, can be defined as an array of 2 floats.
+A 3D vector can be defined as an array of 3 floats.&lt;/p&gt;</description>
     </item>
     <item>
       <title>WebGL</title>
@@ -219,19 +342,17 @@
       <pubDate>Sun, 11 May 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/c-language/</guid>
       <description>&lt;p&gt;Random notes about the C language.&lt;/p&gt;
-&lt;h2 id=&#34;extern&#34;&gt;Extern&lt;/h2&gt;
-&lt;p&gt;Use &lt;code&gt;extern&lt;/code&gt; to declare something without defining it.&lt;/p&gt;
-&lt;p&gt;Tells the compiler not to allocate storage, because the variable/function is defined elsewhere (in another file or later in the same file), ie, “this variable or function is defined elsewhere.”&lt;/p&gt;
-&lt;h4 id=&#34;extern-with-variables&#34;&gt;Extern with variables&lt;/h4&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;extern int global_var;	// declared here, defined in another file
-
-// file1.c
-int global_var = 42;
-
-// file2.c
-extern int global_var;  // declaration, no memory allocated
-&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;extern-with-functions&#34;&gt;Extern with functions&lt;/h4&gt;
-&lt;p&gt;In C (including C99), function declarations and definitions at file scope are extern by default.&lt;/p&gt;</description>
+&lt;h1 id=&#34;entry-point&#34;&gt;Entry Point&lt;/h1&gt;
+&lt;p&gt;The &lt;code&gt;main&lt;/code&gt; function is the entry point of the program. It is the first function that is called when the program starts.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;compilation-and-linking&#34;&gt;Compilation and Linking&lt;/h1&gt;
+&lt;p&gt;The C compiler (cc) compiles each source code into object files.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;cc -c file1.c file2.c
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The &lt;code&gt;-c&lt;/code&gt; option tells the compiler to compile only and not to link.&lt;/p&gt;
+&lt;p&gt;The object files are then linked together to form an executable.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Swift Language</title>
@@ -252,6 +373,58 @@ extern int global_var;  // declaration, no memory allocated
 &lt;h2 id=&#34;audio-nodes-and-chains&#34;&gt;Audio Nodes and Chains&lt;/h2&gt;
 &lt;p&gt;The &lt;code&gt;AudioNode&lt;/code&gt; interface is the base interface for all nodes in the audio processing graph.&lt;/p&gt;
 &lt;p&gt;We can connect audio nodes together to create a chain of nodes. For example, we can start with the &lt;code&gt;OscillatorNode&lt;/code&gt; to generate a sine wave, and then connect it to the &lt;code&gt;GainNode&lt;/code&gt; to control the volume of the sound, and then connect it to the &lt;code&gt;DestinationNode&lt;/code&gt; to play the sound to the speakers (or any other output device connected to the computer).&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Project Management</title>
+      <link>http://localhost:1313/posts/project-management/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/project-management/</guid>
+      <description>&lt;p&gt;Project management is a structured approach to planning, organizing, and directing resources to achieve specific goals within defined constraints like time, budget, and scope.
+In software development, the goal normally is to deliver the software changes to achieve product or engineering requirements.&lt;/p&gt;
+&lt;h1 id=&#34;methodology&#34;&gt;Methodology&lt;/h1&gt;
+&lt;p&gt;The methodology is a specific way of managing the project.
+Examples of methodologies are Agile, Kanban, and Scrum.&lt;/p&gt;
+&lt;h1 id=&#34;retrospective&#34;&gt;Retrospective&lt;/h1&gt;
+&lt;p&gt;A retrospective is a meeting held to review and reflect on a project or sprint in an Agile environment, with the goal of identifying improvements for future work.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Strength Training</title>
+      <link>http://localhost:1313/posts/strength-training/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/strength-training/</guid>
+      <description>&lt;p&gt;The strength training involves the use of resistance (like weights) to  improve the strength of the muscles and joints.&lt;/p&gt;
+&lt;h1 id=&#34;common-exercises&#34;&gt;Common Exercises&lt;/h1&gt;
+&lt;h2 id=&#34;a1&#34;&gt;A1&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Bench Press&lt;/li&gt;
+&lt;li&gt;Dumbbell Bench Press&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;a2&#34;&gt;A2&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Dumbbell Lateral Raise&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;b1&#34;&gt;B1&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Lat Pull-Down&lt;/li&gt;
+&lt;li&gt;Seated Cable Rows&lt;/li&gt;
+&lt;li&gt;Single-Arm Dumbbell Row&lt;/li&gt;
+&lt;li&gt;Dumbbell Shrugs&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;b2&#34;&gt;B2&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Dumbbell curls&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;core&#34;&gt;Core&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Superman&lt;/li&gt;
+&lt;li&gt;Planks&lt;/li&gt;
+&lt;li&gt;Russian Twists&lt;/li&gt;
+&lt;li&gt;Bicycle Crunches&lt;/li&gt;
+&lt;li&gt;Leg Raises&lt;/li&gt;
+&lt;li&gt;Leg Circles&lt;/li&gt;
+&lt;li&gt;Squats&lt;/li&gt;
+&lt;li&gt;Deadlift&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
     <item>
       <title>Fractals</title>
