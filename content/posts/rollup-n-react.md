@@ -10,13 +10,18 @@ This is a simple guide to setup a bare minimum React app with Rollup.
 ## Rollup
 
 Rollup is a module bundler for JavaScript.
-It has built-in support for ES modules (ESM, like `import` and `export`).
-It has built-in watch mode.
-You can expand the features with plugins.
+
+- It has built-in support for ES modules (ESM, like `import` and `export`).
+- It has built-in watch mode.
+- You can expand features with plugins.
 
 ## Setup
 
-Initialize a new NPM project
+Create a folder for the project and initialize a new NPM project.
+
+`mkdir project-name`
+
+`cd project-name`
 
 `npm init -y`
 
@@ -127,3 +132,44 @@ It helps to minify and compress our output JavaScript files.
 ### rollup-plugin-visualizer
 
 Helps us to visualize the output bundle.
+
+## Adding TypeScript support
+
+Install TypeScript
+
+`npm install typescript --save-dev`
+
+Install TypeScript plugins
+
+`npm install @rollup/plugin-typescript --save-dev`
+
+Create `tsconfig.json` and add the following content:
+
+````json
+{
+  "compilerOptions": {
+    "target": "ESNext",
+  }
+}
+
+You can also use `tsc --init` to create a basic `tsconfig.json` file.
+
+Update `rollup.config.mjs` to add the following content:
+
+```js
+import typescript from "@rollup/plugin-typescript";
+
+export default {
+  input: "src/index.tsx",
+  plugins: [
+    typescript(),
+    babel({
+      babelHelpers: "bundled",
+      exclude: "node_modules/**",
+    }),
+    ...
+````
+
+Note that if you wan to do type checking, you need use tsc to do it.
+The plugin will only transpile the code, striping away the types.
+One pipeline option is add tsc as part of the `npm run build | dev` script.
