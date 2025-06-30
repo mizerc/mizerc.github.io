@@ -4,6 +4,8 @@
 }
 
 .post-title {
+    /* font-family: "Playfair Display", serif; */
+    font-family: "Times New Roman", Times, serif;
     margin-bottom: 2px;
     font-size: 40px;
 }

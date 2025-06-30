@@ -16,7 +16,6 @@ I hold a Bachelor's degree in Computer Engineering from the [Federal University 
 
 This is a collection of in-progress notes on random topics. 
 Writing never was my strong suit, but on May 21, 2025, I challenged myself to start writing and publishing notes about different subjects.
-I hope this can inspire or helps others.
 
 I have a genuine curiosity about how things works under the hood, and as a hobby of mine I enjoy building things from scratch.
 If not in a professional environment, I believe that trying to inventing the wheel is a great way to truly understand the challenges and steps necessary to build something.

@@ -19,6 +19,7 @@
       {{ .Description }}
     </div>
     {{- end }}
+    <hr>
     {{- if not (.Param "hideMeta") }}
     <div class="post-meta">
       {{- partial "post_meta.html" . -}}

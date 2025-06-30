@@ -1,8 +1,3 @@
----
-date: '2025-05-21'
-draft: false
-title: 'Trees'
-tag: ['dsa']
----
-
 # Trees
+
+Tree is a non-linear data structure that is used to store data in a hierarchical manner.

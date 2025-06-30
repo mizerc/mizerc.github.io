@@ -10,6 +10,8 @@ params:
   homeInfoParams:
     Title: Hello, I'm Mauricio
   socialIcons:
+  - name: email
+    url: "mailto:contact@mauricioize.dev"
   - name: linkedin
     url: "https://www.linkedin.com/in/izemauricio/"
   - name: github

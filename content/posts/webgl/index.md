@@ -1,20 +1,30 @@
 ---
-date: '2025-05-21'
-title: 'WebGL'
-tags: ['webgl', 'graphics']
+date: "2025-05-21"
+title: "WebGL"
+tags: ["webgl", "graphics"]
 draft: false
 ---
 
-How awesome would be if we could controler the powerful GPU from the browser using JavaScript? Well, we can with WebGL. The WebGL has limitation if we compare with modern OpenGL, but it is still offer a great way to create 3D graphics in the browser.
+# Introduction
+
+The HTML5 <canvas> element provides a drawable region in a web page that can be manipulated with JavaScript.
+
+It supports two main rendering contexts:
+
+- `context2d`: which uses the CanvasRenderingContext2D API to draw shapes, text, images, and perform pixel manipulation in a rasterized space;
+- `webgl`: which exposes a low-level WebGL API that allows direct access to the GPU for high-performance, hardware-accelerated rendering of 2D and 3D graphics.
+
+While context2d is simpler and suited for lightweight graphics, webgl enables us to run small programs in the GPU (shaders) which allow us to build more complex visualizations like simulations, games, and 3D rendering by interfacing with shaders and GPU buffers.
+The WebGL has limitation if we compare with modern OpenGL, but it is still offer a great way to create 3D graphics in the browser.
 
 ## Canvas and WebGL Context
 
-The `<canvas>` element is the HTML element that we need to use to access the WebGL context. 
+The `<canvas>` element is the HTML element that we need to use to access the WebGL context.
 The WebGL context is the object that we will use define programs, shaders, buffers, etc.
 
 ```js
-const canvas = document.querySelector('#canvas');
-const gl = canvas.getContext('webgl');
+const canvas = document.querySelector("#canvas");
+const gl = canvas.getContext("webgl");
 ```
 
 ## Shaders
@@ -45,7 +55,7 @@ TODO
 
 ## Buffers
 
-Buffers are objects that store data in the GPU memory. 
+Buffers are objects that store data in the GPU memory.
 
 A complex 3D object normally is represented by a mesh which is made of a set of triangles. Each triangle is made of 3 vertices. Each vertex has a position, a normal, and a color.
 
@@ -83,7 +93,7 @@ TODO
 
 ## 3D Transformations
 
-We can apply transformations to the 3D object using matrices. The `modelView` matrix is the matrix that transforms the vertices of the 3D object to the world space. 
+We can apply transformations to the 3D object using matrices. The `modelView` matrix is the matrix that transforms the vertices of the 3D object to the world space.
 
 It is a combination of the `model` matrix and the `view` matrix. Every time we render the scene, we need to multiply each visible vertex of the 3D object by the `modelView` matrix. Note the work 'visible', more about this when we talk about the clipping.
 
@@ -117,7 +127,7 @@ To avoid wasting processing power rendering objects that are not visible, like b
 
 A simple climping technique is to use the normal of the face to check if it is facing the camera or not.
 
-Another technique is to build the frustum and check if the object is inside it. The frustum is a pyramid of 6 planes that define the visible area of the camera. 
+Another technique is to build the frustum and check if the object is inside it. The frustum is a pyramid of 6 planes that define the visible area of the camera.
 
 ## The Draw Call
 
@@ -128,5 +138,3 @@ A tipical concern is to keep the number of draw calls to a minimum. Each draw me
 ## The Pipeline
 
 The pipeline is the sequence of steps that the GPU follows to render the scene.
-
-

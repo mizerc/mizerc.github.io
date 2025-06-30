@@ -5,9 +5,7 @@ title: 'Ray Tracing'
 tags: ['graphics']
 ---
 
-If you're into computer graphics, there's a chance you've come across the famous [ray tracing in one weekend](https://raytracing.github.io/books/RayTracingInOneWeekend.html). If not, well, I'm happy to be the first to introduce you.
-
-I decided to take on the challenge and try to make a simplified version using a simple HTML Canvas.
+If you're into computer graphics, there's a chance you've come across the famous [ray tracing in one weekend](https://raytracing.github.io/books/RayTracingInOneWeekend.html).
 
 ### Algorithm
 
