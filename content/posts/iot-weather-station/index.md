@@ -5,25 +5,28 @@ title: "Weather Station"
 tag: ["iot", "weather"]
 ---
 
-## Introduction
+For a long time, I have wanted to build a custom weather station to display specific information on a screen. 
+As a first step toward that goal, I built a basic prototype using the `HiLetgo ESP-32D` development board, the `BME280` sensor, and the `4-inch TFT display`.
 
-Notes about the process of building a simple weather station using the `HiLetgo ESP-32D Development Board`, the `BME280` sensor, and a `4 inch TFT Display`.
+The expected product specs are:
 
-## Product Specs
-
-- Be able to measure temperature, humidity, and pressure.
-- Be able to keep track of the 100 last samples per second, minute, hour, 3-hour, 8-hour, 24-hour.
-- Be able to navigate thru pages using a button.
+- Be able to display temperature in Celsius and Fahrenheit, humidity in %, and pressure in hPa.
+- Be able to navigate thru pages using a physical button.
+- Display the current page.
+- Each page should organize the data in a different way to test different layouts.
+- Be able to keep track of the 100 last samples for a specific time period (second, minute, hour, 3-hour, 8-hour, 24-hour).
 - Keep min and max value of each metric (temperature, humidity, pressure) for each time period.
+- Render a simple chart of the last N samples for a specific time period.
+- Display the amout of time since the last reset.
 
-## Setup
+## Hardware
 
-### ESP32
+### Microcontroller
 
 I will be using the `HiLetgo ESP-32D Development Board`.
-It is a development board that comes with a `ESP32-D0WD-V3` microcontroller, a USB-C connector with serial communication, a voltage regulator, and a few other components.
+It is a development board that comes with a `ESP32-D0WD-V3` microcontroller, serial communication over USB, a voltage regulator, 38 pins (which supports GPIO, I2C, SPI, etc.) and a few other components.
 
-### BME280
+### Sensor
 
 The BME280 is a sensor that measures temperature, humidity, and pressure.
 It uses I2C to communicate with the microcontroller.
@@ -36,17 +39,21 @@ To be able to display the data, I got the 4" TFT Display from Amazon.
 It's a 480x320 pixel display.
 It uses SPI to communicate with the microcontroller.
 
-## Diagram
+## Project Structure
+
+### Diagram
 
 TBD
 
-## Code
+### Code
 
 We need a few libraries to be able to use the `BME280` sensor and the `TFT Display`.
 I am using the `Arduino IDE` to download the libraries and to program the microcontroller.
 The libraries are available in the `Arduino Library Manager`.
 
-## Power Supply
+## Other Features
+
+### Power Supply
 
 I tried using 3 AA batteries in series to power the board (1.5V x 3 = 4.5V total) which is suitable for the voltage regulator of the board.
 You can connect the + and - of the battery to the Vin and GND pins of the board.
@@ -73,3 +80,10 @@ Last, we have the total amount of time the board has been running since the last
 
 ![Weather Station](./assets/photo2.png)
 ![Weather Station](./assets/photo3.png)
+
+## Next Steps
+
+- Store samples in sdcard.
+- Enable touch screen to navigate thru pages instead of using a physical button.
+- Explore ESP32 sleep mode to reduce power consumption.
+- Build a external module to keep outside the house, communicate with the main board thru 333 Hz RF module.

@@ -14,7 +14,14 @@ In macOS, you can install Hugo using Homebrew:
 - `brew update`
 - `brew install hugo`
 
-### Adding Theme
+### Creating New Project
+
+```
+hugo new site mysite
+cd mysite
+```
+
+### Setting Theme
 
 After installing Hugo, you can add a theme to your site.
 
@@ -32,7 +39,7 @@ theme: ['PaperMod']
 
 Update theme key in `hugo.yaml` to be `theme: ['PaperMod']`.
 
-### Adding New Post
+### Creating New Post
 
 You can create a new post by using a single markdown file.
 For bigger posts, you can create a folder with multiple markdown files.

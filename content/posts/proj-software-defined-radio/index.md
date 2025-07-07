@@ -1,7 +1,7 @@
 ---
 date: '2025-05-21T01:24:51-07:00'
 draft: false
-title: 'Live Satellites Images'
+title: 'Live Earth Images from Satellites'
 tags: ['eletronics', 'iot', 'sdr']
 ---
 
@@ -11,9 +11,12 @@ Sadly we can't use a FM radio (88-108 MHz), because we need a device able to cap
 
 ## SDR Receivers
 
-For just a few dollars, you can get a small USB device that lets you tune into a wide range of radio frequencies (10 kHz to 1.5 GHz), do demodulation of several protocols, donwload images from weather satellites, etc. 
+For just a few dollars, you can get a small USB device like the SDR-RTL V3 that lets you tune into a wide range of radio frequencies (500kHz - 1766 MHz).
 Something that, decades ago, would have cost hundreds of dollars and required bulky racks of specialized hardware.
-This is possible with Software Defined Radios (SDR) receivers and a few open source softwares.
+This is the great power of Software Defined Radios (SDR) receivers, and a few open source softwares.
+
+With that range of frequencies, you can capture signals from weather satellites like NOAA-15 at 137.62 MHz.
+The raw signal needs to be processed to get the image using open source software like SatDump.
 
 ### Specs 
 
@@ -46,24 +49,63 @@ For example you can get one that allows only 137-138 MHz for NOAA satellites.
 
 #### RTL-SDR V3
 
-- R828D or R820T tuner chip
-- triplexed input filter
+- R828D or R820T tuner chip.
+- Triplexed input filter.
+- Aluminium case with passive cooling.
+- SMA female connector.
+- RTL2832U chipset.
+- The maximum sample rate is 3.2 MS/s (mega samples per second).
 
 #### RTL-SDR V4
 
-TODO
+- Improved front-end filtering.
 
-## Weather Satellites
+## NOAA Weather Satellites
 
-Weather Satellites like NOAA transmit weather images continuously. As of now, NOAA-15, NOAA-18, and NOAA-19 are the only satellites transmitting images. 
+Weather Satellites like NOAA transmit weather images continuously. 
+As of now, NOAA-15, NOAA-18, and NOAA-19 are the only satellites transmitting images. 
 Keep in mind that the longevity of these transmissions is uncertain, and they may cease entirely in the near future. 
 
 They transmit Automatic Picture Transmission (APT) signals in the VHF band (around 137 MHz).
 The images received are grayscale; however, some software (like SatDump) can process them to add country boundaries and colors based on the location and time of capture.
 
+### Downlink Frequency Bands
+
 | Satellite | Frequency  |
 | --------- | ---------- |
-| NOAA-15   | 137.62 MHz |
+| NOAA-15   | 137.620 MHz |
+| NOAA-18   | 137.9125 MHz |
+| NOAA-19   | 137.100 MHz |
+
+### Automatic Picture Transmission
+
+The Automatic Picture Transmission (APT) system is an analog image transmission system used by NOAA satellites.
+
+From [Wikipedia](https://en.wikipedia.org/wiki/Automatic_picture_transmission):
+- It was introduced in the 1960s and over four decades has provided image data to relatively low-cost user stations at locations in most countries of the world.
+- The signal is continuously broadcast, with reception beginning at the start of the next line when the receiver is within radio range.
+- The bandwidth required to receive APT transmissions is approximately 34 kHz.
+
+### Image
+
+Raw NOAA images often appear grey and low contrast.
+Histogram equalization is a technique that can be used to improve the contrast of the image to enhance the details.
+
+### NOAA-15
+
+- 807 km above the Earth
+- Orbital period of 101 minutes.
+- It completes about 14 revolutions per day (`1440 minutes in one day / 101 minutes to do a single orbit`).
+- APT transmission frequency is 137.62 MHz. 
+
+### NOAA-18
+
+- Also known as NOAA-N or Advanced TIROS-N.
+- 854 km above the Earth.
+- Orbital period of 102 minutes.
+- APT downlink frequency is 137.9125 MHz (note that NOAA-18 changed frequencies with NOAA-19 on June 2009).
+- The spacecraft power is provided by the single solar array which is composed of eight panels of solar cells.
+- https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2005-018A
 
 ## Capturing Images from NOAA Satellites
 
@@ -167,7 +209,7 @@ Given the weather conditions, the signal was very noisy.
 
 TODO
 
-## Useful Scripts
+## Software
 
 ### OGG to WAV
 
@@ -177,16 +219,29 @@ for i in *.ogg; do
 done
 ```
 
-## IQ Signal
+### SDR++
+
+You can select different inputs like SDR, over network, file, etc.
+Select NFM.
+Bandwidth 50,000.
+Record Audio (instead of baseband).
+
+#### IQ Signal
 
 The IQ signal is raw samples from the SDR receiver that you can export to a file to be processed later.
 The SDR++ can export the IQ signal to a file.
 Real + Complex samples.
 
-### SDR++
+## GOES Satellites
 
-You can select different inputs like SDR, over network, file, etc.
+GOES satellites are geostationary, unlike NOAA satellites, which orbit around the Earth.
 
+### GOES-18
+
+The GOES-18 is the only one I am able to capture from Seattle, WA.
+Using Azimuthal coordinate system at Seattle, you can find it stationary at Azimuth +199 deg and Elevation +33 deg.
+To capture GOES signal, you may need to use a [parabolic reflector antenna targeting 1.7 GHz frequency](https://www.amazon.com/gp/product/B08HGQXC7C).
+Check [this great tutorial from usradioguy](https://usradioguy.com/goes-satellite-imagery-reception) on how to receive GOES signal.
 
 ## Next Steps
 
@@ -196,3 +251,4 @@ You can select different inputs like SDR, over network, file, etc.
 
 [ ] Capture images from GOES satellites
 
+[ ] Publish images to [satnog](https://network.satnogs.org/stations)
