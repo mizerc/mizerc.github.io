@@ -1,10 +1,18 @@
 ---
-date: 2025-05-22
-draft: true
-title: 'Bookmarks'
+date: 2025-07-07
+title: "Bookmarks"
+layout: "hidden"
+hidden: true
+showInMenu: false
+showInList: false
+headless: true
 ---
 
 ## Engineering
+
+a
+b
+c
 
 - [How Stuff Works](https://www.howstuffworks.com/)
 

@@ -22,7 +22,7 @@ The WebGL has limitation if we compare with modern OpenGL, but it is still offer
 The `<canvas>` element is the HTML element that we need to use to access the WebGL context.
 The WebGL context is the object that we will use define programs, shaders, buffers, etc.
 
-```js
+```text
 const canvas = document.querySelector("#canvas");
 const gl = canvas.getContext("webgl");
 ```

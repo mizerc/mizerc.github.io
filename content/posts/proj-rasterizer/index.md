@@ -8,11 +8,58 @@ draft: true
 # Introduction
 
 Computer graphics is one of my favorite topics in computer science.
-I always wanted to understand how computer graphics works under the hood.
-The algorithms and math necessary to create images from 3d geometry.
+Here I will try to document a bit of the math and algorithms necessary to build a simple engine that can render 3d models on the screen.
 
 The two main methods to create images from 3d geometry are rasterization and ray tracing.
-Here I want to explore the rasterization method.
+On this post I will focus on the rasterization method.
+<!-- If you are interested in ray tracing, you can check [this post](). -->
+
+# Vector
+
+We normally use a three dimensional vector to represent a point in space.
+It has three components: x, y, and z.
+Each component is a float number.
+You can use single precision (32 bits) or double precision (64 bits) to represent the vector.
+
+Using math notation, we can represent a vector as:
+
+$$
+\begin{bmatrix}
+x \\\
+y \\\
+z
+\end{bmatrix}
+$$
+
+# Model
+
+We can call a model a collection of 3d points defined in local space that is built using a software like Blender.
+We group each three points to form a face/triangle.
+And we group faces into a entity called mesh.
+Any 3d object can be represented by a collection of triangles called mesh, from a simple cube to a complex model like a human body.
+
+### Reading a model from a file
+
+Softwares like Blender can export the model in a file format like OBJ.
+It can be a text file that you can open with a text editor to see the vertices and faces.
+There are also binary formats like FBX that can include more data like textures, materials, and animations.
+
+If your file is using the same 3d point multiple times, it may be benefical using the idea of indices.
+The indices are a list of numbers that point to a resubable vertex.
+This helps to reduce the size of the file and to avoid rewritting the same vertex multiple times.
+
+Besides indices and vertices, a 3D model file can also include vertex normals, face normals, texture coordinates, and transformations such as translation, rotation, and scaling.
+
+# Camera
+
+The camera is the point of view from which we are looking at the scene.
+It is defined by a position, a look at point, and an up vector.
+We can have multiple cameras in the scene, each one with its own position, look at point, and up vector.
+
+# Scene
+
+We can think of a scene as a collection of models, lights, and cameras.
+It is the data structure that holds all the information necessary to render the scene.
 
 # Transformations
 
@@ -51,7 +98,7 @@ w'
 x \\\
 y \\\
 z \\\
-1
+w
 \end{bmatrix}
 $$
 
@@ -112,7 +159,9 @@ This projection simulates the human eye's perspective, where objects appear smal
 
 This proijection preserves size regardless of depth, parallel lines stay parallel.
 
-# Culling & Clipping
+# Optimization
+
+## Culling & Clipping
 
 To avoid rendering objects that are not visible, we can use the culling and clipping techniques.
 Culling is the process of removing *entire* objects that are not visible from the scene.

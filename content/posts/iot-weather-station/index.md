@@ -7,7 +7,7 @@ tag: ["iot", "weather"]
 
 ## Introduction
 
-Here I will document the process of building a simple weather station using the `HiLetgo ESP-32D Development Board` and the `BME280` sensor.
+Notes about the process of building a simple weather station using the `HiLetgo ESP-32D Development Board`, the `BME280` sensor, and a `4 inch TFT Display`.
 
 ## Product Specs
 
@@ -18,8 +18,10 @@ Here I will document the process of building a simple weather station using the 
 
 ## Setup
 
-I got the HiLetgo ESP-32D Development Board from Amazon.
-For more info about how to setup the board, see [esp32.md](esp32.md).
+### ESP32
+
+I will be using the `HiLetgo ESP-32D Development Board`.
+It is a development board that comes with a `ESP32-D0WD-V3` microcontroller, a USB-C connector with serial communication, a voltage regulator, and a few other components.
 
 ### BME280
 
@@ -40,8 +42,9 @@ TBD
 
 ## Code
 
-I am using the `Arduino IDE` to program the microcontroller.
 We need a few libraries to be able to use the `BME280` sensor and the `TFT Display`.
+I am using the `Arduino IDE` to download the libraries and to program the microcontroller.
+The libraries are available in the `Arduino Library Manager`.
 
 ## Power Supply
 

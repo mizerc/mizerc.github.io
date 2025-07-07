@@ -6,6 +6,8 @@ theme: ['PaperMod']
 params:
   custom_css: ["custom.css"]
   hideMeta: true
+  showToc: true
+  ShowBreadCrumbs: true
   math: true
   homeInfoParams:
     Title: Hello, I'm Mauricio

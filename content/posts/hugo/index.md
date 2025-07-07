@@ -54,7 +54,7 @@ hugo new content content/posts/my-post-folder/index.md
 If you are having issues with the generated site, you can try cleaning the destination directory:
 
 ```bash
-hugo clean --cleanDestinationDir
+hugo --cleanDestinationDir
 ```
 
 ### Serving Locally
@@ -64,6 +64,13 @@ You can run hugo locally with a simple `hugo server` command. Use `--buildDrafts
 ```bash
 hugo server --buildDrafts
 ```
+
+## PaperMod
+
+### Override Theme Files
+
+Copy from `themes/foo/layouts/index.html` and paste it in `layouts/index.html`.
+See [Override a Hugo Theme](https://zwbetz.com/override-a-hugo-theme/) for more information.
 
 ## Post Content
 
@@ -88,7 +95,8 @@ draft: false
 ### Images
 
 We can insert images using markdown syntax: `[Image Description](image.png)`.
-You can also add an image using `{ {<figure src="image.png" caption="Image Description" class="center">}}` syntax.
+You can also add an image using `{ {<figure src="image.png" caption="Image Description" class="center" align=center>}}` syntax.
+Use `align=center` to center image with captions.
 
 Edit `themes/PaperMod/assets/css/common/post-single.css` to change the default image styling.
 You can edit the selector `.post-content img[src*="#center"]` to change the style of images that have the `#center` flag in the src attribute. Or the selector `.post-content figure > figcaption` to change the style of the caption of the images.

@@ -14,11 +14,12 @@ I hold a Bachelor's degree in Computer Engineering from the [Federal University 
 
 ### About This Website
 
-This is a collection of in-progress notes on random topics. 
-Writing never was my strong suit, but on May 21, 2025, I challenged myself to start writing and publishing notes about different subjects.
+This is a growing collection of my exploration notes on a variety of random topics.
+It is far from complete, I tend to revisit there subjects from time to time and add more thoughts, findings or questions as I explore them.
+If you have questions or want to fix any errors, please let me know at [contact@mauricioize.dev](mailto:contact@mauricioize.dev).
 
 I have a genuine curiosity about how things works under the hood, and as a hobby of mine I enjoy building things from scratch.
-If not in a professional environment, I believe that trying to inventing the wheel is a great way to truly understand the challenges and steps necessary to build something.
+If not in a professional environment, I believe that trying to inventing the wheel is a great way to truly understand the challenges and steps necessary to build something. 
 I will try to document some of the process in this space.
 
 Stay curious, keep building, and share.
