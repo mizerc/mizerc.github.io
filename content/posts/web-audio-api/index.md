@@ -1,7 +1,7 @@
 ---
 date: '2024-05-22'
 draft: false
-tags: ['audio']
+tags: ['web', 'audio']
 title: 'Web Audio API'
 ---
 

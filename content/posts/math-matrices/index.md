@@ -2,7 +2,7 @@
 date: '2025-05-22'
 draft: true
 title: 'Matrices'
-tags: ['math']
+tags: ['math', 'linear-algebra', 'computer-graphics']
 ---
 
 Matrices are structures that condense multiple numbers into a single entity allowing us to perform operations on them as a whole.

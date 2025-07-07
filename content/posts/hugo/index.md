@@ -16,46 +16,54 @@ In macOS, you can install Hugo using Homebrew:
 
 ### Adding Theme
 
-To add a theme, you can just clone the repository and update the `hugo.yaml` file to include the theme.
+After installing Hugo, you can add a theme to your site.
 
-```
+To add a theme, you can just clone the repository to `themes/<theme-name>`:
+
+```bash
 git clone https://github.com/adityatelange/hugo-PaperMod themes/PaperMod --depth=1
+```
+
+Then, update the `hugo.yaml` file to include the theme:
+
+```yaml
+theme: ['PaperMod']
 ```
 
 Update theme key in `hugo.yaml` to be `theme: ['PaperMod']`.
 
 ### Adding New Post
 
-To create a new post, you can use the `hugo new` command.
+You can create a new post by using a single markdown file.
+For bigger posts, you can create a folder with multiple markdown files.
 
-```text
-// Single file post
+To create a single file post:
+
+```bash
 hugo new content content/posts/my-post-title.md
+```
 
-// Folder post with multiple markdown files
+To create a folder post with multiple markdown files:
+
+```bash
 hugo new content content/posts/my-post-folder/index.md
 ```
 
 ### Troubleshooting
 
-- `hugo --cleanDestinationDir`
+If you are having issues with the generated site, you can try cleaning the destination directory:
 
-### Modifying the Theme
-
-- You can adjust h1, h2, h3, etc. in `/static/custom.css`
-- You can add Google Fonts header in `public/index.html`
-- You can adjust styling of the post *title* by updating selector `.post-title` in `themes/PaperMod/assets/css/common/post-single.css`.
-- You can add a new HTML element to the post template by updating `themes/PaperMod/layouts/_default/single.html`
-
-## Running
+```bash
+hugo clean --cleanDestinationDir
+```
 
 ### Serving Locally
 
-```
+You can run hugo locally with a simple `hugo server` command. Use `--buildDrafts` flag to include posts with `draft: true` in the front matter.
+
+```bash
 hugo server --buildDrafts
 ```
-
-Use `--buildDrafts` flag to include posts with `draft: true`.
 
 ## Post Content
 
@@ -72,21 +80,45 @@ draft: false
 ---
 ```
 
-### Linking between md files inside a single post
+### Linking between markdown files inside a single post
 
 - Using relref: `{{</* relref "my-post-title" */>}}` to link to another post.
 - Using relative link: ` [The link text]``(./my-post-title) ` to link to another post or go-back like `[`Back to Main]`(./)`.
 
 ### Images
 
-We can use images in markdown files.
-We can use the `[Image Description](image.png)` syntax to add an image.
+We can insert images using markdown syntax: `[Image Description](image.png)`.
+You can also add an image using `{ {<figure src="image.png" caption="Image Description" class="center">}}` syntax.
+
+Edit `themes/PaperMod/assets/css/common/post-single.css` to change the default image styling.
+You can edit the selector `.post-content img[src*="#center"]` to change the style of images that have the `#center` flag in the src attribute. Or the selector `.post-content figure > figcaption` to change the style of the caption of the images.
+
+### Heading
+
+- You can adjust h1, h2, h3, etc in `/static/custom.css`
+- You can adjust styling of the post *title* by updating selector `.post-title` in `themes/PaperMod/assets/css/common/post-single.css`.
+
+### Fonts
+
+- You can add Google Fonts header in `public/index.html`
+
+### Post Template
+
+- You can add a new HTML element to the post template by updating `themes/PaperMod/layouts/_default/single.html`
+
+### Canvas
+
+We can use HTML5 Canvas to draw graphics.
+But we first need to update Hugo settings to enable it.
+
 
 ### Latex
 
 We can use Latex in markdown files.
 
-#### Matrix
+#### Matrices
+
+Write the following in your markdown file:
 
 ```latex
 \\(
@@ -96,6 +128,7 @@ We can use Latex in markdown files.
 \end{bmatrix}
 \\)
 ```
+To render the matrix:
 
 \\(
 \begin{bmatrix}
@@ -104,7 +137,9 @@ c & d
 \end{bmatrix}
 \\)
 
-### Symbols
+You can also use symbols like `\Theta` to render symbols like the greek letter theta:
+
+Latex syntax:
 
 ```latex
 \\(
@@ -112,31 +147,35 @@ c & d
 \\)
 ```
 
+Result:
+
 \\(
 \Theta
 \\)
+
+To strike through text, you can use `\xcancel{text}`:
 
 ```latex
 \\(
 \xcancel{ABC}
 \\)
-
 ```
+
+Result:
 
 \\(
 \xcancel{ABC}
 \\)
 
-### HTML5 Canvas
 
-We can use HTML5 Canvas to draw graphics.
-But we first need to update Hugo settings to enable it.
-
-## Introduction
+## Under the Hood
 
 Hugo is a static site generator written in Go.
+You write your content in markdown files, define templates using themes, and do some configuration in a `hugo.yaml` file.
+Then, Hugo will generate a static HTML site for you.
 
 ![Hugo](hugo.png#center)
+
 
 ### Markdown Rendering
 

@@ -2,7 +2,7 @@
 date: "2025-06-16"
 draft: false
 title: "Weather Station"
-tag: ["iot"]
+tag: ["iot", "weather"]
 ---
 
 ## Introduction

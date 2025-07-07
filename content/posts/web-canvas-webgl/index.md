@@ -1,8 +1,8 @@
 ---
 date: "2025-05-21"
 title: "WebGL"
-tags: ["webgl", "graphics"]
-draft: false
+tags: ["web", "computer-graphics"]
+draft: true
 ---
 
 # Introduction
@@ -91,15 +91,6 @@ TODO
 
 TODO
 
-## 3D Transformations
-
-We can apply transformations to the 3D object using matrices. The `modelView` matrix is the matrix that transforms the vertices of the 3D object to the world space.
-
-It is a combination of the `model` matrix and the `view` matrix. Every time we render the scene, we need to multiply each visible vertex of the 3D object by the `modelView` matrix. Note the work 'visible', more about this when we talk about the clipping.
-
-The `model` matrix is the collection of all the transformations applied to the 3D object like translation, rotation, and scaling.
-
-The `view` matrix is the camera matrix, often we build it using the `lookAt` function.
 
 ## Architecture
 
