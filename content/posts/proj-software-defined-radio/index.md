@@ -243,6 +243,40 @@ Using Azimuthal coordinate system at Seattle, you can find it stationary at Azim
 To capture GOES signal, you may need to use a [parabolic reflector antenna targeting 1.7 GHz frequency](https://www.amazon.com/gp/product/B08HGQXC7C).
 Check [this great tutorial from usradioguy](https://usradioguy.com/goes-satellite-imagery-reception) on how to receive GOES signal.
 
+## Antenna Theory
+
+### Antenna Capacitance and Inductance
+
+Adding coils increase inductance, while adding perpendicular wires increase capacitance.
+Both lower the resonate frequency. 
+The trade offs are in efficiency and radiation pattern.
+
+Excess capacitance can detune the antenna away from the desired resonant frequency, requiring additional inductive load or tuning methods to achieve the target frequency.
+
+Coils add resistance to the antenna, which cause some of the energy be lost as heat.
+
+### Antenna Ressonance Frequency
+
+The antenna has a ressonance frequency to which it will convert electromagnetic waves to voltage/current best.
+It also needs to match the impedance the radio circuits expect.
+Impedance is just the ratio of voltage to current.
+It is like matching the right gear in the car to extract the max power from the engine.
+
+### Antenna Beamwidth
+
+### Impedance
+
+Unlike resistance, the impedance will vary with frequency.
+
+### Coax
+
+The length of the coax cable will limit how much power, at a given frequency, you can pump through it before some kind of failure.
+Power vs Signal.
+
+### Tools 
+
+- NanoVNA
+
 ## Next Steps
 
 [ ] Automatize image capture, processing and upload with raspberry pi

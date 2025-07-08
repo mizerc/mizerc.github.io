@@ -52,12 +52,17 @@ F = G * (m1 * m2) / r^2
 
 ## Integration
 
+Numerical integration methods are used to update positions and velocities over discrete time, since analytical solutions are not practical.
+Usually it is a trade off between speed vs. accuracy vs. stability
+
 ### Explicit Euler method
 
 ```math
 v_{n+1} = v_n + a_n * dt
 x_{n+1} = x_n + v_n * dt
 ```
+
+### Semi-Implicit Euler (a.k.a. Symplectic Euler)
 
 ### Forward Euler method
 
@@ -72,7 +77,7 @@ Angular_acceleration_{n+1} = (T_n / I)
 Angular_velocity_{n+1} = Angular_velocity_{n} + Angular_acceleration_{n+1} * dt
 Orientation_{n+1} = Orientation_n + Angular_velocity_{n+1} * dt
 ```
-### Runge-Kutta method
+### Runge-Kutta method (RK4)
 
 ```math
 Acceleration_{n+1} = (F_n / m)

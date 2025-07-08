@@ -189,3 +189,40 @@ We can use the DDA algorithm to rasterize a line.
 
 The next shape to rasterize is a triangle.
 We can use the scanline algorithm to rasterize a triangle.
+
+# Vertex & Face Normal
+
+The face normal can be computed from the winding of the face vertexes using right hand rule.
+
+The vertex normal can be computed from the normal of each neighboor face normal.
+
+# Shading
+
+How surface respond to light.
+
+Diffuse reflection of light caused by irregular surface.
+Light rays are reflected to all directions.
+Sunrise and sunset have a difuse behavior.
+A big area lamp creates a difuse light.
+
+Specular reflection is caused by a smooth surface.
+A shine metal surface has a high specular reflection than rubber surface.
+A concentrated highlight spot on a metallic surface.
+
+## Flat Shading
+
+The entire face is painted with one single solid color.
+
+## Gouraud Shading
+
+Each vertex of the triangle has a color.
+We interpolate the color using barycenter coordinates as we paint the triangle.
+Each pixel receives a unique color from the interpolation.
+Create smooth surfaces.
+
+## Phong Shading
+
+Interpolate the normal across the surface of the triangle.
+Same reasoning used to interpolate color in Gouraud, but now applied to the normal.
+
+## Blinn-Phong

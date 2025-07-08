@@ -5,25 +5,26 @@ tags: ["hugo"]
 draft: false
 ---
 
-## Setup
+Hugo is a static site generator developed in Go.
+You write pure plain markdown text files, and Hugo build the HTML website for you.
 
 ### Installation
 
-In macOS, you can install Hugo using Homebrew:
+In macOS, you can install Hugo using Homebrew.
 
 - `brew update`
 - `brew install hugo`
 
-### Creating New Project
+### Creating New Site
+
+To create a fresh new site, you can use Hugo CLI:
 
 ```
 hugo new site mysite
 cd mysite
 ```
 
-### Setting Theme
-
-After installing Hugo, you can add a theme to your site.
+### Adding Theme
 
 To add a theme, you can just clone the repository to `themes/<theme-name>`:
 
@@ -37,12 +38,10 @@ Then, update the `hugo.yaml` file to include the theme:
 theme: ['PaperMod']
 ```
 
-Update theme key in `hugo.yaml` to be `theme: ['PaperMod']`.
-
 ### Creating New Post
 
-You can create a new post by using a single markdown file.
-For bigger posts, you can create a folder with multiple markdown files.
+You can create a new post manually by creating the .md file and manually writing the front matter.
+Another option is using the Hugo CLI:
 
 To create a single file post:
 

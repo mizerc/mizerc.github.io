@@ -2,7 +2,6 @@
 date: "2025-05-21"
 draft: true
 title: "Vectors"
-tags: ["math"]
 ---
 
 # Definition
