@@ -1,6 +1,6 @@
 ---
 date: '2025-05-19'
-draft: false
+draft: true
 title: 'Ray Tracing'
 tags: ['graphics']
 ---

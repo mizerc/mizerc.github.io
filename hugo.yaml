@@ -18,8 +18,6 @@ params:
     url: "https://www.linkedin.com/in/izemauricio/"
   - name: github
     url: "https://github.com/mizerc/"
-  - name: instagram
-    url: "https://www.instagram.com/mizecollection/"
 menu:
   main:
     - identifier: home

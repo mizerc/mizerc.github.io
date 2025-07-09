@@ -1,3 +1,10 @@
+---
+date: '2024-05-22'
+draft: true
+title: 'IOT Rasterizer Benchmark'
+tags: ['graphics']
+---
+
 # Introduction
 
 In this little project, the goal is to use a simple microcontroller to rasterize a 3d model on a screen.

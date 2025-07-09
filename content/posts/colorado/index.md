@@ -1,6 +1,6 @@
 ---
 date: '2025-07-08'
-draft: false
+draft: true
 title: 'Colorado'
 ---
 
