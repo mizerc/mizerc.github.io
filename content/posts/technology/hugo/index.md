@@ -289,3 +289,14 @@ For example, you can add `math.html` to handle math equations using some Latex l
 Contains the default layout for the site.
 
 ##### /layouts/\_default/\_markup
+
+# Analytics
+
+To add analytics to your Hugo website, assuming your current theme doesn't support it automatically by just updating the settings in hugo.yaml, do the following:
+
+- Go to analytics.google.com
+- Create your project/analytics account
+- Copy the javascript code provided by Google
+- Create a partial file called analytics in hugo_root/layout/partials/google/analytics.html
+- Paste the code there, save, close
+- Include the partial in your theme, for PaperMod, include `{{ - partial "extend_head.html" . -}}` at `themes/PaperMod/layouts/partials/head.html`.
