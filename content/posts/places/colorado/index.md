@@ -2,6 +2,7 @@
 date: '2025-07-08'
 draft: true
 title: 'Colorado'
+tags: ['places']
 ---
 
 # Great Sand Dunes National Park

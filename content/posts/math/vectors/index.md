@@ -4,6 +4,24 @@ draft: true
 title: "Vectors"
 ---
 
+We normally use a three dimensional vector to represent a point in 3d space.
+It has three components: x, y, and z.
+
+In programming, we can model each component using a floating point.
+You can use single precision (32 bits) or double precision (64 bits) to represent the vector.
+
+Using math notation, we can represent a vector as:
+
+$$
+\begin{bmatrix}
+x \\\
+y \\\
+z
+\end{bmatrix}
+$$
+
+
+
 # Definition
 
 In math, a vector is object that has a magnitude and a direction. 

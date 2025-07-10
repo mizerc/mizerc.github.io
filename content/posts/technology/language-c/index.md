@@ -2,7 +2,7 @@
 date: "2025-05-11"
 draft: false
 title: "C Language"
-tags: ["programming"]
+tags: ["language"]
 ---
 
 Random notes about the C language.

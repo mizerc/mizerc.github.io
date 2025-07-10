@@ -2,7 +2,7 @@
 date: "2025-06-16"
 draft: false
 title: "Weather Station"
-tag: ["iot", "weather"]
+tags: ["iot"]
 ---
 
 For a long time, I have wanted to build a custom weather station to display specific information on a screen. 

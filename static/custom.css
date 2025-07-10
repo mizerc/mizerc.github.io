@@ -1,3 +1,4 @@
+/* a */
 /* h1 { */
 /* font-family: "Times New Roman", Times, serif; */
 /* text-transform: uppercase; */
@@ -8,18 +9,10 @@
 /* padding-bottom: 44px; */
 /* } */
 
-h1 {
-  color: #132b3e;
-}
+/* h1 { */
+  /* color: #132b3e; */
+/* } */
 
-h2 {
-  /* padding-top: 16px; */
-  color: #334547;
-}
-
-h3 {
-  color: #506D64;
-}
 
 /* @media (prefers-color-scheme: dark) {
   h3 {

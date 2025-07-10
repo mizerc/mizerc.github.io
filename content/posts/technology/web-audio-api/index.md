@@ -7,6 +7,8 @@ title: 'Web Audio API'
 
 Modern web browsers support the Web Audio API, which allows us to create and manipulate audio streams.
 
+# Basics
+
 ## Audio Context
 
 The `AudioContext` object is the main entry point for the Web Audio API.
@@ -21,11 +23,12 @@ It kind remember me those Modular Synthesizers from the old days where you can p
 
 ![modular synthesizer](modular-synth.png#center)
 
-## Nodes
+# Nodes
 
 ### Oscillator Node
 
 The `OscillatorNode` allows us to generate a periodic waveform, such as a sine wave, square wave, or triangle wave.
+You can use the `setValueAtTime` to change properties.
 
 ### Gain Node
 
@@ -46,16 +49,39 @@ Note that you can't automatically access the microphone like inside a onLoad eve
 For security and privacy reasons, it is necessary a user interaction to start the request.
 On the same reasoning, you can connect the microphone to the audio chain to send the audio stream to the next node.
 
-## Audio Processing
+# Audio Processing
 
-One great thing about the Web Audio API is that we can process the audio stream in real time. 
+One great thing about the Web Audio API is that we can process the audio stream in real time.
 The old way is using the `ScriptProcessorNode` interface. 
 The modern way to do this is to use the `AudioWorklet` interface.
 The problem with the last one is that it runs in the main thread, so it can suffer from performance issues.
 The `AudioWorklet` instead runs in a separate thread, so it avoid blocking the main thread, but on the other hand it requires a bit more of boilerplate code to set up.
-
 If we need to send data between the main thread and the audio thread, we need to use the messaging approach.
 
-## MIDI
+## Audio Worklet
+
+- Runs in a different thread from the main js thread.
+  
+## ScriptProcessorNode
+
+- Runs in the main thread, the same JS thread. 
+
+## Audio Buffer
+
+Creating an audio buffer is useful for static playback.
+You can't change the buffer on the fly.
+You cannot modify the buffer while it's playing.
+AudioBuffer is just a memory buffer holding precomputed samples.
+
+To "change frequency" dynamically, you'd need to:
+- stop the old node
+- generate a new buffer
+- create a new source
+- start it again
+This causes audible glitches or gaps. It’s not smooth or continuous.
+
+AudioBufferSourceNode plays it once.
+
+# MIDI
 
 The MIDI is a protocol that allows us to send and receive MIDI messages. It is a digital protocol that allows us to send and receive MIDI messages between devices. Several devices like keyboards, synthesizers, and controllers can speak MIDI.

@@ -59,6 +59,13 @@ We can build the view matrix directly.
 
 ## Yaw Pitch Roll
 
+## Light 
+
+- Position, direction
+- Type: Directional, Point, Spot, Area
+- Intensity (RGB), attenuation
+- Shadow casting flags
+
 # Transformations
 
 We can use matrices as a well defined structure to do transformations.
@@ -405,43 +412,6 @@ Shadow Mapping is another technique to create shadows in a rasterizer.
 ## Text Rendering
 
 - 16x16 Bitmap font
-
-# Linear Algebra
-
-## Vector
-
-We normally use a three dimensional vector to represent a point in space.
-It has three components: x, y, and z.
-Each component is a float number.
-You can use single precision (32 bits) or double precision (64 bits) to represent the vector.
-
-Using math notation, we can represent a vector as:
-
-$$
-\begin{bmatrix}
-x \\\
-y \\\
-z
-\end{bmatrix}
-$$
-
-## Matrices
-
-TODO
-
-## Geometric
-
-### Spherical coordinates
-
-### Barycentric coordinates
-
-### Distance between two points
-
-### Line Equation
-
-### Plane Equation
-
-### Circle Circle Collision
 
 # Reference
 

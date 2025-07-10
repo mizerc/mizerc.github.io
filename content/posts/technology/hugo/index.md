@@ -4,38 +4,25 @@ date: 2025-05-22
 tags: ["hugo"]
 draft: false
 ---
+# Hugo
 
 Hugo is a static site generator developed in Go.
 You write pure plain markdown text files, and Hugo build the HTML website for you.
 
-### Installation
+### Installing Hugo in your System
 
 In macOS, you can install Hugo using Homebrew.
 
 - `brew update`
 - `brew install hugo`
 
-### Creating New Site
+### Creating New Hugo Project
 
 To create a fresh new site, you can use Hugo CLI:
 
 ```
 hugo new site mysite
 cd mysite
-```
-
-### Adding Theme
-
-To add a theme, you can just clone the repository to `themes/<theme-name>`:
-
-```bash
-git clone https://github.com/adityatelange/hugo-PaperMod themes/PaperMod --depth=1
-```
-
-Then, update the `hugo.yaml` file to include the theme:
-
-```yaml
-theme: ['PaperMod']
 ```
 
 ### Creating New Post
@@ -71,14 +58,30 @@ You can run hugo locally with a simple `hugo server` command. Use `--buildDrafts
 hugo server --buildDrafts
 ```
 
-## PaperMod
+# PaperMod
+
+PaperMod is just a option of theme for Hugo.
+
+### Adding Theme
+
+To add a theme, you can just clone the repository to `themes/<theme-name>`:
+
+```bash
+git clone https://github.com/adityatelange/hugo-PaperMod themes/PaperMod --depth=1
+```
+
+Then, update the `hugo.yaml` file to include the theme:
+
+```yaml
+theme: ['PaperMod']
+```
 
 ### Override Theme Files
 
 Copy from `themes/foo/layouts/index.html` and paste it in `layouts/index.html`.
 See [Override a Hugo Theme](https://zwbetz.com/override-a-hugo-theme/) for more information.
 
-## Post Content
+# Post Content
 
 ### Front Matter
 
@@ -92,6 +95,10 @@ tags: ['tag1', 'tag2']
 draft: false
 ---
 ```
+
+### Inserting md file into current md
+
+{{< includemd "./piece.md" >}}
 
 ### Linking between markdown files inside a single post
 
@@ -107,26 +114,42 @@ Use `align=center` to center image with captions.
 Edit `themes/PaperMod/assets/css/common/post-single.css` to change the default image styling.
 You can edit the selector `.post-content img[src*="#center"]` to change the style of images that have the `#center` flag in the src attribute. Or the selector `.post-content figure > figcaption` to change the style of the caption of the images.
 
-### Heading
-
-- You can adjust h1, h2, h3, etc in `/static/custom.css`
-- You can adjust styling of the post *title* by updating selector `.post-title` in `themes/PaperMod/assets/css/common/post-single.css`.
-
 ### Fonts
 
-- You can add Google Fonts header in `public/index.html`
+You can add Google Fonts header in `public/index.html`.
 
-### Post Template
+# Extending
 
-- You can add a new HTML element to the post template by updating `themes/PaperMod/layouts/_default/single.html`
+### Modifying Theme
 
-### Canvas
+To override PaperMod behavior without touching the theme:
+Copy the file from themes/PaperMod/layouts/... to your project’s /layouts/....
+Modify it there—Hugo will prioritize your version.
+
+### Modifying CSS
+
+#### Headings
+
+You can adjust h1, h2, h3, etc in `/static/custom.css`.
+
+#### Tags
+
+The HTML file that include the tags at bottom of each page is located at `themes/PaperMod/layouts/_default/single.html`.
+
+#### Post Title 
+
+You can adjust styling of the *title* of the post by updating the selector `.post-title` in `themes/PaperMod/assets/css/common/post-single.css`.
+
+### Modifying the HTML structure
+
+You can add a new HTML element to the post template by updating `themes/PaperMod/layouts/_default/single.html`
+
+### Adding Canvas Support
 
 We can use HTML5 Canvas to draw graphics.
 But we first need to update Hugo settings to enable it.
 
-
-### Latex
+### Adding Latex Support
 
 We can use Latex in markdown files.
 
@@ -182,7 +205,7 @@ Result:
 \\)
 
 
-## Under the Hood
+# Under the Hood
 
 Hugo is a static site generator written in Go.
 You write your content in markdown files, define templates using themes, and do some configuration in a `hugo.yaml` file.
@@ -190,15 +213,14 @@ Then, Hugo will generate a static HTML site for you.
 
 ![Hugo](hugo.png#center)
 
-
-### Markdown Rendering
+## Markdown Rendering
 
 Hugo uses `Goldmark` as the Markdown parser.
 Files with ending with `.md`, `.mdown`, or `.markdown` are processed as Markdown.
 
 Documentation: https://gohugo.io/configuration/markup/
 
-### HTML Templates
+## HTML Templates
 
 Inside the .html files you will notice a template syntax.
 Templates use variables, functions, and methods to transform the markdown content into a published page.
@@ -207,40 +229,63 @@ Hugo uses the Go [html/template](https://pkg.go.dev/html/template) and [text/tem
 
 Documentation: https://gohugo.io/templates/introduction/
 
-### Directory Structure
+## Directory Structure
 
 #### /hugo.toml
 
-Contains the configuration for the site.
+The main configuration file of Hugo.
 
-#### /public
+#### /public/*
 
 Contains the generated site ready to be published.
+Once Hugo finishes to build your website from markdown files, it will put the generated HTML files in this folder.
 
-#### /content
+#### /content/*
 
-The content folder contains the content as markup files (markdown) and assets of your site.
+The content folder contains the markdown files that you write for each post.
 
-#### /layouts
+#### /static/*
 
-Contains the HTML templates for the site.
+In Hugo, the /static folder is used to store static assets—files that should be served as-is without any processing or templating.
+Everything in /static is copied verbatim to the public folder during build.
+If you have static/images/logo.png, it will be available at example.com/images/logo.png.
 
-#### /layouts/\_default/baseof.html
+#### /themes/PaperMod
 
-The parent template.
-The index.html file content.
+This is the directory where the PaperMod theme is installed in your Hugo project.
+
+#### /layouts/*
+
+Here is where you can override PaperMod behavior without touching the theme files.
+You just copy the file from `themes/PaperMod/layouts/...` to `/layouts/...`.
+Then you modify the file in `/layouts/...` that Hugo will ignore the theme file.
+
+A fresh Hugo project will have a empty Layout folder.
+So Hugo will fallback to the Layout folder inside your theme at /themes/<themename>/layouts/
+
+### Layout Folder
+
+You have a layout folder inside the theme and you in your root folder.
+
+##### /layouts/\_default/baseof.html
+
+This is the root HTML file.
 The start point of the published site.
 Contains the base template where the other templates inherit from.
 
 It imports `header.html` and `footer.html` partials.
 
-#### /layouts/partials
+##### /layouts/shortcodes/*
+
+In Hugo, layouts/shortcodes/ is a special directory where you define custom shortcodes (reusable content snippets written in Go template syntax). These are mini-templates that you can call from within your Markdown files.
+
+##### /layouts/partials
 
 Contains the HTML for partial content.
 For example, you can add `math.html` to handle math equations using some Latex library like KaTeX.
 
-#### /layouts/\_default
+##### /layouts/\_default
 
 Contains the default layout for the site.
 
-#### /layouts/\_default/\_markup
+##### /layouts/\_default/\_markup
