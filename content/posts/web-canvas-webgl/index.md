@@ -47,9 +47,20 @@ We can pass data from the JavaScript code to the shaders using variables. We can
 
 #### Uniforms
 
-Uniforms are variables that are passed from the JavaScript code to the shaders. They are constant for the entire shader program.
+Uniforms are variables that are passed from the JavaScript code to the shaders. 
+They are constant for the entire shader program.
+They are per-primitive parameters.
+They are constant during an entire draw call.
 
 #### Attributes
+
+Attributes are per-vertex values.
+Often holding the model matrix, normals, colors, UV coordinates, etc.
+
+#### Varying
+
+They vary from pixel to pixel.
+They are per-fragment (aka per-pixel) values.
 
 TODO
 

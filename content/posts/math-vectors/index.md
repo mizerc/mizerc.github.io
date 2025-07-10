@@ -22,6 +22,8 @@ vec3 = [x, y, z]
 The `x`, `y`, and `z` are the components of the vector.
 
 
+# Length
+
 # Addition & Subtraction
 
 Addition and subtraction of vectors can be done by adding or subtracting the corresponding elements of the vectors.

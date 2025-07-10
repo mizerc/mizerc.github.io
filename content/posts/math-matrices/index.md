@@ -6,6 +6,8 @@ tags: ['math']
 ---
 Matrices are structures that organize numbers into a rectangular array, allowing operations to be performed on groups of values simultaneously.
 
+We can represent linear transformatinos using matrices.
+
 They are a foundational concept in linear algebra and are wide used in computer graphics where they are used for transformations, projections, and modeling spatial relationships.
 
 # Properties

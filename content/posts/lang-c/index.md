@@ -140,6 +140,16 @@ TODO
 
 We can pass functions to other functions.
 
+# Dynamic Array
+
+Creating a dynamic array in C is a good challenge.
+Being able to keep pushing new elements to the array without dealing with array size limit, resize, desalocation.
+
+- init
+- push
+- size
+- free
+
 # Reference
 
 [1] K&R 2nd Edition

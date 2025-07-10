@@ -15,23 +15,6 @@ On this post I will focus on the rasterization method.
 
 <!-- If you are interested in ray tracing, you can check [this post](). -->
 
-# Vector
-
-We normally use a three dimensional vector to represent a point in space.
-It has three components: x, y, and z.
-Each component is a float number.
-You can use single precision (32 bits) or double precision (64 bits) to represent the vector.
-
-Using math notation, we can represent a vector as:
-
-$$
-\begin{bmatrix}
-x \\\
-y \\\
-z
-\end{bmatrix}
-$$
-
 # Scene
 
 We can think of a scene as a collection of models, lights, and cameras.
@@ -49,6 +32,9 @@ Any 3d object can be represented by a collection of triangles called mesh, from 
 
 #### Reading a model from a file
 
+We can load a model from a file.
+The file can provide the list of vertexes, vertexes normal, face normal, texture coordinates.
+
 Softwares like Blender can export the model in a file format like OBJ.
 It can be a text file that you can open with a text editor to see the vertices and faces.
 There are also binary formats like FBX that can include more data like textures, materials, and animations.
@@ -64,6 +50,14 @@ Besides indices and vertices, a 3D model file can also include vertex normals, f
 The camera is the point of view from which we are looking at the scene.
 It is defined by a position, a look at point, and an up vector.
 We can have multiple cameras in the scene, each one with its own position, look at point, and up vector.
+
+The camera stay at origin, and we move the universe around.
+
+Technically the view matrix is the inverse of the camera "model" transformation.
+But we don't need to compute the inverse.
+We can build the view matrix directly.
+
+## Yaw Pitch Roll
 
 # Transformations
 
@@ -168,6 +162,31 @@ $$
 
 ### Rotation
 
+### Order of Transforms
+
+We first move to the origin using translation.
+Then we rotate.
+Then we move it back.
+
+Rotating after translating causes the object to orbit a point instead of rotating in place.
+
+For model transform you usually first scale, then rotate, then translate.
+
+If you want to rotate the mesh around a arbritary point, then 
+you need to scale, move to the point, rotate, return back.
+
+Matrix multiplication is right associative.
+M = T x R x S reads we apply S first, then R, then T.
+Doing the matrix-vector multiplication we read as `M x v = (T x R x S) x v = T x (R x (S x v))`.
+
+Combining all the transformation into a single matrice if efficient because we do the multiplication once.
+Often we combine the model and view matrix into the `modelView` matrice.
+We can also combine with the projection matrix.
+- v_world = Model x vertex
+- v_camera = View x Model x vertex
+- v_clip = Projection x View x Model x vertex
+
+
 ## View
 
 View Matrix transform from Model Space to View Space.
@@ -178,7 +197,8 @@ However, if we want to move or rotate the camera around the world, we need to us
 We can model the camera with a position, a look at point, and an up vector.
 The three properties are defined with vectors.
 
-### Projection
+
+## Projection
 
 Projection is the mathematical transformation that maps 3D coordinates to a 2D plane (the screen), simulating the perspective or orthographic view of a camera.
 
@@ -189,11 +209,14 @@ This projection simulates the human eye's perspective, where objects appear smal
 ### Orthographic
 
 This propjection preserves size regardless of depth, parallel lines stay parallel.
+When using orthographic, we don't need to do perspective division since we don't make things smaller as they are far away.
 
 ## Viewport
 
 The last transformation is to scale the normalized coordinates (x,y) of each vertex to the screen space.
 The screen space x component will be x times the canvas width.
+
+
 
 # Optimization
 
@@ -252,8 +275,15 @@ Rasterization is the stage in the graphics pipeline where projected 2D shapes (f
 
 ## Line Rasterization
 
+### DDA
+
 The simplest shape to rasterize is a line.
 We can use the DDA algorithm to rasterize a line.
+
+### Bresenham's line algorith
+
+- Fast than DDA.
+- Only use integer (no floating computation).
 
 ## Triangle Rasterization
 
@@ -265,12 +295,17 @@ We can use the scanline algorithm to rasterize a triangle.
 ## Face Normal
 
 The face normal can be computed from the winding of the face vertexes using right hand rule.
+Clockwise ordering.
 
 ## Vertex Normal
 
 The vertex normal can be computed from the averange of the normal of each face shared by the vertex.
 
 {{< figure src="./vertex-normal.png#center"width="70%">}}
+
+# Lighting
+
+## Diffuse reflection
 
 # Shading
 
@@ -288,32 +323,127 @@ A concentrated highlight spot on a metallic surface.
 ## Flat Shading
 
 The entire face is painted with one single solid color.
+No interpolation.
 
 ## Gouraud Shading
+
+Also know as "smooth shading" when compared with the previous flat shading.
+They have a smooth color transition from pixel to pixel.
 
 Each vertex of the triangle has a color.
 We interpolate the color using barycenter coordinates as we paint the triangle.
 Each pixel receives a unique color from the interpolation.
 Create smooth surfaces.
 
+We use the color of the three vertices of the triangle to compute the color of each pixel of the triangle by interpolating it on the surface.
+
+The Gouraud shading algorithm is named after Henri Gouraud.
+He first published the technique in 1971. 
+This lighening model compute the illuminated color at each pixel using barycenter interpolation to rasterize the surface/triangle.
+
 ## Phong Shading
 
+We use the normal of each vertex to interpolate the normal over the surface using barycenter coordinates.
+Then we compute light on each pixel/fragment.
 Interpolate the normal across the surface of the triangle.
 Same reasoning used to interpolate color in Gouraud, but now applied to the normals of each vertex.
+
+Phong shading improves Gouraud shading by providing a better approximation of the shading of a smooth surface.
+
+Phong Shading is named after Bui Tuong Phong.
+
+Phong = Ambient + Diffuse + Specular
 
 ## Blinn-Phong
 
 # Texture
 
+Texture is a image that you glue into the triangle.
+
+- UV coordinates.
+
 ## Normal Mapping
 
-# Shadow
+# Extra Topics
+
+## Shadow
 
 Computing shadow in a rasterizer is not straight forward as in a raytracer.
 We don't want to compute rays from the light to the objects.
 
-## Stencil Buffer
+### Stencil Buffer
 
-## Shadow Mapping
+### Shadow Mapping
 
 Shadow Mapping is another technique to create shadows in a rasterizer.
+
+## Reflection
+
+## Refraction
+
+## Skybox
+
+## Mouse Picker
+
+## Orbital Controller
+
+## Terrain Generator
+
+## Parallax
+
+## Loop Controller
+
+## Rigid Body Physics Engine
+
+- Cannonjs
+- Matterjs
+
+## GUI
+
+- Datgui
+
+## Text Rendering
+
+- 16x16 Bitmap font
+
+# Linear Algebra
+
+## Vector
+
+We normally use a three dimensional vector to represent a point in space.
+It has three components: x, y, and z.
+Each component is a float number.
+You can use single precision (32 bits) or double precision (64 bits) to represent the vector.
+
+Using math notation, we can represent a vector as:
+
+$$
+\begin{bmatrix}
+x \\\
+y \\\
+z
+\end{bmatrix}
+$$
+
+## Matrices
+
+TODO
+
+## Geometric
+
+### Spherical coordinates
+
+### Barycentric coordinates
+
+### Distance between two points
+
+### Line Equation
+
+### Plane Equation
+
+### Circle Circle Collision
+
+# Reference
+
+- https://learnopengl.com
+- http://courses.cms.caltech.edu/cs171/assignments/hw2/hw2-notes/notes-hw2.html

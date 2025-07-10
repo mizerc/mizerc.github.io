@@ -7,6 +7,8 @@ tags: ['graphics']
 
 If you're into computer graphics, there's a chance you've come across the famous [ray tracing in one weekend](https://raytracing.github.io/books/RayTracingInOneWeekend.html).
 
+With raytracing you naturally get realistic ligheting, shadow, refraction and reflection.
+
 ### Algorithm
 
 In a rough way, the overwall algorithm goes like this
