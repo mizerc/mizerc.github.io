@@ -2,6 +2,7 @@
 date: '2014-01-01'
 title: 'Fractals'
 tag: ['fractals']
+draft: true
 ---
 
 The basic idea to create a fractal is to use a formula to check how stable the computation is.

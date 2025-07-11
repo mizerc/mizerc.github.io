@@ -11,9 +11,17 @@ tags: ['places']
 
 ## Mt Baker
 
+The second-most thermally active crater in the Cascade Range after Mount St. Helens.
+
 ### Lake Shannon
 
+Lake Shannon is a long, narrow reservoir on the Baker River.
+
 ### Artist Point
+
+The Artist Point is located at the very end of Mount Baker Highway.
+This trailhead offers seasonal hiking with views of Mount Shuksan & Baker.
+Artist Point typically opens in late June or early July and remains open until the first substantial snowfall of the year in early October.
 
 ## North Cascades National Park
 
@@ -22,9 +30,32 @@ It features sharp granite spires, glaciers, deep valleys, and dense conifer fore
 
 In geology, spires are tall, narrow, pointed rock formations usually the result of erosion and glacial carving acting on hard bedrock, like granite.
 
-### Ross Lake
+### Crossing the Park thry Highway 20
+
+Starting from Burlington and arriving at Twisp thru Highway 20.
+
+{{< figure src="./photos/map.png#center" caption="Image from Google Maps." width="90%">}}
+
+### North Cascades National Park West Entrance
+
+### Gorge Powerhouse
 
 ### Diablo Lake
+
+{{< figure src="./photos/diablo-lake.png#center" caption="Colonial Peak and Diablo Lake from Diablo Lake Vista Point looking southwest. Photo by author." width="70%">}}
+
+Diablo Lake is a reservoir in the North Cascades of Washington State, known for its turquoise color caused by glacial flour suspended in the water.
+It's located within North Cascades National Park and is part of the Skagit River Hydroelectric Project.
+
+The `Diablo Lake Overlook` is accessible via Highway 20.
+From the view point you can the lake and a few mountains like the `Colonial Peak`.
+
+### Ross Lake
+
+{{< figure src="./photos/ross-lake.png#center" caption="Ross Lake from Ross Lake Overlook. Photo by author, June 2025." width="70%">}}
+
+The Ross Lake is a 23‑mile-long hydroelectric reservoir.
+The Ross Lake Overlook is located at `48.728275, -121.041469`.
 
 ### Washington Pass Vista Point
 
@@ -32,7 +63,7 @@ Washington Pass Vista Point, also known as Washington Pass Overlook, sits at an 
 
 It provides panoramic views of legendary peaks like `Liberty Bell Mountain`, the `Early Winters Spires`, the `Vasiliki Ridge`, as well as the winding of the Highway 20 which crosses the National Park.
 
-{{< figure src="./photos/north-cascades.png#center" caption="View of the Vasiliki Ridge from the view point. Photo by author" width="70%">}}
+{{< figure src="./photos/north-cascades.png#center" caption="View of the Vasiliki Ridge from the view point looking east. Photo by author, June 2025." width="70%">}}
 
 There is a parking spot and you just need to walk less than a mile to access the "balcony" to be able to see the panoramic view.
 
@@ -81,7 +112,7 @@ Aslo the difference between canyon and gorge is that the last is essentially a n
 
 You can access the Frenchman Coulee via the Exit 143 on the I‑90.
 
-{{< figure src="./photos/Frenchman-Coulee.png#center" caption="photo by author" width="70%">}}
+{{< figure src="./photos/Frenchman-Coulee.png#center" caption="Photo by author, , June 2025." width="70%">}}
 
 ## Ancient Lakes Trailhead
 

@@ -1,31 +1,33 @@
 ---
 date: "2025-05-21"
 title: "WebGL"
-tags: ["web", "computer-graphics"]
-draft: true
 ---
 
-# Introduction
+# Canvas
 
-The HTML5 <canvas> element provides a drawable region in a web page that can be manipulated with JavaScript.
+The HTML5 `<canvas>` element provides a drawable region in a web page that can be manipulated with JavaScript.
 
-It supports two main rendering contexts:
+## Context
 
-- `context2d`: which uses the CanvasRenderingContext2D API to draw shapes, text, images, and perform pixel manipulation in a rasterized space;
-- `webgl`: which exposes a low-level WebGL API that allows direct access to the GPU for high-performance, hardware-accelerated rendering of 2D and 3D graphics.
+The canvas object allow us to access two type of API or 'context'.
+
+The `context2d` which uses the `CanvasRenderingContext2D` API allow us to draw shapes, text, images, and perform pixel manipulation in a rasterized space.
+
+The `webgl` which exposes a low-level WebGL API that allows direct access to the GPU for high-performance, hardware-accelerated rendering of 2D and 3D graphics.
 
 While context2d is simpler and suited for lightweight graphics, webgl enables us to run small programs in the GPU (shaders) which allow us to build more complex visualizations like simulations, games, and 3D rendering by interfacing with shaders and GPU buffers.
 The WebGL has limitation if we compare with modern OpenGL, but it is still offer a great way to create 3D graphics in the browser.
 
-## Canvas and WebGL Context
-
-The `<canvas>` element is the HTML element that we need to use to access the WebGL context.
-The WebGL context is the object that we will use define programs, shaders, buffers, etc.
+To get thee webgl context, we just need to call getContext on the canvas object.
 
 ```text
 const canvas = document.querySelector("#canvas");
 const gl = canvas.getContext("webgl");
 ```
+
+## Boilerplate
+
+To be able to create a webgl web applicatin, we need to do some boilerplate work.
 
 ## Shaders
 
