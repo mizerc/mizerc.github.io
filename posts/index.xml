@@ -7,14 +7,4 @@
 &lt;h3 id="artist-point">Artist Point&lt;/h3>
 &lt;p>The Artist Point is located at the very end of Mount Baker Highway.
 This trailhead offers seasonal hiking with views of Mount Shuksan &amp;amp; Baker.
-Artist Point typically opens in late June or early July and remains open until the first substantial snowfall of the year in early October.&lt;/p></description></item><item><title>Next.js</title><link>https://mizerc.github.io/posts/technology/nextjs/</link><pubDate>Tue, 01 Jul 2025 00:00:00 +0000</pubDate><guid>https://mizerc.github.io/posts/technology/nextjs/</guid><description>&lt;h1 id="routing">Routing&lt;/h1>
-&lt;h2 id="app-router">App Router&lt;/h2>
-&lt;p>In Next.js 13+, app route (/app) is part of the App Router, which uses the new file-based routing system with React Server Components.
-It supports layouts, templates, nested routing, loading/error states, and server/client components separation.
-This approach is more flexible and modern, designed for large-scale and dynamic apps.&lt;/p>
-&lt;p>The App Router is a file-system based router that uses React&amp;rsquo;s latest features such as Server Components, Suspense, and Server Functions.&lt;/p></description></item><item><title>WebGL</title><link>https://mizerc.github.io/posts/technology/webgl/</link><pubDate>Wed, 21 May 2025 00:00:00 +0000</pubDate><guid>https://mizerc.github.io/posts/technology/webgl/</guid><description>&lt;h1 id="canvas">Canvas&lt;/h1>
-&lt;p>The HTML5 &lt;code>&amp;lt;canvas&amp;gt;&lt;/code> element provides a drawable region in a web page that can be manipulated with JavaScript.&lt;/p>
-&lt;h2 id="context">Context&lt;/h2>
-&lt;p>The canvas object allow us to access two type of API or &amp;lsquo;context&amp;rsquo;.&lt;/p>
-&lt;p>The &lt;code>context2d&lt;/code> which uses the &lt;code>CanvasRenderingContext2D&lt;/code> API allow us to draw shapes, text, images, and perform pixel manipulation in a rasterized space.&lt;/p>
-&lt;p>The &lt;code>webgl&lt;/code> which exposes a low-level WebGL API that allows direct access to the GPU for high-performance, hardware-accelerated rendering of 2D and 3D graphics.&lt;/p></description></item><item><title/><link>https://mizerc.github.io/posts/math/quartenions/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mizerc.github.io/posts/math/quartenions/</guid><description/></item></channel></rss>
+Artist Point typically opens in late June or early July and remains open until the first substantial snowfall of the year in early October.&lt;/p></description></item></channel></rss>
