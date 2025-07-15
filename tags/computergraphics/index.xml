@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Computergraphics on The Mize Collection</title><link>https://mizerc.github.io/tags/computergraphics/</link><description>Recent content in Computergraphics on The Mize Collection</description><generator>Hugo -- 0.148.1</generator><language>en-us</language><lastBuildDate>Tue, 08 Jul 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://mizerc.github.io/tags/computergraphics/index.xml" rel="self" type="application/rss+xml"/><item><title>Rasterizer</title><link>https://mizerc.github.io/posts/projects/rasterizer/</link><pubDate>Tue, 08 Jul 2025 00:00:00 +0000</pubDate><guid>https://mizerc.github.io/posts/projects/rasterizer/</guid><description>&lt;h1 id="introduction">Introduction&lt;/h1>
-&lt;p>Computer graphics is one of my favorite topics in computer science.
-Here I will try to document a bit of the math and algorithms necessary to build a simple engine that can render 3d models on the screen.&lt;/p>
-&lt;p>The two main methods to create images from 3d geometry are rasterization and ray tracing.
-On this post I will focus on the rasterization method.&lt;/p>
-&lt;!-- If you are interested in ray tracing, you can check [this post](). -->
-&lt;h1 id="scene">Scene&lt;/h1>
-&lt;p>We can think of a scene as a collection of models, lights, and cameras.
-It is the data structure that holds all the information necessary to render the scene.&lt;/p></description></item></channel></rss>
