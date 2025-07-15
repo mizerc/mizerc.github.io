@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Hugo on The Mize Collection</title>
+    <link>https://example.org/tags/hugo/</link>
+    <description>Recent content in Hugo on The Mize Collection</description>
+    <generator>Hugo -- 0.147.4</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 22 May 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://example.org/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugo</title>
+      <link>https://example.org/posts/technology/hugo/</link>
+      <pubDate>Thu, 22 May 2025 00:00:00 +0000</pubDate>
+      <guid>https://example.org/posts/technology/hugo/</guid>
+      <description>&lt;h1 id=&#34;hugo&#34;&gt;Hugo&lt;/h1&gt;
+&lt;p&gt;Hugo is a static site generator developed in Go.
+You write pure plain markdown text files, and Hugo build the HTML website for you.&lt;/p&gt;
+&lt;h3 id=&#34;installing-hugo-in-your-system&#34;&gt;Installing Hugo in your System&lt;/h3&gt;
+&lt;p&gt;In macOS, you can install Hugo using Homebrew.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;brew update&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;brew install hugo&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;creating-new-hugo-project&#34;&gt;Creating New Hugo Project&lt;/h3&gt;
+&lt;p&gt;To create a fresh new site, you can use Hugo CLI:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;hugo new site mysite
+cd mysite
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;creating-new-post&#34;&gt;Creating New Post&lt;/h3&gt;
+&lt;p&gt;You can create a new post manually by creating the .md file and manually writing the front matter.
+Another option is using the Hugo CLI:&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

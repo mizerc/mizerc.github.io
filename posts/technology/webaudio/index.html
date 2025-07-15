@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Web Audio API | The Mize Collection</title>
+<meta name="keywords" content="web, audio">
+<meta name="description" content="Modern web browsers support the Web Audio API, which allows us to create and manipulate audio streams.
+Basics
+Audio Context
+The AudioContext object is the main entry point for the Web Audio API.
+Audio Nodes and Chains
+The AudioNode interface is the base interface for all nodes in the audio processing graph.
+We can connect audio nodes together to create a chain of nodes. For example, we can start with the OscillatorNode to generate a sine wave, and then connect it to the GainNode to control the volume of the sound, and then connect it to the DestinationNode to play the sound to the speakers (or any other output device connected to the computer).">
+<meta name="author" content="">
+<link rel="canonical" href="https://example.org/posts/technology/webaudio/">
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NSFZNK7SSK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-NSFZNK7SSK');
+</script>
+<link crossorigin="anonymous" href="/assets/css/stylesheet.c99e5cfcb9fc753351f74fbc922b84fc6fc938d5bc8196bd1cc0121a2f2ca665.css" integrity="sha256-yZ5c/Ln8dTNR90&#43;8kiuE/G/JONW8gZa9HMASGi8spmU=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://example.org/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://example.org/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://example.org/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://example.org/apple-touch-icon.png">
+<link rel="mask-icon" href="https://example.org/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://example.org/posts/technology/webaudio/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css" integrity="sha384-5TcZemv2l/9On385z///+d7MSYlvIEw9FuZTIdZ14vJLqWphw7e7ZPuOiCHJcFCP" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js" integrity="sha384-cMkvdD8LoxVzGF/RPUKAcvmm49FQ0oxwDF3BGKtDXcEc+T1b2N+teh/OJfpU0jr6" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/contrib/auto-render.min.js" integrity="sha384-hCXGrW6PitJEwbkoStFjeJxv+fSOOQKOPbJxSfM6G5sWZjAyWhXiTIIAmQqnlLlh" crossorigin="anonymous"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+          
+          
+          delimiters: [
+              {left: '$$', right: '$$', display: true},
+              {left: '$', right: '$', display: false},
+              {left: '\\(', right: '\\)', display: false},
+              {left: '\\[', right: '\\]', display: true}
+          ],
+          
+          throwOnError : false
+        });
+    });
+</script>
+<meta property="og:url" content="https://example.org/posts/technology/webaudio/">
+  <meta property="og:site_name" content="The Mize Collection">
+  <meta property="og:title" content="Web Audio API">
+  <meta property="og:description" content="Modern web browsers support the Web Audio API, which allows us to create and manipulate audio streams.
+Basics Audio Context The AudioContext object is the main entry point for the Web Audio API.
+Audio Nodes and Chains The AudioNode interface is the base interface for all nodes in the audio processing graph.
+We can connect audio nodes together to create a chain of nodes. For example, we can start with the OscillatorNode to generate a sine wave, and then connect it to the GainNode to control the volume of the sound, and then connect it to the DestinationNode to play the sound to the speakers (or any other output device connected to the computer).">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-05-22T00:00:00+00:00">
+    <meta property="article:modified_time" content="2024-05-22T00:00:00+00:00">
+    <meta property="article:tag" content="Web">
+    <meta property="article:tag" content="Audio">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Web Audio API">
+<meta name="twitter:description" content="Modern web browsers support the Web Audio API, which allows us to create and manipulate audio streams.
+Basics
+Audio Context
+The AudioContext object is the main entry point for the Web Audio API.
+Audio Nodes and Chains
+The AudioNode interface is the base interface for all nodes in the audio processing graph.
+We can connect audio nodes together to create a chain of nodes. For example, we can start with the OscillatorNode to generate a sine wave, and then connect it to the GainNode to control the volume of the sound, and then connect it to the DestinationNode to play the sound to the speakers (or any other output device connected to the computer).">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://example.org/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Web Audio API",
+      "item": "https://example.org/posts/technology/webaudio/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Web Audio API",
+  "name": "Web Audio API",
+  "description": "Modern web browsers support the Web Audio API, which allows us to create and manipulate audio streams.\nBasics Audio Context The AudioContext object is the main entry point for the Web Audio API.\nAudio Nodes and Chains The AudioNode interface is the base interface for all nodes in the audio processing graph.\nWe can connect audio nodes together to create a chain of nodes. For example, we can start with the OscillatorNode to generate a sine wave, and then connect it to the GainNode to control the volume of the sound, and then connect it to the DestinationNode to play the sound to the speakers (or any other output device connected to the computer).\n",
+  "keywords": [
+    "web", "audio"
+  ],
+  "articleBody": "Modern web browsers support the Web Audio API, which allows us to create and manipulate audio streams.\nBasics Audio Context The AudioContext object is the main entry point for the Web Audio API.\nAudio Nodes and Chains The AudioNode interface is the base interface for all nodes in the audio processing graph.\nWe can connect audio nodes together to create a chain of nodes. For example, we can start with the OscillatorNode to generate a sine wave, and then connect it to the GainNode to control the volume of the sound, and then connect it to the DestinationNode to play the sound to the speakers (or any other output device connected to the computer).\nIt kind remember me those Modular Synthesizers from the old days where you can plug in different modules together to modify the sound.\nNodes Oscillator Node The OscillatorNode allows us to generate a periodic waveform, such as a sine wave, square wave, or triangle wave. You can use the setValueAtTime to change properties.\nGain Node The GainNode allows us to control the volume of the audio stream. The gain property is a scalar value.\nDestination Node The DestinationNode is the final node in the chain and is responsible for playing the audio stream to the speakers.\nAudio Buffer Source Node The AudioBufferSourceNode allows us to create a empty Audio Buffer and populate it with audio data. We can create samples using math functinos like sin or cos to simulate the same behavior of an oscillator node.\nMicrophone You can request access to the microphone of the computer using the navigator.mediaDevices.getUserMedia method. Note that you can’t automatically access the microphone like inside a onLoad event. For security and privacy reasons, it is necessary a user interaction to start the request. On the same reasoning, you can connect the microphone to the audio chain to send the audio stream to the next node.\nAudio Processing One great thing about the Web Audio API is that we can process the audio stream in real time. The old way is using the ScriptProcessorNode interface. The modern way to do this is to use the AudioWorklet interface. The problem with the last one is that it runs in the main thread, so it can suffer from performance issues. The AudioWorklet instead runs in a separate thread, so it avoid blocking the main thread, but on the other hand it requires a bit more of boilerplate code to set up. If we need to send data between the main thread and the audio thread, we need to use the messaging approach.\nAudio Worklet Runs in a different thread from the main js thread. ScriptProcessorNode Runs in the main thread, the same JS thread. Audio Buffer Creating an audio buffer is useful for static playback. You can’t change the buffer on the fly. You cannot modify the buffer while it’s playing. AudioBuffer is just a memory buffer holding precomputed samples.\nTo “change frequency” dynamically, you’d need to:\nstop the old node generate a new buffer create a new source start it again This causes audible glitches or gaps. It’s not smooth or continuous. AudioBufferSourceNode plays it once.\nMIDI The MIDI is a protocol that allows us to send and receive MIDI messages. It is a digital protocol that allows us to send and receive MIDI messages between devices. Several devices like keyboards, synthesizers, and controllers can speak MIDI.\n",
+  "wordCount" : "565",
+  "inLanguage": "en",
+  "datePublished": "2024-05-22T00:00:00Z",
+  "dateModified": "2024-05-22T00:00:00Z",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://example.org/posts/technology/webaudio/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "The Mize Collection",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://example.org/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<link rel="stylesheet" href="https://example.org/custom.css">
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://example.org/" accesskey="h" title="The Mize Collection (Alt + H)">The Mize Collection</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://example.org/" title="Home">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://example.org/about/" title="About">
+                    <span>About</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Web Audio API
+    </h1>
+    <hr>
+  </header> 
+  <div class="post-content"><p>Modern web browsers support the Web Audio API, which allows us to create and manipulate audio streams.</p>
+<h1 id="basics">Basics<a hidden class="anchor" aria-hidden="true" href="#basics">#</a></h1>
+<h2 id="audio-context">Audio Context<a hidden class="anchor" aria-hidden="true" href="#audio-context">#</a></h2>
+<p>The <code>AudioContext</code> object is the main entry point for the Web Audio API.</p>
+<h2 id="audio-nodes-and-chains">Audio Nodes and Chains<a hidden class="anchor" aria-hidden="true" href="#audio-nodes-and-chains">#</a></h2>
+<p>The <code>AudioNode</code> interface is the base interface for all nodes in the audio processing graph.</p>
+<p>We can connect audio nodes together to create a chain of nodes. For example, we can start with the <code>OscillatorNode</code> to generate a sine wave, and then connect it to the <code>GainNode</code> to control the volume of the sound, and then connect it to the <code>DestinationNode</code> to play the sound to the speakers (or any other output device connected to the computer).</p>
+<p>It kind remember me those Modular Synthesizers from the old days where you can plug in different modules together to modify the sound.</p>
+<p><img alt="modular synthesizer" loading="lazy" src="/posts/technology/webaudio/modular-synth.png#center"></p>
+<h1 id="nodes">Nodes<a hidden class="anchor" aria-hidden="true" href="#nodes">#</a></h1>
+<h3 id="oscillator-node">Oscillator Node<a hidden class="anchor" aria-hidden="true" href="#oscillator-node">#</a></h3>
+<p>The <code>OscillatorNode</code> allows us to generate a periodic waveform, such as a sine wave, square wave, or triangle wave.
+You can use the <code>setValueAtTime</code> to change properties.</p>
+<h3 id="gain-node">Gain Node<a hidden class="anchor" aria-hidden="true" href="#gain-node">#</a></h3>
+<p>The <code>GainNode</code> allows us to control the volume of the audio stream. The gain property is a scalar value.</p>
+<h3 id="destination-node">Destination Node<a hidden class="anchor" aria-hidden="true" href="#destination-node">#</a></h3>
+<p>The <code>DestinationNode</code> is the final node in the chain and is responsible for playing the audio stream to the speakers.</p>
+<h3 id="audio-buffer-source-node">Audio Buffer Source Node<a hidden class="anchor" aria-hidden="true" href="#audio-buffer-source-node">#</a></h3>
+<p>The <code>AudioBufferSourceNode</code> allows us to create a empty Audio Buffer and populate it with audio data. We can create samples using math functinos like sin or cos to simulate the same behavior of an oscillator node.</p>
+<h3 id="microphone">Microphone<a hidden class="anchor" aria-hidden="true" href="#microphone">#</a></h3>
+<p>You can request access to the microphone of the computer using the <code>navigator.mediaDevices.getUserMedia</code> method.
+Note that you can&rsquo;t automatically access the microphone like inside a onLoad event.
+For security and privacy reasons, it is necessary a user interaction to start the request.
+On the same reasoning, you can connect the microphone to the audio chain to send the audio stream to the next node.</p>
+<h1 id="audio-processing">Audio Processing<a hidden class="anchor" aria-hidden="true" href="#audio-processing">#</a></h1>
+<p>One great thing about the Web Audio API is that we can process the audio stream in real time.
+The old way is using the <code>ScriptProcessorNode</code> interface.
+The modern way to do this is to use the <code>AudioWorklet</code> interface.
+The problem with the last one is that it runs in the main thread, so it can suffer from performance issues.
+The <code>AudioWorklet</code> instead runs in a separate thread, so it avoid blocking the main thread, but on the other hand it requires a bit more of boilerplate code to set up.
+If we need to send data between the main thread and the audio thread, we need to use the messaging approach.</p>
+<h2 id="audio-worklet">Audio Worklet<a hidden class="anchor" aria-hidden="true" href="#audio-worklet">#</a></h2>
+<ul>
+<li>Runs in a different thread from the main js thread.</li>
+</ul>
+<h2 id="scriptprocessornode">ScriptProcessorNode<a hidden class="anchor" aria-hidden="true" href="#scriptprocessornode">#</a></h2>
+<ul>
+<li>Runs in the main thread, the same JS thread.</li>
+</ul>
+<h2 id="audio-buffer">Audio Buffer<a hidden class="anchor" aria-hidden="true" href="#audio-buffer">#</a></h2>
+<p>Creating an audio buffer is useful for static playback.
+You can&rsquo;t change the buffer on the fly.
+You cannot modify the buffer while it&rsquo;s playing.
+AudioBuffer is just a memory buffer holding precomputed samples.</p>
+<p>To &ldquo;change frequency&rdquo; dynamically, you&rsquo;d need to:</p>
+<ul>
+<li>stop the old node</li>
+<li>generate a new buffer</li>
+<li>create a new source</li>
+<li>start it again
+This causes audible glitches or gaps. It’s not smooth or continuous.</li>
+</ul>
+<p>AudioBufferSourceNode plays it once.</p>
+<h1 id="midi">MIDI<a hidden class="anchor" aria-hidden="true" href="#midi">#</a></h1>
+<p>The MIDI is a protocol that allows us to send and receive MIDI messages. It is a digital protocol that allows us to send and receive MIDI messages between devices. Several devices like keyboards, synthesizers, and controllers can speak MIDI.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://example.org/tags/web/">Web</a></li>
+      <li><a href="https://example.org/tags/audio/">Audio</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="https://example.org/">The Mize Collection</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Places on The Mize Collection</title>
+    <link>https://example.org/tags/places/</link>
+    <description>Recent content in Places on The Mize Collection</description>
+    <generator>Hugo -- 0.147.4</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 08 Jul 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://example.org/tags/places/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Washington</title>
+      <link>https://example.org/posts/places/washington/</link>
+      <pubDate>Tue, 08 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>https://example.org/posts/places/washington/</guid>
+      <description>&lt;h1 id=&#34;north&#34;&gt;North&lt;/h1&gt;
+&lt;h2 id=&#34;san-juan&#34;&gt;San Juan&lt;/h2&gt;
+&lt;h2 id=&#34;mt-baker&#34;&gt;Mt Baker&lt;/h2&gt;
+&lt;p&gt;The second-most thermally active crater in the Cascade Range after Mount St. Helens.&lt;/p&gt;
+&lt;h3 id=&#34;lake-shannon&#34;&gt;Lake Shannon&lt;/h3&gt;
+&lt;p&gt;Lake Shannon is a long, narrow reservoir on the Baker River.&lt;/p&gt;
+&lt;h3 id=&#34;artist-point&#34;&gt;Artist Point&lt;/h3&gt;
+&lt;p&gt;The Artist Point is located at the very end of Mount Baker Highway.
+This trailhead offers seasonal hiking with views of Mount Shuksan &amp;amp; Baker.
+Artist Point typically opens in late June or early July and remains open until the first substantial snowfall of the year in early October.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
