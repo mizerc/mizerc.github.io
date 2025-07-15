@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Places on The Mize Collection</title>
-    <link>https://example.org/tags/places/</link>
+    <link>https://mizerc.github.io/tags/places/</link>
     <description>Recent content in Places on The Mize Collection</description>
     <generator>Hugo -- 0.147.4</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 08 Jul 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://example.org/tags/places/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://mizerc.github.io/tags/places/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Washington</title>
-      <link>https://example.org/posts/places/washington/</link>
+      <link>https://mizerc.github.io/posts/places/washington/</link>
       <pubDate>Tue, 08 Jul 2025 00:00:00 +0000</pubDate>
-      <guid>https://example.org/posts/places/washington/</guid>
+      <guid>https://mizerc.github.io/posts/places/washington/</guid>
       <description>&lt;h1 id=&#34;north&#34;&gt;North&lt;/h1&gt;
 &lt;h2 id=&#34;san-juan&#34;&gt;San Juan&lt;/h2&gt;
 &lt;h2 id=&#34;mt-baker&#34;&gt;Mt Baker&lt;/h2&gt;

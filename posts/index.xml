@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Posts on The Mize Collection</title>
-    <link>https://example.org/posts/</link>
+    <link>https://mizerc.github.io/posts/</link>
     <description>Recent content in Posts on The Mize Collection</description>
     <generator>Hugo -- 0.147.4</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 08 Jul 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://example.org/posts/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://mizerc.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Rasterizer</title>
-      <link>https://example.org/posts/projects/rasterizer/</link>
+      <link>https://mizerc.github.io/posts/projects/rasterizer/</link>
       <pubDate>Tue, 08 Jul 2025 00:00:00 +0000</pubDate>
-      <guid>https://example.org/posts/projects/rasterizer/</guid>
+      <guid>https://mizerc.github.io/posts/projects/rasterizer/</guid>
       <description>&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
 &lt;p&gt;Computer graphics is one of my favorite topics in computer science.
 Here I will try to document a bit of the math and algorithms necessary to build a simple engine that can render 3d models on the screen.&lt;/p&gt;
@@ -25,9 +25,9 @@ It is the data structure that holds all the information necessary to render the 
     </item>
     <item>
       <title>Washington</title>
-      <link>https://example.org/posts/places/washington/</link>
+      <link>https://mizerc.github.io/posts/places/washington/</link>
       <pubDate>Tue, 08 Jul 2025 00:00:00 +0000</pubDate>
-      <guid>https://example.org/posts/places/washington/</guid>
+      <guid>https://mizerc.github.io/posts/places/washington/</guid>
       <description>&lt;h1 id=&#34;north&#34;&gt;North&lt;/h1&gt;
 &lt;h2 id=&#34;san-juan&#34;&gt;San Juan&lt;/h2&gt;
 &lt;h2 id=&#34;mt-baker&#34;&gt;Mt Baker&lt;/h2&gt;
@@ -41,9 +41,9 @@ Artist Point typically opens in late June or early July and remains open until t
     </item>
     <item>
       <title>Next.js</title>
-      <link>https://example.org/posts/technology/nextjs/</link>
+      <link>https://mizerc.github.io/posts/technology/nextjs/</link>
       <pubDate>Tue, 01 Jul 2025 00:00:00 +0000</pubDate>
-      <guid>https://example.org/posts/technology/nextjs/</guid>
+      <guid>https://mizerc.github.io/posts/technology/nextjs/</guid>
       <description>&lt;h1 id=&#34;routing&#34;&gt;Routing&lt;/h1&gt;
 &lt;h2 id=&#34;app-router&#34;&gt;App Router&lt;/h2&gt;
 &lt;p&gt;In Next.js 13+, app route (/app) is part of the App Router, which uses the new file-based routing system with React Server Components.
@@ -53,9 +53,9 @@ This approach is more flexible and modern, designed for large-scale and dynamic 
     </item>
     <item>
       <title>Weather Station</title>
-      <link>https://example.org/posts/projects/iot-weather-station/</link>
+      <link>https://mizerc.github.io/posts/projects/iot-weather-station/</link>
       <pubDate>Mon, 16 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>https://example.org/posts/projects/iot-weather-station/</guid>
+      <guid>https://mizerc.github.io/posts/projects/iot-weather-station/</guid>
       <description>&lt;p&gt;I decided to create this weather station project to explore a bit the world of IoT.
 I will be using the &lt;code&gt;HiLetgo ESP-32D&lt;/code&gt; development board, the &lt;code&gt;BME280&lt;/code&gt; sensor, and a &lt;code&gt;4-inch TFT display&lt;/code&gt;.
 It required some study around eletronics, power supply, batteries, ESP microcontrollers, protocols like Serial, SPI and I2C, Graphics.&lt;/p&gt;
@@ -64,9 +64,9 @@ It required some study around eletronics, power supply, batteries, ESP microcont
     </item>
     <item>
       <title>Hugo</title>
-      <link>https://example.org/posts/technology/hugo/</link>
+      <link>https://mizerc.github.io/posts/technology/hugo/</link>
       <pubDate>Thu, 22 May 2025 00:00:00 +0000</pubDate>
-      <guid>https://example.org/posts/technology/hugo/</guid>
+      <guid>https://mizerc.github.io/posts/technology/hugo/</guid>
       <description>&lt;h1 id=&#34;hugo&#34;&gt;Hugo&lt;/h1&gt;
 &lt;p&gt;Hugo is a static site generator developed in Go.
 You write pure plain markdown text files, and Hugo build the HTML website for you.&lt;/p&gt;
@@ -86,9 +86,9 @@ Another option is using the Hugo CLI:&lt;/p&gt;</description>
     </item>
     <item>
       <title>Matrices</title>
-      <link>https://example.org/posts/math/matrices/</link>
+      <link>https://mizerc.github.io/posts/math/matrices/</link>
       <pubDate>Thu, 22 May 2025 00:00:00 +0000</pubDate>
-      <guid>https://example.org/posts/math/matrices/</guid>
+      <guid>https://mizerc.github.io/posts/math/matrices/</guid>
       <description>&lt;p&gt;Matrices are structures that organize numbers into a rectangular array, allowing operations to be performed on groups of values simultaneously.&lt;/p&gt;
 &lt;p&gt;We can represent linear transformatinos using matrices.&lt;/p&gt;
 &lt;p&gt;They are a foundational concept in linear algebra and are wide used in computer graphics where they are used for transformations, projections, and modeling spatial relationships.&lt;/p&gt;
@@ -99,18 +99,18 @@ In matrix algebra, not all operations are commutative, unlike scalar arithmetic.
     </item>
     <item>
       <title>Live Earth Images from Satellites</title>
-      <link>https://example.org/posts/projects/sdr/</link>
+      <link>https://mizerc.github.io/posts/projects/sdr/</link>
       <pubDate>Wed, 21 May 2025 01:24:51 -0700</pubDate>
-      <guid>https://example.org/posts/projects/sdr/</guid>
+      <guid>https://mizerc.github.io/posts/projects/sdr/</guid>
       <description>&lt;p&gt;Right now there are a few satellites transmitting images in real time using radio waves (yes, the same eletromagnetic waves used by FM radio or WiFi internet) that you can capture with a simple setup from your home.
 You just need a computer, an antenna, maybe a filter, and a device able to capture radio signals.
 Sadly we can&amp;rsquo;t use a FM radio (88-108 MHz), because we need a device able to capture signals at 137 MHz or higher.&lt;/p&gt;</description>
     </item>
     <item>
       <title>DSA</title>
-      <link>https://example.org/posts/eng-dsa/</link>
+      <link>https://mizerc.github.io/posts/eng-dsa/</link>
       <pubDate>Wed, 21 May 2025 00:00:00 +0000</pubDate>
-      <guid>https://example.org/posts/eng-dsa/</guid>
+      <guid>https://mizerc.github.io/posts/eng-dsa/</guid>
       <description>&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
 &lt;p&gt;DSA stands for Data Structures and Algorithms.&lt;/p&gt;
 &lt;h1 id=&#34;linear-containers&#34;&gt;Linear Containers&lt;/h1&gt;
@@ -121,9 +121,9 @@ Each implementation has its own advantages and disadvantages.&lt;/p&gt;</descrip
     </item>
     <item>
       <title>WebGL</title>
-      <link>https://example.org/posts/technology/webgl/</link>
+      <link>https://mizerc.github.io/posts/technology/webgl/</link>
       <pubDate>Wed, 21 May 2025 00:00:00 +0000</pubDate>
-      <guid>https://example.org/posts/technology/webgl/</guid>
+      <guid>https://mizerc.github.io/posts/technology/webgl/</guid>
       <description>&lt;h1 id=&#34;canvas&#34;&gt;Canvas&lt;/h1&gt;
 &lt;p&gt;The HTML5 &lt;code&gt;&amp;lt;canvas&amp;gt;&lt;/code&gt; element provides a drawable region in a web page that can be manipulated with JavaScript.&lt;/p&gt;
 &lt;h2 id=&#34;context&#34;&gt;Context&lt;/h2&gt;
@@ -133,9 +133,9 @@ Each implementation has its own advantages and disadvantages.&lt;/p&gt;</descrip
     </item>
     <item>
       <title>C Language</title>
-      <link>https://example.org/posts/technology/language-c/</link>
+      <link>https://mizerc.github.io/posts/technology/language-c/</link>
       <pubDate>Sun, 11 May 2025 00:00:00 +0000</pubDate>
-      <guid>https://example.org/posts/technology/language-c/</guid>
+      <guid>https://mizerc.github.io/posts/technology/language-c/</guid>
       <description>&lt;p&gt;Random notes about the C language.&lt;/p&gt;
 &lt;h1 id=&#34;entry-point&#34;&gt;Entry Point&lt;/h1&gt;
 &lt;p&gt;The &lt;code&gt;main&lt;/code&gt; function is the entry point of the program. It is the first function that is called when the program starts.&lt;/p&gt;
@@ -151,9 +151,9 @@ Each implementation has its own advantages and disadvantages.&lt;/p&gt;</descrip
     </item>
     <item>
       <title>System Design</title>
-      <link>https://example.org/posts/eng-system-design/</link>
+      <link>https://mizerc.github.io/posts/eng-system-design/</link>
       <pubDate>Sat, 01 Jun 2024 00:00:00 +0000</pubDate>
-      <guid>https://example.org/posts/eng-system-design/</guid>
+      <guid>https://mizerc.github.io/posts/eng-system-design/</guid>
       <description>&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
 &lt;p&gt;The goal of system design is to architect scalable, reliable, maintainable, and performant software systems that meet both functional and non-functional requirements.
 It focuses on how components (databases, APIs, caches, queues) interact, scale under load, recover from failure, and handle growth.
@@ -162,9 +162,9 @@ The art of turning product specs into robust architecture that can scale, surviv
     </item>
     <item>
       <title>Web Audio API</title>
-      <link>https://example.org/posts/technology/webaudio/</link>
+      <link>https://mizerc.github.io/posts/technology/webaudio/</link>
       <pubDate>Wed, 22 May 2024 00:00:00 +0000</pubDate>
-      <guid>https://example.org/posts/technology/webaudio/</guid>
+      <guid>https://mizerc.github.io/posts/technology/webaudio/</guid>
       <description>&lt;p&gt;Modern web browsers support the Web Audio API, which allows us to create and manipulate audio streams.&lt;/p&gt;
 &lt;h1 id=&#34;basics&#34;&gt;Basics&lt;/h1&gt;
 &lt;h2 id=&#34;audio-context&#34;&gt;Audio Context&lt;/h2&gt;
@@ -175,9 +175,9 @@ The art of turning product specs into robust architecture that can scale, surviv
     </item>
     <item>
       <title></title>
-      <link>https://example.org/posts/math/quartenions/</link>
+      <link>https://mizerc.github.io/posts/math/quartenions/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://example.org/posts/math/quartenions/</guid>
+      <guid>https://mizerc.github.io/posts/math/quartenions/</guid>
       <description></description>
     </item>
   </channel>

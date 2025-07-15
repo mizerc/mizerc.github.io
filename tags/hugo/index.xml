@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Hugo on The Mize Collection</title>
-    <link>https://example.org/tags/hugo/</link>
+    <link>https://mizerc.github.io/tags/hugo/</link>
     <description>Recent content in Hugo on The Mize Collection</description>
     <generator>Hugo -- 0.147.4</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 22 May 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://example.org/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://mizerc.github.io/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hugo</title>
-      <link>https://example.org/posts/technology/hugo/</link>
+      <link>https://mizerc.github.io/posts/technology/hugo/</link>
       <pubDate>Thu, 22 May 2025 00:00:00 +0000</pubDate>
-      <guid>https://example.org/posts/technology/hugo/</guid>
+      <guid>https://mizerc.github.io/posts/technology/hugo/</guid>
       <description>&lt;h1 id=&#34;hugo&#34;&gt;Hugo&lt;/h1&gt;
 &lt;p&gt;Hugo is a static site generator developed in Go.
 You write pure plain markdown text files, and Hugo build the HTML website for you.&lt;/p&gt;
