@@ -1,25 +1,7 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
-  <channel>
-    <title>Math on The Mize Collection</title>
-    <link>https://mizerc.github.io/tags/math/</link>
-    <description>Recent content in Math on The Mize Collection</description>
-    <generator>Hugo -- 0.147.4</generator>
-    <language>en-us</language>
-    <lastBuildDate>Thu, 22 May 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://mizerc.github.io/tags/math/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Matrices</title>
-      <link>https://mizerc.github.io/posts/math/matrices/</link>
-      <pubDate>Thu, 22 May 2025 00:00:00 +0000</pubDate>
-      <guid>https://mizerc.github.io/posts/math/matrices/</guid>
-      <description>&lt;p&gt;Matrices are structures that organize numbers into a rectangular array, allowing operations to be performed on groups of values simultaneously.&lt;/p&gt;
-&lt;p&gt;We can represent linear transformatinos using matrices.&lt;/p&gt;
-&lt;p&gt;They are a foundational concept in linear algebra and are wide used in computer graphics where they are used for transformations, projections, and modeling spatial relationships.&lt;/p&gt;
-&lt;h1 id=&#34;properties&#34;&gt;Properties&lt;/h1&gt;
-&lt;h2 id=&#34;commutative&#34;&gt;Commutative&lt;/h2&gt;
-&lt;p&gt;The commutative property means that changing the &lt;strong&gt;order of operands&lt;/strong&gt; does not affect the result.
-In matrix algebra, not all operations are commutative, unlike scalar arithmetic.&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Math on The Mize Collection</title><link>https://mizerc.github.io/tags/math/</link><description>Recent content in Math on The Mize Collection</description><generator>Hugo -- 0.148.1</generator><language>en-us</language><lastBuildDate>Thu, 22 May 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://mizerc.github.io/tags/math/index.xml" rel="self" type="application/rss+xml"/><item><title>Matrices</title><link>https://mizerc.github.io/posts/math/matrices/</link><pubDate>Thu, 22 May 2025 00:00:00 +0000</pubDate><guid>https://mizerc.github.io/posts/math/matrices/</guid><description>&lt;p>Matrices are structures that organize numbers into a rectangular array, allowing operations to be performed on groups of values simultaneously.&lt;/p>
+&lt;p>We can represent linear transformatinos using matrices.&lt;/p>
+&lt;p>They are a foundational concept in linear algebra and are wide used in computer graphics where they are used for transformations, projections, and modeling spatial relationships.&lt;/p>
+&lt;h1 id="properties">Properties&lt;/h1>
+&lt;h2 id="commutative">Commutative&lt;/h2>
+&lt;p>The commutative property means that changing the &lt;strong>order of operands&lt;/strong> does not affect the result.
+In matrix algebra, not all operations are commutative, unlike scalar arithmetic.&lt;/p></description></item></channel></rss>

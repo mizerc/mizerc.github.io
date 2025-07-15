@@ -1,184 +1,82 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
-  <channel>
-    <title>Posts on The Mize Collection</title>
-    <link>https://mizerc.github.io/posts/</link>
-    <description>Recent content in Posts on The Mize Collection</description>
-    <generator>Hugo -- 0.147.4</generator>
-    <language>en-us</language>
-    <lastBuildDate>Tue, 08 Jul 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://mizerc.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Rasterizer</title>
-      <link>https://mizerc.github.io/posts/projects/rasterizer/</link>
-      <pubDate>Tue, 08 Jul 2025 00:00:00 +0000</pubDate>
-      <guid>https://mizerc.github.io/posts/projects/rasterizer/</guid>
-      <description>&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
-&lt;p&gt;Computer graphics is one of my favorite topics in computer science.
-Here I will try to document a bit of the math and algorithms necessary to build a simple engine that can render 3d models on the screen.&lt;/p&gt;
-&lt;p&gt;The two main methods to create images from 3d geometry are rasterization and ray tracing.
-On this post I will focus on the rasterization method.&lt;/p&gt;
-&lt;!-- If you are interested in ray tracing, you can check [this post](). --&gt;
-&lt;h1 id=&#34;scene&#34;&gt;Scene&lt;/h1&gt;
-&lt;p&gt;We can think of a scene as a collection of models, lights, and cameras.
-It is the data structure that holds all the information necessary to render the scene.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Washington</title>
-      <link>https://mizerc.github.io/posts/places/washington/</link>
-      <pubDate>Tue, 08 Jul 2025 00:00:00 +0000</pubDate>
-      <guid>https://mizerc.github.io/posts/places/washington/</guid>
-      <description>&lt;h1 id=&#34;north&#34;&gt;North&lt;/h1&gt;
-&lt;h2 id=&#34;san-juan&#34;&gt;San Juan&lt;/h2&gt;
-&lt;h2 id=&#34;mt-baker&#34;&gt;Mt Baker&lt;/h2&gt;
-&lt;p&gt;The second-most thermally active crater in the Cascade Range after Mount St. Helens.&lt;/p&gt;
-&lt;h3 id=&#34;lake-shannon&#34;&gt;Lake Shannon&lt;/h3&gt;
-&lt;p&gt;Lake Shannon is a long, narrow reservoir on the Baker River.&lt;/p&gt;
-&lt;h3 id=&#34;artist-point&#34;&gt;Artist Point&lt;/h3&gt;
-&lt;p&gt;The Artist Point is located at the very end of Mount Baker Highway.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Posts on The Mize Collection</title><link>https://mizerc.github.io/posts/</link><description>Recent content in Posts on The Mize Collection</description><generator>Hugo -- 0.148.1</generator><language>en-us</language><lastBuildDate>Tue, 08 Jul 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://mizerc.github.io/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>Rasterizer</title><link>https://mizerc.github.io/posts/projects/rasterizer/</link><pubDate>Tue, 08 Jul 2025 00:00:00 +0000</pubDate><guid>https://mizerc.github.io/posts/projects/rasterizer/</guid><description>&lt;h1 id="introduction">Introduction&lt;/h1>
+&lt;p>Computer graphics is one of my favorite topics in computer science.
+Here I will try to document a bit of the math and algorithms necessary to build a simple engine that can render 3d models on the screen.&lt;/p>
+&lt;p>The two main methods to create images from 3d geometry are rasterization and ray tracing.
+On this post I will focus on the rasterization method.&lt;/p>
+&lt;!-- If you are interested in ray tracing, you can check [this post](). -->
+&lt;h1 id="scene">Scene&lt;/h1>
+&lt;p>We can think of a scene as a collection of models, lights, and cameras.
+It is the data structure that holds all the information necessary to render the scene.&lt;/p></description></item><item><title>Washington</title><link>https://mizerc.github.io/posts/places/washington/</link><pubDate>Tue, 08 Jul 2025 00:00:00 +0000</pubDate><guid>https://mizerc.github.io/posts/places/washington/</guid><description>&lt;h1 id="north">North&lt;/h1>
+&lt;h2 id="san-juan">San Juan&lt;/h2>
+&lt;h2 id="mt-baker">Mt Baker&lt;/h2>
+&lt;p>The second-most thermally active crater in the Cascade Range after Mount St. Helens.&lt;/p>
+&lt;h3 id="lake-shannon">Lake Shannon&lt;/h3>
+&lt;p>Lake Shannon is a long, narrow reservoir on the Baker River.&lt;/p>
+&lt;h3 id="artist-point">Artist Point&lt;/h3>
+&lt;p>The Artist Point is located at the very end of Mount Baker Highway.
 This trailhead offers seasonal hiking with views of Mount Shuksan &amp;amp; Baker.
-Artist Point typically opens in late June or early July and remains open until the first substantial snowfall of the year in early October.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Next.js</title>
-      <link>https://mizerc.github.io/posts/technology/nextjs/</link>
-      <pubDate>Tue, 01 Jul 2025 00:00:00 +0000</pubDate>
-      <guid>https://mizerc.github.io/posts/technology/nextjs/</guid>
-      <description>&lt;h1 id=&#34;routing&#34;&gt;Routing&lt;/h1&gt;
-&lt;h2 id=&#34;app-router&#34;&gt;App Router&lt;/h2&gt;
-&lt;p&gt;In Next.js 13+, app route (/app) is part of the App Router, which uses the new file-based routing system with React Server Components.
+Artist Point typically opens in late June or early July and remains open until the first substantial snowfall of the year in early October.&lt;/p></description></item><item><title>Next.js</title><link>https://mizerc.github.io/posts/technology/nextjs/</link><pubDate>Tue, 01 Jul 2025 00:00:00 +0000</pubDate><guid>https://mizerc.github.io/posts/technology/nextjs/</guid><description>&lt;h1 id="routing">Routing&lt;/h1>
+&lt;h2 id="app-router">App Router&lt;/h2>
+&lt;p>In Next.js 13+, app route (/app) is part of the App Router, which uses the new file-based routing system with React Server Components.
 It supports layouts, templates, nested routing, loading/error states, and server/client components separation.
-This approach is more flexible and modern, designed for large-scale and dynamic apps.&lt;/p&gt;
-&lt;p&gt;The App Router is a file-system based router that uses React&amp;rsquo;s latest features such as Server Components, Suspense, and Server Functions.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Weather Station</title>
-      <link>https://mizerc.github.io/posts/projects/iot-weather-station/</link>
-      <pubDate>Mon, 16 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>https://mizerc.github.io/posts/projects/iot-weather-station/</guid>
-      <description>&lt;p&gt;I decided to create this weather station project to explore a bit the world of IoT.
-I will be using the &lt;code&gt;HiLetgo ESP-32D&lt;/code&gt; development board, the &lt;code&gt;BME280&lt;/code&gt; sensor, and a &lt;code&gt;4-inch TFT display&lt;/code&gt;.
-It required some study around eletronics, power supply, batteries, ESP microcontrollers, protocols like Serial, SPI and I2C, Graphics.&lt;/p&gt;
-&lt;h2 id=&#34;product-specs&#34;&gt;Product Specs&lt;/h2&gt;
-&lt;p&gt;To stay organized and scoped, let&amp;rsquo;s frame this as a define a few product specs for the project:&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Hugo</title>
-      <link>https://mizerc.github.io/posts/technology/hugo/</link>
-      <pubDate>Thu, 22 May 2025 00:00:00 +0000</pubDate>
-      <guid>https://mizerc.github.io/posts/technology/hugo/</guid>
-      <description>&lt;h1 id=&#34;hugo&#34;&gt;Hugo&lt;/h1&gt;
-&lt;p&gt;Hugo is a static site generator developed in Go.
-You write pure plain markdown text files, and Hugo build the HTML website for you.&lt;/p&gt;
-&lt;h3 id=&#34;installing-hugo-in-your-system&#34;&gt;Installing Hugo in your System&lt;/h3&gt;
-&lt;p&gt;In macOS, you can install Hugo using Homebrew.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;brew update&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;brew install hugo&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;creating-new-hugo-project&#34;&gt;Creating New Hugo Project&lt;/h3&gt;
-&lt;p&gt;To create a fresh new site, you can use Hugo CLI:&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;hugo new site mysite
+This approach is more flexible and modern, designed for large-scale and dynamic apps.&lt;/p>
+&lt;p>The App Router is a file-system based router that uses React&amp;rsquo;s latest features such as Server Components, Suspense, and Server Functions.&lt;/p></description></item><item><title>Weather Station</title><link>https://mizerc.github.io/posts/projects/iot-weather-station/</link><pubDate>Mon, 16 Jun 2025 00:00:00 +0000</pubDate><guid>https://mizerc.github.io/posts/projects/iot-weather-station/</guid><description>&lt;p>I decided to create this weather station project to explore a bit the world of IoT.
+I will be using the &lt;code>HiLetgo ESP-32D&lt;/code> development board, the &lt;code>BME280&lt;/code> sensor, and a &lt;code>4-inch TFT display&lt;/code>.
+It required some study around eletronics, power supply, batteries, ESP microcontrollers, protocols like Serial, SPI and I2C, Graphics.&lt;/p>
+&lt;h2 id="product-specs">Product Specs&lt;/h2>
+&lt;p>To stay organized and scoped, let&amp;rsquo;s frame this as a define a few product specs for the project:&lt;/p></description></item><item><title>Hugo</title><link>https://mizerc.github.io/posts/technology/hugo/</link><pubDate>Thu, 22 May 2025 00:00:00 +0000</pubDate><guid>https://mizerc.github.io/posts/technology/hugo/</guid><description>&lt;h1 id="hugo">Hugo&lt;/h1>
+&lt;p>Hugo is a static site generator developed in Go.
+You write pure plain markdown text files, and Hugo build the HTML website for you.&lt;/p>
+&lt;h3 id="installing-hugo-in-your-system">Installing Hugo in your System&lt;/h3>
+&lt;p>In macOS, you can install Hugo using Homebrew.&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>brew update&lt;/code>&lt;/li>
+&lt;li>&lt;code>brew install hugo&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;h3 id="creating-new-hugo-project">Creating New Hugo Project&lt;/h3>
+&lt;p>To create a fresh new site, you can use Hugo CLI:&lt;/p>
+&lt;pre tabindex="0">&lt;code>hugo new site mysite
 cd mysite
-&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;creating-new-post&#34;&gt;Creating New Post&lt;/h3&gt;
-&lt;p&gt;You can create a new post manually by creating the .md file and manually writing the front matter.
-Another option is using the Hugo CLI:&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Matrices</title>
-      <link>https://mizerc.github.io/posts/math/matrices/</link>
-      <pubDate>Thu, 22 May 2025 00:00:00 +0000</pubDate>
-      <guid>https://mizerc.github.io/posts/math/matrices/</guid>
-      <description>&lt;p&gt;Matrices are structures that organize numbers into a rectangular array, allowing operations to be performed on groups of values simultaneously.&lt;/p&gt;
-&lt;p&gt;We can represent linear transformatinos using matrices.&lt;/p&gt;
-&lt;p&gt;They are a foundational concept in linear algebra and are wide used in computer graphics where they are used for transformations, projections, and modeling spatial relationships.&lt;/p&gt;
-&lt;h1 id=&#34;properties&#34;&gt;Properties&lt;/h1&gt;
-&lt;h2 id=&#34;commutative&#34;&gt;Commutative&lt;/h2&gt;
-&lt;p&gt;The commutative property means that changing the &lt;strong&gt;order of operands&lt;/strong&gt; does not affect the result.
-In matrix algebra, not all operations are commutative, unlike scalar arithmetic.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Live Earth Images from Satellites</title>
-      <link>https://mizerc.github.io/posts/projects/sdr/</link>
-      <pubDate>Wed, 21 May 2025 01:24:51 -0700</pubDate>
-      <guid>https://mizerc.github.io/posts/projects/sdr/</guid>
-      <description>&lt;p&gt;Right now there are a few satellites transmitting images in real time using radio waves (yes, the same eletromagnetic waves used by FM radio or WiFi internet) that you can capture with a simple setup from your home.
+&lt;/code>&lt;/pre>&lt;h3 id="creating-new-post">Creating New Post&lt;/h3>
+&lt;p>You can create a new post manually by creating the .md file and manually writing the front matter.
+Another option is using the Hugo CLI:&lt;/p></description></item><item><title>Matrices</title><link>https://mizerc.github.io/posts/math/matrices/</link><pubDate>Thu, 22 May 2025 00:00:00 +0000</pubDate><guid>https://mizerc.github.io/posts/math/matrices/</guid><description>&lt;p>Matrices are structures that organize numbers into a rectangular array, allowing operations to be performed on groups of values simultaneously.&lt;/p>
+&lt;p>We can represent linear transformatinos using matrices.&lt;/p>
+&lt;p>They are a foundational concept in linear algebra and are wide used in computer graphics where they are used for transformations, projections, and modeling spatial relationships.&lt;/p>
+&lt;h1 id="properties">Properties&lt;/h1>
+&lt;h2 id="commutative">Commutative&lt;/h2>
+&lt;p>The commutative property means that changing the &lt;strong>order of operands&lt;/strong> does not affect the result.
+In matrix algebra, not all operations are commutative, unlike scalar arithmetic.&lt;/p></description></item><item><title>Live Earth Images from Satellites</title><link>https://mizerc.github.io/posts/projects/sdr/</link><pubDate>Wed, 21 May 2025 01:24:51 -0700</pubDate><guid>https://mizerc.github.io/posts/projects/sdr/</guid><description>&lt;p>Right now there are a few satellites transmitting images in real time using radio waves (yes, the same eletromagnetic waves used by FM radio or WiFi internet) that you can capture with a simple setup from your home.
 You just need a computer, an antenna, maybe a filter, and a device able to capture radio signals.
-Sadly we can&amp;rsquo;t use a FM radio (88-108 MHz), because we need a device able to capture signals at 137 MHz or higher.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>DSA</title>
-      <link>https://mizerc.github.io/posts/eng-dsa/</link>
-      <pubDate>Wed, 21 May 2025 00:00:00 +0000</pubDate>
-      <guid>https://mizerc.github.io/posts/eng-dsa/</guid>
-      <description>&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
-&lt;p&gt;DSA stands for Data Structures and Algorithms.&lt;/p&gt;
-&lt;h1 id=&#34;linear-containers&#34;&gt;Linear Containers&lt;/h1&gt;
-&lt;p&gt;A linear container is a type of data structure where elements are arranged in a linear order, which each element has a unique predecessor and successor, except the first and last items.&lt;/p&gt;
-&lt;p&gt;We can use the term &lt;code&gt;List&lt;/code&gt; to refer the interface that define the operations that can be performed on it.
-And let the term like &lt;code&gt;Array&lt;/code&gt;, &lt;code&gt;Queue&lt;/code&gt;, &lt;code&gt;Linked List&lt;/code&gt;, etc. to refer to the specific implementation of the &lt;code&gt;List&lt;/code&gt; interface.
-Each implementation has its own advantages and disadvantages.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>WebGL</title>
-      <link>https://mizerc.github.io/posts/technology/webgl/</link>
-      <pubDate>Wed, 21 May 2025 00:00:00 +0000</pubDate>
-      <guid>https://mizerc.github.io/posts/technology/webgl/</guid>
-      <description>&lt;h1 id=&#34;canvas&#34;&gt;Canvas&lt;/h1&gt;
-&lt;p&gt;The HTML5 &lt;code&gt;&amp;lt;canvas&amp;gt;&lt;/code&gt; element provides a drawable region in a web page that can be manipulated with JavaScript.&lt;/p&gt;
-&lt;h2 id=&#34;context&#34;&gt;Context&lt;/h2&gt;
-&lt;p&gt;The canvas object allow us to access two type of API or &amp;lsquo;context&amp;rsquo;.&lt;/p&gt;
-&lt;p&gt;The &lt;code&gt;context2d&lt;/code&gt; which uses the &lt;code&gt;CanvasRenderingContext2D&lt;/code&gt; API allow us to draw shapes, text, images, and perform pixel manipulation in a rasterized space.&lt;/p&gt;
-&lt;p&gt;The &lt;code&gt;webgl&lt;/code&gt; which exposes a low-level WebGL API that allows direct access to the GPU for high-performance, hardware-accelerated rendering of 2D and 3D graphics.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>C Language</title>
-      <link>https://mizerc.github.io/posts/technology/language-c/</link>
-      <pubDate>Sun, 11 May 2025 00:00:00 +0000</pubDate>
-      <guid>https://mizerc.github.io/posts/technology/language-c/</guid>
-      <description>&lt;p&gt;Random notes about the C language.&lt;/p&gt;
-&lt;h1 id=&#34;entry-point&#34;&gt;Entry Point&lt;/h1&gt;
-&lt;p&gt;The &lt;code&gt;main&lt;/code&gt; function is the entry point of the program. It is the first function that is called when the program starts.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;compilation-and-linking&#34;&gt;Compilation and Linking&lt;/h1&gt;
-&lt;p&gt;The C compiler (cc) compiles each source code into object files.&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;cc -c file1.c file2.c
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The &lt;code&gt;-c&lt;/code&gt; option tells the compiler to compile only and not to link.&lt;/p&gt;
-&lt;p&gt;The object files are then linked together to form an executable.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>System Design</title>
-      <link>https://mizerc.github.io/posts/eng-system-design/</link>
-      <pubDate>Sat, 01 Jun 2024 00:00:00 +0000</pubDate>
-      <guid>https://mizerc.github.io/posts/eng-system-design/</guid>
-      <description>&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
-&lt;p&gt;The goal of system design is to architect scalable, reliable, maintainable, and performant software systems that meet both functional and non-functional requirements.
+Sadly we can&amp;rsquo;t use a FM radio (88-108 MHz), because we need a device able to capture signals at 137 MHz or higher.&lt;/p></description></item><item><title>DSA</title><link>https://mizerc.github.io/posts/eng-dsa/</link><pubDate>Wed, 21 May 2025 00:00:00 +0000</pubDate><guid>https://mizerc.github.io/posts/eng-dsa/</guid><description>&lt;h1 id="introduction">Introduction&lt;/h1>
+&lt;p>DSA stands for Data Structures and Algorithms.&lt;/p>
+&lt;h1 id="linear-containers">Linear Containers&lt;/h1>
+&lt;p>A linear container is a type of data structure where elements are arranged in a linear order, which each element has a unique predecessor and successor, except the first and last items.&lt;/p>
+&lt;p>We can use the term &lt;code>List&lt;/code> to refer the interface that define the operations that can be performed on it.
+And let the term like &lt;code>Array&lt;/code>, &lt;code>Queue&lt;/code>, &lt;code>Linked List&lt;/code>, etc. to refer to the specific implementation of the &lt;code>List&lt;/code> interface.
+Each implementation has its own advantages and disadvantages.&lt;/p></description></item><item><title>WebGL</title><link>https://mizerc.github.io/posts/technology/webgl/</link><pubDate>Wed, 21 May 2025 00:00:00 +0000</pubDate><guid>https://mizerc.github.io/posts/technology/webgl/</guid><description>&lt;h1 id="canvas">Canvas&lt;/h1>
+&lt;p>The HTML5 &lt;code>&amp;lt;canvas&amp;gt;&lt;/code> element provides a drawable region in a web page that can be manipulated with JavaScript.&lt;/p>
+&lt;h2 id="context">Context&lt;/h2>
+&lt;p>The canvas object allow us to access two type of API or &amp;lsquo;context&amp;rsquo;.&lt;/p>
+&lt;p>The &lt;code>context2d&lt;/code> which uses the &lt;code>CanvasRenderingContext2D&lt;/code> API allow us to draw shapes, text, images, and perform pixel manipulation in a rasterized space.&lt;/p>
+&lt;p>The &lt;code>webgl&lt;/code> which exposes a low-level WebGL API that allows direct access to the GPU for high-performance, hardware-accelerated rendering of 2D and 3D graphics.&lt;/p></description></item><item><title>C Language</title><link>https://mizerc.github.io/posts/technology/language-c/</link><pubDate>Sun, 11 May 2025 00:00:00 +0000</pubDate><guid>https://mizerc.github.io/posts/technology/language-c/</guid><description>&lt;p>Random notes about the C language.&lt;/p>
+&lt;h1 id="entry-point">Entry Point&lt;/h1>
+&lt;p>The &lt;code>main&lt;/code> function is the entry point of the program. It is the first function that is called when the program starts.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-c" data-lang="c">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">int&lt;/span> &lt;span style="color:#a6e22e">main&lt;/span>(&lt;span style="color:#66d9ef">void&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>{
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">return&lt;/span> &lt;span style="color:#ae81ff">0&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="compilation-and-linking">Compilation and Linking&lt;/h1>
+&lt;p>The C compiler (cc) compiles each source code into object files.&lt;/p>
+&lt;pre tabindex="0">&lt;code>cc -c file1.c file2.c
+&lt;/code>&lt;/pre>&lt;p>The &lt;code>-c&lt;/code> option tells the compiler to compile only and not to link.&lt;/p>
+&lt;p>The object files are then linked together to form an executable.&lt;/p></description></item><item><title>System Design</title><link>https://mizerc.github.io/posts/eng-system-design/</link><pubDate>Sat, 01 Jun 2024 00:00:00 +0000</pubDate><guid>https://mizerc.github.io/posts/eng-system-design/</guid><description>&lt;h1 id="introduction">Introduction&lt;/h1>
+&lt;p>The goal of system design is to architect scalable, reliable, maintainable, and performant software systems that meet both functional and non-functional requirements.
 It focuses on how components (databases, APIs, caches, queues) interact, scale under load, recover from failure, and handle growth.
 System design balances trade-offs (like CAP theorem, latency vs. throughput, consistency vs. availability) to ensure the system performs well under real-world constraints.
-The art of turning product specs into robust architecture that can scale, survive, and evolve.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Web Audio API</title>
-      <link>https://mizerc.github.io/posts/technology/webaudio/</link>
-      <pubDate>Wed, 22 May 2024 00:00:00 +0000</pubDate>
-      <guid>https://mizerc.github.io/posts/technology/webaudio/</guid>
-      <description>&lt;p&gt;Modern web browsers support the Web Audio API, which allows us to create and manipulate audio streams.&lt;/p&gt;
-&lt;h1 id=&#34;basics&#34;&gt;Basics&lt;/h1&gt;
-&lt;h2 id=&#34;audio-context&#34;&gt;Audio Context&lt;/h2&gt;
-&lt;p&gt;The &lt;code&gt;AudioContext&lt;/code&gt; object is the main entry point for the Web Audio API.&lt;/p&gt;
-&lt;h2 id=&#34;audio-nodes-and-chains&#34;&gt;Audio Nodes and Chains&lt;/h2&gt;
-&lt;p&gt;The &lt;code&gt;AudioNode&lt;/code&gt; interface is the base interface for all nodes in the audio processing graph.&lt;/p&gt;
-&lt;p&gt;We can connect audio nodes together to create a chain of nodes. For example, we can start with the &lt;code&gt;OscillatorNode&lt;/code&gt; to generate a sine wave, and then connect it to the &lt;code&gt;GainNode&lt;/code&gt; to control the volume of the sound, and then connect it to the &lt;code&gt;DestinationNode&lt;/code&gt; to play the sound to the speakers (or any other output device connected to the computer).&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://mizerc.github.io/posts/math/quartenions/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://mizerc.github.io/posts/math/quartenions/</guid>
-      <description></description>
-    </item>
-  </channel>
-</rss>
+The art of turning product specs into robust architecture that can scale, survive, and evolve.&lt;/p></description></item><item><title>Web Audio API</title><link>https://mizerc.github.io/posts/technology/webaudio/</link><pubDate>Wed, 22 May 2024 00:00:00 +0000</pubDate><guid>https://mizerc.github.io/posts/technology/webaudio/</guid><description>&lt;p>Modern web browsers support the Web Audio API, which allows us to create and manipulate audio streams.&lt;/p>
+&lt;h1 id="basics">Basics&lt;/h1>
+&lt;h2 id="audio-context">Audio Context&lt;/h2>
+&lt;p>The &lt;code>AudioContext&lt;/code> object is the main entry point for the Web Audio API.&lt;/p>
+&lt;h2 id="audio-nodes-and-chains">Audio Nodes and Chains&lt;/h2>
+&lt;p>The &lt;code>AudioNode&lt;/code> interface is the base interface for all nodes in the audio processing graph.&lt;/p>
+&lt;p>We can connect audio nodes together to create a chain of nodes. For example, we can start with the &lt;code>OscillatorNode&lt;/code> to generate a sine wave, and then connect it to the &lt;code>GainNode&lt;/code> to control the volume of the sound, and then connect it to the &lt;code>DestinationNode&lt;/code> to play the sound to the speakers (or any other output device connected to the computer).&lt;/p></description></item><item><title/><link>https://mizerc.github.io/posts/math/quartenions/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mizerc.github.io/posts/math/quartenions/</guid><description/></item></channel></rss>

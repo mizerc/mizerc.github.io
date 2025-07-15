@@ -1,339 +1,36 @@
-<!DOCTYPE html>
-<html lang="en" dir="auto">
-
-<head><meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="index, follow">
-<title>Live Earth Images from Satellites | The Mize Collection</title>
-<meta name="keywords" content="eletronics, iot, sdr">
-<meta name="description" content="Right now there are a few satellites transmitting images in real time using radio waves (yes, the same eletromagnetic waves used by FM radio or WiFi internet) that you can capture with a simple setup from your home.
+<!doctype html><html lang=en dir=auto><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=robots content="index, follow"><title>Live Earth Images from Satellites | The Mize Collection</title><meta name=keywords content="eletronics,iot,sdr"><meta name=description content="Right now there are a few satellites transmitting images in real time using radio waves (yes, the same eletromagnetic waves used by FM radio or WiFi internet) that you can capture with a simple setup from your home.
 You just need a computer, an antenna, maybe a filter, and a device able to capture radio signals.
-Sadly we can&rsquo;t use a FM radio (88-108 MHz), because we need a device able to capture signals at 137 MHz or higher.">
-<meta name="author" content="">
-<link rel="canonical" href="https://mizerc.github.io/posts/projects/sdr/">
-
-
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-NSFZNK7SSK"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-NSFZNK7SSK');
-</script>
-<link crossorigin="anonymous" href="/assets/css/stylesheet.c99e5cfcb9fc753351f74fbc922b84fc6fc938d5bc8196bd1cc0121a2f2ca665.css" integrity="sha256-yZ5c/Ln8dTNR90&#43;8kiuE/G/JONW8gZa9HMASGi8spmU=" rel="preload stylesheet" as="style">
-<link rel="icon" href="https://mizerc.github.io/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="https://mizerc.github.io/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://mizerc.github.io/favicon-32x32.png">
-<link rel="apple-touch-icon" href="https://mizerc.github.io/apple-touch-icon.png">
-<link rel="mask-icon" href="https://mizerc.github.io/safari-pinned-tab.svg">
-<meta name="theme-color" content="#2e2e33">
-<meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="https://mizerc.github.io/posts/projects/sdr/">
-<noscript>
-    <style>
-        #theme-toggle,
-        .top-link {
-            display: none;
-        }
-
-    </style>
-    <style>
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --theme: rgb(29, 30, 32);
-                --entry: rgb(46, 46, 51);
-                --primary: rgb(218, 218, 219);
-                --secondary: rgb(155, 156, 157);
-                --tertiary: rgb(65, 66, 68);
-                --content: rgb(196, 196, 197);
-                --code-block-bg: rgb(46, 46, 51);
-                --code-bg: rgb(55, 56, 62);
-                --border: rgb(51, 51, 51);
-            }
-
-            .list {
-                background: var(--theme);
-            }
-
-            .list:not(.dark)::-webkit-scrollbar-track {
-                background: 0 0;
-            }
-
-            .list:not(.dark)::-webkit-scrollbar-thumb {
-                border-color: var(--theme);
-            }
-        }
-
-    </style>
-</noscript>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css" integrity="sha384-5TcZemv2l/9On385z///+d7MSYlvIEw9FuZTIdZ14vJLqWphw7e7ZPuOiCHJcFCP" crossorigin="anonymous">
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js" integrity="sha384-cMkvdD8LoxVzGF/RPUKAcvmm49FQ0oxwDF3BGKtDXcEc+T1b2N+teh/OJfpU0jr6" crossorigin="anonymous"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/contrib/auto-render.min.js" integrity="sha384-hCXGrW6PitJEwbkoStFjeJxv+fSOOQKOPbJxSfM6G5sWZjAyWhXiTIIAmQqnlLlh" crossorigin="anonymous"></script>
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        renderMathInElement(document.body, {
-          
-          
-          delimiters: [
-              {left: '$$', right: '$$', display: true},
-              {left: '$', right: '$', display: false},
-              {left: '\\(', right: '\\)', display: false},
-              {left: '\\[', right: '\\]', display: true}
-          ],
-          
-          throwOnError : false
-        });
-    });
-</script>
-<meta property="og:url" content="https://mizerc.github.io/posts/projects/sdr/">
-  <meta property="og:site_name" content="The Mize Collection">
-  <meta property="og:title" content="Live Earth Images from Satellites">
-  <meta property="og:description" content="Right now there are a few satellites transmitting images in real time using radio waves (yes, the same eletromagnetic waves used by FM radio or WiFi internet) that you can capture with a simple setup from your home. You just need a computer, an antenna, maybe a filter, and a device able to capture radio signals. Sadly we can’t use a FM radio (88-108 MHz), because we need a device able to capture signals at 137 MHz or higher.">
-  <meta property="og:locale" content="en-us">
-  <meta property="og:type" content="article">
-    <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2025-05-21T01:24:51-07:00">
-    <meta property="article:modified_time" content="2025-05-21T01:24:51-07:00">
-    <meta property="article:tag" content="Eletronics">
-    <meta property="article:tag" content="Iot">
-    <meta property="article:tag" content="Sdr">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Live Earth Images from Satellites">
-<meta name="twitter:description" content="Right now there are a few satellites transmitting images in real time using radio waves (yes, the same eletromagnetic waves used by FM radio or WiFi internet) that you can capture with a simple setup from your home.
+Sadly we can&rsquo;t use a FM radio (88-108 MHz), because we need a device able to capture signals at 137 MHz or higher."><meta name=author content><link rel=canonical href=https://mizerc.github.io/posts/projects/sdr/><script async src="https://www.googletagmanager.com/gtag/js?id=G-NSFZNK7SSK"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-NSFZNK7SSK")</script><link crossorigin=anonymous href=/assets/css/stylesheet.446cc608fb2eeca040e3f550f79b21a7de7b97859101459113eb3325853e12ce.css integrity="sha256-RGzGCPsu7KBA4/VQ95shp957l4WRAUWRE+szJYU+Es4=" rel="preload stylesheet" as=style><link rel=icon href=https://mizerc.github.io/favicon.ico><link rel=icon type=image/png sizes=16x16 href=https://mizerc.github.io/favicon-16x16.png><link rel=icon type=image/png sizes=32x32 href=https://mizerc.github.io/favicon-32x32.png><link rel=apple-touch-icon href=https://mizerc.github.io/apple-touch-icon.png><link rel=mask-icon href=https://mizerc.github.io/safari-pinned-tab.svg><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><link rel=alternate hreflang=en href=https://mizerc.github.io/posts/projects/sdr/><noscript><style>#theme-toggle,.top-link{display:none}</style><style>@media(prefers-color-scheme:dark){:root{--theme:rgb(29, 30, 32);--entry:rgb(46, 46, 51);--primary:rgb(218, 218, 219);--secondary:rgb(155, 156, 157);--tertiary:rgb(65, 66, 68);--content:rgb(196, 196, 197);--code-block-bg:rgb(46, 46, 51);--code-bg:rgb(55, 56, 62);--border:rgb(51, 51, 51)}.list{background:var(--theme)}.list:not(.dark)::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-thumb{border-color:var(--theme)}}</style></noscript><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css integrity=sha384-5TcZemv2l/9On385z///+d7MSYlvIEw9FuZTIdZ14vJLqWphw7e7ZPuOiCHJcFCP crossorigin=anonymous><script defer src=https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js integrity=sha384-cMkvdD8LoxVzGF/RPUKAcvmm49FQ0oxwDF3BGKtDXcEc+T1b2N+teh/OJfpU0jr6 crossorigin=anonymous></script><script defer src=https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/contrib/auto-render.min.js integrity=sha384-hCXGrW6PitJEwbkoStFjeJxv+fSOOQKOPbJxSfM6G5sWZjAyWhXiTIIAmQqnlLlh crossorigin=anonymous></script><script>document.addEventListener("DOMContentLoaded",function(){renderMathInElement(document.body,{delimiters:[{left:"$$",right:"$$",display:!0},{left:"$",right:"$",display:!1},{left:"\\(",right:"\\)",display:!1},{left:"\\[",right:"\\]",display:!0}],throwOnError:!1})})</script><meta property="og:url" content="https://mizerc.github.io/posts/projects/sdr/"><meta property="og:site_name" content="The Mize Collection"><meta property="og:title" content="Live Earth Images from Satellites"><meta property="og:description" content="Right now there are a few satellites transmitting images in real time using radio waves (yes, the same eletromagnetic waves used by FM radio or WiFi internet) that you can capture with a simple setup from your home. You just need a computer, an antenna, maybe a filter, and a device able to capture radio signals. Sadly we can’t use a FM radio (88-108 MHz), because we need a device able to capture signals at 137 MHz or higher."><meta property="og:locale" content="en-us"><meta property="og:type" content="article"><meta property="article:section" content="posts"><meta property="article:published_time" content="2025-05-21T01:24:51-07:00"><meta property="article:modified_time" content="2025-05-21T01:24:51-07:00"><meta property="article:tag" content="Eletronics"><meta property="article:tag" content="Iot"><meta property="article:tag" content="Sdr"><meta name=twitter:card content="summary"><meta name=twitter:title content="Live Earth Images from Satellites"><meta name=twitter:description content="Right now there are a few satellites transmitting images in real time using radio waves (yes, the same eletromagnetic waves used by FM radio or WiFi internet) that you can capture with a simple setup from your home.
 You just need a computer, an antenna, maybe a filter, and a device able to capture radio signals.
-Sadly we can&rsquo;t use a FM radio (88-108 MHz), because we need a device able to capture signals at 137 MHz or higher.">
-
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position":  1 ,
-      "name": "Posts",
-      "item": "https://mizerc.github.io/posts/"
-    }, 
-    {
-      "@type": "ListItem",
-      "position":  2 ,
-      "name": "Live Earth Images from Satellites",
-      "item": "https://mizerc.github.io/posts/projects/sdr/"
-    }
-  ]
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "headline": "Live Earth Images from Satellites",
-  "name": "Live Earth Images from Satellites",
-  "description": "Right now there are a few satellites transmitting images in real time using radio waves (yes, the same eletromagnetic waves used by FM radio or WiFi internet) that you can capture with a simple setup from your home. You just need a computer, an antenna, maybe a filter, and a device able to capture radio signals. Sadly we can\u0026rsquo;t use a FM radio (88-108 MHz), because we need a device able to capture signals at 137 MHz or higher.\n",
-  "keywords": [
-    "eletronics", "iot", "sdr"
-  ],
-  "articleBody": "Right now there are a few satellites transmitting images in real time using radio waves (yes, the same eletromagnetic waves used by FM radio or WiFi internet) that you can capture with a simple setup from your home. You just need a computer, an antenna, maybe a filter, and a device able to capture radio signals. Sadly we can’t use a FM radio (88-108 MHz), because we need a device able to capture signals at 137 MHz or higher.\nSDR Receivers For just a few dollars, you can get a small USB device like the SDR-RTL V3 that lets you tune into a wide range of radio frequencies (500kHz - 1766 MHz). Something that, decades ago, would have cost hundreds of dollars and required bulky racks of specialized hardware. This is the great power of Software Defined Radios (SDR) receivers, and a few open source softwares.\nWith that range of frequencies, you can capture signals from weather satellites like NOAA-15 at 137.62 MHz. The raw signal needs to be processed to get the image using open source software like SatDump.\nSpecs Frequency Range Some SDR devices can capture very low frequencies, around 6-10 meters. Other are better at capturing higher frequencies, over 1.5 GHz which can be good for capturing signals from weather satellites like GOES. The frequency range an SDR can capture depends on its RF front-end design, including filters, mixers, and the ADC sample rate. Wideband SDRs may cover from kHz to several GHz, but performance (sensitivity, dynamic range) often varies across the range. Nonlinear components (e.g., amplifiers) distort strong signals, reducing usable range.\nMonitor Window Some SDR devices have a wider bandwidth, allowing you to monitor a larger portion of the RF spectrum simultaneously. The key term here is instantaneous bandwidth which defines how much spectrum can be digitized and processed at once. It is directly limited by the performance of its analog-to-digital converter (ADC). The ADC must sample the incoming analog RF signal at a rate at least twice the highest frequency component present (per Nyquist theorem). For example, to digitize 100 MHz of spectrum, the ADC must sample at ≥200 MSPS (mega-samples per second). Wider spectrum windows require faster ADCs and higher data throughput to the host system.\nFiltering Out / Filtering In To avoid strong FM broadcast interference (typically 88–108 MHz), you can use an FM band-stop filter between the antenna and the SDR. Some filter can attenuates only the FM band while passing other frequencies with minimal loss. Ideal if you want to monitor below or above 88–108 MHz. Other filters, like a band-pass filter, can allow only a specific frequency range to pass through. For example you can get one that allows only 137-138 MHz for NOAA satellites.\nDevices RTL-SDR V3 R828D or R820T tuner chip. Triplexed input filter. Aluminium case with passive cooling. SMA female connector. RTL2832U chipset. The maximum sample rate is 3.2 MS/s (mega samples per second). RTL-SDR V4 Improved front-end filtering. NOAA Weather Satellites Weather Satellites like NOAA transmit weather images continuously. As of now, NOAA-15, NOAA-18, and NOAA-19 are the only satellites transmitting images. Keep in mind that the longevity of these transmissions is uncertain, and they may cease entirely in the near future.\nThey transmit Automatic Picture Transmission (APT) signals in the VHF band (around 137 MHz). The images received are grayscale; however, some software (like SatDump) can process them to add country boundaries and colors based on the location and time of capture.\nDownlink Frequency Bands Satellite Frequency NOAA-15 137.620 MHz NOAA-18 137.9125 MHz NOAA-19 137.100 MHz Automatic Picture Transmission The Automatic Picture Transmission (APT) system is an analog image transmission system used by NOAA satellites.\nFrom Wikipedia:\nIt was introduced in the 1960s and over four decades has provided image data to relatively low-cost user stations at locations in most countries of the world. The signal is continuously broadcast, with reception beginning at the start of the next line when the receiver is within radio range. The bandwidth required to receive APT transmissions is approximately 34 kHz. Image Raw NOAA images often appear grey and low contrast. Histogram equalization is a technique that can be used to improve the contrast of the image to enhance the details.\nNOAA-15 807 km above the Earth Orbital period of 101 minutes. It completes about 14 revolutions per day (1440 minutes in one day / 101 minutes to do a single orbit). APT transmission frequency is 137.62 MHz. NOAA-18 Also known as NOAA-N or Advanced TIROS-N. 854 km above the Earth. Orbital period of 102 minutes. APT downlink frequency is 137.9125 MHz (note that NOAA-18 changed frequencies with NOAA-19 on June 2009). The spacecraft power is provided by the single solar array which is composed of eight panels of solar cells. https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2005-018A Capturing Images from NOAA Satellites SDR Device I will be using the RTL-SDR v3 to capture the signal.\nAntenna To capture NOAA signal at 137-138 MHz, you need an antenna that is tuned to that frequency. You can use a simple dipole antenna. Some users say that the QFH (Quadrifilar Helix Antenna) is best “build once, use forever” antenna for NOAA satellites, which is RHCP.\nHorizontal V-dipole for NOAA satellites There is a great tutorial at rtl-sdr and at lna4all that explains how to build a dipole antenna suitable to capture signals from NOAA satellites. In a nutshell, you want 120deg angle between the two arms of the dipole antenna. And ~54 cm long for each arm.\nTo find the length of each arm, you can use the following reasoning:\nspeed of light = 300,000,000 meters/second speed of light (meters/second) = frequency (Hz) * wavelength (meters) Wavelength (meters) = 300,000,000 meters/second / frequency (Hz) Wavelength (meters) = 300 / frequency (MHz) Wavelength (meters) = 300 / 137.62 MHz = 2.18 meters Half-wave length = 150 / frequency (MHz) Half-wave length = 150 / 137.62 MHz = 1.09 meters Each arm (meters) = 1.09 meters / 2 = 0.545 meters = ~54 cm The angle between the arms of a dipole is adjusted primarily to improve impedance matching with the coaxial feedline, as well as to reduce the space used by the antenna since a straight wire can be too long to fit the space available.\nA straight dipole (180deg) has a feedpoint impedance of ~70 ohms. Bending the arms downward (forming an angle \u003c180°) lowers the impedance. This article from qsl goes into more detail about this topic. We can also notice from the chart that bending from 180deg to 120deg reduces the gain in dBi.\nTo better understand how bending the arms of a dipole antenna affects the properties of the antenna, we will need to understand the radiation pattern of the antenna or using antenna modeling software.\nQFH Antenna TODO\nCable RG174 cable + SMA connectors. The RG174 cable is a small-diameter (2.5 mm) and flexible coaxial cable with impedance of 50 ohms.\nAntenna Design Resources Book: ARRL Antenna handbook. Tool: NanoVNA: Low cost vector network analyzer. Software gpredict Stellarium SDR++ SatDump Satellite Position Tracking In the image below, we can see a screenshot of the gpredict software, which allows us to view the current position and elevation of satellites, as well as predict their next pass over your location (Next Event column). Based on my experiments, I would target a minimum elevation of 45 degrees to capture a strong signal from NOAA satelittes.\nFigure: Screenshot of gpredict software used to track NOAA satelittles.\nTogether with gpredict, you can also use Stellarium to get a 3D view of the satellite’s position and manually estimate when it will pass over your location.\nFigure: Using stellarium to check the position of the NOAA-19 satellite.\nLastly, you can also use n2yo website to track the position of several satellites in real time. For example, you can use this link to get the NOAA-19 satellite’s position.\nCapturing the Signal Once you connect the SDR to your computer, you can start capturing the signal using the SDR++ software.\nFigure: Using SDR++ to capture the signal.\nSatDump Result (First Attempt) My first attempt was mid. Given the weather conditions, the signal was very noisy.\nFigure: First attempt capturing signal from NOAA satelittles.\nResult (Second Attempt) TODO\nSoftware OGG to WAV for i in *.ogg; do ffmpeg -acodec libvorbis -i \"$i\" -acodec pcm_s16le \"${i%.ogg}.wav\" done SDR++ You can select different inputs like SDR, over network, file, etc. Select NFM. Bandwidth 50,000. Record Audio (instead of baseband).\nIQ Signal The IQ signal is raw samples from the SDR receiver that you can export to a file to be processed later. The SDR++ can export the IQ signal to a file. Real + Complex samples.\nGOES Satellites GOES satellites are geostationary, unlike NOAA satellites, which orbit around the Earth.\nGOES-18 The GOES-18 is the only one I am able to capture from Seattle, WA. Using Azimuthal coordinate system at Seattle, you can find it stationary at Azimuth +199 deg and Elevation +33 deg. To capture GOES signal, you may need to use a parabolic reflector antenna targeting 1.7 GHz frequency. Check this great tutorial from usradioguy on how to receive GOES signal.\nAntenna Theory Antenna Capacitance and Inductance Adding coils increase inductance, while adding perpendicular wires increase capacitance. Both lower the resonate frequency. The trade offs are in efficiency and radiation pattern.\nExcess capacitance can detune the antenna away from the desired resonant frequency, requiring additional inductive load or tuning methods to achieve the target frequency.\nCoils add resistance to the antenna, which cause some of the energy be lost as heat.\nAntenna Ressonance Frequency The antenna has a ressonance frequency to which it will convert electromagnetic waves to voltage/current best. It also needs to match the impedance the radio circuits expect. Impedance is just the ratio of voltage to current. It is like matching the right gear in the car to extract the max power from the engine.\nAntenna Beamwidth Impedance Unlike resistance, the impedance will vary with frequency.\nCoax The length of the coax cable will limit how much power, at a given frequency, you can pump through it before some kind of failure. Power vs Signal.\nTools NanoVNA Next Steps [ ] Automatize image capture, processing and upload with raspberry pi\n[ ] Build PVC QFH Antenna to replace the dipole antenna\n[ ] Capture images from GOES satellites\n[ ] Publish images to satnog\n",
-  "wordCount" : "1725",
-  "inLanguage": "en",
-  "datePublished": "2025-05-21T01:24:51-07:00",
-  "dateModified": "2025-05-21T01:24:51-07:00",
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://mizerc.github.io/posts/projects/sdr/"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "The Mize Collection",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://mizerc.github.io/favicon.ico"
-    }
-  }
-}
-</script>
-</head>
-
-<body class="" id="top">
-<script>
-    if (localStorage.getItem("pref-theme") === "dark") {
-        document.body.classList.add('dark');
-    } else if (localStorage.getItem("pref-theme") === "light") {
-        document.body.classList.remove('dark')
-    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        document.body.classList.add('dark');
-    }
-
-</script>
-
-<link rel="stylesheet" href="https://mizerc.github.io/custom.css">
-
-<header class="header">
-    <nav class="nav">
-        <div class="logo">
-            <a href="https://mizerc.github.io/" accesskey="h" title="The Mize Collection (Alt + H)">The Mize Collection</a>
-            <div class="logo-switches">
-                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
-                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                    </svg>
-                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <circle cx="12" cy="12" r="5"></circle>
-                        <line x1="12" y1="1" x2="12" y2="3"></line>
-                        <line x1="12" y1="21" x2="12" y2="23"></line>
-                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                        <line x1="1" y1="12" x2="3" y2="12"></line>
-                        <line x1="21" y1="12" x2="23" y2="12"></line>
-                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                    </svg>
-                </button>
-            </div>
-        </div>
-        <ul id="menu">
-            <li>
-                <a href="https://mizerc.github.io/" title="Home">
-                    <span>Home</span>
-                </a>
-            </li>
-            <li>
-                <a href="https://mizerc.github.io/about/" title="About">
-                    <span>About</span>
-                </a>
-            </li>
-        </ul>
-    </nav>
-</header>
-<main class="main">
-
-<article class="post-single">
-  <header class="post-header">
-    
-    <h1 class="post-title entry-hint-parent">
-      Live Earth Images from Satellites
-    </h1>
-    <hr>
-  </header> 
-  <div class="post-content"><p>Right now there are a few satellites transmitting images in real time using radio waves (yes, the same eletromagnetic waves used by FM radio or WiFi internet) that you can capture with a simple setup from your home.
+Sadly we can&rsquo;t use a FM radio (88-108 MHz), because we need a device able to capture signals at 137 MHz or higher."><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"https://mizerc.github.io/posts/"},{"@type":"ListItem","position":2,"name":"Live Earth Images from Satellites","item":"https://mizerc.github.io/posts/projects/sdr/"}]}</script><script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"Live Earth Images from Satellites","name":"Live Earth Images from Satellites","description":"Right now there are a few satellites transmitting images in real time using radio waves (yes, the same eletromagnetic waves used by FM radio or WiFi internet) that you can capture with a simple setup from your home. You just need a computer, an antenna, maybe a filter, and a device able to capture radio signals. Sadly we can\u0026rsquo;t use a FM radio (88-108 MHz), because we need a device able to capture signals at 137 MHz or higher.\n","keywords":["eletronics","iot","sdr"],"articleBody":"Right now there are a few satellites transmitting images in real time using radio waves (yes, the same eletromagnetic waves used by FM radio or WiFi internet) that you can capture with a simple setup from your home. You just need a computer, an antenna, maybe a filter, and a device able to capture radio signals. Sadly we can’t use a FM radio (88-108 MHz), because we need a device able to capture signals at 137 MHz or higher.\nSDR Receivers For just a few dollars, you can get a small USB device like the SDR-RTL V3 that lets you tune into a wide range of radio frequencies (500kHz - 1766 MHz). Something that, decades ago, would have cost hundreds of dollars and required bulky racks of specialized hardware. This is the great power of Software Defined Radios (SDR) receivers, and a few open source softwares.\nWith that range of frequencies, you can capture signals from weather satellites like NOAA-15 at 137.62 MHz. The raw signal needs to be processed to get the image using open source software like SatDump.\nSpecs Frequency Range Some SDR devices can capture very low frequencies, around 6-10 meters. Other are better at capturing higher frequencies, over 1.5 GHz which can be good for capturing signals from weather satellites like GOES. The frequency range an SDR can capture depends on its RF front-end design, including filters, mixers, and the ADC sample rate. Wideband SDRs may cover from kHz to several GHz, but performance (sensitivity, dynamic range) often varies across the range. Nonlinear components (e.g., amplifiers) distort strong signals, reducing usable range.\nMonitor Window Some SDR devices have a wider bandwidth, allowing you to monitor a larger portion of the RF spectrum simultaneously. The key term here is instantaneous bandwidth which defines how much spectrum can be digitized and processed at once. It is directly limited by the performance of its analog-to-digital converter (ADC). The ADC must sample the incoming analog RF signal at a rate at least twice the highest frequency component present (per Nyquist theorem). For example, to digitize 100 MHz of spectrum, the ADC must sample at ≥200 MSPS (mega-samples per second). Wider spectrum windows require faster ADCs and higher data throughput to the host system.\nFiltering Out / Filtering In To avoid strong FM broadcast interference (typically 88–108 MHz), you can use an FM band-stop filter between the antenna and the SDR. Some filter can attenuates only the FM band while passing other frequencies with minimal loss. Ideal if you want to monitor below or above 88–108 MHz. Other filters, like a band-pass filter, can allow only a specific frequency range to pass through. For example you can get one that allows only 137-138 MHz for NOAA satellites.\nDevices RTL-SDR V3 R828D or R820T tuner chip. Triplexed input filter. Aluminium case with passive cooling. SMA female connector. RTL2832U chipset. The maximum sample rate is 3.2 MS/s (mega samples per second). RTL-SDR V4 Improved front-end filtering. NOAA Weather Satellites Weather Satellites like NOAA transmit weather images continuously. As of now, NOAA-15, NOAA-18, and NOAA-19 are the only satellites transmitting images. Keep in mind that the longevity of these transmissions is uncertain, and they may cease entirely in the near future.\nThey transmit Automatic Picture Transmission (APT) signals in the VHF band (around 137 MHz). The images received are grayscale; however, some software (like SatDump) can process them to add country boundaries and colors based on the location and time of capture.\nDownlink Frequency Bands Satellite Frequency NOAA-15 137.620 MHz NOAA-18 137.9125 MHz NOAA-19 137.100 MHz Automatic Picture Transmission The Automatic Picture Transmission (APT) system is an analog image transmission system used by NOAA satellites.\nFrom Wikipedia:\nIt was introduced in the 1960s and over four decades has provided image data to relatively low-cost user stations at locations in most countries of the world. The signal is continuously broadcast, with reception beginning at the start of the next line when the receiver is within radio range. The bandwidth required to receive APT transmissions is approximately 34 kHz. Image Raw NOAA images often appear grey and low contrast. Histogram equalization is a technique that can be used to improve the contrast of the image to enhance the details.\nNOAA-15 807 km above the Earth Orbital period of 101 minutes. It completes about 14 revolutions per day (1440 minutes in one day / 101 minutes to do a single orbit). APT transmission frequency is 137.62 MHz. NOAA-18 Also known as NOAA-N or Advanced TIROS-N. 854 km above the Earth. Orbital period of 102 minutes. APT downlink frequency is 137.9125 MHz (note that NOAA-18 changed frequencies with NOAA-19 on June 2009). The spacecraft power is provided by the single solar array which is composed of eight panels of solar cells. https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2005-018A Capturing Images from NOAA Satellites SDR Device I will be using the RTL-SDR v3 to capture the signal.\nAntenna To capture NOAA signal at 137-138 MHz, you need an antenna that is tuned to that frequency. You can use a simple dipole antenna. Some users say that the QFH (Quadrifilar Helix Antenna) is best “build once, use forever” antenna for NOAA satellites, which is RHCP.\nHorizontal V-dipole for NOAA satellites There is a great tutorial at rtl-sdr and at lna4all that explains how to build a dipole antenna suitable to capture signals from NOAA satellites. In a nutshell, you want 120deg angle between the two arms of the dipole antenna. And ~54 cm long for each arm.\nTo find the length of each arm, you can use the following reasoning:\nspeed of light = 300,000,000 meters/second speed of light (meters/second) = frequency (Hz) * wavelength (meters) Wavelength (meters) = 300,000,000 meters/second / frequency (Hz) Wavelength (meters) = 300 / frequency (MHz) Wavelength (meters) = 300 / 137.62 MHz = 2.18 meters Half-wave length = 150 / frequency (MHz) Half-wave length = 150 / 137.62 MHz = 1.09 meters Each arm (meters) = 1.09 meters / 2 = 0.545 meters = ~54 cm The angle between the arms of a dipole is adjusted primarily to improve impedance matching with the coaxial feedline, as well as to reduce the space used by the antenna since a straight wire can be too long to fit the space available.\nA straight dipole (180deg) has a feedpoint impedance of ~70 ohms. Bending the arms downward (forming an angle \u003c180°) lowers the impedance. This article from qsl goes into more detail about this topic. We can also notice from the chart that bending from 180deg to 120deg reduces the gain in dBi.\nTo better understand how bending the arms of a dipole antenna affects the properties of the antenna, we will need to understand the radiation pattern of the antenna or using antenna modeling software.\nQFH Antenna TODO\nCable RG174 cable + SMA connectors. The RG174 cable is a small-diameter (2.5 mm) and flexible coaxial cable with impedance of 50 ohms.\nAntenna Design Resources Book: ARRL Antenna handbook. Tool: NanoVNA: Low cost vector network analyzer. Software gpredict Stellarium SDR++ SatDump Satellite Position Tracking In the image below, we can see a screenshot of the gpredict software, which allows us to view the current position and elevation of satellites, as well as predict their next pass over your location (Next Event column). Based on my experiments, I would target a minimum elevation of 45 degrees to capture a strong signal from NOAA satelittes.\nFigure: Screenshot of gpredict software used to track NOAA satelittles.\nTogether with gpredict, you can also use Stellarium to get a 3D view of the satellite’s position and manually estimate when it will pass over your location.\nFigure: Using stellarium to check the position of the NOAA-19 satellite.\nLastly, you can also use n2yo website to track the position of several satellites in real time. For example, you can use this link to get the NOAA-19 satellite’s position.\nCapturing the Signal Once you connect the SDR to your computer, you can start capturing the signal using the SDR++ software.\nFigure: Using SDR++ to capture the signal.\nSatDump Result (First Attempt) My first attempt was mid. Given the weather conditions, the signal was very noisy.\nFigure: First attempt capturing signal from NOAA satelittles.\nResult (Second Attempt) TODO\nSoftware OGG to WAV for i in *.ogg; do ffmpeg -acodec libvorbis -i \"$i\" -acodec pcm_s16le \"${i%.ogg}.wav\" done SDR++ You can select different inputs like SDR, over network, file, etc. Select NFM. Bandwidth 50,000. Record Audio (instead of baseband).\nIQ Signal The IQ signal is raw samples from the SDR receiver that you can export to a file to be processed later. The SDR++ can export the IQ signal to a file. Real + Complex samples.\nGOES Satellites GOES satellites are geostationary, unlike NOAA satellites, which orbit around the Earth.\nGOES-18 The GOES-18 is the only one I am able to capture from Seattle, WA. Using Azimuthal coordinate system at Seattle, you can find it stationary at Azimuth +199 deg and Elevation +33 deg. To capture GOES signal, you may need to use a parabolic reflector antenna targeting 1.7 GHz frequency. Check this great tutorial from usradioguy on how to receive GOES signal.\nAntenna Theory Antenna Capacitance and Inductance Adding coils increase inductance, while adding perpendicular wires increase capacitance. Both lower the resonate frequency. The trade offs are in efficiency and radiation pattern.\nExcess capacitance can detune the antenna away from the desired resonant frequency, requiring additional inductive load or tuning methods to achieve the target frequency.\nCoils add resistance to the antenna, which cause some of the energy be lost as heat.\nAntenna Ressonance Frequency The antenna has a ressonance frequency to which it will convert electromagnetic waves to voltage/current best. It also needs to match the impedance the radio circuits expect. Impedance is just the ratio of voltage to current. It is like matching the right gear in the car to extract the max power from the engine.\nAntenna Beamwidth Impedance Unlike resistance, the impedance will vary with frequency.\nCoax The length of the coax cable will limit how much power, at a given frequency, you can pump through it before some kind of failure. Power vs Signal.\nTools NanoVNA Next Steps [ ] Automatize image capture, processing and upload with raspberry pi\n[ ] Build PVC QFH Antenna to replace the dipole antenna\n[ ] Capture images from GOES satellites\n[ ] Publish images to satnog\n","wordCount":"1725","inLanguage":"en","datePublished":"2025-05-21T01:24:51-07:00","dateModified":"2025-05-21T01:24:51-07:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://mizerc.github.io/posts/projects/sdr/"},"publisher":{"@type":"Organization","name":"The Mize Collection","logo":{"@type":"ImageObject","url":"https://mizerc.github.io/favicon.ico"}}}</script></head><body id=top><script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add("dark"):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove("dark"):window.matchMedia("(prefers-color-scheme: dark)").matches&&document.body.classList.add("dark")</script><link rel=stylesheet href=https://mizerc.github.io/custom.css><header class=header><nav class=nav><div class=logo><a href=https://mizerc.github.io/ accesskey=h title="The Mize Collection (Alt + H)">The Mize Collection</a><div class=logo-switches><button id=theme-toggle accesskey=t title="(Alt + T)" aria-label="Toggle theme">
+<svg id="moon" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+<svg id="sun" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></div></div><ul id=menu><li><a href=https://mizerc.github.io/ title=Home><span>Home</span></a></li><li><a href=https://mizerc.github.io/about/ title=About><span>About</span></a></li></ul></nav></header><main class=main><article class=post-single><header class=post-header><h1 class="post-title entry-hint-parent">Live Earth Images from Satellites</h1><hr></header><div class=post-content><p>Right now there are a few satellites transmitting images in real time using radio waves (yes, the same eletromagnetic waves used by FM radio or WiFi internet) that you can capture with a simple setup from your home.
 You just need a computer, an antenna, maybe a filter, and a device able to capture radio signals.
-Sadly we can&rsquo;t use a FM radio (88-108 MHz), because we need a device able to capture signals at 137 MHz or higher.</p>
-<h2 id="sdr-receivers">SDR Receivers<a hidden class="anchor" aria-hidden="true" href="#sdr-receivers">#</a></h2>
-<p>For just a few dollars, you can get a small USB device like the SDR-RTL V3 that lets you tune into a wide range of radio frequencies (500kHz - 1766 MHz).
+Sadly we can&rsquo;t use a FM radio (88-108 MHz), because we need a device able to capture signals at 137 MHz or higher.</p><h2 id=sdr-receivers>SDR Receivers<a hidden class=anchor aria-hidden=true href=#sdr-receivers>#</a></h2><p>For just a few dollars, you can get a small USB device like the SDR-RTL V3 that lets you tune into a wide range of radio frequencies (500kHz - 1766 MHz).
 Something that, decades ago, would have cost hundreds of dollars and required bulky racks of specialized hardware.
-This is the great power of Software Defined Radios (SDR) receivers, and a few open source softwares.</p>
-<p>With that range of frequencies, you can capture signals from weather satellites like NOAA-15 at 137.62 MHz.
-The raw signal needs to be processed to get the image using open source software like SatDump.</p>
-<h3 id="specs">Specs<a hidden class="anchor" aria-hidden="true" href="#specs">#</a></h3>
-<h4 id="frequency-range">Frequency Range<a hidden class="anchor" aria-hidden="true" href="#frequency-range">#</a></h4>
-<p>Some SDR devices can capture very low frequencies, around 6-10 meters.
+This is the great power of Software Defined Radios (SDR) receivers, and a few open source softwares.</p><p>With that range of frequencies, you can capture signals from weather satellites like NOAA-15 at 137.62 MHz.
+The raw signal needs to be processed to get the image using open source software like SatDump.</p><h3 id=specs>Specs<a hidden class=anchor aria-hidden=true href=#specs>#</a></h3><h4 id=frequency-range>Frequency Range<a hidden class=anchor aria-hidden=true href=#frequency-range>#</a></h4><p>Some SDR devices can capture very low frequencies, around 6-10 meters.
 Other are better at capturing higher frequencies, over 1.5 GHz which can be good for capturing signals from weather satellites like GOES.
 The frequency range an SDR can capture depends on its RF front-end design, including filters, mixers, and the ADC sample rate.
 Wideband SDRs may cover from kHz to several GHz, but performance (sensitivity, dynamic range) often varies across the range.
-Nonlinear components (e.g., amplifiers) distort strong signals, reducing usable range.</p>
-<h4 id="monitor-window">Monitor Window<a hidden class="anchor" aria-hidden="true" href="#monitor-window">#</a></h4>
-<p>Some SDR devices have a wider bandwidth, allowing you to monitor a larger portion of the RF spectrum simultaneously.
+Nonlinear components (e.g., amplifiers) distort strong signals, reducing usable range.</p><h4 id=monitor-window>Monitor Window<a hidden class=anchor aria-hidden=true href=#monitor-window>#</a></h4><p>Some SDR devices have a wider bandwidth, allowing you to monitor a larger portion of the RF spectrum simultaneously.
 The key term here is <code>instantaneous bandwidth</code> which defines how much spectrum can be digitized and processed at once.
 It is directly limited by the performance of its analog-to-digital converter (ADC).
 The ADC must sample the incoming analog RF signal at a rate at least twice the highest frequency component present (per Nyquist theorem).
 For example, to digitize 100 MHz of spectrum, the ADC must sample at ≥200 MSPS (mega-samples per second).
-Wider spectrum windows require faster ADCs and higher data throughput to the host system.</p>
-<h4 id="filtering-out--filtering-in">Filtering Out / Filtering In<a hidden class="anchor" aria-hidden="true" href="#filtering-out--filtering-in">#</a></h4>
-<p>To avoid strong FM broadcast interference (typically 88–108 MHz), you can use an FM band-stop filter between the antenna and the SDR.
+Wider spectrum windows require faster ADCs and higher data throughput to the host system.</p><h4 id=filtering-out--filtering-in>Filtering Out / Filtering In<a hidden class=anchor aria-hidden=true href=#filtering-out--filtering-in>#</a></h4><p>To avoid strong FM broadcast interference (typically 88–108 MHz), you can use an FM band-stop filter between the antenna and the SDR.
 Some filter can attenuates only the FM band while passing other frequencies with minimal loss.
 Ideal if you want to monitor below or above 88–108 MHz.
 Other filters, like a <code>band-pass filter</code>, can allow only a specific frequency range to pass through.
-For example you can get one that allows only 137-138 MHz for NOAA satellites.</p>
-<h3 id="devices">Devices<a hidden class="anchor" aria-hidden="true" href="#devices">#</a></h3>
-<h4 id="rtl-sdr-v3">RTL-SDR V3<a hidden class="anchor" aria-hidden="true" href="#rtl-sdr-v3">#</a></h4>
-<ul>
-<li>R828D or R820T tuner chip.</li>
-<li>Triplexed input filter.</li>
-<li>Aluminium case with passive cooling.</li>
-<li>SMA female connector.</li>
-<li>RTL2832U chipset.</li>
-<li>The maximum sample rate is 3.2 MS/s (mega samples per second).</li>
-</ul>
-<h4 id="rtl-sdr-v4">RTL-SDR V4<a hidden class="anchor" aria-hidden="true" href="#rtl-sdr-v4">#</a></h4>
-<ul>
-<li>Improved front-end filtering.</li>
-</ul>
-<h2 id="noaa-weather-satellites">NOAA Weather Satellites<a hidden class="anchor" aria-hidden="true" href="#noaa-weather-satellites">#</a></h2>
-<p>Weather Satellites like NOAA transmit weather images continuously.
+For example you can get one that allows only 137-138 MHz for NOAA satellites.</p><h3 id=devices>Devices<a hidden class=anchor aria-hidden=true href=#devices>#</a></h3><h4 id=rtl-sdr-v3>RTL-SDR V3<a hidden class=anchor aria-hidden=true href=#rtl-sdr-v3>#</a></h4><ul><li>R828D or R820T tuner chip.</li><li>Triplexed input filter.</li><li>Aluminium case with passive cooling.</li><li>SMA female connector.</li><li>RTL2832U chipset.</li><li>The maximum sample rate is 3.2 MS/s (mega samples per second).</li></ul><h4 id=rtl-sdr-v4>RTL-SDR V4<a hidden class=anchor aria-hidden=true href=#rtl-sdr-v4>#</a></h4><ul><li>Improved front-end filtering.</li></ul><h2 id=noaa-weather-satellites>NOAA Weather Satellites<a hidden class=anchor aria-hidden=true href=#noaa-weather-satellites>#</a></h2><p>Weather Satellites like NOAA transmit weather images continuously.
 As of now, NOAA-15, NOAA-18, and NOAA-19 are the only satellites transmitting images.
-Keep in mind that the longevity of these transmissions is uncertain, and they may cease entirely in the near future.</p>
-<p>They transmit Automatic Picture Transmission (APT) signals in the VHF band (around 137 MHz).
-The images received are grayscale; however, some software (like SatDump) can process them to add country boundaries and colors based on the location and time of capture.</p>
-<h3 id="downlink-frequency-bands">Downlink Frequency Bands<a hidden class="anchor" aria-hidden="true" href="#downlink-frequency-bands">#</a></h3>
-<table>
-  <thead>
-      <tr>
-          <th>Satellite</th>
-          <th>Frequency</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>NOAA-15</td>
-          <td>137.620 MHz</td>
-      </tr>
-      <tr>
-          <td>NOAA-18</td>
-          <td>137.9125 MHz</td>
-      </tr>
-      <tr>
-          <td>NOAA-19</td>
-          <td>137.100 MHz</td>
-      </tr>
-  </tbody>
-</table>
-<h3 id="automatic-picture-transmission">Automatic Picture Transmission<a hidden class="anchor" aria-hidden="true" href="#automatic-picture-transmission">#</a></h3>
-<p>The Automatic Picture Transmission (APT) system is an analog image transmission system used by NOAA satellites.</p>
-<p>From <a href="https://en.wikipedia.org/wiki/Automatic_picture_transmission">Wikipedia</a>:</p>
-<ul>
-<li>It was introduced in the 1960s and over four decades has provided image data to relatively low-cost user stations at locations in most countries of the world.</li>
-<li>The signal is continuously broadcast, with reception beginning at the start of the next line when the receiver is within radio range.</li>
-<li>The bandwidth required to receive APT transmissions is approximately 34 kHz.</li>
-</ul>
-<h3 id="image">Image<a hidden class="anchor" aria-hidden="true" href="#image">#</a></h3>
-<p>Raw NOAA images often appear grey and low contrast.
-Histogram equalization is a technique that can be used to improve the contrast of the image to enhance the details.</p>
-<h3 id="noaa-15">NOAA-15<a hidden class="anchor" aria-hidden="true" href="#noaa-15">#</a></h3>
-<ul>
-<li>807 km above the Earth</li>
-<li>Orbital period of 101 minutes.</li>
-<li>It completes about 14 revolutions per day (<code>1440 minutes in one day / 101 minutes to do a single orbit</code>).</li>
-<li>APT transmission frequency is 137.62 MHz.</li>
-</ul>
-<h3 id="noaa-18">NOAA-18<a hidden class="anchor" aria-hidden="true" href="#noaa-18">#</a></h3>
-<ul>
-<li>Also known as NOAA-N or Advanced TIROS-N.</li>
-<li>854 km above the Earth.</li>
-<li>Orbital period of 102 minutes.</li>
-<li>APT downlink frequency is 137.9125 MHz (note that NOAA-18 changed frequencies with NOAA-19 on June 2009).</li>
-<li>The spacecraft power is provided by the single solar array which is composed of eight panels of solar cells.</li>
-<li><a href="https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2005-018A">https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2005-018A</a></li>
-</ul>
-<h2 id="capturing-images-from-noaa-satellites">Capturing Images from NOAA Satellites<a hidden class="anchor" aria-hidden="true" href="#capturing-images-from-noaa-satellites">#</a></h2>
-<h3 id="sdr-device">SDR Device<a hidden class="anchor" aria-hidden="true" href="#sdr-device">#</a></h3>
-<p>I will be using the RTL-SDR v3 to capture the signal.</p>
-<h3 id="antenna">Antenna<a hidden class="anchor" aria-hidden="true" href="#antenna">#</a></h3>
-<p>To capture NOAA signal at 137-138 MHz, you need an antenna that is tuned to that frequency.
+Keep in mind that the longevity of these transmissions is uncertain, and they may cease entirely in the near future.</p><p>They transmit Automatic Picture Transmission (APT) signals in the VHF band (around 137 MHz).
+The images received are grayscale; however, some software (like SatDump) can process them to add country boundaries and colors based on the location and time of capture.</p><h3 id=downlink-frequency-bands>Downlink Frequency Bands<a hidden class=anchor aria-hidden=true href=#downlink-frequency-bands>#</a></h3><table><thead><tr><th>Satellite</th><th>Frequency</th></tr></thead><tbody><tr><td>NOAA-15</td><td>137.620 MHz</td></tr><tr><td>NOAA-18</td><td>137.9125 MHz</td></tr><tr><td>NOAA-19</td><td>137.100 MHz</td></tr></tbody></table><h3 id=automatic-picture-transmission>Automatic Picture Transmission<a hidden class=anchor aria-hidden=true href=#automatic-picture-transmission>#</a></h3><p>The Automatic Picture Transmission (APT) system is an analog image transmission system used by NOAA satellites.</p><p>From <a href=https://en.wikipedia.org/wiki/Automatic_picture_transmission>Wikipedia</a>:</p><ul><li>It was introduced in the 1960s and over four decades has provided image data to relatively low-cost user stations at locations in most countries of the world.</li><li>The signal is continuously broadcast, with reception beginning at the start of the next line when the receiver is within radio range.</li><li>The bandwidth required to receive APT transmissions is approximately 34 kHz.</li></ul><h3 id=image>Image<a hidden class=anchor aria-hidden=true href=#image>#</a></h3><p>Raw NOAA images often appear grey and low contrast.
+Histogram equalization is a technique that can be used to improve the contrast of the image to enhance the details.</p><h3 id=noaa-15>NOAA-15<a hidden class=anchor aria-hidden=true href=#noaa-15>#</a></h3><ul><li>807 km above the Earth</li><li>Orbital period of 101 minutes.</li><li>It completes about 14 revolutions per day (<code>1440 minutes in one day / 101 minutes to do a single orbit</code>).</li><li>APT transmission frequency is 137.62 MHz.</li></ul><h3 id=noaa-18>NOAA-18<a hidden class=anchor aria-hidden=true href=#noaa-18>#</a></h3><ul><li>Also known as NOAA-N or Advanced TIROS-N.</li><li>854 km above the Earth.</li><li>Orbital period of 102 minutes.</li><li>APT downlink frequency is 137.9125 MHz (note that NOAA-18 changed frequencies with NOAA-19 on June 2009).</li><li>The spacecraft power is provided by the single solar array which is composed of eight panels of solar cells.</li><li><a href="https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2005-018A">https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2005-018A</a></li></ul><h2 id=capturing-images-from-noaa-satellites>Capturing Images from NOAA Satellites<a hidden class=anchor aria-hidden=true href=#capturing-images-from-noaa-satellites>#</a></h2><h3 id=sdr-device>SDR Device<a hidden class=anchor aria-hidden=true href=#sdr-device>#</a></h3><p>I will be using the RTL-SDR v3 to capture the signal.</p><h3 id=antenna>Antenna<a hidden class=anchor aria-hidden=true href=#antenna>#</a></h3><p>To capture NOAA signal at 137-138 MHz, you need an antenna that is tuned to that frequency.
 You can use a simple dipole antenna.
-Some users say that the QFH (Quadrifilar Helix Antenna) is best &ldquo;build once, use forever&rdquo; antenna for NOAA satellites, which is RHCP.</p>
-<h4 id="horizontal-v-dipole-for-noaa-satellites">Horizontal V-dipole for NOAA satellites<a hidden class="anchor" aria-hidden="true" href="#horizontal-v-dipole-for-noaa-satellites">#</a></h4>
-<p>There is a great tutorial at <a href="https://www.rtl-sdr.com/simple-noaameteor-weather-satellite-antenna-137-mhz-v-dipole/">rtl-sdr</a> and at <a href="https://lna4all.blogspot.com/2017/02/diy-137-mhz-wx-sat-v-dipole-antenna.html">lna4all</a> that explains how to build a dipole antenna suitable to capture signals from NOAA satellites.
+Some users say that the QFH (Quadrifilar Helix Antenna) is best &ldquo;build once, use forever&rdquo; antenna for NOAA satellites, which is RHCP.</p><h4 id=horizontal-v-dipole-for-noaa-satellites>Horizontal V-dipole for NOAA satellites<a hidden class=anchor aria-hidden=true href=#horizontal-v-dipole-for-noaa-satellites>#</a></h4><p>There is a great tutorial at <a href=https://www.rtl-sdr.com/simple-noaameteor-weather-satellite-antenna-137-mhz-v-dipole/>rtl-sdr</a> and at <a href=https://lna4all.blogspot.com/2017/02/diy-137-mhz-wx-sat-v-dipole-antenna.html>lna4all</a> that explains how to build a dipole antenna suitable to capture signals from NOAA satellites.
 In a nutshell, you want 120deg angle between the two arms of the dipole antenna.
-And ~54 cm long for each arm.</p>
-<p>To find the length of each arm, you can use the following reasoning:</p>
-<pre tabindex="0"><code class="language-math" data-lang="math">speed of light = 300,000,000 meters/second
+And ~54 cm long for each arm.</p><p>To find the length of each arm, you can use the following reasoning:</p><pre tabindex=0><code class=language-math data-lang=math>speed of light = 300,000,000 meters/second
 
 speed of light (meters/second) = frequency (Hz) * wavelength (meters)
 Wavelength (meters) = 300,000,000 meters/second / frequency (Hz)
@@ -344,204 +41,32 @@ Half-wave length = 150 / frequency (MHz)
 Half-wave length = 150 / 137.62 MHz = 1.09 meters
 
 Each arm (meters) = 1.09 meters / 2 = 0.545 meters = ~54 cm
-</code></pre><p>The angle between the arms of a dipole is adjusted primarily to improve impedance matching with the coaxial feedline, as well as to reduce the space used by the antenna since a straight wire can be too long to fit the space available.</p>
-<p>A straight dipole (180deg) has a feedpoint impedance of ~70 ohms.
+</code></pre><p>The angle between the arms of a dipole is adjusted primarily to improve impedance matching with the coaxial feedline, as well as to reduce the space used by the antenna since a straight wire can be too long to fit the space available.</p><p>A straight dipole (180deg) has a feedpoint impedance of ~70 ohms.
 Bending the arms downward (forming an angle &lt;180°) lowers the impedance.
-<a href="https://www.qsl.net/kk4obi/Center-fed%20V-dipoles%20Lateral.html">This article from qsl</a> goes into more detail about this topic.
-We can also notice from the chart that bending from 180deg to 120deg reduces the gain in dBi.</p>
-<p>To better understand how bending the arms of a dipole antenna affects the properties of the antenna, we will need to understand the radiation pattern of the antenna or using antenna modeling software.</p>
-<h4 id="qfh-antenna">QFH Antenna<a hidden class="anchor" aria-hidden="true" href="#qfh-antenna">#</a></h4>
-<p>TODO</p>
-<h4 id="cable">Cable<a hidden class="anchor" aria-hidden="true" href="#cable">#</a></h4>
-<p>RG174 cable + SMA connectors.
-The RG174 cable is a small-diameter (2.5 mm) and flexible coaxial cable with impedance of 50 ohms.</p>
-<!-- At high frequencies, the RG174 cable can have high losses. -->
-<!-- You also need to keep it short (<5 meters) to avoid signal loss. -->
-<h4 id="antenna-design-resources">Antenna Design Resources<a hidden class="anchor" aria-hidden="true" href="#antenna-design-resources">#</a></h4>
-<ul>
-<li>Book: ARRL Antenna handbook.</li>
-<li>Tool: NanoVNA: Low cost vector network analyzer.</li>
-</ul>
-<h3 id="software">Software<a hidden class="anchor" aria-hidden="true" href="#software">#</a></h3>
-<ul>
-<li>gpredict</li>
-<li>Stellarium</li>
-<li>SDR++</li>
-<li>SatDump</li>
-</ul>
-<h4 id="satellite-position-tracking">Satellite Position Tracking<a hidden class="anchor" aria-hidden="true" href="#satellite-position-tracking">#</a></h4>
-<p>In the image below, we can see a screenshot of the <code>gpredict</code> software, which allows us to view the current <code>position</code> and <code>elevation</code> of satellites, as well as predict their next pass over your location (Next Event column).
-Based on my experiments, I would target a minimum elevation of 45 degrees to capture a strong signal from NOAA satelittes.</p>
-<figure class="center">
-    <img loading="lazy" src="images/gpredict.png#center"
-         alt="Figure: Screenshot of gpredict software used to track NOAA satelittles." width="80%"/> <figcaption>
-            <p>Figure: Screenshot of gpredict software used to track NOAA satelittles.</p>
-        </figcaption>
-</figure>
-
-<p>Together with gpredict, you can also use Stellarium to get a 3D view of the satellite&rsquo;s position and manually estimate when it will pass over your location.</p>
-<figure class="center">
-    <img loading="lazy" src="images/stellarium.png#center"
-         alt="Figure: Using stellarium to check the position of the NOAA-19 satellite."/> <figcaption>
-            <p>Figure: Using stellarium to check the position of the NOAA-19 satellite.</p>
-        </figcaption>
-</figure>
-
-<p>Lastly, you can also use n2yo website to track the position of several satellites in real time.
-For example, you can use <a href="https://www.n2yo.com/?s=33591&amp;live=1">this link</a> to get the NOAA-19 satellite&rsquo;s position.</p>
-<h4 id="capturing-the-signal">Capturing the Signal<a hidden class="anchor" aria-hidden="true" href="#capturing-the-signal">#</a></h4>
-<p>Once you connect the SDR to your computer, you can start capturing the signal using the SDR++ software.</p>
-<figure>
-    <img loading="lazy" src="images/sdr&#43;&#43;.png#center"
-         alt="Figure: Using SDR&#43;&#43; to capture the signal."/> <figcaption>
-            <p>Figure: Using SDR++ to capture the signal.</p>
-        </figcaption>
-</figure>
-
-<h4 id="satdump">SatDump<a hidden class="anchor" aria-hidden="true" href="#satdump">#</a></h4>
-<h4 id="result-first-attempt">Result (First Attempt)<a hidden class="anchor" aria-hidden="true" href="#result-first-attempt">#</a></h4>
-<p>My first attempt was mid.
-Given the weather conditions, the signal was very noisy.</p>
-<figure>
-    <img loading="lazy" src="images/result.png#center"
-         alt="Figure: First attempt capturing signal from NOAA satelittles."/> <figcaption>
-            <p>Figure: First attempt capturing signal from NOAA satelittles.</p>
-        </figcaption>
-</figure>
-
-<h4 id="result-second-attempt">Result (Second Attempt)<a hidden class="anchor" aria-hidden="true" href="#result-second-attempt">#</a></h4>
-<p>TODO</p>
-<h2 id="software-1">Software<a hidden class="anchor" aria-hidden="true" href="#software-1">#</a></h2>
-<h3 id="ogg-to-wav">OGG to WAV<a hidden class="anchor" aria-hidden="true" href="#ogg-to-wav">#</a></h3>
-<pre tabindex="0"><code>for i in *.ogg; do
+<a href=https://www.qsl.net/kk4obi/Center-fed%20V-dipoles%20Lateral.html>This article from qsl</a> goes into more detail about this topic.
+We can also notice from the chart that bending from 180deg to 120deg reduces the gain in dBi.</p><p>To better understand how bending the arms of a dipole antenna affects the properties of the antenna, we will need to understand the radiation pattern of the antenna or using antenna modeling software.</p><h4 id=qfh-antenna>QFH Antenna<a hidden class=anchor aria-hidden=true href=#qfh-antenna>#</a></h4><p>TODO</p><h4 id=cable>Cable<a hidden class=anchor aria-hidden=true href=#cable>#</a></h4><p>RG174 cable + SMA connectors.
+The RG174 cable is a small-diameter (2.5 mm) and flexible coaxial cable with impedance of 50 ohms.</p><h4 id=antenna-design-resources>Antenna Design Resources<a hidden class=anchor aria-hidden=true href=#antenna-design-resources>#</a></h4><ul><li>Book: ARRL Antenna handbook.</li><li>Tool: NanoVNA: Low cost vector network analyzer.</li></ul><h3 id=software>Software<a hidden class=anchor aria-hidden=true href=#software>#</a></h3><ul><li>gpredict</li><li>Stellarium</li><li>SDR++</li><li>SatDump</li></ul><h4 id=satellite-position-tracking>Satellite Position Tracking<a hidden class=anchor aria-hidden=true href=#satellite-position-tracking>#</a></h4><p>In the image below, we can see a screenshot of the <code>gpredict</code> software, which allows us to view the current <code>position</code> and <code>elevation</code> of satellites, as well as predict their next pass over your location (Next Event column).
+Based on my experiments, I would target a minimum elevation of 45 degrees to capture a strong signal from NOAA satelittes.</p><figure class=center><img loading=lazy src=images/gpredict.png#center alt="Figure: Screenshot of gpredict software used to track NOAA satelittles." width=80%><figcaption><p>Figure: Screenshot of gpredict software used to track NOAA satelittles.</p></figcaption></figure><p>Together with gpredict, you can also use Stellarium to get a 3D view of the satellite&rsquo;s position and manually estimate when it will pass over your location.</p><figure class=center><img loading=lazy src=images/stellarium.png#center alt="Figure: Using stellarium to check the position of the NOAA-19 satellite."><figcaption><p>Figure: Using stellarium to check the position of the NOAA-19 satellite.</p></figcaption></figure><p>Lastly, you can also use n2yo website to track the position of several satellites in real time.
+For example, you can use <a href="https://www.n2yo.com/?s=33591&amp;live=1">this link</a> to get the NOAA-19 satellite&rsquo;s position.</p><h4 id=capturing-the-signal>Capturing the Signal<a hidden class=anchor aria-hidden=true href=#capturing-the-signal>#</a></h4><p>Once you connect the SDR to your computer, you can start capturing the signal using the SDR++ software.</p><figure><img loading=lazy src=images/sdr++.png#center alt="Figure: Using SDR++ to capture the signal."><figcaption><p>Figure: Using SDR++ to capture the signal.</p></figcaption></figure><h4 id=satdump>SatDump<a hidden class=anchor aria-hidden=true href=#satdump>#</a></h4><h4 id=result-first-attempt>Result (First Attempt)<a hidden class=anchor aria-hidden=true href=#result-first-attempt>#</a></h4><p>My first attempt was mid.
+Given the weather conditions, the signal was very noisy.</p><figure><img loading=lazy src=images/result.png#center alt="Figure: First attempt capturing signal from NOAA satelittles."><figcaption><p>Figure: First attempt capturing signal from NOAA satelittles.</p></figcaption></figure><h4 id=result-second-attempt>Result (Second Attempt)<a hidden class=anchor aria-hidden=true href=#result-second-attempt>#</a></h4><p>TODO</p><h2 id=software-1>Software<a hidden class=anchor aria-hidden=true href=#software-1>#</a></h2><h3 id=ogg-to-wav>OGG to WAV<a hidden class=anchor aria-hidden=true href=#ogg-to-wav>#</a></h3><pre tabindex=0><code>for i in *.ogg; do
   ffmpeg -acodec libvorbis -i &#34;$i&#34; -acodec pcm_s16le &#34;${i%.ogg}.wav&#34;
 done
-</code></pre><h3 id="sdr">SDR++<a hidden class="anchor" aria-hidden="true" href="#sdr">#</a></h3>
-<p>You can select different inputs like SDR, over network, file, etc.
+</code></pre><h3 id=sdr>SDR++<a hidden class=anchor aria-hidden=true href=#sdr>#</a></h3><p>You can select different inputs like SDR, over network, file, etc.
 Select NFM.
 Bandwidth 50,000.
-Record Audio (instead of baseband).</p>
-<h4 id="iq-signal">IQ Signal<a hidden class="anchor" aria-hidden="true" href="#iq-signal">#</a></h4>
-<p>The IQ signal is raw samples from the SDR receiver that you can export to a file to be processed later.
+Record Audio (instead of baseband).</p><h4 id=iq-signal>IQ Signal<a hidden class=anchor aria-hidden=true href=#iq-signal>#</a></h4><p>The IQ signal is raw samples from the SDR receiver that you can export to a file to be processed later.
 The SDR++ can export the IQ signal to a file.
-Real + Complex samples.</p>
-<h2 id="goes-satellites">GOES Satellites<a hidden class="anchor" aria-hidden="true" href="#goes-satellites">#</a></h2>
-<p>GOES satellites are geostationary, unlike NOAA satellites, which orbit around the Earth.</p>
-<h3 id="goes-18">GOES-18<a hidden class="anchor" aria-hidden="true" href="#goes-18">#</a></h3>
-<p>The GOES-18 is the only one I am able to capture from Seattle, WA.
+Real + Complex samples.</p><h2 id=goes-satellites>GOES Satellites<a hidden class=anchor aria-hidden=true href=#goes-satellites>#</a></h2><p>GOES satellites are geostationary, unlike NOAA satellites, which orbit around the Earth.</p><h3 id=goes-18>GOES-18<a hidden class=anchor aria-hidden=true href=#goes-18>#</a></h3><p>The GOES-18 is the only one I am able to capture from Seattle, WA.
 Using Azimuthal coordinate system at Seattle, you can find it stationary at Azimuth +199 deg and Elevation +33 deg.
-To capture GOES signal, you may need to use a <a href="https://www.amazon.com/gp/product/B08HGQXC7C">parabolic reflector antenna targeting 1.7 GHz frequency</a>.
-Check <a href="https://usradioguy.com/goes-satellite-imagery-reception">this great tutorial from usradioguy</a> on how to receive GOES signal.</p>
-<h2 id="antenna-theory">Antenna Theory<a hidden class="anchor" aria-hidden="true" href="#antenna-theory">#</a></h2>
-<h3 id="antenna-capacitance-and-inductance">Antenna Capacitance and Inductance<a hidden class="anchor" aria-hidden="true" href="#antenna-capacitance-and-inductance">#</a></h3>
-<p>Adding coils increase inductance, while adding perpendicular wires increase capacitance.
+To capture GOES signal, you may need to use a <a href=https://www.amazon.com/gp/product/B08HGQXC7C>parabolic reflector antenna targeting 1.7 GHz frequency</a>.
+Check <a href=https://usradioguy.com/goes-satellite-imagery-reception>this great tutorial from usradioguy</a> on how to receive GOES signal.</p><h2 id=antenna-theory>Antenna Theory<a hidden class=anchor aria-hidden=true href=#antenna-theory>#</a></h2><h3 id=antenna-capacitance-and-inductance>Antenna Capacitance and Inductance<a hidden class=anchor aria-hidden=true href=#antenna-capacitance-and-inductance>#</a></h3><p>Adding coils increase inductance, while adding perpendicular wires increase capacitance.
 Both lower the resonate frequency.
-The trade offs are in efficiency and radiation pattern.</p>
-<p>Excess capacitance can detune the antenna away from the desired resonant frequency, requiring additional inductive load or tuning methods to achieve the target frequency.</p>
-<p>Coils add resistance to the antenna, which cause some of the energy be lost as heat.</p>
-<h3 id="antenna-ressonance-frequency">Antenna Ressonance Frequency<a hidden class="anchor" aria-hidden="true" href="#antenna-ressonance-frequency">#</a></h3>
-<p>The antenna has a ressonance frequency to which it will convert electromagnetic waves to voltage/current best.
+The trade offs are in efficiency and radiation pattern.</p><p>Excess capacitance can detune the antenna away from the desired resonant frequency, requiring additional inductive load or tuning methods to achieve the target frequency.</p><p>Coils add resistance to the antenna, which cause some of the energy be lost as heat.</p><h3 id=antenna-ressonance-frequency>Antenna Ressonance Frequency<a hidden class=anchor aria-hidden=true href=#antenna-ressonance-frequency>#</a></h3><p>The antenna has a ressonance frequency to which it will convert electromagnetic waves to voltage/current best.
 It also needs to match the impedance the radio circuits expect.
 Impedance is just the ratio of voltage to current.
-It is like matching the right gear in the car to extract the max power from the engine.</p>
-<h3 id="antenna-beamwidth">Antenna Beamwidth<a hidden class="anchor" aria-hidden="true" href="#antenna-beamwidth">#</a></h3>
-<h3 id="impedance">Impedance<a hidden class="anchor" aria-hidden="true" href="#impedance">#</a></h3>
-<p>Unlike resistance, the impedance will vary with frequency.</p>
-<h3 id="coax">Coax<a hidden class="anchor" aria-hidden="true" href="#coax">#</a></h3>
-<p>The length of the coax cable will limit how much power, at a given frequency, you can pump through it before some kind of failure.
-Power vs Signal.</p>
-<h3 id="tools">Tools<a hidden class="anchor" aria-hidden="true" href="#tools">#</a></h3>
-<ul>
-<li>NanoVNA</li>
-</ul>
-<h2 id="next-steps">Next Steps<a hidden class="anchor" aria-hidden="true" href="#next-steps">#</a></h2>
-<p>[ ] Automatize image capture, processing and upload with raspberry pi</p>
-<p>[ ] <a href="https://www.instructables.com/NOAA-Satellite-Signals-with-a-PVC-QFH-Antenna-and-/">Build PVC QFH Antenna to replace the dipole antenna</a></p>
-<p>[ ] Capture images from GOES satellites</p>
-<p>[ ] Publish images to <a href="https://network.satnogs.org/stations">satnog</a></p>
-
-
-  </div>
-
-  <footer class="post-footer">
-    <ul class="post-tags">
-      <li><a href="https://mizerc.github.io/tags/eletronics/">Eletronics</a></li>
-      <li><a href="https://mizerc.github.io/tags/iot/">Iot</a></li>
-      <li><a href="https://mizerc.github.io/tags/sdr/">Sdr</a></li>
-    </ul>
-  </footer>
-</article>
-    </main>
-    
-<footer class="footer">
-        <span>&copy; 2025 <a href="https://mizerc.github.io/">The Mize Collection</a></span> · 
-
-    <span>
-        Powered by
-        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
-        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
-    </span>
-</footer>
-<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
-        <path d="M12 6H0l6-6z" />
-    </svg>
-</a>
-
-<script>
-    let menu = document.getElementById('menu')
-    if (menu) {
-        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
-        menu.onscroll = function () {
-            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
-        }
-    }
-
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener("click", function (e) {
-            e.preventDefault();
-            var id = this.getAttribute("href").substr(1);
-            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
-                    behavior: "smooth"
-                });
-            } else {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
-            }
-            if (id === "top") {
-                history.replaceState(null, null, " ");
-            } else {
-                history.pushState(null, null, `#${id}`);
-            }
-        });
-    });
-
-</script>
-<script>
-    var mybutton = document.getElementById("top-link");
-    window.onscroll = function () {
-        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
-            mybutton.style.visibility = "visible";
-            mybutton.style.opacity = "1";
-        } else {
-            mybutton.style.visibility = "hidden";
-            mybutton.style.opacity = "0";
-        }
-    };
-
-</script>
-<script>
-    document.getElementById("theme-toggle").addEventListener("click", () => {
-        if (document.body.className.includes("dark")) {
-            document.body.classList.remove('dark');
-            localStorage.setItem("pref-theme", 'light');
-        } else {
-            document.body.classList.add('dark');
-            localStorage.setItem("pref-theme", 'dark');
-        }
-    })
-
-</script>
-</body>
-
-</html>
+It is like matching the right gear in the car to extract the max power from the engine.</p><h3 id=antenna-beamwidth>Antenna Beamwidth<a hidden class=anchor aria-hidden=true href=#antenna-beamwidth>#</a></h3><h3 id=impedance>Impedance<a hidden class=anchor aria-hidden=true href=#impedance>#</a></h3><p>Unlike resistance, the impedance will vary with frequency.</p><h3 id=coax>Coax<a hidden class=anchor aria-hidden=true href=#coax>#</a></h3><p>The length of the coax cable will limit how much power, at a given frequency, you can pump through it before some kind of failure.
+Power vs Signal.</p><h3 id=tools>Tools<a hidden class=anchor aria-hidden=true href=#tools>#</a></h3><ul><li>NanoVNA</li></ul><h2 id=next-steps>Next Steps<a hidden class=anchor aria-hidden=true href=#next-steps>#</a></h2><p>[ ] Automatize image capture, processing and upload with raspberry pi</p><p>[ ] <a href=https://www.instructables.com/NOAA-Satellite-Signals-with-a-PVC-QFH-Antenna-and-/>Build PVC QFH Antenna to replace the dipole antenna</a></p><p>[ ] Capture images from GOES satellites</p><p>[ ] Publish images to <a href=https://network.satnogs.org/stations>satnog</a></p></div><footer class=post-footer><ul class=post-tags><li><a href=https://mizerc.github.io/tags/eletronics/>Eletronics</a></li><li><a href=https://mizerc.github.io/tags/iot/>Iot</a></li><li><a href=https://mizerc.github.io/tags/sdr/>Sdr</a></li></ul></footer></article></main><footer class=footer><span>&copy; 2025 <a href=https://mizerc.github.io/>The Mize Collection</a></span> ·
+<span>Powered by
+<a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
+<a href=https://github.com/adityatelange/hugo-PaperMod/ rel=noopener target=_blank>PaperMod</a></span></footer><a href=#top aria-label="go to top" title="Go to Top (Alt + G)" class=top-link id=top-link accesskey=g><svg viewBox="0 0 12 6" fill="currentColor"><path d="M12 6H0l6-6z"/></svg>
+</a><script>let menu=document.getElementById("menu");menu&&(menu.scrollLeft=localStorage.getItem("menu-scroll-position"),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)}),document.querySelectorAll('a[href^="#"]').forEach(e=>{e.addEventListener("click",function(e){e.preventDefault();var t=this.getAttribute("href").substr(1);window.matchMedia("(prefers-reduced-motion: reduce)").matches?document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView({behavior:"smooth"}),t==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${t}`)})})</script><script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script><script>document.getElementById("theme-toggle").addEventListener("click",()=>{document.body.className.includes("dark")?(document.body.classList.remove("dark"),localStorage.setItem("pref-theme","light")):(document.body.classList.add("dark"),localStorage.setItem("pref-theme","dark"))})</script></body></html>

@@ -1,13 +1,4 @@
-<!DOCTYPE html>
-<html lang="en" dir="auto">
-
-<head><meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="index, follow">
-<title>Rasterizer | The Mize Collection</title>
-<meta name="keywords" content="computergraphics">
-<meta name="description" content="Introduction
+<!doctype html><html lang=en dir=auto><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=robots content="index, follow"><title>Rasterizer | The Mize Collection</title><meta name=keywords content="computergraphics"><meta name=description content="Introduction
 Computer graphics is one of my favorite topics in computer science.
 Here I will try to document a bit of the math and algorithms necessary to build a simple engine that can render 3d models on the screen.
 The two main methods to create images from 3d geometry are rasterization and ray tracing.
@@ -15,99 +6,9 @@ On this post I will focus on the rasterization method.
 
 Scene
 We can think of a scene as a collection of models, lights, and cameras.
-It is the data structure that holds all the information necessary to render the scene.">
-<meta name="author" content="">
-<link rel="canonical" href="https://mizerc.github.io/posts/projects/rasterizer/">
-
-
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-NSFZNK7SSK"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-NSFZNK7SSK');
-</script>
-<link crossorigin="anonymous" href="/assets/css/stylesheet.c99e5cfcb9fc753351f74fbc922b84fc6fc938d5bc8196bd1cc0121a2f2ca665.css" integrity="sha256-yZ5c/Ln8dTNR90&#43;8kiuE/G/JONW8gZa9HMASGi8spmU=" rel="preload stylesheet" as="style">
-<link rel="icon" href="https://mizerc.github.io/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="https://mizerc.github.io/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://mizerc.github.io/favicon-32x32.png">
-<link rel="apple-touch-icon" href="https://mizerc.github.io/apple-touch-icon.png">
-<link rel="mask-icon" href="https://mizerc.github.io/safari-pinned-tab.svg">
-<meta name="theme-color" content="#2e2e33">
-<meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="https://mizerc.github.io/posts/projects/rasterizer/">
-<noscript>
-    <style>
-        #theme-toggle,
-        .top-link {
-            display: none;
-        }
-
-    </style>
-    <style>
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --theme: rgb(29, 30, 32);
-                --entry: rgb(46, 46, 51);
-                --primary: rgb(218, 218, 219);
-                --secondary: rgb(155, 156, 157);
-                --tertiary: rgb(65, 66, 68);
-                --content: rgb(196, 196, 197);
-                --code-block-bg: rgb(46, 46, 51);
-                --code-bg: rgb(55, 56, 62);
-                --border: rgb(51, 51, 51);
-            }
-
-            .list {
-                background: var(--theme);
-            }
-
-            .list:not(.dark)::-webkit-scrollbar-track {
-                background: 0 0;
-            }
-
-            .list:not(.dark)::-webkit-scrollbar-thumb {
-                border-color: var(--theme);
-            }
-        }
-
-    </style>
-</noscript>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css" integrity="sha384-5TcZemv2l/9On385z///+d7MSYlvIEw9FuZTIdZ14vJLqWphw7e7ZPuOiCHJcFCP" crossorigin="anonymous">
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js" integrity="sha384-cMkvdD8LoxVzGF/RPUKAcvmm49FQ0oxwDF3BGKtDXcEc+T1b2N+teh/OJfpU0jr6" crossorigin="anonymous"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/contrib/auto-render.min.js" integrity="sha384-hCXGrW6PitJEwbkoStFjeJxv+fSOOQKOPbJxSfM6G5sWZjAyWhXiTIIAmQqnlLlh" crossorigin="anonymous"></script>
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        renderMathInElement(document.body, {
-          
-          
-          delimiters: [
-              {left: '$$', right: '$$', display: true},
-              {left: '$', right: '$', display: false},
-              {left: '\\(', right: '\\)', display: false},
-              {left: '\\[', right: '\\]', display: true}
-          ],
-          
-          throwOnError : false
-        });
-    });
-</script>
-<meta property="og:url" content="https://mizerc.github.io/posts/projects/rasterizer/">
-  <meta property="og:site_name" content="The Mize Collection">
-  <meta property="og:title" content="Rasterizer">
-  <meta property="og:description" content="Introduction Computer graphics is one of my favorite topics in computer science. Here I will try to document a bit of the math and algorithms necessary to build a simple engine that can render 3d models on the screen.
+It is the data structure that holds all the information necessary to render the scene."><meta name=author content><link rel=canonical href=https://mizerc.github.io/posts/projects/rasterizer/><script async src="https://www.googletagmanager.com/gtag/js?id=G-NSFZNK7SSK"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-NSFZNK7SSK")</script><link crossorigin=anonymous href=/assets/css/stylesheet.446cc608fb2eeca040e3f550f79b21a7de7b97859101459113eb3325853e12ce.css integrity="sha256-RGzGCPsu7KBA4/VQ95shp957l4WRAUWRE+szJYU+Es4=" rel="preload stylesheet" as=style><link rel=icon href=https://mizerc.github.io/favicon.ico><link rel=icon type=image/png sizes=16x16 href=https://mizerc.github.io/favicon-16x16.png><link rel=icon type=image/png sizes=32x32 href=https://mizerc.github.io/favicon-32x32.png><link rel=apple-touch-icon href=https://mizerc.github.io/apple-touch-icon.png><link rel=mask-icon href=https://mizerc.github.io/safari-pinned-tab.svg><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><link rel=alternate hreflang=en href=https://mizerc.github.io/posts/projects/rasterizer/><noscript><style>#theme-toggle,.top-link{display:none}</style><style>@media(prefers-color-scheme:dark){:root{--theme:rgb(29, 30, 32);--entry:rgb(46, 46, 51);--primary:rgb(218, 218, 219);--secondary:rgb(155, 156, 157);--tertiary:rgb(65, 66, 68);--content:rgb(196, 196, 197);--code-block-bg:rgb(46, 46, 51);--code-bg:rgb(55, 56, 62);--border:rgb(51, 51, 51)}.list{background:var(--theme)}.list:not(.dark)::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-thumb{border-color:var(--theme)}}</style></noscript><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css integrity=sha384-5TcZemv2l/9On385z///+d7MSYlvIEw9FuZTIdZ14vJLqWphw7e7ZPuOiCHJcFCP crossorigin=anonymous><script defer src=https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js integrity=sha384-cMkvdD8LoxVzGF/RPUKAcvmm49FQ0oxwDF3BGKtDXcEc+T1b2N+teh/OJfpU0jr6 crossorigin=anonymous></script><script defer src=https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/contrib/auto-render.min.js integrity=sha384-hCXGrW6PitJEwbkoStFjeJxv+fSOOQKOPbJxSfM6G5sWZjAyWhXiTIIAmQqnlLlh crossorigin=anonymous></script><script>document.addEventListener("DOMContentLoaded",function(){renderMathInElement(document.body,{delimiters:[{left:"$$",right:"$$",display:!0},{left:"$",right:"$",display:!1},{left:"\\(",right:"\\)",display:!1},{left:"\\[",right:"\\]",display:!0}],throwOnError:!1})})</script><meta property="og:url" content="https://mizerc.github.io/posts/projects/rasterizer/"><meta property="og:site_name" content="The Mize Collection"><meta property="og:title" content="Rasterizer"><meta property="og:description" content="Introduction Computer graphics is one of my favorite topics in computer science. Here I will try to document a bit of the math and algorithms necessary to build a simple engine that can render 3d models on the screen.
 The two main methods to create images from 3d geometry are rasterization and ray tracing. On this post I will focus on the rasterization method.
-Scene We can think of a scene as a collection of models, lights, and cameras. It is the data structure that holds all the information necessary to render the scene.">
-  <meta property="og:locale" content="en-us">
-  <meta property="og:type" content="article">
-    <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2025-07-08T00:00:00+00:00">
-    <meta property="article:modified_time" content="2025-07-08T00:00:00+00:00">
-    <meta property="article:tag" content="Computergraphics">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Rasterizer">
-<meta name="twitter:description" content="Introduction
+Scene We can think of a scene as a collection of models, lights, and cameras. It is the data structure that holds all the information necessary to render the scene."><meta property="og:locale" content="en-us"><meta property="og:type" content="article"><meta property="article:section" content="posts"><meta property="article:published_time" content="2025-07-08T00:00:00+00:00"><meta property="article:modified_time" content="2025-07-08T00:00:00+00:00"><meta property="article:tag" content="Computergraphics"><meta name=twitter:card content="summary"><meta name=twitter:title content="Rasterizer"><meta name=twitter:description content="Introduction
 Computer graphics is one of my favorite topics in computer science.
 Here I will try to document a bit of the math and algorithms necessary to build a simple engine that can render 3d models on the screen.
 The two main methods to create images from 3d geometry are rasterization and ray tracing.
@@ -115,180 +16,27 @@ On this post I will focus on the rasterization method.
 
 Scene
 We can think of a scene as a collection of models, lights, and cameras.
-It is the data structure that holds all the information necessary to render the scene.">
-
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position":  1 ,
-      "name": "Posts",
-      "item": "https://mizerc.github.io/posts/"
-    }, 
-    {
-      "@type": "ListItem",
-      "position":  2 ,
-      "name": "Rasterizer",
-      "item": "https://mizerc.github.io/posts/projects/rasterizer/"
-    }
-  ]
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "headline": "Rasterizer",
-  "name": "Rasterizer",
-  "description": "Introduction Computer graphics is one of my favorite topics in computer science. Here I will try to document a bit of the math and algorithms necessary to build a simple engine that can render 3d models on the screen.\nThe two main methods to create images from 3d geometry are rasterization and ray tracing. On this post I will focus on the rasterization method.\nScene We can think of a scene as a collection of models, lights, and cameras. It is the data structure that holds all the information necessary to render the scene.\n",
-  "keywords": [
-    "computergraphics"
-  ],
-  "articleBody": "Introduction Computer graphics is one of my favorite topics in computer science. Here I will try to document a bit of the math and algorithms necessary to build a simple engine that can render 3d models on the screen.\nThe two main methods to create images from 3d geometry are rasterization and ray tracing. On this post I will focus on the rasterization method.\nScene We can think of a scene as a collection of models, lights, and cameras. It is the data structure that holds all the information necessary to render the scene.\nModel We can call a model the collection of 3d points defined in local space that is built using a software like Blender.\nMesh We group each three points to form a face/triangle. And we group faces into a entity called mesh. Any 3d object can be represented by a collection of triangles called mesh, from a simple cube to a complex model like a human body.\nReading a model from a file We can load a model from a file. The file can provide the list of vertexes, vertexes normal, face normal, texture coordinates.\nSoftwares like Blender can export the model in a file format like OBJ. It can be a text file that you can open with a text editor to see the vertices and faces. There are also binary formats like FBX that can include more data like textures, materials, and animations.\nIf your file is using the same 3d point multiple times, it may be benefical using the idea of indices. The indices are a list of numbers that point to a resubable vertex. This helps to reduce the size of the file and to avoid rewritting the same vertex multiple times.\nBesides indices and vertices, a 3D model file can also include vertex normals, face normals, texture coordinates, and transformations such as translation, rotation, and scaling.\nCamera The camera is the point of view from which we are looking at the scene. It is defined by a position, a look at point, and an up vector. We can have multiple cameras in the scene, each one with its own position, look at point, and up vector.\nThe camera stay at origin, and we move the universe around.\nTechnically the view matrix is the inverse of the camera “model” transformation. But we don’t need to compute the inverse. We can build the view matrix directly.\nYaw Pitch Roll Light Position, direction Type: Directional, Point, Spot, Area Intensity (RGB), attenuation Shadow casting flags Transformations We can use matrices as a well defined structure to do transformations. The main matrices are model, view, and projection.\nThe model matrix is the collection of all the transformations applied to the 3D object like translation, rotation, and scaling. The order is important, we first apply the translation, then the rotation, and finally the scaling.\nModel Matrix Model Matrix transforms from Local Space to World Space.\nTranslation We can translate x by t_x and save the result in x' by doing the following:\n$$ x’ \\mathrel{=} x + t_x $$\nUsing matrices, we can translate a 3d point by multiplying it by the translation matrix:\n$$ \\begin{bmatrix} x’ \\\\ y’ \\\\ z’ \\\\ w' \\end{bmatrix} \\mathrel{=} \\begin{bmatrix} 1 \u0026 0 \u0026 0 \u0026 t_x \\\\ 0 \u0026 1 \u0026 0 \u0026 t_y \\\\ 0 \u0026 0 \u0026 1 \u0026 t_z \\\\ 0 \u0026 0 \u0026 0 \u0026 1 \\end{bmatrix} \\cdot \\begin{bmatrix} x \\\\ y \\\\ z \\\\ 1 \\end{bmatrix} $$\nFor example, the new prime elements will contain the following:\nx’ = x + tx y’ = y + ty z’ = z + tz w’ = w = 1 Note that we use homogeneous coordinates to be able to do the translation using matrices. The w component is 1 and still 1 after the translation.\nScaling We can scale x by s_x and save the result in x' by doing the following:\n$$ x’ \\mathrel{=} x \\cdot s_x $$\nWe don’t need homogeneous coordinates for the scaling. But to keep the same structure as the translation matrix, we can write the scaling matrix as:\n$$ \\begin{bmatrix} x’ \\\\ y’ \\\\ z’ \\\\ w' \\end{bmatrix} \\mathrel{=} \\begin{bmatrix} s_x \u0026 0 \u0026 0 \u0026 0 \\\\ 0 \u0026 s_y \u0026 0 \u0026 0 \\\\ 0 \u0026 0 \u0026 s_z \u0026 0 \\\\ 0 \u0026 0 \u0026 0 \u0026 1 \\end{bmatrix} \\cdot \\begin{bmatrix} x \\\\ y \\\\ z \\\\ w \\end{bmatrix} \\mathrel{=} \\begin{bmatrix} x + s_x \\\\ y + s_y \\\\ z + s_z \\\\ w \\end{bmatrix} $$\nx’ = sx * x y’ = sy * y z’ = sz * z w’ = w = 1 Rotation Order of Transforms We first move to the origin using translation. Then we rotate. Then we move it back.\nRotating after translating causes the object to orbit a point instead of rotating in place.\nFor model transform you usually first scale, then rotate, then translate.\nIf you want to rotate the mesh around a arbritary point, then you need to scale, move to the point, rotate, return back.\nMatrix multiplication is right associative. M = T x R x S reads we apply S first, then R, then T. Doing the matrix-vector multiplication we read as M x v = (T x R x S) x v = T x (R x (S x v)).\nCombining all the transformation into a single matrice if efficient because we do the multiplication once. Often we combine the model and view matrix into the modelView matrice. We can also combine with the projection matrix.\nv_world = Model x vertex v_camera = View x Model x vertex v_clip = Projection x View x Model x vertex View View Matrix transform from Model Space to View Space.\nIf we keep the camera at the origin, looking at the negative z-axis, the view matrix is the identity matrix. However, if we want to move or rotate the camera around the world, we need to use the view matrix to transform the world space to the camera space.\nWe can model the camera with a position, a look at point, and an up vector. The three properties are defined with vectors.\nProjection Projection is the mathematical transformation that maps 3D coordinates to a 2D plane (the screen), simulating the perspective or orthographic view of a camera.\nPerspective This projection simulates the human eye’s perspective, where objects appear smaller as they are further away.\nOrthographic This propjection preserves size regardless of depth, parallel lines stay parallel. When using orthographic, we don’t need to do perspective division since we don’t make things smaller as they are far away.\nViewport The last transformation is to scale the normalized coordinates (x,y) of each vertex to the screen space. The screen space x component will be x times the canvas width.\nOptimization To avoid wasting computation rendering objects that are not visible, we can use the culling and clipping techniques. This is valid because normally rasterization of the pixels of a triangle is way more costly than just checking the 3 vertexes of the face.\nFrustum The camera frustum is the volume that contains the visible objects from the camera point of view. It is a volume defined by 6 planes: top, bottom, left, right, near and far.\nCulling Culling is the process of removing entire objects that are not visible from the scene.\nOutside Frustum Culling If a surface/triangle is outside the frustum, we can remove it. This means a surface behind the camera (behind the near plane).\nBackface Culling Another culling technique is to check if the face is facing away from the camera. We can compute the normal of the face and check if it is facing away from the camera. To compute the normal of the face, we can use the right hand wind rule. Using math, we can compute the normal of the face by using the cross product of the two edges of the face.\nClipping When we are lucky, we can just remove the entire triagle from the pipeline if it is outside the field of view. However, sometimes the triangle is right on the barrier that divide what we want to render and what we don’t want to render. When this happens, we could just remove the object, but the right way is to clip the triangle.\nClipping is the process of removing parts of objects, often a triangle, that are not visible from the camera. Clipping needs more advanced math to remove or add vertices of the sliced triangle.\nRendering Order Using a technique to render surfaces in the correct order can fix some of the problems where we render a back surface over the front surface.\nPainter Algorithm The painter algorithm is just a way of sorting each surface by the averange z value of the vertexes. Assuming a triangle defined by 3 vertexes v1, v2 and v3, the triangle average z is the (v1.z + v2.z + v3.z) / 3.\nZ-Buffer The Z-Buffer, also called Depth buffer, is a additional buffer that contains a number for each pixel of the canvas. The number is specifically the front-most z value of each vertex (x,y,z) of the surface. So as we render, if the buffer already contains a z value that is smaller than the current, we ignore it to prevent rendering on top of a existing surface.\nRasterization Once we finish to transform and cull the objects, we can start to rasterize the objects. Rasterization is the stage in the graphics pipeline where projected 2D shapes (from 3D scene) are converted into pixel data.\nLine Rasterization DDA The simplest shape to rasterize is a line. We can use the DDA algorithm to rasterize a line.\nBresenham’s line algorith Fast than DDA. Only use integer (no floating computation). Triangle Rasterization The next shape to rasterize is a triangle. We can use the scanline algorithm to rasterize a triangle.\nNormals Face Normal The face normal can be computed from the winding of the face vertexes using right hand rule. Clockwise ordering.\nVertex Normal The vertex normal can be computed from the averange of the normal of each face shared by the vertex.\nLighting Diffuse reflection Shading How surface respond to light.\nDiffuse reflection of light caused by irregular surface. Light rays are reflected to all directions. Sunrise and sunset have a difuse behavior. A big area lamp creates a difuse light.\nSpecular reflection is caused by a smooth surface. A shine metal surface has a high specular reflection than rubber surface. A concentrated highlight spot on a metallic surface.\nFlat Shading The entire face is painted with one single solid color. No interpolation.\nGouraud Shading Also know as “smooth shading” when compared with the previous flat shading. They have a smooth color transition from pixel to pixel.\nEach vertex of the triangle has a color. We interpolate the color using barycenter coordinates as we paint the triangle. Each pixel receives a unique color from the interpolation. Create smooth surfaces.\nWe use the color of the three vertices of the triangle to compute the color of each pixel of the triangle by interpolating it on the surface.\nThe Gouraud shading algorithm is named after Henri Gouraud. He first published the technique in 1971. This lighening model compute the illuminated color at each pixel using barycenter interpolation to rasterize the surface/triangle.\nPhong Shading We use the normal of each vertex to interpolate the normal over the surface using barycenter coordinates. Then we compute light on each pixel/fragment. Interpolate the normal across the surface of the triangle. Same reasoning used to interpolate color in Gouraud, but now applied to the normals of each vertex.\nPhong shading improves Gouraud shading by providing a better approximation of the shading of a smooth surface.\nPhong Shading is named after Bui Tuong Phong.\nPhong = Ambient + Diffuse + Specular\nBlinn-Phong Texture Texture is a image that you glue into the triangle.\nUV coordinates. Normal Mapping Extra Topics Shadow Computing shadow in a rasterizer is not straight forward as in a raytracer. We don’t want to compute rays from the light to the objects.\nStencil Buffer Shadow Mapping Shadow Mapping is another technique to create shadows in a rasterizer.\nReflection Refraction Skybox Mouse Picker Orbital Controller Terrain Generator Parallax Loop Controller Rigid Body Physics Engine Cannonjs Matterjs GUI Datgui Text Rendering 16x16 Bitmap font Reference https://learnopengl.com http://courses.cms.caltech.edu/cs171/assignments/hw2/hw2-notes/notes-hw2.html ",
-  "wordCount" : "2065",
-  "inLanguage": "en",
-  "datePublished": "2025-07-08T00:00:00Z",
-  "dateModified": "2025-07-08T00:00:00Z",
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://mizerc.github.io/posts/projects/rasterizer/"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "The Mize Collection",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://mizerc.github.io/favicon.ico"
-    }
-  }
-}
-</script>
-</head>
-
-<body class="" id="top">
-<script>
-    if (localStorage.getItem("pref-theme") === "dark") {
-        document.body.classList.add('dark');
-    } else if (localStorage.getItem("pref-theme") === "light") {
-        document.body.classList.remove('dark')
-    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        document.body.classList.add('dark');
-    }
-
-</script>
-
-<link rel="stylesheet" href="https://mizerc.github.io/custom.css">
-
-<header class="header">
-    <nav class="nav">
-        <div class="logo">
-            <a href="https://mizerc.github.io/" accesskey="h" title="The Mize Collection (Alt + H)">The Mize Collection</a>
-            <div class="logo-switches">
-                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
-                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                    </svg>
-                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <circle cx="12" cy="12" r="5"></circle>
-                        <line x1="12" y1="1" x2="12" y2="3"></line>
-                        <line x1="12" y1="21" x2="12" y2="23"></line>
-                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                        <line x1="1" y1="12" x2="3" y2="12"></line>
-                        <line x1="21" y1="12" x2="23" y2="12"></line>
-                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                    </svg>
-                </button>
-            </div>
-        </div>
-        <ul id="menu">
-            <li>
-                <a href="https://mizerc.github.io/" title="Home">
-                    <span>Home</span>
-                </a>
-            </li>
-            <li>
-                <a href="https://mizerc.github.io/about/" title="About">
-                    <span>About</span>
-                </a>
-            </li>
-        </ul>
-    </nav>
-</header>
-<main class="main">
-
-<article class="post-single">
-  <header class="post-header">
-    
-    <h1 class="post-title entry-hint-parent">
-      Rasterizer
-    </h1>
-    <hr>
-  </header> 
-  <div class="post-content"><h1 id="introduction">Introduction<a hidden class="anchor" aria-hidden="true" href="#introduction">#</a></h1>
-<p>Computer graphics is one of my favorite topics in computer science.
-Here I will try to document a bit of the math and algorithms necessary to build a simple engine that can render 3d models on the screen.</p>
-<p>The two main methods to create images from 3d geometry are rasterization and ray tracing.
-On this post I will focus on the rasterization method.</p>
-<!-- If you are interested in ray tracing, you can check [this post](). -->
-<h1 id="scene">Scene<a hidden class="anchor" aria-hidden="true" href="#scene">#</a></h1>
-<p>We can think of a scene as a collection of models, lights, and cameras.
-It is the data structure that holds all the information necessary to render the scene.</p>
-<h2 id="model">Model<a hidden class="anchor" aria-hidden="true" href="#model">#</a></h2>
-<p>We can call a model the collection of 3d points defined in local space that is built using a software like Blender.</p>
-<h4 id="mesh">Mesh<a hidden class="anchor" aria-hidden="true" href="#mesh">#</a></h4>
-<p>We group each three points to form a face/triangle.
+It is the data structure that holds all the information necessary to render the scene."><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"https://mizerc.github.io/posts/"},{"@type":"ListItem","position":2,"name":"Rasterizer","item":"https://mizerc.github.io/posts/projects/rasterizer/"}]}</script><script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"Rasterizer","name":"Rasterizer","description":"Introduction Computer graphics is one of my favorite topics in computer science. Here I will try to document a bit of the math and algorithms necessary to build a simple engine that can render 3d models on the screen.\nThe two main methods to create images from 3d geometry are rasterization and ray tracing. On this post I will focus on the rasterization method.\nScene We can think of a scene as a collection of models, lights, and cameras. It is the data structure that holds all the information necessary to render the scene.\n","keywords":["computergraphics"],"articleBody":"Introduction Computer graphics is one of my favorite topics in computer science. Here I will try to document a bit of the math and algorithms necessary to build a simple engine that can render 3d models on the screen.\nThe two main methods to create images from 3d geometry are rasterization and ray tracing. On this post I will focus on the rasterization method.\nScene We can think of a scene as a collection of models, lights, and cameras. It is the data structure that holds all the information necessary to render the scene.\nModel We can call a model the collection of 3d points defined in local space that is built using a software like Blender.\nMesh We group each three points to form a face/triangle. And we group faces into a entity called mesh. Any 3d object can be represented by a collection of triangles called mesh, from a simple cube to a complex model like a human body.\nReading a model from a file We can load a model from a file. The file can provide the list of vertexes, vertexes normal, face normal, texture coordinates.\nSoftwares like Blender can export the model in a file format like OBJ. It can be a text file that you can open with a text editor to see the vertices and faces. There are also binary formats like FBX that can include more data like textures, materials, and animations.\nIf your file is using the same 3d point multiple times, it may be benefical using the idea of indices. The indices are a list of numbers that point to a resubable vertex. This helps to reduce the size of the file and to avoid rewritting the same vertex multiple times.\nBesides indices and vertices, a 3D model file can also include vertex normals, face normals, texture coordinates, and transformations such as translation, rotation, and scaling.\nCamera The camera is the point of view from which we are looking at the scene. It is defined by a position, a look at point, and an up vector. We can have multiple cameras in the scene, each one with its own position, look at point, and up vector.\nThe camera stay at origin, and we move the universe around.\nTechnically the view matrix is the inverse of the camera “model” transformation. But we don’t need to compute the inverse. We can build the view matrix directly.\nYaw Pitch Roll Light Position, direction Type: Directional, Point, Spot, Area Intensity (RGB), attenuation Shadow casting flags Transformations We can use matrices as a well defined structure to do transformations. The main matrices are model, view, and projection.\nThe model matrix is the collection of all the transformations applied to the 3D object like translation, rotation, and scaling. The order is important, we first apply the translation, then the rotation, and finally the scaling.\nModel Matrix Model Matrix transforms from Local Space to World Space.\nTranslation We can translate x by t_x and save the result in x' by doing the following:\n$$ x’ \\mathrel{=} x + t_x $$\nUsing matrices, we can translate a 3d point by multiplying it by the translation matrix:\n$$ \\begin{bmatrix} x’ \\\\ y’ \\\\ z’ \\\\ w' \\end{bmatrix} \\mathrel{=} \\begin{bmatrix} 1 \u0026 0 \u0026 0 \u0026 t_x \\\\ 0 \u0026 1 \u0026 0 \u0026 t_y \\\\ 0 \u0026 0 \u0026 1 \u0026 t_z \\\\ 0 \u0026 0 \u0026 0 \u0026 1 \\end{bmatrix} \\cdot \\begin{bmatrix} x \\\\ y \\\\ z \\\\ 1 \\end{bmatrix} $$\nFor example, the new prime elements will contain the following:\nx’ = x + tx y’ = y + ty z’ = z + tz w’ = w = 1 Note that we use homogeneous coordinates to be able to do the translation using matrices. The w component is 1 and still 1 after the translation.\nScaling We can scale x by s_x and save the result in x' by doing the following:\n$$ x’ \\mathrel{=} x \\cdot s_x $$\nWe don’t need homogeneous coordinates for the scaling. But to keep the same structure as the translation matrix, we can write the scaling matrix as:\n$$ \\begin{bmatrix} x’ \\\\ y’ \\\\ z’ \\\\ w' \\end{bmatrix} \\mathrel{=} \\begin{bmatrix} s_x \u0026 0 \u0026 0 \u0026 0 \\\\ 0 \u0026 s_y \u0026 0 \u0026 0 \\\\ 0 \u0026 0 \u0026 s_z \u0026 0 \\\\ 0 \u0026 0 \u0026 0 \u0026 1 \\end{bmatrix} \\cdot \\begin{bmatrix} x \\\\ y \\\\ z \\\\ w \\end{bmatrix} \\mathrel{=} \\begin{bmatrix} x + s_x \\\\ y + s_y \\\\ z + s_z \\\\ w \\end{bmatrix} $$\nx’ = sx * x y’ = sy * y z’ = sz * z w’ = w = 1 Rotation Order of Transforms We first move to the origin using translation. Then we rotate. Then we move it back.\nRotating after translating causes the object to orbit a point instead of rotating in place.\nFor model transform you usually first scale, then rotate, then translate.\nIf you want to rotate the mesh around a arbritary point, then you need to scale, move to the point, rotate, return back.\nMatrix multiplication is right associative. M = T x R x S reads we apply S first, then R, then T. Doing the matrix-vector multiplication we read as M x v = (T x R x S) x v = T x (R x (S x v)).\nCombining all the transformation into a single matrice if efficient because we do the multiplication once. Often we combine the model and view matrix into the modelView matrice. We can also combine with the projection matrix.\nv_world = Model x vertex v_camera = View x Model x vertex v_clip = Projection x View x Model x vertex View View Matrix transform from Model Space to View Space.\nIf we keep the camera at the origin, looking at the negative z-axis, the view matrix is the identity matrix. However, if we want to move or rotate the camera around the world, we need to use the view matrix to transform the world space to the camera space.\nWe can model the camera with a position, a look at point, and an up vector. The three properties are defined with vectors.\nProjection Projection is the mathematical transformation that maps 3D coordinates to a 2D plane (the screen), simulating the perspective or orthographic view of a camera.\nPerspective This projection simulates the human eye’s perspective, where objects appear smaller as they are further away.\nOrthographic This propjection preserves size regardless of depth, parallel lines stay parallel. When using orthographic, we don’t need to do perspective division since we don’t make things smaller as they are far away.\nViewport The last transformation is to scale the normalized coordinates (x,y) of each vertex to the screen space. The screen space x component will be x times the canvas width.\nOptimization To avoid wasting computation rendering objects that are not visible, we can use the culling and clipping techniques. This is valid because normally rasterization of the pixels of a triangle is way more costly than just checking the 3 vertexes of the face.\nFrustum The camera frustum is the volume that contains the visible objects from the camera point of view. It is a volume defined by 6 planes: top, bottom, left, right, near and far.\nCulling Culling is the process of removing entire objects that are not visible from the scene.\nOutside Frustum Culling If a surface/triangle is outside the frustum, we can remove it. This means a surface behind the camera (behind the near plane).\nBackface Culling Another culling technique is to check if the face is facing away from the camera. We can compute the normal of the face and check if it is facing away from the camera. To compute the normal of the face, we can use the right hand wind rule. Using math, we can compute the normal of the face by using the cross product of the two edges of the face.\nClipping When we are lucky, we can just remove the entire triagle from the pipeline if it is outside the field of view. However, sometimes the triangle is right on the barrier that divide what we want to render and what we don’t want to render. When this happens, we could just remove the object, but the right way is to clip the triangle.\nClipping is the process of removing parts of objects, often a triangle, that are not visible from the camera. Clipping needs more advanced math to remove or add vertices of the sliced triangle.\nRendering Order Using a technique to render surfaces in the correct order can fix some of the problems where we render a back surface over the front surface.\nPainter Algorithm The painter algorithm is just a way of sorting each surface by the averange z value of the vertexes. Assuming a triangle defined by 3 vertexes v1, v2 and v3, the triangle average z is the (v1.z + v2.z + v3.z) / 3.\nZ-Buffer The Z-Buffer, also called Depth buffer, is a additional buffer that contains a number for each pixel of the canvas. The number is specifically the front-most z value of each vertex (x,y,z) of the surface. So as we render, if the buffer already contains a z value that is smaller than the current, we ignore it to prevent rendering on top of a existing surface.\nRasterization Once we finish to transform and cull the objects, we can start to rasterize the objects. Rasterization is the stage in the graphics pipeline where projected 2D shapes (from 3D scene) are converted into pixel data.\nLine Rasterization DDA The simplest shape to rasterize is a line. We can use the DDA algorithm to rasterize a line.\nBresenham’s line algorith Fast than DDA. Only use integer (no floating computation). Triangle Rasterization The next shape to rasterize is a triangle. We can use the scanline algorithm to rasterize a triangle.\nNormals Face Normal The face normal can be computed from the winding of the face vertexes using right hand rule. Clockwise ordering.\nVertex Normal The vertex normal can be computed from the averange of the normal of each face shared by the vertex.\nLighting Diffuse reflection Shading How surface respond to light.\nDiffuse reflection of light caused by irregular surface. Light rays are reflected to all directions. Sunrise and sunset have a difuse behavior. A big area lamp creates a difuse light.\nSpecular reflection is caused by a smooth surface. A shine metal surface has a high specular reflection than rubber surface. A concentrated highlight spot on a metallic surface.\nFlat Shading The entire face is painted with one single solid color. No interpolation.\nGouraud Shading Also know as “smooth shading” when compared with the previous flat shading. They have a smooth color transition from pixel to pixel.\nEach vertex of the triangle has a color. We interpolate the color using barycenter coordinates as we paint the triangle. Each pixel receives a unique color from the interpolation. Create smooth surfaces.\nWe use the color of the three vertices of the triangle to compute the color of each pixel of the triangle by interpolating it on the surface.\nThe Gouraud shading algorithm is named after Henri Gouraud. He first published the technique in 1971. This lighening model compute the illuminated color at each pixel using barycenter interpolation to rasterize the surface/triangle.\nPhong Shading We use the normal of each vertex to interpolate the normal over the surface using barycenter coordinates. Then we compute light on each pixel/fragment. Interpolate the normal across the surface of the triangle. Same reasoning used to interpolate color in Gouraud, but now applied to the normals of each vertex.\nPhong shading improves Gouraud shading by providing a better approximation of the shading of a smooth surface.\nPhong Shading is named after Bui Tuong Phong.\nPhong = Ambient + Diffuse + Specular\nBlinn-Phong Texture Texture is a image that you glue into the triangle.\nUV coordinates. Normal Mapping Extra Topics Shadow Computing shadow in a rasterizer is not straight forward as in a raytracer. We don’t want to compute rays from the light to the objects.\nStencil Buffer Shadow Mapping Shadow Mapping is another technique to create shadows in a rasterizer.\nReflection Refraction Skybox Mouse Picker Orbital Controller Terrain Generator Parallax Loop Controller Rigid Body Physics Engine Cannonjs Matterjs GUI Datgui Text Rendering 16x16 Bitmap font Reference https://learnopengl.com http://courses.cms.caltech.edu/cs171/assignments/hw2/hw2-notes/notes-hw2.html ","wordCount":"2065","inLanguage":"en","datePublished":"2025-07-08T00:00:00Z","dateModified":"2025-07-08T00:00:00Z","mainEntityOfPage":{"@type":"WebPage","@id":"https://mizerc.github.io/posts/projects/rasterizer/"},"publisher":{"@type":"Organization","name":"The Mize Collection","logo":{"@type":"ImageObject","url":"https://mizerc.github.io/favicon.ico"}}}</script></head><body id=top><script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add("dark"):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove("dark"):window.matchMedia("(prefers-color-scheme: dark)").matches&&document.body.classList.add("dark")</script><link rel=stylesheet href=https://mizerc.github.io/custom.css><header class=header><nav class=nav><div class=logo><a href=https://mizerc.github.io/ accesskey=h title="The Mize Collection (Alt + H)">The Mize Collection</a><div class=logo-switches><button id=theme-toggle accesskey=t title="(Alt + T)" aria-label="Toggle theme">
+<svg id="moon" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+<svg id="sun" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></div></div><ul id=menu><li><a href=https://mizerc.github.io/ title=Home><span>Home</span></a></li><li><a href=https://mizerc.github.io/about/ title=About><span>About</span></a></li></ul></nav></header><main class=main><article class=post-single><header class=post-header><h1 class="post-title entry-hint-parent">Rasterizer</h1><hr></header><div class=post-content><h1 id=introduction>Introduction<a hidden class=anchor aria-hidden=true href=#introduction>#</a></h1><p>Computer graphics is one of my favorite topics in computer science.
+Here I will try to document a bit of the math and algorithms necessary to build a simple engine that can render 3d models on the screen.</p><p>The two main methods to create images from 3d geometry are rasterization and ray tracing.
+On this post I will focus on the rasterization method.</p><h1 id=scene>Scene<a hidden class=anchor aria-hidden=true href=#scene>#</a></h1><p>We can think of a scene as a collection of models, lights, and cameras.
+It is the data structure that holds all the information necessary to render the scene.</p><h2 id=model>Model<a hidden class=anchor aria-hidden=true href=#model>#</a></h2><p>We can call a model the collection of 3d points defined in local space that is built using a software like Blender.</p><h4 id=mesh>Mesh<a hidden class=anchor aria-hidden=true href=#mesh>#</a></h4><p>We group each three points to form a face/triangle.
 And we group faces into a entity called mesh.
-Any 3d object can be represented by a collection of triangles called mesh, from a simple cube to a complex model like a human body.</p>
-<h4 id="reading-a-model-from-a-file">Reading a model from a file<a hidden class="anchor" aria-hidden="true" href="#reading-a-model-from-a-file">#</a></h4>
-<p>We can load a model from a file.
-The file can provide the list of vertexes, vertexes normal, face normal, texture coordinates.</p>
-<p>Softwares like Blender can export the model in a file format like OBJ.
+Any 3d object can be represented by a collection of triangles called mesh, from a simple cube to a complex model like a human body.</p><h4 id=reading-a-model-from-a-file>Reading a model from a file<a hidden class=anchor aria-hidden=true href=#reading-a-model-from-a-file>#</a></h4><p>We can load a model from a file.
+The file can provide the list of vertexes, vertexes normal, face normal, texture coordinates.</p><p>Softwares like Blender can export the model in a file format like OBJ.
 It can be a text file that you can open with a text editor to see the vertices and faces.
-There are also binary formats like FBX that can include more data like textures, materials, and animations.</p>
-<p>If your file is using the same 3d point multiple times, it may be benefical using the idea of indices.
+There are also binary formats like FBX that can include more data like textures, materials, and animations.</p><p>If your file is using the same 3d point multiple times, it may be benefical using the idea of indices.
 The indices are a list of numbers that point to a resubable vertex.
-This helps to reduce the size of the file and to avoid rewritting the same vertex multiple times.</p>
-<p>Besides indices and vertices, a 3D model file can also include vertex normals, face normals, texture coordinates, and transformations such as translation, rotation, and scaling.</p>
-<h2 id="camera">Camera<a hidden class="anchor" aria-hidden="true" href="#camera">#</a></h2>
-<p>The camera is the point of view from which we are looking at the scene.
+This helps to reduce the size of the file and to avoid rewritting the same vertex multiple times.</p><p>Besides indices and vertices, a 3D model file can also include vertex normals, face normals, texture coordinates, and transformations such as translation, rotation, and scaling.</p><h2 id=camera>Camera<a hidden class=anchor aria-hidden=true href=#camera>#</a></h2><p>The camera is the point of view from which we are looking at the scene.
 It is defined by a position, a look at point, and an up vector.
-We can have multiple cameras in the scene, each one with its own position, look at point, and up vector.</p>
-<p>The camera stay at origin, and we move the universe around.</p>
-<p>Technically the view matrix is the inverse of the camera &ldquo;model&rdquo; transformation.
+We can have multiple cameras in the scene, each one with its own position, look at point, and up vector.</p><p>The camera stay at origin, and we move the universe around.</p><p>Technically the view matrix is the inverse of the camera &ldquo;model&rdquo; transformation.
 But we don&rsquo;t need to compute the inverse.
-We can build the view matrix directly.</p>
-<h2 id="yaw-pitch-roll">Yaw Pitch Roll<a hidden class="anchor" aria-hidden="true" href="#yaw-pitch-roll">#</a></h2>
-<h2 id="light">Light<a hidden class="anchor" aria-hidden="true" href="#light">#</a></h2>
-<ul>
-<li>Position, direction</li>
-<li>Type: Directional, Point, Spot, Area</li>
-<li>Intensity (RGB), attenuation</li>
-<li>Shadow casting flags</li>
-</ul>
-<h1 id="transformations">Transformations<a hidden class="anchor" aria-hidden="true" href="#transformations">#</a></h1>
-<p>We can use matrices as a well defined structure to do transformations.
-The main matrices are model, view, and projection.</p>
-<p>The model matrix is the collection of all the transformations applied to the 3D object like translation, rotation, and scaling.
-The order is important, we first apply the translation, then the rotation, and finally the scaling.</p>
-<h2 id="model-matrix">Model Matrix<a hidden class="anchor" aria-hidden="true" href="#model-matrix">#</a></h2>
-<p>Model Matrix transforms from Local Space to World Space.</p>
-<h3 id="translation">Translation<a hidden class="anchor" aria-hidden="true" href="#translation">#</a></h3>
-<p>We can translate <code>x</code> by <code>t_x</code> and save the result in <code>x'</code> by doing the following:</p>
-<p>$$
+We can build the view matrix directly.</p><h2 id=yaw-pitch-roll>Yaw Pitch Roll<a hidden class=anchor aria-hidden=true href=#yaw-pitch-roll>#</a></h2><h2 id=light>Light<a hidden class=anchor aria-hidden=true href=#light>#</a></h2><ul><li>Position, direction</li><li>Type: Directional, Point, Spot, Area</li><li>Intensity (RGB), attenuation</li><li>Shadow casting flags</li></ul><h1 id=transformations>Transformations<a hidden class=anchor aria-hidden=true href=#transformations>#</a></h1><p>We can use matrices as a well defined structure to do transformations.
+The main matrices are model, view, and projection.</p><p>The model matrix is the collection of all the transformations applied to the 3D object like translation, rotation, and scaling.
+The order is important, we first apply the translation, then the rotation, and finally the scaling.</p><h2 id=model-matrix>Model Matrix<a hidden class=anchor aria-hidden=true href=#model-matrix>#</a></h2><p>Model Matrix transforms from Local Space to World Space.</p><h3 id=translation>Translation<a hidden class=anchor aria-hidden=true href=#translation>#</a></h3><p>We can translate <code>x</code> by <code>t_x</code> and save the result in <code>x'</code> by doing the following:</p><p>$$
 x&rsquo; \mathrel{=} x + t_x
-$$</p>
-<p>Using matrices, we can translate a 3d point by multiplying it by the translation matrix:</p>
-<p>$$
+$$</p><p>Using matrices, we can translate a 3d point by multiplying it by the translation matrix:</p><p>$$
 \begin{bmatrix}
 x&rsquo; \\
 y&rsquo; \\
@@ -297,10 +45,10 @@ w'
 \end{bmatrix}
 \mathrel{=}
 \begin{bmatrix}
-1 &amp; 0 &amp; 0 &amp; t_x \\
-0 &amp; 1 &amp; 0 &amp; t_y \\
-0 &amp; 0 &amp; 1 &amp; t_z \\
-0 &amp; 0 &amp; 0 &amp; 1
+1 & 0 & 0 & t_x \\
+0 & 1 & 0 & t_y \\
+0 & 0 & 1 & t_z \\
+0 & 0 & 0 & 1
 \end{bmatrix}
 \cdot
 \begin{bmatrix}
@@ -309,24 +57,11 @@ y \\
 z \\
 1
 \end{bmatrix}
-$$</p>
-<p>For example, the new prime elements will contain the following:</p>
-<ul>
-<li>x&rsquo; = x + tx</li>
-<li>y&rsquo; = y + ty</li>
-<li>z&rsquo; = z + tz</li>
-<li>w&rsquo; = w = 1</li>
-</ul>
-<p>Note that we use homogeneous coordinates to be able to do the translation using matrices.
-The w component is 1 and still 1 after the translation.</p>
-<h3 id="scaling">Scaling<a hidden class="anchor" aria-hidden="true" href="#scaling">#</a></h3>
-<p>We can scale <code>x</code> by <code>s_x</code> and save the result in <code>x'</code> by doing the following:</p>
-<p>$$
+$$</p><p>For example, the new prime elements will contain the following:</p><ul><li>x&rsquo; = x + tx</li><li>y&rsquo; = y + ty</li><li>z&rsquo; = z + tz</li><li>w&rsquo; = w = 1</li></ul><p>Note that we use homogeneous coordinates to be able to do the translation using matrices.
+The w component is 1 and still 1 after the translation.</p><h3 id=scaling>Scaling<a hidden class=anchor aria-hidden=true href=#scaling>#</a></h3><p>We can scale <code>x</code> by <code>s_x</code> and save the result in <code>x'</code> by doing the following:</p><p>$$
 x&rsquo; \mathrel{=} x \cdot s_x
-$$</p>
-<p>We don&rsquo;t need homogeneous coordinates for the scaling.
-But to keep the same structure as the translation matrix, we can write the scaling matrix as:</p>
-<p>$$
+$$</p><p>We don&rsquo;t need homogeneous coordinates for the scaling.
+But to keep the same structure as the translation matrix, we can write the scaling matrix as:</p><p>$$
 \begin{bmatrix}
 x&rsquo; \\
 y&rsquo; \\
@@ -335,10 +70,10 @@ w'
 \end{bmatrix}
 \mathrel{=}
 \begin{bmatrix}
-s_x &amp; 0 &amp; 0 &amp; 0 \\
-0 &amp; s_y &amp; 0 &amp; 0 \\
-0 &amp; 0 &amp; s_z &amp; 0 \\
-0 &amp; 0 &amp; 0 &amp; 1
+s_x & 0 & 0 & 0 \\
+0 & s_y & 0 & 0 \\
+0 & 0 & s_z & 0 \\
+0 & 0 & 0 & 1
 \end{bmatrix}
 \cdot
 \begin{bmatrix}
@@ -354,259 +89,51 @@ y + s_y \\
 z + s_z \\
 w
 \end{bmatrix}
-$$</p>
-<ul>
-<li>x&rsquo; = sx * x</li>
-<li>y&rsquo; = sy * y</li>
-<li>z&rsquo; = sz * z</li>
-<li>w&rsquo; = w = 1</li>
-</ul>
-<h3 id="rotation">Rotation<a hidden class="anchor" aria-hidden="true" href="#rotation">#</a></h3>
-<h3 id="order-of-transforms">Order of Transforms<a hidden class="anchor" aria-hidden="true" href="#order-of-transforms">#</a></h3>
-<p>We first move to the origin using translation.
+$$</p><ul><li>x&rsquo; = sx * x</li><li>y&rsquo; = sy * y</li><li>z&rsquo; = sz * z</li><li>w&rsquo; = w = 1</li></ul><h3 id=rotation>Rotation<a hidden class=anchor aria-hidden=true href=#rotation>#</a></h3><h3 id=order-of-transforms>Order of Transforms<a hidden class=anchor aria-hidden=true href=#order-of-transforms>#</a></h3><p>We first move to the origin using translation.
 Then we rotate.
-Then we move it back.</p>
-<p>Rotating after translating causes the object to orbit a point instead of rotating in place.</p>
-<p>For model transform you usually first scale, then rotate, then translate.</p>
-<p>If you want to rotate the mesh around a arbritary point, then
-you need to scale, move to the point, rotate, return back.</p>
-<p>Matrix multiplication is right associative.
+Then we move it back.</p><p>Rotating after translating causes the object to orbit a point instead of rotating in place.</p><p>For model transform you usually first scale, then rotate, then translate.</p><p>If you want to rotate the mesh around a arbritary point, then
+you need to scale, move to the point, rotate, return back.</p><p>Matrix multiplication is right associative.
 M = T x R x S reads we apply S first, then R, then T.
-Doing the matrix-vector multiplication we read as <code>M x v = (T x R x S) x v = T x (R x (S x v))</code>.</p>
-<p>Combining all the transformation into a single matrice if efficient because we do the multiplication once.
+Doing the matrix-vector multiplication we read as <code>M x v = (T x R x S) x v = T x (R x (S x v))</code>.</p><p>Combining all the transformation into a single matrice if efficient because we do the multiplication once.
 Often we combine the model and view matrix into the <code>modelView</code> matrice.
-We can also combine with the projection matrix.</p>
-<ul>
-<li>v_world = Model x vertex</li>
-<li>v_camera = View x Model x vertex</li>
-<li>v_clip = Projection x View x Model x vertex</li>
-</ul>
-<h2 id="view">View<a hidden class="anchor" aria-hidden="true" href="#view">#</a></h2>
-<p>View Matrix transform from Model Space to View Space.</p>
-<p>If we keep the camera at the origin, looking at the negative z-axis, the view matrix is the identity matrix.
-However, if we want to move or rotate the camera around the world, we need to use the view matrix to transform the world space to the camera space.</p>
-<p>We can model the camera with a position, a look at point, and an up vector.
-The three properties are defined with vectors.</p>
-<h2 id="projection">Projection<a hidden class="anchor" aria-hidden="true" href="#projection">#</a></h2>
-<p>Projection is the mathematical transformation that maps 3D coordinates to a 2D plane (the screen), simulating the perspective or orthographic view of a camera.</p>
-<h3 id="perspective">Perspective<a hidden class="anchor" aria-hidden="true" href="#perspective">#</a></h3>
-<p>This projection simulates the human eye&rsquo;s perspective, where objects appear smaller as they are further away.</p>
-<h3 id="orthographic">Orthographic<a hidden class="anchor" aria-hidden="true" href="#orthographic">#</a></h3>
-<p>This propjection preserves size regardless of depth, parallel lines stay parallel.
-When using orthographic, we don&rsquo;t need to do perspective division since we don&rsquo;t make things smaller as they are far away.</p>
-<h2 id="viewport">Viewport<a hidden class="anchor" aria-hidden="true" href="#viewport">#</a></h2>
-<p>The last transformation is to scale the normalized coordinates (x,y) of each vertex to the screen space.
-The screen space x component will be x times the canvas width.</p>
-<h1 id="optimization">Optimization<a hidden class="anchor" aria-hidden="true" href="#optimization">#</a></h1>
-<p>To avoid wasting computation rendering objects that are not visible, we can use the culling and clipping techniques.
-This is valid because normally rasterization of the pixels of a triangle is way more costly than just checking the 3 vertexes of the face.</p>
-<h3 id="frustum">Frustum<a hidden class="anchor" aria-hidden="true" href="#frustum">#</a></h3>
-<p>The camera frustum is the volume that contains the visible objects from the camera point of view.
-It is a volume defined by 6 planes: top, bottom, left, right, near and far.</p>
-<h3 id="culling">Culling<a hidden class="anchor" aria-hidden="true" href="#culling">#</a></h3>
-<p>Culling is the process of removing <em>entire</em> objects that are not visible from the scene.</p>
-<h4 id="outside-frustum-culling">Outside Frustum Culling<a hidden class="anchor" aria-hidden="true" href="#outside-frustum-culling">#</a></h4>
-<p>If a surface/triangle is outside the frustum, we can remove it.
-This means a surface behind the camera (behind the near plane).</p>
-<h4 id="backface-culling">Backface Culling<a hidden class="anchor" aria-hidden="true" href="#backface-culling">#</a></h4>
-<p>Another culling technique is to check if the face is facing away from the camera.
+We can also combine with the projection matrix.</p><ul><li>v_world = Model x vertex</li><li>v_camera = View x Model x vertex</li><li>v_clip = Projection x View x Model x vertex</li></ul><h2 id=view>View<a hidden class=anchor aria-hidden=true href=#view>#</a></h2><p>View Matrix transform from Model Space to View Space.</p><p>If we keep the camera at the origin, looking at the negative z-axis, the view matrix is the identity matrix.
+However, if we want to move or rotate the camera around the world, we need to use the view matrix to transform the world space to the camera space.</p><p>We can model the camera with a position, a look at point, and an up vector.
+The three properties are defined with vectors.</p><h2 id=projection>Projection<a hidden class=anchor aria-hidden=true href=#projection>#</a></h2><p>Projection is the mathematical transformation that maps 3D coordinates to a 2D plane (the screen), simulating the perspective or orthographic view of a camera.</p><h3 id=perspective>Perspective<a hidden class=anchor aria-hidden=true href=#perspective>#</a></h3><p>This projection simulates the human eye&rsquo;s perspective, where objects appear smaller as they are further away.</p><h3 id=orthographic>Orthographic<a hidden class=anchor aria-hidden=true href=#orthographic>#</a></h3><p>This propjection preserves size regardless of depth, parallel lines stay parallel.
+When using orthographic, we don&rsquo;t need to do perspective division since we don&rsquo;t make things smaller as they are far away.</p><h2 id=viewport>Viewport<a hidden class=anchor aria-hidden=true href=#viewport>#</a></h2><p>The last transformation is to scale the normalized coordinates (x,y) of each vertex to the screen space.
+The screen space x component will be x times the canvas width.</p><h1 id=optimization>Optimization<a hidden class=anchor aria-hidden=true href=#optimization>#</a></h1><p>To avoid wasting computation rendering objects that are not visible, we can use the culling and clipping techniques.
+This is valid because normally rasterization of the pixels of a triangle is way more costly than just checking the 3 vertexes of the face.</p><h3 id=frustum>Frustum<a hidden class=anchor aria-hidden=true href=#frustum>#</a></h3><p>The camera frustum is the volume that contains the visible objects from the camera point of view.
+It is a volume defined by 6 planes: top, bottom, left, right, near and far.</p><h3 id=culling>Culling<a hidden class=anchor aria-hidden=true href=#culling>#</a></h3><p>Culling is the process of removing <em>entire</em> objects that are not visible from the scene.</p><h4 id=outside-frustum-culling>Outside Frustum Culling<a hidden class=anchor aria-hidden=true href=#outside-frustum-culling>#</a></h4><p>If a surface/triangle is outside the frustum, we can remove it.
+This means a surface behind the camera (behind the near plane).</p><h4 id=backface-culling>Backface Culling<a hidden class=anchor aria-hidden=true href=#backface-culling>#</a></h4><p>Another culling technique is to check if the face is facing away from the camera.
 We can compute the normal of the face and check if it is facing away from the camera.
 To compute the normal of the face, we can use the right hand wind rule.
-Using math, we can compute the normal of the face by using the cross product of the two edges of the face.</p>
-<h3 id="clipping">Clipping<a hidden class="anchor" aria-hidden="true" href="#clipping">#</a></h3>
-<p>When we are lucky, we can just remove the entire triagle from the pipeline if it is outside the field of view.
+Using math, we can compute the normal of the face by using the cross product of the two edges of the face.</p><h3 id=clipping>Clipping<a hidden class=anchor aria-hidden=true href=#clipping>#</a></h3><p>When we are lucky, we can just remove the entire triagle from the pipeline if it is outside the field of view.
 However, sometimes the triangle is right on the barrier that divide what we want to render and what we don&rsquo;t want to render.
-When this happens, we could just remove the object, but the right way is to clip the triangle.</p>
-<p>Clipping is the process of removing parts of objects, often a triangle, that are not visible from the camera.
-Clipping needs more advanced math to remove or add vertices of the sliced triangle.</p>
-<h3 id="rendering-order">Rendering Order<a hidden class="anchor" aria-hidden="true" href="#rendering-order">#</a></h3>
-<p>Using a technique to render surfaces in the correct order can fix some of the problems where we render a back surface over the front surface.</p>
-<h4 id="painter-algorithm">Painter Algorithm<a hidden class="anchor" aria-hidden="true" href="#painter-algorithm">#</a></h4>
-<p>The painter algorithm is just a way of sorting each surface by the averange z value of the vertexes.
-Assuming a triangle defined by 3 vertexes v1, v2 and v3, the triangle average z is the <code>(v1.z + v2.z + v3.z) / 3</code>.</p>
-<h4 id="z-buffer">Z-Buffer<a hidden class="anchor" aria-hidden="true" href="#z-buffer">#</a></h4>
-<p>The Z-Buffer, also called Depth buffer, is a additional buffer that contains a number for each pixel of the canvas.
+When this happens, we could just remove the object, but the right way is to clip the triangle.</p><p>Clipping is the process of removing parts of objects, often a triangle, that are not visible from the camera.
+Clipping needs more advanced math to remove or add vertices of the sliced triangle.</p><h3 id=rendering-order>Rendering Order<a hidden class=anchor aria-hidden=true href=#rendering-order>#</a></h3><p>Using a technique to render surfaces in the correct order can fix some of the problems where we render a back surface over the front surface.</p><h4 id=painter-algorithm>Painter Algorithm<a hidden class=anchor aria-hidden=true href=#painter-algorithm>#</a></h4><p>The painter algorithm is just a way of sorting each surface by the averange z value of the vertexes.
+Assuming a triangle defined by 3 vertexes v1, v2 and v3, the triangle average z is the <code>(v1.z + v2.z + v3.z) / 3</code>.</p><h4 id=z-buffer>Z-Buffer<a hidden class=anchor aria-hidden=true href=#z-buffer>#</a></h4><p>The Z-Buffer, also called Depth buffer, is a additional buffer that contains a number for each pixel of the canvas.
 The number is specifically the front-most z value of each vertex (x,y,z) of the surface.
-So as we render, if the buffer already contains a z value that is smaller than the current, we ignore it to prevent rendering on top of a existing surface.</p>
-<h1 id="rasterization">Rasterization<a hidden class="anchor" aria-hidden="true" href="#rasterization">#</a></h1>
-<p>Once we finish to transform and cull the objects, we can start to rasterize the objects.
-Rasterization is the stage in the graphics pipeline where projected 2D shapes (from 3D scene) are converted into pixel data.</p>
-<h2 id="line-rasterization">Line Rasterization<a hidden class="anchor" aria-hidden="true" href="#line-rasterization">#</a></h2>
-<h3 id="dda">DDA<a hidden class="anchor" aria-hidden="true" href="#dda">#</a></h3>
-<p>The simplest shape to rasterize is a line.
-We can use the DDA algorithm to rasterize a line.</p>
-<h3 id="bresenhams-line-algorith">Bresenham&rsquo;s line algorith<a hidden class="anchor" aria-hidden="true" href="#bresenhams-line-algorith">#</a></h3>
-<ul>
-<li>Fast than DDA.</li>
-<li>Only use integer (no floating computation).</li>
-</ul>
-<h2 id="triangle-rasterization">Triangle Rasterization<a hidden class="anchor" aria-hidden="true" href="#triangle-rasterization">#</a></h2>
-<p>The next shape to rasterize is a triangle.
-We can use the scanline algorithm to rasterize a triangle.</p>
-<h1 id="normals">Normals<a hidden class="anchor" aria-hidden="true" href="#normals">#</a></h1>
-<h2 id="face-normal">Face Normal<a hidden class="anchor" aria-hidden="true" href="#face-normal">#</a></h2>
-<p>The face normal can be computed from the winding of the face vertexes using right hand rule.
-Clockwise ordering.</p>
-<h2 id="vertex-normal">Vertex Normal<a hidden class="anchor" aria-hidden="true" href="#vertex-normal">#</a></h2>
-<p>The vertex normal can be computed from the averange of the normal of each face shared by the vertex.</p>
-<figure>
-    <img loading="lazy" src="./vertex-normal.png#center" width="70%"/> 
-</figure>
-
-<h1 id="lighting">Lighting<a hidden class="anchor" aria-hidden="true" href="#lighting">#</a></h1>
-<h2 id="diffuse-reflection">Diffuse reflection<a hidden class="anchor" aria-hidden="true" href="#diffuse-reflection">#</a></h2>
-<h1 id="shading">Shading<a hidden class="anchor" aria-hidden="true" href="#shading">#</a></h1>
-<p>How surface respond to light.</p>
-<p>Diffuse reflection of light caused by irregular surface.
+So as we render, if the buffer already contains a z value that is smaller than the current, we ignore it to prevent rendering on top of a existing surface.</p><h1 id=rasterization>Rasterization<a hidden class=anchor aria-hidden=true href=#rasterization>#</a></h1><p>Once we finish to transform and cull the objects, we can start to rasterize the objects.
+Rasterization is the stage in the graphics pipeline where projected 2D shapes (from 3D scene) are converted into pixel data.</p><h2 id=line-rasterization>Line Rasterization<a hidden class=anchor aria-hidden=true href=#line-rasterization>#</a></h2><h3 id=dda>DDA<a hidden class=anchor aria-hidden=true href=#dda>#</a></h3><p>The simplest shape to rasterize is a line.
+We can use the DDA algorithm to rasterize a line.</p><h3 id=bresenhams-line-algorith>Bresenham&rsquo;s line algorith<a hidden class=anchor aria-hidden=true href=#bresenhams-line-algorith>#</a></h3><ul><li>Fast than DDA.</li><li>Only use integer (no floating computation).</li></ul><h2 id=triangle-rasterization>Triangle Rasterization<a hidden class=anchor aria-hidden=true href=#triangle-rasterization>#</a></h2><p>The next shape to rasterize is a triangle.
+We can use the scanline algorithm to rasterize a triangle.</p><h1 id=normals>Normals<a hidden class=anchor aria-hidden=true href=#normals>#</a></h1><h2 id=face-normal>Face Normal<a hidden class=anchor aria-hidden=true href=#face-normal>#</a></h2><p>The face normal can be computed from the winding of the face vertexes using right hand rule.
+Clockwise ordering.</p><h2 id=vertex-normal>Vertex Normal<a hidden class=anchor aria-hidden=true href=#vertex-normal>#</a></h2><p>The vertex normal can be computed from the averange of the normal of each face shared by the vertex.</p><figure><img loading=lazy src=./vertex-normal.png#center width=70%></figure><h1 id=lighting>Lighting<a hidden class=anchor aria-hidden=true href=#lighting>#</a></h1><h2 id=diffuse-reflection>Diffuse reflection<a hidden class=anchor aria-hidden=true href=#diffuse-reflection>#</a></h2><h1 id=shading>Shading<a hidden class=anchor aria-hidden=true href=#shading>#</a></h1><p>How surface respond to light.</p><p>Diffuse reflection of light caused by irregular surface.
 Light rays are reflected to all directions.
 Sunrise and sunset have a difuse behavior.
-A big area lamp creates a difuse light.</p>
-<p>Specular reflection is caused by a smooth surface.
+A big area lamp creates a difuse light.</p><p>Specular reflection is caused by a smooth surface.
 A shine metal surface has a high specular reflection than rubber surface.
-A concentrated highlight spot on a metallic surface.</p>
-<h2 id="flat-shading">Flat Shading<a hidden class="anchor" aria-hidden="true" href="#flat-shading">#</a></h2>
-<p>The entire face is painted with one single solid color.
-No interpolation.</p>
-<h2 id="gouraud-shading">Gouraud Shading<a hidden class="anchor" aria-hidden="true" href="#gouraud-shading">#</a></h2>
-<p>Also know as &ldquo;smooth shading&rdquo; when compared with the previous flat shading.
-They have a smooth color transition from pixel to pixel.</p>
-<p>Each vertex of the triangle has a color.
+A concentrated highlight spot on a metallic surface.</p><h2 id=flat-shading>Flat Shading<a hidden class=anchor aria-hidden=true href=#flat-shading>#</a></h2><p>The entire face is painted with one single solid color.
+No interpolation.</p><h2 id=gouraud-shading>Gouraud Shading<a hidden class=anchor aria-hidden=true href=#gouraud-shading>#</a></h2><p>Also know as &ldquo;smooth shading&rdquo; when compared with the previous flat shading.
+They have a smooth color transition from pixel to pixel.</p><p>Each vertex of the triangle has a color.
 We interpolate the color using barycenter coordinates as we paint the triangle.
 Each pixel receives a unique color from the interpolation.
-Create smooth surfaces.</p>
-<p>We use the color of the three vertices of the triangle to compute the color of each pixel of the triangle by interpolating it on the surface.</p>
-<p>The Gouraud shading algorithm is named after Henri Gouraud.
+Create smooth surfaces.</p><p>We use the color of the three vertices of the triangle to compute the color of each pixel of the triangle by interpolating it on the surface.</p><p>The Gouraud shading algorithm is named after Henri Gouraud.
 He first published the technique in 1971.
-This lighening model compute the illuminated color at each pixel using barycenter interpolation to rasterize the surface/triangle.</p>
-<h2 id="phong-shading">Phong Shading<a hidden class="anchor" aria-hidden="true" href="#phong-shading">#</a></h2>
-<p>We use the normal of each vertex to interpolate the normal over the surface using barycenter coordinates.
+This lighening model compute the illuminated color at each pixel using barycenter interpolation to rasterize the surface/triangle.</p><h2 id=phong-shading>Phong Shading<a hidden class=anchor aria-hidden=true href=#phong-shading>#</a></h2><p>We use the normal of each vertex to interpolate the normal over the surface using barycenter coordinates.
 Then we compute light on each pixel/fragment.
 Interpolate the normal across the surface of the triangle.
-Same reasoning used to interpolate color in Gouraud, but now applied to the normals of each vertex.</p>
-<p>Phong shading improves Gouraud shading by providing a better approximation of the shading of a smooth surface.</p>
-<p>Phong Shading is named after Bui Tuong Phong.</p>
-<p>Phong = Ambient + Diffuse + Specular</p>
-<h2 id="blinn-phong">Blinn-Phong<a hidden class="anchor" aria-hidden="true" href="#blinn-phong">#</a></h2>
-<h1 id="texture">Texture<a hidden class="anchor" aria-hidden="true" href="#texture">#</a></h1>
-<p>Texture is a image that you glue into the triangle.</p>
-<ul>
-<li>UV coordinates.</li>
-</ul>
-<h2 id="normal-mapping">Normal Mapping<a hidden class="anchor" aria-hidden="true" href="#normal-mapping">#</a></h2>
-<h1 id="extra-topics">Extra Topics<a hidden class="anchor" aria-hidden="true" href="#extra-topics">#</a></h1>
-<h2 id="shadow">Shadow<a hidden class="anchor" aria-hidden="true" href="#shadow">#</a></h2>
-<p>Computing shadow in a rasterizer is not straight forward as in a raytracer.
-We don&rsquo;t want to compute rays from the light to the objects.</p>
-<h3 id="stencil-buffer">Stencil Buffer<a hidden class="anchor" aria-hidden="true" href="#stencil-buffer">#</a></h3>
-<h3 id="shadow-mapping">Shadow Mapping<a hidden class="anchor" aria-hidden="true" href="#shadow-mapping">#</a></h3>
-<p>Shadow Mapping is another technique to create shadows in a rasterizer.</p>
-<h2 id="reflection">Reflection<a hidden class="anchor" aria-hidden="true" href="#reflection">#</a></h2>
-<h2 id="refraction">Refraction<a hidden class="anchor" aria-hidden="true" href="#refraction">#</a></h2>
-<h2 id="skybox">Skybox<a hidden class="anchor" aria-hidden="true" href="#skybox">#</a></h2>
-<h2 id="mouse-picker">Mouse Picker<a hidden class="anchor" aria-hidden="true" href="#mouse-picker">#</a></h2>
-<h2 id="orbital-controller">Orbital Controller<a hidden class="anchor" aria-hidden="true" href="#orbital-controller">#</a></h2>
-<h2 id="terrain-generator">Terrain Generator<a hidden class="anchor" aria-hidden="true" href="#terrain-generator">#</a></h2>
-<h2 id="parallax">Parallax<a hidden class="anchor" aria-hidden="true" href="#parallax">#</a></h2>
-<h2 id="loop-controller">Loop Controller<a hidden class="anchor" aria-hidden="true" href="#loop-controller">#</a></h2>
-<h2 id="rigid-body-physics-engine">Rigid Body Physics Engine<a hidden class="anchor" aria-hidden="true" href="#rigid-body-physics-engine">#</a></h2>
-<ul>
-<li>Cannonjs</li>
-<li>Matterjs</li>
-</ul>
-<h2 id="gui">GUI<a hidden class="anchor" aria-hidden="true" href="#gui">#</a></h2>
-<ul>
-<li>Datgui</li>
-</ul>
-<h2 id="text-rendering">Text Rendering<a hidden class="anchor" aria-hidden="true" href="#text-rendering">#</a></h2>
-<ul>
-<li>16x16 Bitmap font</li>
-</ul>
-<h1 id="reference">Reference<a hidden class="anchor" aria-hidden="true" href="#reference">#</a></h1>
-<ul>
-<li><a href="https://learnopengl.com">https://learnopengl.com</a></li>
-<li><a href="http://courses.cms.caltech.edu/cs171/assignments/hw2/hw2-notes/notes-hw2.html">http://courses.cms.caltech.edu/cs171/assignments/hw2/hw2-notes/notes-hw2.html</a></li>
-</ul>
-
-
-  </div>
-
-  <footer class="post-footer">
-    <ul class="post-tags">
-      <li><a href="https://mizerc.github.io/tags/computergraphics/">Computergraphics</a></li>
-    </ul>
-  </footer>
-</article>
-    </main>
-    
-<footer class="footer">
-        <span>&copy; 2025 <a href="https://mizerc.github.io/">The Mize Collection</a></span> · 
-
-    <span>
-        Powered by
-        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
-        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
-    </span>
-</footer>
-<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
-        <path d="M12 6H0l6-6z" />
-    </svg>
-</a>
-
-<script>
-    let menu = document.getElementById('menu')
-    if (menu) {
-        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
-        menu.onscroll = function () {
-            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
-        }
-    }
-
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener("click", function (e) {
-            e.preventDefault();
-            var id = this.getAttribute("href").substr(1);
-            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
-                    behavior: "smooth"
-                });
-            } else {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
-            }
-            if (id === "top") {
-                history.replaceState(null, null, " ");
-            } else {
-                history.pushState(null, null, `#${id}`);
-            }
-        });
-    });
-
-</script>
-<script>
-    var mybutton = document.getElementById("top-link");
-    window.onscroll = function () {
-        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
-            mybutton.style.visibility = "visible";
-            mybutton.style.opacity = "1";
-        } else {
-            mybutton.style.visibility = "hidden";
-            mybutton.style.opacity = "0";
-        }
-    };
-
-</script>
-<script>
-    document.getElementById("theme-toggle").addEventListener("click", () => {
-        if (document.body.className.includes("dark")) {
-            document.body.classList.remove('dark');
-            localStorage.setItem("pref-theme", 'light');
-        } else {
-            document.body.classList.add('dark');
-            localStorage.setItem("pref-theme", 'dark');
-        }
-    })
-
-</script>
-</body>
-
-</html>
+Same reasoning used to interpolate color in Gouraud, but now applied to the normals of each vertex.</p><p>Phong shading improves Gouraud shading by providing a better approximation of the shading of a smooth surface.</p><p>Phong Shading is named after Bui Tuong Phong.</p><p>Phong = Ambient + Diffuse + Specular</p><h2 id=blinn-phong>Blinn-Phong<a hidden class=anchor aria-hidden=true href=#blinn-phong>#</a></h2><h1 id=texture>Texture<a hidden class=anchor aria-hidden=true href=#texture>#</a></h1><p>Texture is a image that you glue into the triangle.</p><ul><li>UV coordinates.</li></ul><h2 id=normal-mapping>Normal Mapping<a hidden class=anchor aria-hidden=true href=#normal-mapping>#</a></h2><h1 id=extra-topics>Extra Topics<a hidden class=anchor aria-hidden=true href=#extra-topics>#</a></h1><h2 id=shadow>Shadow<a hidden class=anchor aria-hidden=true href=#shadow>#</a></h2><p>Computing shadow in a rasterizer is not straight forward as in a raytracer.
+We don&rsquo;t want to compute rays from the light to the objects.</p><h3 id=stencil-buffer>Stencil Buffer<a hidden class=anchor aria-hidden=true href=#stencil-buffer>#</a></h3><h3 id=shadow-mapping>Shadow Mapping<a hidden class=anchor aria-hidden=true href=#shadow-mapping>#</a></h3><p>Shadow Mapping is another technique to create shadows in a rasterizer.</p><h2 id=reflection>Reflection<a hidden class=anchor aria-hidden=true href=#reflection>#</a></h2><h2 id=refraction>Refraction<a hidden class=anchor aria-hidden=true href=#refraction>#</a></h2><h2 id=skybox>Skybox<a hidden class=anchor aria-hidden=true href=#skybox>#</a></h2><h2 id=mouse-picker>Mouse Picker<a hidden class=anchor aria-hidden=true href=#mouse-picker>#</a></h2><h2 id=orbital-controller>Orbital Controller<a hidden class=anchor aria-hidden=true href=#orbital-controller>#</a></h2><h2 id=terrain-generator>Terrain Generator<a hidden class=anchor aria-hidden=true href=#terrain-generator>#</a></h2><h2 id=parallax>Parallax<a hidden class=anchor aria-hidden=true href=#parallax>#</a></h2><h2 id=loop-controller>Loop Controller<a hidden class=anchor aria-hidden=true href=#loop-controller>#</a></h2><h2 id=rigid-body-physics-engine>Rigid Body Physics Engine<a hidden class=anchor aria-hidden=true href=#rigid-body-physics-engine>#</a></h2><ul><li>Cannonjs</li><li>Matterjs</li></ul><h2 id=gui>GUI<a hidden class=anchor aria-hidden=true href=#gui>#</a></h2><ul><li>Datgui</li></ul><h2 id=text-rendering>Text Rendering<a hidden class=anchor aria-hidden=true href=#text-rendering>#</a></h2><ul><li>16x16 Bitmap font</li></ul><h1 id=reference>Reference<a hidden class=anchor aria-hidden=true href=#reference>#</a></h1><ul><li><a href=https://learnopengl.com>https://learnopengl.com</a></li><li><a href=http://courses.cms.caltech.edu/cs171/assignments/hw2/hw2-notes/notes-hw2.html>http://courses.cms.caltech.edu/cs171/assignments/hw2/hw2-notes/notes-hw2.html</a></li></ul></div><footer class=post-footer><ul class=post-tags><li><a href=https://mizerc.github.io/tags/computergraphics/>Computergraphics</a></li></ul></footer></article></main><footer class=footer><span>&copy; 2025 <a href=https://mizerc.github.io/>The Mize Collection</a></span> ·
+<span>Powered by
+<a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
+<a href=https://github.com/adityatelange/hugo-PaperMod/ rel=noopener target=_blank>PaperMod</a></span></footer><a href=#top aria-label="go to top" title="Go to Top (Alt + G)" class=top-link id=top-link accesskey=g><svg viewBox="0 0 12 6" fill="currentColor"><path d="M12 6H0l6-6z"/></svg>
+</a><script>let menu=document.getElementById("menu");menu&&(menu.scrollLeft=localStorage.getItem("menu-scroll-position"),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)}),document.querySelectorAll('a[href^="#"]').forEach(e=>{e.addEventListener("click",function(e){e.preventDefault();var t=this.getAttribute("href").substr(1);window.matchMedia("(prefers-reduced-motion: reduce)").matches?document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView({behavior:"smooth"}),t==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${t}`)})})</script><script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script><script>document.getElementById("theme-toggle").addEventListener("click",()=>{document.body.className.includes("dark")?(document.body.classList.remove("dark"),localStorage.setItem("pref-theme","light")):(document.body.classList.add("dark"),localStorage.setItem("pref-theme","dark"))})</script></body></html>

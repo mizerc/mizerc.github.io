@@ -1,25 +1,7 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
-  <channel>
-    <title>Audio on The Mize Collection</title>
-    <link>https://mizerc.github.io/tags/audio/</link>
-    <description>Recent content in Audio on The Mize Collection</description>
-    <generator>Hugo -- 0.147.4</generator>
-    <language>en-us</language>
-    <lastBuildDate>Wed, 22 May 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://mizerc.github.io/tags/audio/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Web Audio API</title>
-      <link>https://mizerc.github.io/posts/technology/webaudio/</link>
-      <pubDate>Wed, 22 May 2024 00:00:00 +0000</pubDate>
-      <guid>https://mizerc.github.io/posts/technology/webaudio/</guid>
-      <description>&lt;p&gt;Modern web browsers support the Web Audio API, which allows us to create and manipulate audio streams.&lt;/p&gt;
-&lt;h1 id=&#34;basics&#34;&gt;Basics&lt;/h1&gt;
-&lt;h2 id=&#34;audio-context&#34;&gt;Audio Context&lt;/h2&gt;
-&lt;p&gt;The &lt;code&gt;AudioContext&lt;/code&gt; object is the main entry point for the Web Audio API.&lt;/p&gt;
-&lt;h2 id=&#34;audio-nodes-and-chains&#34;&gt;Audio Nodes and Chains&lt;/h2&gt;
-&lt;p&gt;The &lt;code&gt;AudioNode&lt;/code&gt; interface is the base interface for all nodes in the audio processing graph.&lt;/p&gt;
-&lt;p&gt;We can connect audio nodes together to create a chain of nodes. For example, we can start with the &lt;code&gt;OscillatorNode&lt;/code&gt; to generate a sine wave, and then connect it to the &lt;code&gt;GainNode&lt;/code&gt; to control the volume of the sound, and then connect it to the &lt;code&gt;DestinationNode&lt;/code&gt; to play the sound to the speakers (or any other output device connected to the computer).&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Audio on The Mize Collection</title><link>https://mizerc.github.io/tags/audio/</link><description>Recent content in Audio on The Mize Collection</description><generator>Hugo -- 0.148.1</generator><language>en-us</language><lastBuildDate>Wed, 22 May 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://mizerc.github.io/tags/audio/index.xml" rel="self" type="application/rss+xml"/><item><title>Web Audio API</title><link>https://mizerc.github.io/posts/technology/webaudio/</link><pubDate>Wed, 22 May 2024 00:00:00 +0000</pubDate><guid>https://mizerc.github.io/posts/technology/webaudio/</guid><description>&lt;p>Modern web browsers support the Web Audio API, which allows us to create and manipulate audio streams.&lt;/p>
+&lt;h1 id="basics">Basics&lt;/h1>
+&lt;h2 id="audio-context">Audio Context&lt;/h2>
+&lt;p>The &lt;code>AudioContext&lt;/code> object is the main entry point for the Web Audio API.&lt;/p>
+&lt;h2 id="audio-nodes-and-chains">Audio Nodes and Chains&lt;/h2>
+&lt;p>The &lt;code>AudioNode&lt;/code> interface is the base interface for all nodes in the audio processing graph.&lt;/p>
+&lt;p>We can connect audio nodes together to create a chain of nodes. For example, we can start with the &lt;code>OscillatorNode&lt;/code> to generate a sine wave, and then connect it to the &lt;code>GainNode&lt;/code> to control the volume of the sound, and then connect it to the &lt;code>DestinationNode&lt;/code> to play the sound to the speakers (or any other output device connected to the computer).&lt;/p></description></item></channel></rss>
