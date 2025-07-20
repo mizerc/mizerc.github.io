@@ -1,3 +1,7 @@
+pre,
+code {
+  border-radius: 16px
+}
 /* a */
 /* h1 { */
 /* font-family: "Times New Roman", Times, serif; */
@@ -10,9 +14,8 @@
 /* } */
 
 /* h1 { */
-  /* color: #132b3e; */
+/* color: #132b3e; */
 /* } */
-
 
 /* @media (prefers-color-scheme: dark) {
   h3 {

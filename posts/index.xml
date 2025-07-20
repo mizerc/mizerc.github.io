@@ -1,10 +1,43 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Posts on The Mize Collection</title><link>https://mizerc.github.io/posts/</link><description>Recent content in Posts on The Mize Collection</description><generator>Hugo -- 0.148.1</generator><language>en-us</language><lastBuildDate>Tue, 08 Jul 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://mizerc.github.io/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>Washington</title><link>https://mizerc.github.io/posts/places/washington/</link><pubDate>Tue, 08 Jul 2025 00:00:00 +0000</pubDate><guid>https://mizerc.github.io/posts/places/washington/</guid><description>&lt;h1 id="north">North&lt;/h1>
-&lt;h2 id="san-juan">San Juan&lt;/h2>
-&lt;h2 id="mt-baker">Mt Baker&lt;/h2>
-&lt;p>The second-most thermally active crater in the Cascade Range after Mount St. Helens.&lt;/p>
-&lt;h3 id="lake-shannon">Lake Shannon&lt;/h3>
-&lt;p>Lake Shannon is a long, narrow reservoir on the Baker River.&lt;/p>
-&lt;h3 id="artist-point">Artist Point&lt;/h3>
-&lt;p>The Artist Point is located at the very end of Mount Baker Highway.
-This trailhead offers seasonal hiking with views of Mount Shuksan &amp;amp; Baker.
-Artist Point typically opens in late June or early July and remains open until the first substantial snowfall of the year in early October.&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Posts on The Mize Collection</title><link>https://mizerc.github.io/posts/</link><description>Recent content in Posts on The Mize Collection</description><generator>Hugo -- 0.148.1</generator><language>en-us</language><lastBuildDate>Sun, 02 Mar 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://mizerc.github.io/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>Microcontrollers &amp; 3D Graphics</title><link>https://mizerc.github.io/posts/projects/iot-microcontroller-n-3d-graphics/</link><pubDate>Sun, 02 Mar 2025 00:00:00 +0000</pubDate><guid>https://mizerc.github.io/posts/projects/iot-microcontroller-n-3d-graphics/</guid><description>&lt;p>In this micro project, the objective is to utilize a microcontroller paired with a display to render a rotating 3D cube and evaluate its performance capabilities.&lt;/p>
+&lt;h2 id="arduino-nano">Arduino Nano&lt;/h2>
+&lt;p>The Arduino Nano is a small board using the 328P microcontroller, offering USB, I2C, SPI communication.&lt;/p>
+&lt;figure>
+&lt;img loading="lazy" src="./photos/nano-front.png#center"
+alt="Arduino Nano front." width="90%"/> &lt;figcaption>
+&lt;p>Arduino Nano front.&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;figure>
+&lt;img loading="lazy" src="./photos/nano-back.png#center"
+alt="Arduino Nano back." width="90%"/> &lt;figcaption>
+&lt;p>Arduino Nano back.&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;h3 id="the-ch340">The CH340&lt;/h3>
+&lt;figure>
+&lt;img loading="lazy" src="./photos/ch340.png#center"
+alt="CH340 chip." width="90%"/> &lt;figcaption>
+&lt;p>CH340 chip.&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>The CH340 is a USB to serial converter chip.
+It allows devices to be programmed and controlled via a USB connection, eliminating the need for a separate &amp;ldquo;programmer&amp;rdquo; device.&lt;/p></description></item><item><title>Weather Station</title><link>https://mizerc.github.io/posts/projects/iot-weather-station/</link><pubDate>Sat, 01 Mar 2025 00:00:00 +0000</pubDate><guid>https://mizerc.github.io/posts/projects/iot-weather-station/</guid><description>&lt;p>Another micro project leaning towards microcontrollers.
+The goal here is to be able to read weather data and show it to a display.&lt;/p>
+&lt;p>I will be using the &lt;code>HiLetgo ESP-32D&lt;/code> development board, the &lt;code>BME280&lt;/code> sensor, and a &lt;code>4-inch TFT display&lt;/code>.
+It required some study around eletronics, power supply, batteries, ESP microcontrollers, protocols like Serial, SPI and I2C, Graphics.&lt;/p>
+&lt;h2 id="product-specs">Product Specs&lt;/h2>
+&lt;p>Let&amp;rsquo;s define a few product specs for this project:&lt;/p>
+&lt;ul>
+&lt;li>Be able to display temperature in Celsius and Fahrenheit, humidity in %, and pressure in hPa.&lt;/li>
+&lt;li>Be able to navigate thru pages using a physical button.&lt;/li>
+&lt;li>Display the current page.&lt;/li>
+&lt;li>Each page should organize the data in a different way to test different layouts.&lt;/li>
+&lt;li>Be able to keep track of the 100 last samples for a specific time period (second, minute, hour, 3-hour, 8-hour, 24-hour).&lt;/li>
+&lt;li>Keep min and max value of each metric (temperature, humidity, pressure) for each time period.&lt;/li>
+&lt;li>Render a simple chart of the last N samples for a specific time period.&lt;/li>
+&lt;li>Display the amout of time since the last reset.&lt;/li>
+&lt;/ul>
+&lt;h2 id="hardware">Hardware&lt;/h2>
+&lt;h3 id="microcontroller">Microcontroller&lt;/h3>
+&lt;p>I will be using the &lt;code>HiLetgo ESP-32D Development Board&lt;/code>.
+It is a development board that comes with a &lt;code>ESP32-D0WD-V3&lt;/code> microcontroller, serial communication over USB, a voltage regulator, 38 pins (which supports GPIO, I2C, SPI, etc.) and a few other components.&lt;/p></description></item></channel></rss>
