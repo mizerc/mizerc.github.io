@@ -1,27 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>The Mize Collection</title><link>https://mizerc.github.io/</link><description>Recent content on The Mize Collection</description><generator>Hugo -- 0.148.1</generator><language>en-us</language><lastBuildDate>Sun, 02 Mar 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://mizerc.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>Microcontrollers &amp; 3D Graphics</title><link>https://mizerc.github.io/posts/projects/iot-microcontroller-n-3d-graphics/</link><pubDate>Sun, 02 Mar 2025 00:00:00 +0000</pubDate><guid>https://mizerc.github.io/posts/projects/iot-microcontroller-n-3d-graphics/</guid><description>&lt;p>In this micro project, the objective is to utilize a microcontroller paired with a display to render a rotating 3D cube and evaluate its performance capabilities.&lt;/p>
-&lt;h2 id="arduino-nano">Arduino Nano&lt;/h2>
-&lt;p>The Arduino Nano is a small board using the 328P microcontroller, offering USB, I2C, SPI communication.&lt;/p>
-&lt;figure>
-&lt;img loading="lazy" src="./photos/nano-front.png#center"
-alt="Arduino Nano front." width="90%"/> &lt;figcaption>
-&lt;p>Arduino Nano front.&lt;/p>
-&lt;/figcaption>
-&lt;/figure>
-&lt;figure>
-&lt;img loading="lazy" src="./photos/nano-back.png#center"
-alt="Arduino Nano back." width="90%"/> &lt;figcaption>
-&lt;p>Arduino Nano back.&lt;/p>
-&lt;/figcaption>
-&lt;/figure>
-&lt;h3 id="the-ch340">The CH340&lt;/h3>
-&lt;figure>
-&lt;img loading="lazy" src="./photos/ch340.png#center"
-alt="CH340 chip." width="90%"/> &lt;figcaption>
-&lt;p>CH340 chip.&lt;/p>
-&lt;/figcaption>
-&lt;/figure>
-&lt;p>The CH340 is a USB to serial converter chip.
-It allows devices to be programmed and controlled via a USB connection, eliminating the need for a separate &amp;ldquo;programmer&amp;rdquo; device.&lt;/p></description></item><item><title>Weather Station</title><link>https://mizerc.github.io/posts/projects/iot-weather-station/</link><pubDate>Sat, 01 Mar 2025 00:00:00 +0000</pubDate><guid>https://mizerc.github.io/posts/projects/iot-weather-station/</guid><description>&lt;p>Another micro project leaning towards microcontrollers.
+&lt;h2 id="hardware">Hardware&lt;/h2>
+&lt;h3 id="arduino-nano">Arduino Nano&lt;/h3>
+&lt;p>The Arduino Nano is a small &lt;strong>board&lt;/strong> that uses the 328P microcontroller, offering IO ports (digital in/out (0-5V), analog in/out (ADC, PWM), Serial, I2C, SPI), voltage regulator (LM1117, 7-12V in), and USB communication thru the CH340 chip and a Mini-B usb port.&lt;/p></description></item><item><title>Weather Station</title><link>https://mizerc.github.io/posts/projects/iot-weather-station/</link><pubDate>Sat, 01 Mar 2025 00:00:00 +0000</pubDate><guid>https://mizerc.github.io/posts/projects/iot-weather-station/</guid><description>&lt;p>Another micro project leaning towards microcontrollers.
 The goal here is to be able to read weather data and show it to a display.&lt;/p>
 &lt;p>I will be using the &lt;code>HiLetgo ESP-32D&lt;/code> development board, the &lt;code>BME280&lt;/code> sensor, and a &lt;code>4-inch TFT display&lt;/code>.
 It required some study around eletronics, power supply, batteries, ESP microcontrollers, protocols like Serial, SPI and I2C, Graphics.&lt;/p>
@@ -40,16 +20,14 @@ It required some study around eletronics, power supply, batteries, ESP microcont
 &lt;h2 id="hardware">Hardware&lt;/h2>
 &lt;h3 id="microcontroller">Microcontroller&lt;/h3>
 &lt;p>I will be using the &lt;code>HiLetgo ESP-32D Development Board&lt;/code>.
-It is a development board that comes with a &lt;code>ESP32-D0WD-V3&lt;/code> microcontroller, serial communication over USB, a voltage regulator, 38 pins (which supports GPIO, I2C, SPI, etc.) and a few other components.&lt;/p></description></item><item><title>About</title><link>https://mizerc.github.io/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mizerc.github.io/about/</guid><description>&lt;h3 id="about-me">About Me&lt;/h3>
-&lt;p>I&amp;rsquo;m a software engineer based in &lt;a href="https://en.wikipedia.org/wiki/Seattle">Seattle, WA&lt;/a>, with extensive experience in desktop, web, mobile, backend development.&lt;/p>
-&lt;p>I hold a Bachelor&amp;rsquo;s degree in Computer Engineering from the &lt;a href="https://www.ufrgs.br/site/">Federal University of Rio Grande do Sul, Brazil&lt;/a>, with an international education program in Computer Science at the &lt;a href="https://www.wisc.edu/">University of Wisconsin, USA&lt;/a>.&lt;/p>
-&lt;!-- Occasionally, I explore areas like computer graphics, physic engines, compilers, and electronics. -->
-&lt;h3 id="about-this-website">About This Website&lt;/h3>
-&lt;p>This is a growing collection of my exploration notes on a variety of random topics.
+It is a development board that comes with a &lt;code>ESP32-D0WD-V3&lt;/code> microcontroller, serial communication over USB, a voltage regulator, 38 pins (which supports GPIO, I2C, SPI, etc.) and a few other components.&lt;/p></description></item><item><title>About</title><link>https://mizerc.github.io/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mizerc.github.io/about/</guid><description>&lt;p>This is a growing collection of my exploration notes on a variety of random topics.
 It is far from complete, I tend to revisit there subjects from time to time and add more thoughts, findings or questions as I explore them.
-If you have questions, comments or spot any errors, please write me an email at &lt;a href="mailto:contact@mauricioize.dev">contact@mauricioize.dev&lt;/a>.&lt;/p></description></item><item><title>Hugo</title><link>https://mizerc.github.io/posts/technology/hugo/hugo/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mizerc.github.io/posts/technology/hugo/hugo/</guid><description>&lt;p>Hugo is a static site generator developed in Go.
-You write pure plain markdown text files, and Hugo build the HTML content following a template defined by you (or some theme from the Internet).&lt;/p>
-&lt;p>Inside each HTML template you have access to the Hugo&amp;rsquo;s template language that allow you to structure the markdown content over the HTML structure.&lt;/p>
+If you have questions, comments or spot any errors, please write me an email at &lt;a href="mailto:contact@mauricioize.dev">contact@mauricioize.dev&lt;/a>.&lt;/p>
+&lt;p>I have a genuine curiosity about how things works under the hood, and as a hobby of mine I enjoy building things from scratch.
+If not in a professional environment, I believe that trying to inventing the wheel is a great way to truly understand the challenges and steps necessary to build things we grant for free.
+I will try to document some of the process in this space.&lt;/p></description></item><item><title>Hugo</title><link>https://mizerc.github.io/posts/technology/hugo/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mizerc.github.io/posts/technology/hugo/</guid><description>&lt;p>Hugo is a static site generator developed in Go.
+You write content using plain markdown files, and Hugo build the website following a template defined by you (or by some theme from the Internet).&lt;/p>
+&lt;p>Inside each template file, you have access to the &lt;code>Hugo's template language&lt;/code> that allow you to structure the markdown content over the HTML structure.&lt;/p>
 &lt;h3 id="installing-hugo">Installing Hugo&lt;/h3>
 &lt;p>In macOS, you can install Hugo using Homebrew.&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
@@ -67,5 +45,4 @@ You write pure plain markdown text files, and Hugo build the HTML content follow
 It features sharp granite spires, glaciers, deep valleys, and dense conifer forests.&lt;/p>
 &lt;p>In geology, spires are tall, narrow, pointed rock formations usually the result of erosion and glacial carving acting on hard bedrock, like granite.&lt;/p>
 &lt;h3 id="location">Location&lt;/h3>
-&lt;p>North Cascades National Park is located in northern Washington state, in the United States. It spans Whatcom, Skagit, and Chelan counties and lies about 100 miles northeast of Seattle, near the Canadian border.&lt;/p></description></item><item><title>The 1st Post</title><link>https://mizerc.github.io/posts/technology/hugo/the-1st-post/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mizerc.github.io/posts/technology/hugo/the-1st-post/</guid><description>&lt;p>Today, May 21, 2025, is the first sucessful attempt using &lt;a href="https://gohugo.io/">Hugo&lt;/a> to generate this website from plain markdown.
-As well as, using Github Actions workflow to deploy the static website to Github Pages hosting.&lt;/p></description></item></channel></rss>
+&lt;p>North Cascades National Park is located in northern Washington state, in the United States. It spans Whatcom, Skagit, and Chelan counties and lies about 100 miles northeast of Seattle, near the Canadian border.&lt;/p></description></item></channel></rss>

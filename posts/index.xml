@@ -1,27 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Posts on The Mize Collection</title><link>https://mizerc.github.io/posts/</link><description>Recent content in Posts on The Mize Collection</description><generator>Hugo -- 0.148.1</generator><language>en-us</language><lastBuildDate>Sun, 02 Mar 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://mizerc.github.io/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>Microcontrollers &amp; 3D Graphics</title><link>https://mizerc.github.io/posts/projects/iot-microcontroller-n-3d-graphics/</link><pubDate>Sun, 02 Mar 2025 00:00:00 +0000</pubDate><guid>https://mizerc.github.io/posts/projects/iot-microcontroller-n-3d-graphics/</guid><description>&lt;p>In this micro project, the objective is to utilize a microcontroller paired with a display to render a rotating 3D cube and evaluate its performance capabilities.&lt;/p>
-&lt;h2 id="arduino-nano">Arduino Nano&lt;/h2>
-&lt;p>The Arduino Nano is a small board using the 328P microcontroller, offering USB, I2C, SPI communication.&lt;/p>
-&lt;figure>
-&lt;img loading="lazy" src="./photos/nano-front.png#center"
-alt="Arduino Nano front." width="90%"/> &lt;figcaption>
-&lt;p>Arduino Nano front.&lt;/p>
-&lt;/figcaption>
-&lt;/figure>
-&lt;figure>
-&lt;img loading="lazy" src="./photos/nano-back.png#center"
-alt="Arduino Nano back." width="90%"/> &lt;figcaption>
-&lt;p>Arduino Nano back.&lt;/p>
-&lt;/figcaption>
-&lt;/figure>
-&lt;h3 id="the-ch340">The CH340&lt;/h3>
-&lt;figure>
-&lt;img loading="lazy" src="./photos/ch340.png#center"
-alt="CH340 chip." width="90%"/> &lt;figcaption>
-&lt;p>CH340 chip.&lt;/p>
-&lt;/figcaption>
-&lt;/figure>
-&lt;p>The CH340 is a USB to serial converter chip.
-It allows devices to be programmed and controlled via a USB connection, eliminating the need for a separate &amp;ldquo;programmer&amp;rdquo; device.&lt;/p></description></item><item><title>Weather Station</title><link>https://mizerc.github.io/posts/projects/iot-weather-station/</link><pubDate>Sat, 01 Mar 2025 00:00:00 +0000</pubDate><guid>https://mizerc.github.io/posts/projects/iot-weather-station/</guid><description>&lt;p>Another micro project leaning towards microcontrollers.
+&lt;h2 id="hardware">Hardware&lt;/h2>
+&lt;h3 id="arduino-nano">Arduino Nano&lt;/h3>
+&lt;p>The Arduino Nano is a small &lt;strong>board&lt;/strong> that uses the 328P microcontroller, offering IO ports (digital in/out (0-5V), analog in/out (ADC, PWM), Serial, I2C, SPI), voltage regulator (LM1117, 7-12V in), and USB communication thru the CH340 chip and a Mini-B usb port.&lt;/p></description></item><item><title>Weather Station</title><link>https://mizerc.github.io/posts/projects/iot-weather-station/</link><pubDate>Sat, 01 Mar 2025 00:00:00 +0000</pubDate><guid>https://mizerc.github.io/posts/projects/iot-weather-station/</guid><description>&lt;p>Another micro project leaning towards microcontrollers.
 The goal here is to be able to read weather data and show it to a display.&lt;/p>
 &lt;p>I will be using the &lt;code>HiLetgo ESP-32D&lt;/code> development board, the &lt;code>BME280&lt;/code> sensor, and a &lt;code>4-inch TFT display&lt;/code>.
 It required some study around eletronics, power supply, batteries, ESP microcontrollers, protocols like Serial, SPI and I2C, Graphics.&lt;/p>
@@ -40,4 +20,20 @@ It required some study around eletronics, power supply, batteries, ESP microcont
 &lt;h2 id="hardware">Hardware&lt;/h2>
 &lt;h3 id="microcontroller">Microcontroller&lt;/h3>
 &lt;p>I will be using the &lt;code>HiLetgo ESP-32D Development Board&lt;/code>.
-It is a development board that comes with a &lt;code>ESP32-D0WD-V3&lt;/code> microcontroller, serial communication over USB, a voltage regulator, 38 pins (which supports GPIO, I2C, SPI, etc.) and a few other components.&lt;/p></description></item></channel></rss>
+It is a development board that comes with a &lt;code>ESP32-D0WD-V3&lt;/code> microcontroller, serial communication over USB, a voltage regulator, 38 pins (which supports GPIO, I2C, SPI, etc.) and a few other components.&lt;/p></description></item><item><title>Hugo</title><link>https://mizerc.github.io/posts/technology/hugo/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mizerc.github.io/posts/technology/hugo/</guid><description>&lt;p>Hugo is a static site generator developed in Go.
+You write content using plain markdown files, and Hugo build the website following a template defined by you (or by some theme from the Internet).&lt;/p>
+&lt;p>Inside each template file, you have access to the &lt;code>Hugo's template language&lt;/code> that allow you to structure the markdown content over the HTML structure.&lt;/p>
+&lt;h3 id="installing-hugo">Installing Hugo&lt;/h3>
+&lt;p>In macOS, you can install Hugo using Homebrew.&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">brew update
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">brew install hugo
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="creating-a-new-site">Creating a new site&lt;/h3>
+&lt;p>Use the following command to start a new site:&lt;/p></description></item></channel></rss>
