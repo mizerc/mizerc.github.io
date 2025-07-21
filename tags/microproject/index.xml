@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Microproject on The Mize Collection</title><link>https://mizerc.github.io/tags/microproject/</link><description>Recent content in Microproject on The Mize Collection</description><generator>Hugo -- 0.148.1</generator><language>en-us</language><lastBuildDate>Sun, 02 Mar 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://mizerc.github.io/tags/microproject/index.xml" rel="self" type="application/rss+xml"/><item><title>Microcontrollers &amp; 3D Graphics</title><link>https://mizerc.github.io/posts/projects/iot-microcontroller-n-3d-graphics/</link><pubDate>Sun, 02 Mar 2025 00:00:00 +0000</pubDate><guid>https://mizerc.github.io/posts/projects/iot-microcontroller-n-3d-graphics/</guid><description>&lt;p>In this micro project, the objective is to utilize a microcontroller paired with a display to render a rotating 3D cube and evaluate its performance capabilities.&lt;/p>
+&lt;h2 id="hardware">Hardware&lt;/h2>
+&lt;h3 id="arduino-nano">Arduino Nano&lt;/h3>
+&lt;p>The Arduino Nano is a small &lt;strong>board&lt;/strong> that uses the 328P microcontroller, offering IO ports (digital in/out (0-5V), analog in/out (ADC, PWM), Serial, I2C, SPI), voltage regulator (LM1117, 7-12V in), and USB communication thru the CH340 chip and a Mini-B usb port.&lt;/p></description></item><item><title>Weather Station</title><link>https://mizerc.github.io/posts/projects/iot-weather-station/</link><pubDate>Sat, 01 Mar 2025 00:00:00 +0000</pubDate><guid>https://mizerc.github.io/posts/projects/iot-weather-station/</guid><description>&lt;p>Given my sudden interest in exploring the potential of microcontrollers, I had to find a new project to try building.
+So here we are, this time I decided to build a simple weather station with a display to show customizated information.&lt;/p>
+&lt;h3 id="product-specs">Product Specs&lt;/h3>
+&lt;p>Let&amp;rsquo;s define a few product specs to keep the project well scoped:&lt;/p>
+&lt;ul>
+&lt;li>Be able to display temperature in Celsius/Fahrenheit, humidity in %, and pressure in hPa.&lt;/li>
+&lt;li>Be able to navigate thru pages using a physical button.&lt;/li>
+&lt;li>Each page should organize the data in a different way to test different layouts.&lt;/li>
+&lt;li>Be able to keep track of the 100 last samples for a specific time period (second, minute, hour, 3-hour, 8-hour, 24-hour).&lt;/li>
+&lt;li>Keep min and max value of each metric (temperature, humidity, pressure) for each time period.&lt;/li>
+&lt;li>Render a simple chart of the last N samples for a specific time period.&lt;/li>
+&lt;li>Display the amout of time since the last reset.&lt;/li>
+&lt;li>Display the current page number.&lt;/li>
+&lt;/ul>
+&lt;h2 id="hardware">Hardware&lt;/h2>
+&lt;h3 id="microcontroller">Microcontroller&lt;/h3>
+&lt;p>I will be using the &lt;code>HiLetgo ESP-32D Development Board&lt;/code>.
+It is a development board that comes with a &lt;code>ESP32-D0WD-V3&lt;/code> microcontroller, serial communication over USB, a voltage regulator, 38 pins (which supports GPIO, I2C, SPI, etc.) and a few other components.&lt;/p></description></item></channel></rss>

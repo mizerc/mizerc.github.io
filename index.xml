@@ -1,31 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>The Mize Collection</title><link>https://mizerc.github.io/</link><description>Recent content on The Mize Collection</description><generator>Hugo -- 0.148.1</generator><language>en-us</language><lastBuildDate>Sun, 02 Mar 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://mizerc.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>Microcontrollers &amp; 3D Graphics</title><link>https://mizerc.github.io/posts/projects/iot-microcontroller-n-3d-graphics/</link><pubDate>Sun, 02 Mar 2025 00:00:00 +0000</pubDate><guid>https://mizerc.github.io/posts/projects/iot-microcontroller-n-3d-graphics/</guid><description>&lt;p>In this micro project, the objective is to utilize a microcontroller paired with a display to render a rotating 3D cube and evaluate its performance capabilities.&lt;/p>
 &lt;h2 id="hardware">Hardware&lt;/h2>
 &lt;h3 id="arduino-nano">Arduino Nano&lt;/h3>
-&lt;p>The Arduino Nano is a small &lt;strong>board&lt;/strong> that uses the 328P microcontroller, offering IO ports (digital in/out (0-5V), analog in/out (ADC, PWM), Serial, I2C, SPI), voltage regulator (LM1117, 7-12V in), and USB communication thru the CH340 chip and a Mini-B usb port.&lt;/p></description></item><item><title>Weather Station</title><link>https://mizerc.github.io/posts/projects/iot-weather-station/</link><pubDate>Sat, 01 Mar 2025 00:00:00 +0000</pubDate><guid>https://mizerc.github.io/posts/projects/iot-weather-station/</guid><description>&lt;p>Another micro project leaning towards microcontrollers.
-The goal here is to be able to read weather data and show it to a display.&lt;/p>
-&lt;p>I will be using the &lt;code>HiLetgo ESP-32D&lt;/code> development board, the &lt;code>BME280&lt;/code> sensor, and a &lt;code>4-inch TFT display&lt;/code>.
-It required some study around eletronics, power supply, batteries, ESP microcontrollers, protocols like Serial, SPI and I2C, Graphics.&lt;/p>
-&lt;h2 id="product-specs">Product Specs&lt;/h2>
-&lt;p>Let&amp;rsquo;s define a few product specs for this project:&lt;/p>
+&lt;p>The Arduino Nano is a small &lt;strong>board&lt;/strong> that uses the 328P microcontroller, offering IO ports (digital in/out (0-5V), analog in/out (ADC, PWM), Serial, I2C, SPI), voltage regulator (LM1117, 7-12V in), and USB communication thru the CH340 chip and a Mini-B usb port.&lt;/p></description></item><item><title>Weather Station</title><link>https://mizerc.github.io/posts/projects/iot-weather-station/</link><pubDate>Sat, 01 Mar 2025 00:00:00 +0000</pubDate><guid>https://mizerc.github.io/posts/projects/iot-weather-station/</guid><description>&lt;p>Given my sudden interest in exploring the potential of microcontrollers, I had to find a new project to try building.
+So here we are, this time I decided to build a simple weather station with a display to show customizated information.&lt;/p>
+&lt;h3 id="product-specs">Product Specs&lt;/h3>
+&lt;p>Let&amp;rsquo;s define a few product specs to keep the project well scoped:&lt;/p>
 &lt;ul>
-&lt;li>Be able to display temperature in Celsius and Fahrenheit, humidity in %, and pressure in hPa.&lt;/li>
+&lt;li>Be able to display temperature in Celsius/Fahrenheit, humidity in %, and pressure in hPa.&lt;/li>
 &lt;li>Be able to navigate thru pages using a physical button.&lt;/li>
-&lt;li>Display the current page.&lt;/li>
 &lt;li>Each page should organize the data in a different way to test different layouts.&lt;/li>
 &lt;li>Be able to keep track of the 100 last samples for a specific time period (second, minute, hour, 3-hour, 8-hour, 24-hour).&lt;/li>
 &lt;li>Keep min and max value of each metric (temperature, humidity, pressure) for each time period.&lt;/li>
 &lt;li>Render a simple chart of the last N samples for a specific time period.&lt;/li>
 &lt;li>Display the amout of time since the last reset.&lt;/li>
+&lt;li>Display the current page number.&lt;/li>
 &lt;/ul>
 &lt;h2 id="hardware">Hardware&lt;/h2>
 &lt;h3 id="microcontroller">Microcontroller&lt;/h3>
 &lt;p>I will be using the &lt;code>HiLetgo ESP-32D Development Board&lt;/code>.
-It is a development board that comes with a &lt;code>ESP32-D0WD-V3&lt;/code> microcontroller, serial communication over USB, a voltage regulator, 38 pins (which supports GPIO, I2C, SPI, etc.) and a few other components.&lt;/p></description></item><item><title>About</title><link>https://mizerc.github.io/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mizerc.github.io/about/</guid><description>&lt;p>This is a growing collection of my exploration notes on a variety of random topics.
-It is far from complete, I tend to revisit there subjects from time to time and add more thoughts, findings or questions as I explore them.
-If you have questions, comments or spot any errors, please write me an email at &lt;a href="mailto:contact@mauricioize.dev">contact@mauricioize.dev&lt;/a>.&lt;/p>
-&lt;p>I have a genuine curiosity about how things works under the hood, and as a hobby of mine I enjoy building things from scratch.
-If not in a professional environment, I believe that trying to inventing the wheel is a great way to truly understand the challenges and steps necessary to build things we grant for free.
-I will try to document some of the process in this space.&lt;/p></description></item><item><title>database</title><link>https://mizerc.github.io/tags/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mizerc.github.io/tags/</guid><description/></item><item><title>Hugo</title><link>https://mizerc.github.io/posts/technology/hugo/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mizerc.github.io/posts/technology/hugo/</guid><description>&lt;p>Hugo is a static site generator developed in Go.
+It is a development board that comes with a &lt;code>ESP32-D0WD-V3&lt;/code> microcontroller, serial communication over USB, a voltage regulator, 38 pins (which supports GPIO, I2C, SPI, etc.) and a few other components.&lt;/p></description></item><item><title>Hugo</title><link>https://mizerc.github.io/posts/technology/hugo/</link><pubDate>Wed, 01 Jan 2025 00:00:00 +0000</pubDate><guid>https://mizerc.github.io/posts/technology/hugo/</guid><description>&lt;p>Hugo is a static site generator developed in Go.
 You write content using plain markdown files, and Hugo build the website following a template defined by you (or by some theme from the Internet).&lt;/p>
 &lt;p>Inside each template file, you have access to the &lt;code>Hugo's template language&lt;/code> that allow you to structure the markdown content over the HTML structure.&lt;/p>
 &lt;h3 id="installing-hugo">Installing Hugo&lt;/h3>
@@ -41,19 +34,97 @@ You write content using plain markdown files, and Hugo build the website followi
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;h3 id="creating-a-new-site">Creating a new site&lt;/h3>
-&lt;p>Use the following command to start a new site:&lt;/p></description></item><item><title>North Cascades National Park</title><link>https://mizerc.github.io/posts/places/washington/north-cascades/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mizerc.github.io/posts/places/washington/north-cascades/</guid><description>&lt;p>The North Cascades are a rugged, mountainous region in northern Washington State, forming the northernmost section of the Cascade Range.
-It features sharp granite spires, glaciers, deep valleys, and dense conifer forests.&lt;/p>
-&lt;p>In geology, spires are tall, narrow, pointed rock formations usually the result of erosion and glacial carving acting on hard bedrock, like granite.&lt;/p>
-&lt;h3 id="location">Location&lt;/h3>
-&lt;p>North Cascades National Park is located in northern Washington state, in the United States. It spans Whatcom, Skagit, and Chelan counties and lies about 100 miles northeast of Seattle, near the Canadian border.&lt;/p></description></item><item><title>Random Photos of Washington</title><link>https://mizerc.github.io/posts/places/washington/random-photos-of-wa/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mizerc.github.io/posts/places/washington/random-photos-of-wa/</guid><description>&lt;ul>
-&lt;li>&lt;a href="#seattle">Seattle&lt;/a>&lt;/li>
-&lt;li>&lt;a href="#mukilteo">Mukilteo&lt;/a>&lt;/li>
+&lt;p>Use the following command to start a new site:&lt;/p></description></item><item><title>Tooling</title><link>https://mizerc.github.io/posts/technology/tooling/</link><pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate><guid>https://mizerc.github.io/posts/technology/tooling/</guid><description>&lt;p>A collection of shortcuts/commands/notes of developement tools in MacOS.&lt;/p>
+&lt;h1 id="shortcuts">Shortcuts&lt;/h1>
+&lt;h2 id="iterm">iTerm&lt;/h2>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Action&lt;/th>
+&lt;th>Shortcut&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>Clear buffer&lt;/td>
+&lt;td>&lt;code>CMD + K&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Open auto complete dialog&lt;/td>
+&lt;td>&lt;code>CMD + ;&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Open settings&lt;/td>
+&lt;td>&lt;code>CMD + ,&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Open profile settings&lt;/td>
+&lt;td>&lt;code>CMD + i&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h2 id="lazydocker">LazyDocker&lt;/h2>
+&lt;p>Move between panels:&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">&amp;lt; or &amp;gt;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>Scroll list inside the panel:&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">v or ^
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>Filter list inside the panel:&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">/
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="visual-studio-code">Visual Studio Code&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a href="https://code.visualstudio.com/shortcuts/keyboard-shortcuts-macos.pdf">https://code.visualstudio.com/shortcuts/keyboard-shortcuts-macos.pdf&lt;/a>&lt;/li>
 &lt;/ul>
-&lt;h1 id="seattle">Seattle&lt;/h1>
-&lt;h3 id="scarecrow-video">Scarecrow Video&lt;/h3>
+&lt;p>Comment the entire line:&lt;/p></description></item><item><title>About</title><link>https://mizerc.github.io/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mizerc.github.io/about/</guid><description>&lt;h3 id="about-me">About Me&lt;/h3>
+&lt;p>I&amp;rsquo;m a software engineer based in &lt;a href="https://en.wikipedia.org/wiki/Seattle">Seattle, WA&lt;/a> with extensive experience in fullstack development.&lt;/p>
+&lt;p>I hold a Bachelor&amp;rsquo;s degree in Computer Engineering from the &lt;a href="https://www.ufrgs.br/site/">Federal University of Rio Grande do Sul, Brazil&lt;/a>, with an international education program in Computer Science at the &lt;a href="https://www.wisc.edu/">University of Wisconsin, USA&lt;/a>.&lt;/p>
+&lt;!-- Occasionally, I explore areas like computer graphics, physic engines, compilers, and electronics. -->
+&lt;!--
+### Contact
+Help me to improve this content, if you spot any errors or have any suggestions, please let me know.
+You can contact me via email at contact@mauricioize.dev
+-->
+&lt;!--
+### disclaimer
+This website is not affiliated with the companies, products, or services mentioned in the posts.
+The opinions expressed in the posts are my own and not the opinions of my employer.
+The content is for informational purposes only and should not be considered professional advice.
+-->
+&lt;h3 id="about-the-content-of-posts">About the content of posts&lt;/h3>
+&lt;p>The &amp;ldquo;posts&amp;rdquo; section is a growing collection of notes on a variety of random topics I&amp;rsquo;m exploring.
+It might sound a bit confusing, as this isn&amp;rsquo;t exactly a portfolio to showcase my professional skills, nor is it a personal blog.
+I think the real reason behind it is that I&amp;rsquo;m practicing writing and creation of public content.
+So any topic I find out interesting can be a potential new post.&lt;/p></description></item><item><title>North Cascades National Park</title><link>https://mizerc.github.io/posts/places/washington-state/north-cascades/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mizerc.github.io/posts/places/washington-state/north-cascades/</guid><description>&lt;p>The North Cascades are a rugged mountainous region in the northern part of Washington State.
+It is the northernmost section of the Cascade Range.
+It features beautiful sharp granite spires, glaciers, deep valleys, and dense conifer forests.&lt;/p>
+&lt;p>The North Cascades National Park was established on October 2, 1968.&lt;/p>
+&lt;p>&lt;em>In geology, spires are tall, narrow, pointed rock formations usually the result of erosion and glacial carving acting on hard bedrock.&lt;/em>&lt;/p>
+&lt;h3 id="location">Location&lt;/h3>
+&lt;p>North Cascades National Park is located in northern Washington state, in the United States. It spans Whatcom, Skagit, and Chelan counties and lies about 100 miles northeast of Seattle, near the Canadian border.&lt;/p></description></item><item><title>Random Places of Washington</title><link>https://mizerc.github.io/posts/places/washington-state/random-places-of-wa/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mizerc.github.io/posts/places/washington-state/random-places-of-wa/</guid><description>&lt;h1 id="seattle">Seattle&lt;/h1>
+&lt;h3 id="scarecrow-video-store">Scarecrow Video Store&lt;/h3>
 &lt;p>A huge collection of movie in physical media that you can rent.&lt;/p>
 &lt;figure>
-&lt;img loading="lazy" src="./photos/scarecrowvideo.png#center"
+&lt;img loading="lazy" src="./photos/scarecrowvideo-june25.png#center"
 alt="June 2025" width="50%"/> &lt;figcaption>
 &lt;p>June 2025&lt;/p>
 &lt;/figcaption>
@@ -78,4 +149,4 @@ alt="June 2025" width="50%"/> &lt;figcaption>
 &lt;figure>
 &lt;img loading="lazy" src="./photos/freemont-may25.png#center"
 alt="May 2025" width="50%"/> &lt;figcaption>
-&lt;p>May 2025&lt;/p></description></item><item><title>Recipes</title><link>https://mizerc.github.io/wiki/recipes/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mizerc.github.io/wiki/recipes/</guid><description>&lt;p>Welcome&lt;/p></description></item></channel></rss>
+&lt;p>May 2025&lt;/p></description></item><item><title>Recipes</title><link>https://mizerc.github.io/wiki/recipes/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mizerc.github.io/wiki/recipes/</guid><description>&lt;p>Welcome&lt;/p></description></item><item><title>Tags</title><link>https://mizerc.github.io/tags/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mizerc.github.io/tags/</guid><description/></item></channel></rss>
