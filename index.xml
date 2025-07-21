@@ -25,7 +25,7 @@ It is far from complete, I tend to revisit there subjects from time to time and 
 If you have questions, comments or spot any errors, please write me an email at &lt;a href="mailto:contact@mauricioize.dev">contact@mauricioize.dev&lt;/a>.&lt;/p>
 &lt;p>I have a genuine curiosity about how things works under the hood, and as a hobby of mine I enjoy building things from scratch.
 If not in a professional environment, I believe that trying to inventing the wheel is a great way to truly understand the challenges and steps necessary to build things we grant for free.
-I will try to document some of the process in this space.&lt;/p></description></item><item><title>Hugo</title><link>https://mizerc.github.io/posts/technology/hugo/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mizerc.github.io/posts/technology/hugo/</guid><description>&lt;p>Hugo is a static site generator developed in Go.
+I will try to document some of the process in this space.&lt;/p></description></item><item><title>database</title><link>https://mizerc.github.io/tags/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mizerc.github.io/tags/</guid><description/></item><item><title>Hugo</title><link>https://mizerc.github.io/posts/technology/hugo/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mizerc.github.io/posts/technology/hugo/</guid><description>&lt;p>Hugo is a static site generator developed in Go.
 You write content using plain markdown files, and Hugo build the website following a template defined by you (or by some theme from the Internet).&lt;/p>
 &lt;p>Inside each template file, you have access to the &lt;code>Hugo's template language&lt;/code> that allow you to structure the markdown content over the HTML structure.&lt;/p>
 &lt;h3 id="installing-hugo">Installing Hugo&lt;/h3>
@@ -45,4 +45,37 @@ You write content using plain markdown files, and Hugo build the website followi
 It features sharp granite spires, glaciers, deep valleys, and dense conifer forests.&lt;/p>
 &lt;p>In geology, spires are tall, narrow, pointed rock formations usually the result of erosion and glacial carving acting on hard bedrock, like granite.&lt;/p>
 &lt;h3 id="location">Location&lt;/h3>
-&lt;p>North Cascades National Park is located in northern Washington state, in the United States. It spans Whatcom, Skagit, and Chelan counties and lies about 100 miles northeast of Seattle, near the Canadian border.&lt;/p></description></item></channel></rss>
+&lt;p>North Cascades National Park is located in northern Washington state, in the United States. It spans Whatcom, Skagit, and Chelan counties and lies about 100 miles northeast of Seattle, near the Canadian border.&lt;/p></description></item><item><title>Random Photos of Washington</title><link>https://mizerc.github.io/posts/places/washington/random-photos-of-wa/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mizerc.github.io/posts/places/washington/random-photos-of-wa/</guid><description>&lt;ul>
+&lt;li>&lt;a href="#seattle">Seattle&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#mukilteo">Mukilteo&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h1 id="seattle">Seattle&lt;/h1>
+&lt;h3 id="scarecrow-video">Scarecrow Video&lt;/h3>
+&lt;p>A huge collection of movie in physical media that you can rent.&lt;/p>
+&lt;figure>
+&lt;img loading="lazy" src="./photos/scarecrowvideo.png#center"
+alt="June 2025" width="50%"/> &lt;figcaption>
+&lt;p>June 2025&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;h3 id="community-garden">Community Garden&lt;/h3>
+&lt;p>There is a &amp;ldquo;hidden&amp;rdquo; community garden on the last floor of this parking garage near the Space Needle.
+One of the attractions is the following old car filled with plants.&lt;/p>
+&lt;figure>
+&lt;img loading="lazy" src="./photos/garden-parkgarage-july25.png#center"
+alt="June 2025" width="50%"/> &lt;figcaption>
+&lt;p>June 2025&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;p>They also use a Airstream to store the garden tools.&lt;/p>
+&lt;figure>
+&lt;img loading="lazy" src="./photos/garden-parkgarage-july25-2.png#center"
+alt="June 2025" width="50%"/> &lt;figcaption>
+&lt;p>June 2025&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;h3 id="sri-chinmoy-statue">Sri Chinmoy Statue&lt;/h3>
+&lt;figure>
+&lt;img loading="lazy" src="./photos/freemont-may25.png#center"
+alt="May 2025" width="50%"/> &lt;figcaption>
+&lt;p>May 2025&lt;/p></description></item><item><title>Recipes</title><link>https://mizerc.github.io/wiki/recipes/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mizerc.github.io/wiki/recipes/</guid><description>&lt;p>Welcome&lt;/p></description></item></channel></rss>
