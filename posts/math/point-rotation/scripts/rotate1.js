@@ -55,21 +55,36 @@ function draw() {
   ctx.stroke();
 
   // Draw rotating vector at origin
-  const vectorLength = 50;
-  const baseVec = new Vec2(vectorLength, 0); // vector pointing right initially
+  const baseVec = new Vec2(50, 0);
   const rotatedVec = baseVec.rotate(angle);
 
-  ctx.strokeStyle = 'blue';
+
+  // Vector
+  ctx.strokeStyle = 'gray';
   ctx.lineWidth = 2;
   ctx.beginPath();
   ctx.moveTo(origin.x, origin.y);
   ctx.lineTo(origin.x + rotatedVec.x, origin.y + rotatedVec.y);
   ctx.stroke();
 
-  // Update angle for rotation animation
-  angle += 0.05;
+  // Red circle
+  ctx.beginPath();
+  ctx.arc(origin.x + rotatedVec.x, origin.y + rotatedVec.y, 4, 0, Math.PI * 2);
+  ctx.strokeStyle = 'red';
+  ctx.lineWidth = 2;
+  ctx.stroke();
 
-  requestAnimationFrame(draw);
+  // Text
+  ctx.font = '12px Arial';
+  ctx.fillStyle = 'black';
+  ctx.fillText(`x,y: <${Math.round(rotatedVec.x)},${Math.round(rotatedVec.y)}>`, 10, 20);
+
+  // Update angle for rotation animation
+  const degPerUpdate = 15;
+  const radPerUpdate = degPerUpdate * Math.PI / 180;
+  angle += radPerUpdate;
+
+  setTimeout(draw, 500);
 }
 
 draw();

@@ -1,8 +1,25 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Posts on The Mize Collection</title><link>https://mizerc.github.io/posts/</link><description>Recent content in Posts on The Mize Collection</description><generator>Hugo -- 0.148.1</generator><language>en-us</language><lastBuildDate>Sun, 02 Mar 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://mizerc.github.io/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>Microcontrollers &amp; 3D Graphics</title><link>https://mizerc.github.io/posts/projects/iot-microcontroller-n-3d-graphics/</link><pubDate>Sun, 02 Mar 2025 00:00:00 +0000</pubDate><guid>https://mizerc.github.io/posts/projects/iot-microcontroller-n-3d-graphics/</guid><description>&lt;p>In this micro project, the objective is to utilize a microcontroller paired with a display to render a rotating 3D cube and evaluate its performance capabilities.&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Posts on The Mize Collection</title><link>https://mizerc.github.io/posts/</link><description>Recent content in Posts on The Mize Collection</description><generator>Hugo -- 0.148.1</generator><language>en-us</language><lastBuildDate>Sun, 02 Mar 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://mizerc.github.io/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>Fractals</title><link>https://mizerc.github.io/posts/math/fractals/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mizerc.github.io/posts/math/fractals/</guid><description>&lt;p>It is facinating how we can produce beautiful visuals by just checking if the the multiplication and sum of a complex number is stable or not.&lt;/p>
+&lt;!-- It can be expensive, a 200x200 canvas doing around ~100 iterations in average means ~4,000,000 operations with complex numbers. -->
+&lt;!--
+&lt;style>
+p.canvasjs-label {
+text-align: center;
+font-family: 'Georgia', serif;
+color: #555;
+font-size: 0.8rem;
+text-align: center;
+font-style: italic;
+line-height: 1.3;
+}
+&lt;/style>
+&lt;div style="display: flex; flex-direction: column; justify-content: center; align-items: center; margin: 16px;">
+&lt;div style="width: 500px; height: 500px; margin: 8px;" id="div-container-mandelbrot1">
+&lt;/div>
+&lt;p class="canvasjs-label">Animation: mandelbrot at x=0 y=0&lt;/p></description></item><item><title>Arduino Nano Microcontroller &amp; 3D Graphics</title><link>https://mizerc.github.io/posts/projects/iot-microcontroller-n-3d-graphics/</link><pubDate>Sun, 02 Mar 2025 00:00:00 +0000</pubDate><guid>https://mizerc.github.io/posts/projects/iot-microcontroller-n-3d-graphics/</guid><description>&lt;p>In this project, the objective is to utilize a microcontroller paired with a display to render a rotating 3D cube and evaluate its performance capabilities around graphics.&lt;/p>
 &lt;h2 id="hardware">Hardware&lt;/h2>
 &lt;h3 id="arduino-nano">Arduino Nano&lt;/h3>
-&lt;p>The Arduino Nano is a small &lt;strong>board&lt;/strong> that uses the 328P microcontroller, offering IO ports (digital in/out (0-5V), analog in/out (ADC, PWM), Serial, I2C, SPI), voltage regulator (LM1117, 7-12V in), and USB communication thru the CH340 chip and a Mini-B usb port.&lt;/p></description></item><item><title>Weather Station</title><link>https://mizerc.github.io/posts/projects/iot-weather-station/</link><pubDate>Sat, 01 Mar 2025 00:00:00 +0000</pubDate><guid>https://mizerc.github.io/posts/projects/iot-weather-station/</guid><description>&lt;p>Given my sudden interest in exploring the potential of microcontrollers, I had to find a new project to try building.
-So here we are, this time I decided to build a simple weather station with a display to show customizated information.&lt;/p>
+&lt;p>The Arduino Nano is a small &lt;strong>board&lt;/strong> that uses the 328P microcontroller, offering IO ports (digital in/out (0-5V), analog in/out (ADC, PWM), Serial, I2C, SPI), voltage regulator (LM1117, 7-12V in), and USB communication thru the CH340 chip and a Mini-B usb port.&lt;/p></description></item><item><title>Weather Station with ESP32 Microcontroller</title><link>https://mizerc.github.io/posts/projects/iot-weather-station/</link><pubDate>Sat, 01 Mar 2025 00:00:00 +0000</pubDate><guid>https://mizerc.github.io/posts/projects/iot-weather-station/</guid><description>&lt;p>Here lets describe the steps needed to build a custom weather station using a microcontroller.
+The goal is to measure temperature, humidity and pressure and display the data on a 2.5&amp;quot; TFT screen.&lt;/p>
 &lt;h3 id="product-specs">Product Specs&lt;/h3>
 &lt;p>Let&amp;rsquo;s define a few product specs to keep the project well scoped:&lt;/p>
 &lt;ul>
@@ -77,65 +94,88 @@ You write content using plain markdown files, and Hugo build the website followi
 &lt;/script>
 &lt;p>If you need to add HTML canvas or import JavaScript libraries from a CDN in your Hugo website, this post will walk you thru on how to do that.&lt;/p>
 &lt;p>In the end you will be able to use HTML canvas to render things like a 3d rotating cube from your markdown file:&lt;/p>
-&lt;div style="display: flex; justify-content: center; align-items: center;">
-&lt;div style="width: 500px; height: 500px;" id="div-container-cube1">
+&lt;style>
+p.canvasjs-label {
+text-align: center;
+font-family: 'Georgia', serif;
+color: #555;
+font-size: 0.8rem;
+text-align: center;
+font-style: italic;
+line-height: 1.3;
+}
+&lt;/style>
+&lt;div style="display: flex; flex-direction: column; justify-content: center; align-items: center; margin: 16px;">
+&lt;div style="width: 500px; height: 500px; margin: 8px;" id="div-container-cube1">
 &lt;/div>
-&lt;/div>
-&lt;script type="module" src="scripts/cube1.js">&lt;/script>
-&lt;h3 id="hugo-shortcodes">Hugo Shortcodes&lt;/h3>
-&lt;p>This is possible using Hugo &lt;a href="https://gohugo.io/content-management/shortcodes/">shortcodes&lt;/a>.
-Which is a way to add custom HTML elements to your website like image, video, and HTML canvas. The shortcode is a template invoked within markup, accepting any number of arguments.&lt;/p></description></item><item><title>Hugo TeX Support</title><link>https://mizerc.github.io/posts/technology/hugo/tex-support/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mizerc.github.io/posts/technology/hugo/tex-support/</guid><description>&lt;p>We can use the &lt;a href="https://katex.org/">Katex&lt;/a> library to enable Tex support to your hugo website.
-KaTeX supports all major browsers.&lt;/p>
+&lt;p class="canvasjs-label">Animation: &lt;/p></description></item><item><title>Hugo TeX Support</title><link>https://mizerc.github.io/posts/technology/hugo/tex-support/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mizerc.github.io/posts/technology/hugo/tex-support/</guid><description>&lt;p>We can use the &lt;a href="https://katex.org/">KaTeX&lt;/a> library to enable TeX support to your hugo website.
+The library supports all major browsers.
+Which TeX we can express math formulas and science symbols with a clear and unambiguous way.&lt;/p>
 &lt;p>$$
-\Huge TeX
+\int_a^b f(x) dx
 $$&lt;/p>
 &lt;h3 id="installing">Installing&lt;/h3>
-&lt;h4 id="creating-a-hugo-partial">Creating a Hugo partial&lt;/h4>
 &lt;p>To install, we just need to import the library files from some CDN to our Hugo website.
-One way to do this is using the Hugo partials which as small HTML templates that we can import to our website.&lt;/p>
-&lt;p>To start, lets create a new partial template file to hold the code needed to add the library.
-Create a new partial file in &lt;code>hugo_root/layouts/tex.html&lt;/code>.&lt;/p></description></item><item><title>North Cascades National Park</title><link>https://mizerc.github.io/posts/places/washington-state/north-cascades/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mizerc.github.io/posts/places/washington-state/north-cascades/</guid><description>&lt;p>The North Cascades are a rugged mountainous region in the northern part of Washington State.
+One way to do this is using the &lt;strong>Hugo partials&lt;/strong> which allow us to import small HTML context.&lt;/p></description></item><item><title>North Cascades National Park</title><link>https://mizerc.github.io/posts/places/washington-state/north-cascades/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mizerc.github.io/posts/places/washington-state/north-cascades/</guid><description>&lt;p>The North Cascades are a rugged mountainous region in the northern part of Washington State.
 It is the northernmost section of the Cascade Range.
 It features beautiful sharp granite spires, glaciers, deep valleys, and dense conifer forests.&lt;/p>
 &lt;p>The North Cascades National Park was established on October 2, 1968.&lt;/p>
 &lt;p>&lt;em>In geology, spires are tall, narrow, pointed rock formations usually the result of erosion and glacial carving acting on hard bedrock.&lt;/em>&lt;/p>
 &lt;h3 id="location">Location&lt;/h3>
-&lt;p>North Cascades National Park is located in northern Washington state, in the United States. It spans Whatcom, Skagit, and Chelan counties and lies about 100 miles northeast of Seattle, near the Canadian border.&lt;/p></description></item><item><title>Random Places of Washington</title><link>https://mizerc.github.io/posts/places/washington-state/random-places-of-wa/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mizerc.github.io/posts/places/washington-state/random-places-of-wa/</guid><description>&lt;h1 id="seattle">Seattle&lt;/h1>
+&lt;p>North Cascades National Park is located in northern Washington state, in the United States. It spans Whatcom, Skagit, and Chelan counties and lies about 100 miles northeast of Seattle, near the Canadian border.&lt;/p></description></item><item><title>Point Rotation</title><link>https://mizerc.github.io/posts/math/point-rotation/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mizerc.github.io/posts/math/point-rotation/</guid><description>&lt;p>When playing with 2d/3d computer graphics, image processing, computer vision, etc.,
+we often need use the rotation matrix to rotate a point &amp;lt;x,y&amp;gt; or &amp;lt;x,y,z&amp;gt; around origin or around an arbitrary point.&lt;/p>
+&lt;p>For example, the following animation, we rotate the red point by 15 degree every half second.
+That means that we need compute the new x,y positiong from the previous x,y rotated by 15 deg.&lt;/p>
+&lt;style>
+p.canvasjs-label {
+text-align: center;
+font-family: 'Georgia', serif;
+color: #555;
+font-size: 0.8rem;
+text-align: center;
+font-style: italic;
+line-height: 1.3;
+}
+&lt;/style>
+&lt;div style="display: flex; flex-direction: column; justify-content: center; align-items: center; margin: 16px;">
+&lt;div style="width: 200px; height: 200px; margin: 8px;" id="div-container-rotate1">
+&lt;/div>
+&lt;p class="canvasjs-label">Animation: Point rotation on canvas coord system.&lt;/p></description></item><item><title>Random Places of Washington</title><link>https://mizerc.github.io/posts/places/washington-state/random-places-of-wa/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mizerc.github.io/posts/places/washington-state/random-places-of-wa/</guid><description>&lt;h1 id="seattle">Seattle&lt;/h1>
 &lt;h3 id="scarecrow-video-store">Scarecrow Video Store&lt;/h3>
 &lt;p>A huge collection of movie in physical media that you can rent.&lt;/p>
+&lt;style>
+figcaption {
+text-align: center;
+font-family: 'Georgia', serif;
+color: #555;
+text-align: center;
+font-style: italic;
+line-height: 1.3;
+}
+&lt;/style>
+&lt;div>
 &lt;figure>
 &lt;img loading="lazy" src="./photos/scarecrowvideo-june25.png#center"
 alt="June 2025" width="50%"/> &lt;figcaption>
 &lt;p>June 2025&lt;/p>
 &lt;/figcaption>
 &lt;/figure>
+&lt;/div>
 &lt;h3 id="community-garden">Community Garden&lt;/h3>
 &lt;p>There is a &amp;ldquo;hidden&amp;rdquo; community garden on the last floor of this parking garage near the Space Needle.
 One of the attractions is the following old car filled with plants.&lt;/p>
+&lt;style>
+figcaption {
+text-align: center;
+font-family: 'Georgia', serif;
+color: #555;
+text-align: center;
+font-style: italic;
+line-height: 1.3;
+}
+&lt;/style>
+&lt;div>
 &lt;figure>
 &lt;img loading="lazy" src="./photos/garden-parkgarage-july25.png#center"
 alt="June 2025" width="50%"/> &lt;figcaption>
-&lt;p>June 2025&lt;/p>
-&lt;/figcaption>
-&lt;/figure>
-&lt;p>They also use a Airstream to store the garden tools.&lt;/p>
-&lt;figure>
-&lt;img loading="lazy" src="./photos/garden-parkgarage-july25-2.png#center"
-alt="June 2025" width="50%"/> &lt;figcaption>
-&lt;p>June 2025&lt;/p>
-&lt;/figcaption>
-&lt;/figure>
-&lt;h3 id="sri-chinmoy-statue">Sri Chinmoy Statue&lt;/h3>
-&lt;figure>
-&lt;img loading="lazy" src="./photos/freemont-may25.png#center"
-alt="May 2025" width="50%"/> &lt;figcaption>
-&lt;p>May 2025&lt;/p></description></item><item><title>Rotating Points</title><link>https://mizerc.github.io/posts/math/rotating-points/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mizerc.github.io/posts/math/rotating-points/</guid><description>&lt;p>When playing with 2d/3d computer graphics, image processing, computer vision,etc
-we often need use the rotation matrix to rotate a point &amp;lt;x,y&amp;gt; or &amp;lt;x,y,z&amp;gt; around origin or around an arbitrary point.&lt;/p>
-&lt;p>For example, on the following animation, we need to compute the new x&amp;rsquo; and y&amp;rsquo; of the endpoint of the blue vector.
-On every frame, we increase the angle by 0.05 rads and compute the new x,y values.&lt;/p>
-&lt;div style="display: flex; justify-content: center; align-items: center;">
-&lt;div style="width: 200px; height: 200px;" id="div-container-rotate1">
-&lt;/div>
-&lt;/div>
-&lt;script type="module" src="../scripts/rotate1.js">&lt;/script>
-&lt;p>To do that, we use the standard point rotation formula, which is commonly stated as that if you have a point (x, y) and you want rotate by \( \theta \).&lt;/p></description></item></channel></rss>
+&lt;p>June 2025&lt;/p></description></item></channel></rss>
