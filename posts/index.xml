@@ -18,22 +18,14 @@ So here we are, this time I decided to build a simple weather station with a dis
 &lt;h2 id="hardware">Hardware&lt;/h2>
 &lt;h3 id="microcontroller">Microcontroller&lt;/h3>
 &lt;p>I will be using the &lt;code>HiLetgo ESP-32D Development Board&lt;/code>.
-It is a development board that comes with a &lt;code>ESP32-D0WD-V3&lt;/code> microcontroller, serial communication over USB, a voltage regulator, 38 pins (which supports GPIO, I2C, SPI, etc.) and a few other components.&lt;/p></description></item><item><title>Hugo</title><link>https://mizerc.github.io/posts/technology/hugo/</link><pubDate>Wed, 01 Jan 2025 00:00:00 +0000</pubDate><guid>https://mizerc.github.io/posts/technology/hugo/</guid><description>&lt;p>Hugo is a static site generator developed in Go.
+It is a development board that comes with a &lt;code>ESP32-D0WD-V3&lt;/code> microcontroller, serial communication over USB, a voltage regulator, 38 pins (which supports GPIO, I2C, SPI, etc.) and a few other components.&lt;/p></description></item><item><title>Hugo</title><link>https://mizerc.github.io/posts/technology/hugo/hugo/</link><pubDate>Wed, 01 Jan 2025 00:00:00 +0000</pubDate><guid>https://mizerc.github.io/posts/technology/hugo/hugo/</guid><description>&lt;p>Hugo is a static site generator developed in Go.
 You write content using plain markdown files, and Hugo build the website following a template defined by you (or by some theme from the Internet).&lt;/p>
 &lt;p>Inside each template file, you have access to the &lt;code>Hugo's template language&lt;/code> that allow you to structure the markdown content over the HTML structure.&lt;/p>
 &lt;h3 id="installing-hugo">Installing Hugo&lt;/h3>
 &lt;p>In macOS, you can install Hugo using Homebrew.&lt;/p>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;span class="lnt">2
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">brew update
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">brew update
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">brew install hugo
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;h3 id="creating-a-new-site">Creating a new site&lt;/h3>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="creating-a-new-site">Creating a new site&lt;/h3>
 &lt;p>Use the following command to start a new site:&lt;/p></description></item><item><title>Tooling</title><link>https://mizerc.github.io/posts/technology/tooling/</link><pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate><guid>https://mizerc.github.io/posts/technology/tooling/</guid><description>&lt;p>A collection of shortcuts/commands/notes of developement tools in MacOS.&lt;/p>
 &lt;h1 id="shortcuts">Shortcuts&lt;/h1>
 &lt;h2 id="iterm">iTerm&lt;/h2>
@@ -65,37 +57,44 @@ You write content using plain markdown files, and Hugo build the website followi
 &lt;/table>
 &lt;h2 id="lazydocker">LazyDocker&lt;/h2>
 &lt;p>Move between panels:&lt;/p>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">&amp;lt; or &amp;gt;
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>Scroll list inside the panel:&lt;/p>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">v or ^
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>Filter list inside the panel:&lt;/p>
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">/
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;h2 id="visual-studio-code">Visual Studio Code&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">&amp;lt; or &amp;gt;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Scroll list inside the panel:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">v or ^
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Filter list inside the panel:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">/
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="visual-studio-code">Visual Studio Code&lt;/h2>
 &lt;ul>
 &lt;li>&lt;a href="https://code.visualstudio.com/shortcuts/keyboard-shortcuts-macos.pdf">https://code.visualstudio.com/shortcuts/keyboard-shortcuts-macos.pdf&lt;/a>&lt;/li>
 &lt;/ul>
-&lt;p>Comment the entire line:&lt;/p></description></item><item><title>North Cascades National Park</title><link>https://mizerc.github.io/posts/places/washington-state/north-cascades/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mizerc.github.io/posts/places/washington-state/north-cascades/</guid><description>&lt;p>The North Cascades are a rugged mountainous region in the northern part of Washington State.
+&lt;p>Comment the entire line:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">CMD + /
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Duplicate current line:&lt;/p></description></item><item><title>Hugo HTML Canvas Support</title><link>https://mizerc.github.io/posts/technology/hugo/canvas-support/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mizerc.github.io/posts/technology/hugo/canvas-support/</guid><description>&lt;script type="importmap">
+{
+"imports": {
+"three": "https://unpkg.com/three@0.160.0/build/three.module.js"
+}
+}
+&lt;/script>
+&lt;p>If you need to add HTML canvas or import JavaScript libraries from a CDN in your Hugo website, this post will walk you thru on how to do that.&lt;/p>
+&lt;p>In the end you will be able to use HTML canvas to render things like a 3d rotating cube from your markdown file:&lt;/p>
+&lt;div style="display: flex; justify-content: center; align-items: center;">
+&lt;div style="width: 500px; height: 500px;" id="div-container-cube1">
+&lt;/div>
+&lt;/div>
+&lt;script type="module" src="scripts/cube1.js">&lt;/script>
+&lt;h3 id="hugo-shortcodes">Hugo Shortcodes&lt;/h3>
+&lt;p>This is possible using Hugo &lt;a href="https://gohugo.io/content-management/shortcodes/">shortcodes&lt;/a>.
+Which is a way to add custom HTML elements to your website like image, video, and HTML canvas. The shortcode is a template invoked within markup, accepting any number of arguments.&lt;/p></description></item><item><title>Hugo TeX Support</title><link>https://mizerc.github.io/posts/technology/hugo/tex-support/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mizerc.github.io/posts/technology/hugo/tex-support/</guid><description>&lt;p>We can use the &lt;a href="https://katex.org/">Katex&lt;/a> library to enable Tex support to your hugo website.
+KaTeX supports all major browsers.&lt;/p>
+&lt;p>$$
+\Huge TeX
+$$&lt;/p>
+&lt;h3 id="installing">Installing&lt;/h3>
+&lt;h4 id="creating-a-hugo-partial">Creating a Hugo partial&lt;/h4>
+&lt;p>To install, we just need to import the library files from some CDN to our Hugo website.
+One way to do this is using the Hugo partials which as small HTML templates that we can import to our website.&lt;/p>
+&lt;p>To start, lets create a new partial template file to hold the code needed to add the library.
+Create a new partial file in &lt;code>hugo_root/layouts/tex.html&lt;/code>.&lt;/p></description></item><item><title>North Cascades National Park</title><link>https://mizerc.github.io/posts/places/washington-state/north-cascades/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mizerc.github.io/posts/places/washington-state/north-cascades/</guid><description>&lt;p>The North Cascades are a rugged mountainous region in the northern part of Washington State.
 It is the northernmost section of the Cascade Range.
 It features beautiful sharp granite spires, glaciers, deep valleys, and dense conifer forests.&lt;/p>
 &lt;p>The North Cascades National Park was established on October 2, 1968.&lt;/p>
@@ -130,4 +129,13 @@ alt="June 2025" width="50%"/> &lt;figcaption>
 &lt;figure>
 &lt;img loading="lazy" src="./photos/freemont-may25.png#center"
 alt="May 2025" width="50%"/> &lt;figcaption>
-&lt;p>May 2025&lt;/p></description></item></channel></rss>
+&lt;p>May 2025&lt;/p></description></item><item><title>Rotating Points</title><link>https://mizerc.github.io/posts/math/rotating-points/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mizerc.github.io/posts/math/rotating-points/</guid><description>&lt;p>When playing with 2d/3d computer graphics, image processing, computer vision,etc
+we often need use the rotation matrix to rotate a point &amp;lt;x,y&amp;gt; or &amp;lt;x,y,z&amp;gt; around origin or around an arbitrary point.&lt;/p>
+&lt;p>For example, on the following animation, we need to compute the new x&amp;rsquo; and y&amp;rsquo; of the endpoint of the blue vector.
+On every frame, we increase the angle by 0.05 rads and compute the new x,y values.&lt;/p>
+&lt;div style="display: flex; justify-content: center; align-items: center;">
+&lt;div style="width: 200px; height: 200px;" id="div-container-rotate1">
+&lt;/div>
+&lt;/div>
+&lt;script type="module" src="../scripts/rotate1.js">&lt;/script>
+&lt;p>To do that, we use the standard point rotation formula, which is commonly stated as that if you have a point (x, y) and you want rotate by \( \theta \).&lt;/p></description></item></channel></rss>
