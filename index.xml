@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>The Mize Collection</title><link>https://mizerc.github.io/</link><description>Recent content on The Mize Collection</description><generator>Hugo -- 0.148.1</generator><language>en-us</language><lastBuildDate>Sun, 02 Mar 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://mizerc.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>Fractals</title><link>https://mizerc.github.io/posts/math/fractals/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mizerc.github.io/posts/math/fractals/</guid><description>&lt;p>It is facinating how we can produce beautiful visuals by just checking if the the multiplication and sum of a complex number is stable or not.&lt;/p>
-&lt;!-- It can be expensive, a 200x200 canvas doing around ~100 iterations in average means ~4,000,000 operations with complex numbers. -->
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>The Mize Collection</title><link>https://mizerc.github.io/</link><description>Recent content on The Mize Collection</description><generator>Hugo -- 0.150.1</generator><language>en-us</language><lastBuildDate>Wed, 21 May 2025 01:24:51 -0700</lastBuildDate><atom:link href="https://mizerc.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>Fractals</title><link>https://mizerc.github.io/posts/math/fractals/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mizerc.github.io/posts/math/fractals/</guid><description>&lt;p&gt;It is facinating how we can produce beautiful visuals by just checking if the the multiplication and sum of a complex number is stable or not.&lt;/p&gt;
+&lt;!-- It can be expensive, a 200x200 canvas doing around ~100 iterations in average means ~4,000,000 operations with complex numbers. --&gt;
 &lt;!--
-&lt;style>
+&lt;style&gt;
 p.canvasjs-label {
 text-align: center;
 font-family: 'Georgia', serif;
@@ -11,109 +11,111 @@ text-align: center;
 font-style: italic;
 line-height: 1.3;
 }
-&lt;/style>
-&lt;div style="display: flex; flex-direction: column; justify-content: center; align-items: center; margin: 16px;">
-&lt;div style="width: 500px; height: 500px; margin: 8px;" id="div-container-mandelbrot1">
-&lt;/div>
-&lt;p class="canvasjs-label">Animation: mandelbrot at x=0 y=0&lt;/p></description></item><item><title>Arduino Nano Microcontroller &amp; 3D Graphics</title><link>https://mizerc.github.io/posts/projects/iot-microcontroller-n-3d-graphics/</link><pubDate>Sun, 02 Mar 2025 00:00:00 +0000</pubDate><guid>https://mizerc.github.io/posts/projects/iot-microcontroller-n-3d-graphics/</guid><description>&lt;p>In this project, the objective is to utilize a microcontroller paired with a display to render a rotating 3D cube and evaluate its performance capabilities around graphics.&lt;/p>
-&lt;h2 id="hardware">Hardware&lt;/h2>
-&lt;h3 id="arduino-nano">Arduino Nano&lt;/h3>
-&lt;p>The Arduino Nano is a small &lt;strong>board&lt;/strong> that uses the 328P microcontroller, offering IO ports (digital in/out (0-5V), analog in/out (ADC, PWM), Serial, I2C, SPI), voltage regulator (LM1117, 7-12V in), and USB communication thru the CH340 chip and a Mini-B usb port.&lt;/p></description></item><item><title>Weather Station with ESP32 Microcontroller</title><link>https://mizerc.github.io/posts/projects/iot-weather-station/</link><pubDate>Sat, 01 Mar 2025 00:00:00 +0000</pubDate><guid>https://mizerc.github.io/posts/projects/iot-weather-station/</guid><description>&lt;p>Here lets describe the steps needed to build a custom weather station using a microcontroller.
-The goal is to measure temperature, humidity and pressure and display the data on a 2.5&amp;quot; TFT screen.&lt;/p>
-&lt;h3 id="product-specs">Product Specs&lt;/h3>
-&lt;p>Let&amp;rsquo;s define a few product specs to keep the project well scoped:&lt;/p>
-&lt;ul>
-&lt;li>Be able to display temperature in Celsius/Fahrenheit, humidity in %, and pressure in hPa.&lt;/li>
-&lt;li>Be able to navigate thru pages using a physical button.&lt;/li>
-&lt;li>Each page should organize the data in a different way to test different layouts.&lt;/li>
-&lt;li>Be able to keep track of the 100 last samples for a specific time period (second, minute, hour, 3-hour, 8-hour, 24-hour).&lt;/li>
-&lt;li>Keep min and max value of each metric (temperature, humidity, pressure) for each time period.&lt;/li>
-&lt;li>Render a simple chart of the last N samples for a specific time period.&lt;/li>
-&lt;li>Display the amout of time since the last reset.&lt;/li>
-&lt;li>Display the current page number.&lt;/li>
-&lt;/ul>
-&lt;h2 id="hardware">Hardware&lt;/h2>
-&lt;h3 id="microcontroller">Microcontroller&lt;/h3>
-&lt;p>I will be using the &lt;code>HiLetgo ESP-32D Development Board&lt;/code>.
-It is a development board that comes with a &lt;code>ESP32-D0WD-V3&lt;/code> microcontroller, serial communication over USB, a voltage regulator, 38 pins (which supports GPIO, I2C, SPI, etc.) and a few other components.&lt;/p></description></item><item><title>Hugo</title><link>https://mizerc.github.io/posts/technology/hugo/hugo/</link><pubDate>Wed, 01 Jan 2025 00:00:00 +0000</pubDate><guid>https://mizerc.github.io/posts/technology/hugo/hugo/</guid><description>&lt;p>Hugo is a static site generator developed in Go.
-You write content using plain markdown files, and Hugo build the website following a template defined by you (or by some theme from the Internet).&lt;/p>
-&lt;p>Inside each template file, you have access to the &lt;code>Hugo's template language&lt;/code> that allow you to structure the markdown content over the HTML structure.&lt;/p>
-&lt;h3 id="installing-hugo">Installing Hugo&lt;/h3>
-&lt;p>In macOS, you can install Hugo using Homebrew.&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">brew update
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">brew install hugo
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="creating-a-new-site">Creating a new site&lt;/h3>
-&lt;p>Use the following command to start a new site:&lt;/p></description></item><item><title>Tooling</title><link>https://mizerc.github.io/posts/technology/tooling/</link><pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate><guid>https://mizerc.github.io/posts/technology/tooling/</guid><description>&lt;p>A collection of shortcuts/commands/notes of developement tools in MacOS.&lt;/p>
-&lt;h1 id="shortcuts">Shortcuts&lt;/h1>
-&lt;h2 id="iterm">iTerm&lt;/h2>
-&lt;table>
-&lt;thead>
-&lt;tr>
-&lt;th>Action&lt;/th>
-&lt;th>Shortcut&lt;/th>
-&lt;/tr>
-&lt;/thead>
-&lt;tbody>
-&lt;tr>
-&lt;td>Clear buffer&lt;/td>
-&lt;td>&lt;code>CMD + K&lt;/code>&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>Open auto complete dialog&lt;/td>
-&lt;td>&lt;code>CMD + ;&lt;/code>&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>Open settings&lt;/td>
-&lt;td>&lt;code>CMD + ,&lt;/code>&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>Open profile settings&lt;/td>
-&lt;td>&lt;code>CMD + i&lt;/code>&lt;/td>
-&lt;/tr>
-&lt;/tbody>
-&lt;/table>
-&lt;h2 id="lazydocker">LazyDocker&lt;/h2>
-&lt;p>Move between panels:&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">&amp;lt; or &amp;gt;
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Scroll list inside the panel:&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">v or ^
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Filter list inside the panel:&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">/
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="visual-studio-code">Visual Studio Code&lt;/h2>
-&lt;ul>
-&lt;li>&lt;a href="https://code.visualstudio.com/shortcuts/keyboard-shortcuts-macos.pdf">https://code.visualstudio.com/shortcuts/keyboard-shortcuts-macos.pdf&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;p>Comment the entire line:&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">CMD + /
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Duplicate current line:&lt;/p></description></item><item><title>About</title><link>https://mizerc.github.io/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mizerc.github.io/about/</guid><description>&lt;h3 id="about-me">About Me&lt;/h3>
-&lt;p>I&amp;rsquo;m a software engineer based in &lt;a href="https://en.wikipedia.org/wiki/Seattle">Seattle, WA&lt;/a> with extensive experience in fullstack development.&lt;/p>
-&lt;p>I hold a Bachelor&amp;rsquo;s degree in Computer Engineering from the &lt;a href="https://www.ufrgs.br/site/">Federal University of Rio Grande do Sul, Brazil&lt;/a>, with an international education program in Computer Science at the &lt;a href="https://www.wisc.edu/">University of Wisconsin, USA&lt;/a>.&lt;/p>
-&lt;!-- Occasionally, I explore areas like computer graphics, physic engines, compilers, and electronics. -->
+&lt;/style&gt;
+&lt;div style="display: flex; flex-direction: column; justify-content: center; align-items: center; margin: 16px;"&gt;
+&lt;div style="width: 500px; height: 500px; margin: 8px;" id="div-container-mandelbrot1"&gt;
+&lt;/div&gt;
+&lt;p class="canvasjs-label"&gt;Animation: mandelbrot at x=0 y=0&lt;/p&gt;</description></item><item><title>SDR &amp; Capturing Live Earth Images</title><link>https://mizerc.github.io/posts/projects/sdr/</link><pubDate>Wed, 21 May 2025 01:24:51 -0700</pubDate><guid>https://mizerc.github.io/posts/projects/sdr/</guid><description>&lt;p&gt;An Software Defined Radio (SDR) is a device where traditional radio hardware components like mixers, filters, demodulators, detectors, amplifiers are replaced by software running on a computer.
+Which brings the investment cost way down and makes the hobby far more accessible to folks who want to experiment with it.&lt;/p&gt;
+&lt;p&gt;This allows us to hear a wide variety of radio signals, for example, the ADS-B signals used to track airplanes (like the ones shown on websites such as Flightradar), conversations across multiple ham radio bands, or, as in this post, capturing weather images directly from NOAA satellites.&lt;/p&gt;</description></item><item><title>Arduino Nano Microcontroller &amp; 3D Graphics</title><link>https://mizerc.github.io/posts/projects/iot-microcontroller-n-3d-graphics/</link><pubDate>Sun, 02 Mar 2025 00:00:00 +0000</pubDate><guid>https://mizerc.github.io/posts/projects/iot-microcontroller-n-3d-graphics/</guid><description>&lt;p&gt;In this project, the objective is to utilize a microcontroller paired with a display to render a rotating 3D cube and evaluate its performance capabilities around graphics.&lt;/p&gt;
+&lt;h2 id="hardware"&gt;Hardware&lt;/h2&gt;
+&lt;h3 id="arduino-nano"&gt;Arduino Nano&lt;/h3&gt;
+&lt;p&gt;The Arduino Nano is a small &lt;strong&gt;board&lt;/strong&gt; that uses the 328P microcontroller, offering IO ports (digital in/out (0-5V), analog in/out (ADC, PWM), Serial, I2C, SPI), voltage regulator (LM1117, 7-12V in), and USB communication thru the CH340 chip and a Mini-B usb port.&lt;/p&gt;</description></item><item><title>Weather Station with ESP32 Microcontroller</title><link>https://mizerc.github.io/posts/projects/iot-weather-station/</link><pubDate>Sat, 01 Mar 2025 00:00:00 +0000</pubDate><guid>https://mizerc.github.io/posts/projects/iot-weather-station/</guid><description>&lt;p&gt;Here lets describe the steps needed to build a custom weather station using a microcontroller.
+The goal is to measure temperature, humidity and pressure and display the data on a 2.5&amp;quot; TFT screen.&lt;/p&gt;
+&lt;h3 id="product-specs"&gt;Product Specs&lt;/h3&gt;
+&lt;p&gt;Let&amp;rsquo;s define a few product specs to keep the project well scoped:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Be able to display temperature in Celsius/Fahrenheit, humidity in %, and pressure in hPa.&lt;/li&gt;
+&lt;li&gt;Be able to navigate thru pages using a physical button.&lt;/li&gt;
+&lt;li&gt;Each page should organize the data in a different way to test different layouts.&lt;/li&gt;
+&lt;li&gt;Be able to keep track of the 100 last samples for a specific time period (second, minute, hour, 3-hour, 8-hour, 24-hour).&lt;/li&gt;
+&lt;li&gt;Keep min and max value of each metric (temperature, humidity, pressure) for each time period.&lt;/li&gt;
+&lt;li&gt;Render a simple chart of the last N samples for a specific time period.&lt;/li&gt;
+&lt;li&gt;Display the amout of time since the last reset.&lt;/li&gt;
+&lt;li&gt;Display the current page number.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="hardware"&gt;Hardware&lt;/h2&gt;
+&lt;h3 id="microcontroller"&gt;Microcontroller&lt;/h3&gt;
+&lt;p&gt;I will be using the &lt;code&gt;HiLetgo ESP-32D Development Board&lt;/code&gt;.
+It is a development board that comes with a &lt;code&gt;ESP32-D0WD-V3&lt;/code&gt; microcontroller, serial communication over USB, a voltage regulator, 38 pins (which supports GPIO, I2C, SPI, etc.) and a few other components.&lt;/p&gt;</description></item><item><title>Hugo</title><link>https://mizerc.github.io/posts/technology/hugo/hugo/</link><pubDate>Wed, 01 Jan 2025 00:00:00 +0000</pubDate><guid>https://mizerc.github.io/posts/technology/hugo/hugo/</guid><description>&lt;p&gt;Hugo is a static site generator developed in Go.
+You write content using plain markdown files, and Hugo build the website following a template defined by you (or by some theme from the Internet).&lt;/p&gt;
+&lt;p&gt;Inside each template file, you have access to the &lt;code&gt;Hugo's template language&lt;/code&gt; that allow you to structure the markdown content over the HTML structure.&lt;/p&gt;
+&lt;h3 id="installing-hugo"&gt;Installing Hugo&lt;/h3&gt;
+&lt;p&gt;In macOS, you can install Hugo using Homebrew.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;brew update
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;brew install hugo
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="creating-a-new-site"&gt;Creating a new site&lt;/h3&gt;
+&lt;p&gt;Use the following command to start a new site:&lt;/p&gt;</description></item><item><title>Tooling</title><link>https://mizerc.github.io/posts/technology/tooling/</link><pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate><guid>https://mizerc.github.io/posts/technology/tooling/</guid><description>&lt;p&gt;A collection of shortcuts/commands/notes of developement tools in MacOS.&lt;/p&gt;
+&lt;h1 id="shortcuts"&gt;Shortcuts&lt;/h1&gt;
+&lt;h2 id="iterm"&gt;iTerm&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Action&lt;/th&gt;
+&lt;th&gt;Shortcut&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Clear buffer&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;CMD + K&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Open auto complete dialog&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;CMD + ;&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Open settings&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;CMD + ,&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Open profile settings&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;CMD + i&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id="lazydocker"&gt;LazyDocker&lt;/h2&gt;
+&lt;p&gt;Move between panels:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&amp;lt; or &amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Scroll list inside the panel:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;v or ^
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Filter list inside the panel:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;/
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="visual-studio-code"&gt;Visual Studio Code&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://code.visualstudio.com/shortcuts/keyboard-shortcuts-macos.pdf"&gt;https://code.visualstudio.com/shortcuts/keyboard-shortcuts-macos.pdf&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Comment the entire line:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;CMD + /
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Duplicate current line:&lt;/p&gt;</description></item><item><title>About</title><link>https://mizerc.github.io/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mizerc.github.io/about/</guid><description>&lt;h3 id="about-me"&gt;About Me&lt;/h3&gt;
+&lt;p&gt;I&amp;rsquo;m a software engineer based in &lt;a href="https://en.wikipedia.org/wiki/Seattle"&gt;Seattle, WA&lt;/a&gt; with extensive experience in fullstack development.&lt;/p&gt;
+&lt;p&gt;I hold a Bachelor&amp;rsquo;s degree in Computer Engineering from the &lt;a href="https://www.ufrgs.br/site/"&gt;Federal University of Rio Grande do Sul, Brazil&lt;/a&gt;, with an international education program in Computer Science at the &lt;a href="https://www.wisc.edu/"&gt;University of Wisconsin, USA&lt;/a&gt;.&lt;/p&gt;
+&lt;!-- Occasionally, I explore areas like computer graphics, physic engines, compilers, and electronics. --&gt;
 &lt;!--
 ### Contact
 Help me to improve this content, if you spot any errors or have any suggestions, please let me know.
 You can contact me via email at contact@mauricioize.dev
--->
+--&gt;
 &lt;!--
 ### disclaimer
 This website is not affiliated with the companies, products, or services mentioned in the posts.
 The opinions expressed in the posts are my own and not the opinions of my employer.
 The content is for informational purposes only and should not be considered professional advice.
--->
-&lt;h3 id="about-the-content-of-posts">About the content of posts&lt;/h3>
-&lt;p>The &amp;ldquo;posts&amp;rdquo; section is a growing collection of notes on a variety of random topics I&amp;rsquo;m exploring.
+--&gt;
+&lt;h3 id="about-the-content-of-posts"&gt;About the content of posts&lt;/h3&gt;
+&lt;p&gt;The &amp;ldquo;posts&amp;rdquo; section is a growing collection of notes on a variety of random topics I&amp;rsquo;m exploring.
 It might sound a bit confusing, as this isn&amp;rsquo;t exactly a portfolio to showcase my professional skills, nor is it a personal blog.
 I think the real reason behind it is that I&amp;rsquo;m practicing writing and creation of public content.
-So any topic I find out interesting can be a potential new post.&lt;/p></description></item><item><title>Hugo HTML Canvas Support</title><link>https://mizerc.github.io/posts/technology/hugo/canvas-support/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mizerc.github.io/posts/technology/hugo/canvas-support/</guid><description>&lt;script type="importmap">
+So any topic I find out interesting can be a potential new post.&lt;/p&gt;</description></item><item><title>Hugo HTML Canvas Support</title><link>https://mizerc.github.io/posts/technology/hugo/canvas-support/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mizerc.github.io/posts/technology/hugo/canvas-support/</guid><description>&lt;script type="importmap"&gt;
 {
 "imports": {
 "three": "https://unpkg.com/three@0.160.0/build/three.module.js"
 }
 }
-&lt;/script>
-&lt;p>If you need to add HTML canvas or import JavaScript libraries from a CDN in your Hugo website, this post will walk you thru on how to do that.&lt;/p>
-&lt;p>In the end you will be able to use HTML canvas to render things like a 3d rotating cube from your markdown file:&lt;/p>
-&lt;style>
+&lt;/script&gt;
+&lt;p&gt;If you need to add HTML canvas or import JavaScript libraries from a CDN in your Hugo website, this post will walk you thru on how to do that.&lt;/p&gt;
+&lt;p&gt;In the end you will be able to use HTML canvas to render things like a 3d rotating cube from your markdown file:&lt;/p&gt;
+&lt;style&gt;
 p.canvasjs-label {
 text-align: center;
 font-family: 'Georgia', serif;
@@ -123,29 +125,29 @@ text-align: center;
 font-style: italic;
 line-height: 1.3;
 }
-&lt;/style>
-&lt;div style="display: flex; flex-direction: column; justify-content: center; align-items: center; margin: 16px;">
-&lt;div style="width: 500px; height: 500px; margin: 8px;" id="div-container-cube1">
-&lt;/div>
-&lt;p class="canvasjs-label">Animation: &lt;/p></description></item><item><title>Hugo TeX Support</title><link>https://mizerc.github.io/posts/technology/hugo/tex-support/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mizerc.github.io/posts/technology/hugo/tex-support/</guid><description>&lt;p>We can use the &lt;a href="https://katex.org/">KaTeX&lt;/a> library to enable TeX support to your hugo website.
+&lt;/style&gt;
+&lt;div style="display: flex; flex-direction: column; justify-content: center; align-items: center; margin: 16px;"&gt;
+&lt;div style="width: 500px; height: 500px; margin: 8px;" id="div-container-cube1"&gt;
+&lt;/div&gt;
+&lt;p class="canvasjs-label"&gt;Animation: &lt;/p&gt;</description></item><item><title>Hugo TeX Support</title><link>https://mizerc.github.io/posts/technology/hugo/tex-support/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mizerc.github.io/posts/technology/hugo/tex-support/</guid><description>&lt;p&gt;We can use the &lt;a href="https://katex.org/"&gt;KaTeX&lt;/a&gt; library to enable TeX support to your hugo website.
 The library supports all major browsers.
-Which TeX we can express math formulas and science symbols with a clear and unambiguous way.&lt;/p>
-&lt;p>$$
+Which TeX we can express math formulas and science symbols with a clear and unambiguous way.&lt;/p&gt;
+&lt;p&gt;$$
 \int_a^b f(x) dx
-$$&lt;/p>
-&lt;h3 id="installing">Installing&lt;/h3>
-&lt;p>To install, we just need to import the library files from some CDN to our Hugo website.
-One way to do this is using the &lt;strong>Hugo partials&lt;/strong> which allow us to import small HTML context.&lt;/p></description></item><item><title>North Cascades National Park</title><link>https://mizerc.github.io/posts/places/washington-state/north-cascades/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mizerc.github.io/posts/places/washington-state/north-cascades/</guid><description>&lt;p>The North Cascades are a rugged mountainous region in the northern part of Washington State.
+$$&lt;/p&gt;
+&lt;h3 id="installing"&gt;Installing&lt;/h3&gt;
+&lt;p&gt;To install, we just need to import the library files from some CDN to our Hugo website.
+One way to do this is using the &lt;strong&gt;Hugo partials&lt;/strong&gt; which allow us to import small HTML context.&lt;/p&gt;</description></item><item><title>North Cascades National Park</title><link>https://mizerc.github.io/posts/places/washington-state/north-cascades/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mizerc.github.io/posts/places/washington-state/north-cascades/</guid><description>&lt;p&gt;The North Cascades are a rugged mountainous region in the northern part of Washington State.
 It is the northernmost section of the Cascade Range.
-It features beautiful sharp granite spires, glaciers, deep valleys, and dense conifer forests.&lt;/p>
-&lt;p>The North Cascades National Park was established on October 2, 1968.&lt;/p>
-&lt;p>&lt;em>In geology, spires are tall, narrow, pointed rock formations usually the result of erosion and glacial carving acting on hard bedrock.&lt;/em>&lt;/p>
-&lt;h3 id="location">Location&lt;/h3>
-&lt;p>North Cascades National Park is located in northern Washington state, in the United States. It spans Whatcom, Skagit, and Chelan counties and lies about 100 miles northeast of Seattle, near the Canadian border.&lt;/p></description></item><item><title>Point Rotation</title><link>https://mizerc.github.io/posts/math/point-rotation/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mizerc.github.io/posts/math/point-rotation/</guid><description>&lt;p>When playing with 2d/3d computer graphics, image processing, computer vision, etc.,
-we often need use the rotation matrix to rotate a point &amp;lt;x,y&amp;gt; or &amp;lt;x,y,z&amp;gt; around origin or around an arbitrary point.&lt;/p>
-&lt;p>For example, the following animation, we rotate the red point by 15 degree every half second.
-That means that we need compute the new x,y positiong from the previous x,y rotated by 15 deg.&lt;/p>
-&lt;style>
+It features beautiful sharp granite spires, glaciers, deep valleys, and dense conifer forests.&lt;/p&gt;
+&lt;p&gt;The North Cascades National Park was established on October 2, 1968.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;In geology, spires are tall, narrow, pointed rock formations usually the result of erosion and glacial carving acting on hard bedrock.&lt;/em&gt;&lt;/p&gt;
+&lt;h3 id="location"&gt;Location&lt;/h3&gt;
+&lt;p&gt;North Cascades National Park is located in northern Washington state, in the United States. It spans Whatcom, Skagit, and Chelan counties and lies about 100 miles northeast of Seattle, near the Canadian border.&lt;/p&gt;</description></item><item><title>Point Rotation</title><link>https://mizerc.github.io/posts/math/point-rotation/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mizerc.github.io/posts/math/point-rotation/</guid><description>&lt;p&gt;When playing with 2d/3d computer graphics, image processing, computer vision, etc.,
+we often need use the rotation matrix to rotate a point &amp;lt;x,y&amp;gt; or &amp;lt;x,y,z&amp;gt; around origin or around an arbitrary point.&lt;/p&gt;
+&lt;p&gt;For example, the following animation, we rotate the red point by 15 degree every half second.
+That means that we need compute the new x,y positiong from the previous x,y rotated by 15 deg.&lt;/p&gt;
+&lt;style&gt;
 p.canvasjs-label {
 text-align: center;
 font-family: 'Georgia', serif;
@@ -155,14 +157,14 @@ text-align: center;
 font-style: italic;
 line-height: 1.3;
 }
-&lt;/style>
-&lt;div style="display: flex; flex-direction: column; justify-content: center; align-items: center; margin: 16px;">
-&lt;div style="width: 200px; height: 200px; margin: 8px;" id="div-container-rotate1">
-&lt;/div>
-&lt;p class="canvasjs-label">Animation: Point rotation on canvas coord system.&lt;/p></description></item><item><title>Random Places of Washington</title><link>https://mizerc.github.io/posts/places/washington-state/random-places-of-wa/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mizerc.github.io/posts/places/washington-state/random-places-of-wa/</guid><description>&lt;h1 id="seattle">Seattle&lt;/h1>
-&lt;h3 id="scarecrow-video-store">Scarecrow Video Store&lt;/h3>
-&lt;p>A huge collection of movie in physical media that you can rent.&lt;/p>
-&lt;style>
+&lt;/style&gt;
+&lt;div style="display: flex; flex-direction: column; justify-content: center; align-items: center; margin: 16px;"&gt;
+&lt;div style="width: 200px; height: 200px; margin: 8px;" id="div-container-rotate1"&gt;
+&lt;/div&gt;
+&lt;p class="canvasjs-label"&gt;Animation: Point rotation on canvas coord system.&lt;/p&gt;</description></item><item><title>Random Places of Washington</title><link>https://mizerc.github.io/posts/places/washington-state/random-places-of-wa/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mizerc.github.io/posts/places/washington-state/random-places-of-wa/</guid><description>&lt;h1 id="seattle"&gt;Seattle&lt;/h1&gt;
+&lt;h3 id="scarecrow-video-store"&gt;Scarecrow Video Store&lt;/h3&gt;
+&lt;p&gt;A huge collection of movie in physical media that you can rent.&lt;/p&gt;
+&lt;style&gt;
 figcaption {
 text-align: center;
 font-family: 'Georgia', serif;
@@ -171,19 +173,19 @@ text-align: center;
 font-style: italic;
 line-height: 1.3;
 }
-&lt;/style>
-&lt;div>
-&lt;figure>
+&lt;/style&gt;
+&lt;div&gt;
+&lt;figure&gt;
 &lt;img loading="lazy" src="./photos/scarecrowvideo-june25.png#center"
-alt="June 2025" width="50%"/> &lt;figcaption>
-&lt;p>June 2025&lt;/p>
-&lt;/figcaption>
-&lt;/figure>
-&lt;/div>
-&lt;h3 id="community-garden">Community Garden&lt;/h3>
-&lt;p>There is a &amp;ldquo;hidden&amp;rdquo; community garden on the last floor of this parking garage near the Space Needle.
-One of the attractions is the following old car filled with plants.&lt;/p>
-&lt;style>
+alt="June 2025" width="50%"/&gt; &lt;figcaption&gt;
+&lt;p&gt;June 2025&lt;/p&gt;
+&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;/div&gt;
+&lt;h3 id="community-garden"&gt;Community Garden&lt;/h3&gt;
+&lt;p&gt;There is a &amp;ldquo;hidden&amp;rdquo; community garden on the last floor of this parking garage near the Space Needle.
+One of the attractions is the following old car filled with plants.&lt;/p&gt;
+&lt;style&gt;
 figcaption {
 text-align: center;
 font-family: 'Georgia', serif;
@@ -192,9 +194,9 @@ text-align: center;
 font-style: italic;
 line-height: 1.3;
 }
-&lt;/style>
-&lt;div>
-&lt;figure>
+&lt;/style&gt;
+&lt;div&gt;
+&lt;figure&gt;
 &lt;img loading="lazy" src="./photos/garden-parkgarage-july25.png#center"
-alt="June 2025" width="50%"/> &lt;figcaption>
-&lt;p>June 2025&lt;/p></description></item><item><title>Recipes</title><link>https://mizerc.github.io/wiki/recipes/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mizerc.github.io/wiki/recipes/</guid><description>&lt;p>Welcome&lt;/p></description></item><item><title>Tags</title><link>https://mizerc.github.io/tags/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mizerc.github.io/tags/</guid><description/></item></channel></rss>
+alt="June 2025" width="50%"/&gt; &lt;figcaption&gt;
+&lt;p&gt;June 2025&lt;/p&gt;</description></item><item><title>Recipes</title><link>https://mizerc.github.io/wiki/recipes/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mizerc.github.io/wiki/recipes/</guid><description>&lt;p&gt;Welcome&lt;/p&gt;</description></item><item><title>Tags</title><link>https://mizerc.github.io/tags/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mizerc.github.io/tags/</guid><description/></item></channel></rss>
