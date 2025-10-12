@@ -11,9 +11,9 @@
 <script type=module>
     
 import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.152/build/three.module.js';
-
 (async function initThree(){
-    console.log("FDSOIFJDSIOJFOISDJFOISDJFOIJSOIDJF");
+  const isDark = document.body.classList.contains('dark');
+
     
 
   
@@ -42,9 +42,10 @@ import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.152/build/three.mod
   
   const geom = new THREE.BoxGeometry(1, 1, 1);
   const edges = new THREE.EdgesGeometry(geom);
+  const color = isDark ? 0xffffff : 0x000000;
   const cube = new THREE.LineSegments(
     edges,
-    new THREE.LineBasicMaterial({ color: 0x000000, linewidth: 1 })
+    new THREE.LineBasicMaterial({ color, linewidth: 2 })
   );
   scene.add(cube);
 
@@ -62,6 +63,13 @@ import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.152/build/three.mod
   }
 
   resize();
+
+  const observer = new MutationObserver(() => {
+    const dark = document.body.classList.contains('dark');
+    cube.material.color.setHex(dark ? 0xffffff : 0x000000);
+  });
+observer.observe(document.body, { attributes: true, attributeFilter: ['class'] });
+
 
   
   let t = 0;
