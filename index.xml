@@ -37,30 +37,8 @@ You write content using plain markdown files, and Hugo build the website followi
 &lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;brew update
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;brew install hugo
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="creating-a-new-site"&gt;Creating a new site&lt;/h3&gt;
-&lt;p&gt;Use the following command to start a new site:&lt;/p&gt;</description></item><item><title>About</title><link>https://mizerc.github.io/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mizerc.github.io/about/</guid><description>&lt;p&gt;Hello! I&amp;rsquo;m a software engineer based in &lt;a href="https://en.wikipedia.org/wiki/Seattle"&gt;Seattle, WA&lt;/a&gt; with extensive experience in fullstack development.&lt;/p&gt;
-&lt;p&gt;I hold a Bachelor&amp;rsquo;s degree in Computer Engineering from the &lt;a href="https://www.ufrgs.br/site/"&gt;Federal University of Rio Grande do Sul, Brazil&lt;/a&gt;, with an international education program in Computer Science at the &lt;a href="https://www.wisc.edu/"&gt;University of Wisconsin, USA&lt;/a&gt;.&lt;/p&gt;
-&lt;!-- Occasionally, I explore areas like computer graphics, physic engines, compilers, and electronics. --&gt;
-&lt;!--
-### Contact
-Help me to improve this content, if you spot any errors or have any suggestions, please let me know.
-You can contact me via email at contact@mauricioize.dev
---&gt;
-&lt;!--
-### disclaimer
-This website is not affiliated with the companies, products, or services mentioned in the posts.
-The opinions expressed in the posts are my own and not the opinions of my employer.
-The content is for informational purposes only and should not be considered professional advice.
---&gt;
-&lt;!-- ### About the content of posts
-The "posts" section is a growing collection of notes on a variety of random topics I'm exploring.
-It might sound a bit confusing, as this isn't exactly a portfolio to showcase my professional skills, nor is it a personal blog.
-I think the real reason behind it is that I'm practicing writing and creation of public content.
-So any topic I find out interesting can be a potential new post.
-Since this is the beginning of my journey, some posts may contain errors or rough ideas.
-So, thank you for your patience and understanding.
-I tend to revisit these subjects from time to time, adding new thoughts, findings, or questions as I continue to explore them.
-If you have questions, comments or spot any errors, please write me an email at [contact@mauricioize.dev](mailto:contact@mauricioize.dev). --&gt;
-&lt;!-- I have a genuine curiosity about how things works under the hood, and as a hobby of mine I enjoy building things from scratch.
-If not in a professional environment, I believe that trying to inventing the wheel is a great way to truly understand the challenges and steps necessary to build things we grant for free.
-I will try to document some of the process in this space. --&gt;
-&lt;!-- Stay curious, keep building, and share. --&gt;</description></item><item><title>Recipes</title><link>https://mizerc.github.io/wiki/recipes/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mizerc.github.io/wiki/recipes/</guid><description>&lt;p&gt;Welcome&lt;/p&gt;</description></item><item><title>Tags</title><link>https://mizerc.github.io/tags/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mizerc.github.io/tags/</guid><description/></item></channel></rss>
+&lt;p&gt;Use the following command to start a new site:&lt;/p&gt;</description></item><item><title>About</title><link>https://mizerc.github.io/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mizerc.github.io/about/</guid><description>&lt;!-- Hello! I'm a software engineer based in [Seattle, WA](https://en.wikipedia.org/wiki/Seattle) with extensive experience in fullstack development. --&gt;
+&lt;!-- Hello! I’m a software engineer based in Seattle, WA, with extensive experience in full-stack development and end-to-end software delivery. --&gt;
+&lt;!-- I’m a software engineer based in Seattle, WA, specializing in full-stack development.
+I hold a Bachelor’s degree in Computer Engineering from the Federal University of Rio Grande do Sul (Brazil) and completed an international academic program in Computer Science at the University of Wisconsin (USA). --&gt;
+&lt;p&gt;Hello!&lt;/p&gt;</description></item><item><title>Recipes</title><link>https://mizerc.github.io/wiki/recipes/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mizerc.github.io/wiki/recipes/</guid><description>&lt;p&gt;Welcome&lt;/p&gt;</description></item><item><title>Tags</title><link>https://mizerc.github.io/tags/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mizerc.github.io/tags/</guid><description/></item></channel></rss>
