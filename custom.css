@@ -1,7 +1,34 @@
-pre,
-code {
-  border-radius: 16px
+/* CODE HIGHLIGHT */
+.post-content pre code,
+.post-content .highlight:not(table),
+.post-content .highlight table
+ {
+    border-radius: 16px;
+    padding: 16px;
+    font-size: 16px;
+    font-family: 'Courier New', Courier, monospace;
+    background: unset !important;
+    background-color: var(--code-bg) !important; /* support light/dark */
+    color: var(--secondary) !important; /* support light/dark */
 }
+
+/* FONT */
+
+@font-face {
+  font-family: myFont;
+  src: url(./RobotoSlab-Regular.ttf);
+}
+/* @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"); */
+
+h1,h2,h3,h4,h5 {
+  font-family: myFont;
+}
+
+p {
+  font-family: "Arial";
+  line-height: 26px;
+}
+
 /* a */
 /* h1 { */
 /* font-family: "Times New Roman", Times, serif; */
