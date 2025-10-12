@@ -1,12 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Posts on The Mize Collection</title><link>https://mizerc.github.io/posts/</link><description>Recent content in Posts on The Mize Collection</description><generator>Hugo -- 0.151.0</generator><language>en-us</language><lastBuildDate>Wed, 01 Jan 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://mizerc.github.io/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>Hugo</title><link>https://mizerc.github.io/posts/hugo/hugo/</link><pubDate>Wed, 01 Jan 2025 00:00:00 +0000</pubDate><guid>https://mizerc.github.io/posts/hugo/hugo/</guid><description>&lt;p&gt;Hugo is a static site generator developed in Go.
-You write content using plain markdown files, and Hugo build the website following a template defined by you (or by some theme from the Internet).&lt;/p&gt;
-&lt;p&gt;Inside each template file, you have access to the &lt;code&gt;Hugo's template language&lt;/code&gt; that allow you to structure the markdown content over the HTML structure.&lt;/p&gt;
-&lt;h3 id="installing-hugo"&gt;Installing Hugo&lt;/h3&gt;
-&lt;p&gt;In macOS, you can install Hugo using Homebrew.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;brew update
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;brew install hugo
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="creating-a-new-site"&gt;Creating a new site&lt;/h3&gt;
-&lt;p&gt;Use the following command to start a new site:&lt;/p&gt;</description></item><item><title>Hugo HTML Canvas Support</title><link>https://mizerc.github.io/posts/hugo/canvas-support/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mizerc.github.io/posts/hugo/canvas-support/</guid><description>&lt;script type="importmap"&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Posts on The Mize Collection</title><link>https://mizerc.github.io/posts/</link><description>Recent content in Posts on The Mize Collection</description><generator>Hugo -- 0.151.0</generator><language>en-us</language><lastBuildDate>Fri, 03 Jan 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://mizerc.github.io/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>Hugo HTML Canvas Support</title><link>https://mizerc.github.io/posts/hugo/canvas-support/</link><pubDate>Fri, 03 Jan 2025 00:00:00 +0000</pubDate><guid>https://mizerc.github.io/posts/hugo/canvas-support/</guid><description>&lt;script type="importmap"&gt;
 {
 "imports": {
 "three": "https://unpkg.com/three@0.160.0/build/three.module.js"
@@ -29,7 +21,7 @@ line-height: 1.3;
 &lt;div style="display: flex; flex-direction: column; justify-content: center; align-items: center; margin: 16px;"&gt;
 &lt;div style="width: 500px; height: 500px; margin: 8px;" id="div-container-cube1"&gt;
 &lt;/div&gt;
-&lt;p class="canvasjs-label"&gt;Animation: &lt;/p&gt;</description></item><item><title>Hugo TeX Support</title><link>https://mizerc.github.io/posts/hugo/tex-support/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mizerc.github.io/posts/hugo/tex-support/</guid><description>&lt;p&gt;We can use the &lt;a href="https://katex.org/"&gt;KaTeX&lt;/a&gt; library to enable TeX support to your hugo website.
+&lt;p class="canvasjs-label"&gt;Animation: &lt;/p&gt;</description></item><item><title>Hugo TeX Support</title><link>https://mizerc.github.io/posts/hugo/tex-support/</link><pubDate>Thu, 02 Jan 2025 00:00:00 +0000</pubDate><guid>https://mizerc.github.io/posts/hugo/tex-support/</guid><description>&lt;p&gt;We can use the &lt;a href="https://katex.org/"&gt;KaTeX&lt;/a&gt; library to enable TeX support to your hugo website.
 The library supports all major browsers.
 Which TeX we can express math formulas and science symbols with a clear and unambiguous way.&lt;/p&gt;
 &lt;p&gt;$$
@@ -37,4 +29,12 @@ Which TeX we can express math formulas and science symbols with a clear and unam
 $$&lt;/p&gt;
 &lt;h3 id="installing"&gt;Installing&lt;/h3&gt;
 &lt;p&gt;To install, we just need to import the library files from some CDN to our Hugo website.
-One way to do this is using the &lt;strong&gt;Hugo partials&lt;/strong&gt; which allow us to import small HTML context.&lt;/p&gt;</description></item></channel></rss>
+One way to do this is using the &lt;strong&gt;Hugo partials&lt;/strong&gt; which allow us to import small HTML context.&lt;/p&gt;</description></item><item><title>Hugo</title><link>https://mizerc.github.io/posts/hugo/hugo/</link><pubDate>Wed, 01 Jan 2025 00:00:00 +0000</pubDate><guid>https://mizerc.github.io/posts/hugo/hugo/</guid><description>&lt;p&gt;Hugo is a static site generator developed in Go.
+You write content using plain markdown files, and Hugo build the website following a template defined by you (or by some theme from the Internet).&lt;/p&gt;
+&lt;p&gt;Inside each template file, you have access to the &lt;code&gt;Hugo's template language&lt;/code&gt; that allow you to structure the markdown content over the HTML structure.&lt;/p&gt;
+&lt;h3 id="installing-hugo"&gt;Installing Hugo&lt;/h3&gt;
+&lt;p&gt;In macOS, you can install Hugo using Homebrew.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;brew update
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;brew install hugo
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="creating-a-new-site"&gt;Creating a new site&lt;/h3&gt;
+&lt;p&gt;Use the following command to start a new site:&lt;/p&gt;</description></item></channel></rss>
