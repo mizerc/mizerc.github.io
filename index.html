@@ -6,4 +6,74 @@
 <span>Powered by
 <a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
 <a href=https://github.com/adityatelange/hugo-PaperMod/ rel=noopener target=_blank>PaperMod</a></span></footer><a href=#top aria-label="go to top" title="Go to Top (Alt + G)" class=top-link id=top-link accesskey=g><svg viewBox="0 0 12 6" fill="currentColor"><path d="M12 6H0l6-6z"/></svg>
-</a><script>let menu=document.getElementById("menu");menu&&(menu.scrollLeft=localStorage.getItem("menu-scroll-position"),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)}),document.querySelectorAll('a[href^="#"]').forEach(e=>{e.addEventListener("click",function(e){e.preventDefault();var t=this.getAttribute("href").substr(1);window.matchMedia("(prefers-reduced-motion: reduce)").matches?document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView({behavior:"smooth"}),t==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${t}`)})})</script><script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script><script>document.getElementById("theme-toggle").addEventListener("click",()=>{document.body.className.includes("dark")?(document.body.classList.remove("dark"),localStorage.setItem("pref-theme","light")):(document.body.classList.add("dark"),localStorage.setItem("pref-theme","dark"))})</script></body></html>
+</a><script>let menu=document.getElementById("menu");menu&&(menu.scrollLeft=localStorage.getItem("menu-scroll-position"),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)}),document.querySelectorAll('a[href^="#"]').forEach(e=>{e.addEventListener("click",function(e){e.preventDefault();var t=this.getAttribute("href").substr(1);window.matchMedia("(prefers-reduced-motion: reduce)").matches?document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView({behavior:"smooth"}),t==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${t}`)})})</script><script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script><script>document.getElementById("theme-toggle").addEventListener("click",()=>{document.body.className.includes("dark")?(document.body.classList.remove("dark"),localStorage.setItem("pref-theme","light")):(document.body.classList.add("dark"),localStorage.setItem("pref-theme","dark"))})</script><canvas id=home-canvas style=position:fixed;bottom:0;right:0;width:1e3px;height:1e3px;z-index:-1;display:block>
+</canvas>
+<script type=module>
+    
+import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.152/build/three.module.js';
+
+(async function initThree(){
+    console.log("FDSOIFJDSIOJFOISDJFOISDJFOIJSOIDJF");
+    
+
+  
+  if (typeof THREE === "undefined") {
+    console.error("THREE.js not loaded");
+    return;
+  }
+
+  const c = document.getElementById('home-canvas');
+  if (!c) return;
+  c.width=1000;
+  c.heitgh=1000;
+  c.style.pointerEvents = 'none'; 
+
+
+  
+  const renderer = new THREE.WebGLRenderer({ canvas: c, antialias: true, alpha: true });
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+
+  const scene = new THREE.Scene();
+
+  
+  const camera = new THREE.PerspectiveCamera(45, 1, 0.1, 1000);
+  camera.position.set(0,0,5);
+
+  
+  const geom = new THREE.BoxGeometry(1, 1, 1);
+  const edges = new THREE.EdgesGeometry(geom);
+  const cube = new THREE.LineSegments(
+    edges,
+    new THREE.LineBasicMaterial({ color: 0x000000, linewidth: 1 })
+  );
+  scene.add(cube);
+
+  
+  function resize() {
+    const w = c.clientWidth;
+    const h = c.clientHeight;
+    const size = Math.min(w, h);
+    renderer.setSize(size, size, false);
+    
+    renderer.setViewport(0,0,size,size);
+    camera.aspect = 1;
+    camera.lookAt(-1,1, 1.5);
+    camera.updateProjectionMatrix();
+  }
+
+  resize();
+
+  
+  let t = 0;
+  function animate() {
+    t += 0.01;
+    cube.rotation.x = t * 0.05;
+    cube.rotation.y = t * 0.05;
+    renderer.setClearColor(0xFFFFFFFF, 0);
+    renderer.clear();
+    renderer.render(scene, camera);
+    requestAnimationFrame(animate);
+  }
+  animate();
+})();
+</script></body></html>
