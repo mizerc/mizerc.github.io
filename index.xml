@@ -21,7 +21,11 @@ line-height: 1.3;
 &lt;div style="display: flex; flex-direction: column; justify-content: center; align-items: center; margin: 16px;"&gt;
 &lt;div style="width: 500px; height: 500px; margin: 8px;" id="div-container-cube1"&gt;
 &lt;/div&gt;
-&lt;p class="canvasjs-label"&gt;Animation: &lt;/p&gt;</description></item><item><title>Hugo TeX Support</title><link>https://mizerc.github.io/posts/hugo/tex-support/</link><pubDate>Thu, 02 Jan 2025 00:00:00 +0000</pubDate><guid>https://mizerc.github.io/posts/hugo/tex-support/</guid><description>&lt;p&gt;We can use the &lt;a href="https://katex.org/"&gt;KaTeX&lt;/a&gt; library to enable TeX support to your hugo website.
+&lt;/div&gt;
+&lt;script type="module" src="scripts/cube1.js"&gt;&lt;/script&gt;
+&lt;h3 id="hugo-shortcodes"&gt;Hugo Shortcodes&lt;/h3&gt;
+&lt;p&gt;This is possible using Hugo &lt;a href="https://gohugo.io/content-management/shortcodes/"&gt;shortcodes&lt;/a&gt;.
+Which is a way to add custom HTML elements to your website like image, video, and HTML canvas. The shortcode is a template invoked within markup, accepting any number of arguments.&lt;/p&gt;</description></item><item><title>Hugo TeX Support</title><link>https://mizerc.github.io/posts/hugo/tex-support/</link><pubDate>Thu, 02 Jan 2025 00:00:00 +0000</pubDate><guid>https://mizerc.github.io/posts/hugo/tex-support/</guid><description>&lt;p&gt;We can use the &lt;a href="https://katex.org/"&gt;KaTeX&lt;/a&gt; library to enable TeX support to your hugo website.
 The library supports all major browsers.
 Which TeX we can express math formulas and science symbols with a clear and unambiguous way.&lt;/p&gt;
 &lt;p&gt;$$
