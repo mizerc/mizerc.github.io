@@ -5,8 +5,9 @@
 }
 }
 &lt;/script&gt;
-&lt;p&gt;If you need to add HTML canvas or import JavaScript libraries from a CDN in your Hugo website, this post will walk you thru on how to do that.&lt;/p&gt;
-&lt;p&gt;In the end you will be able to use HTML canvas to render things like a 3d rotating cube from your markdown file:&lt;/p&gt;
+&lt;p&gt;This post walks through how to add an HTML Canvas to a Hugo site, with additional guidance on including external JavaScript libraries from a CDN, such as Three.js to render the cube shown below:&lt;/p&gt;
+&lt;!-- If you need to add HTML canvas or import JavaScript libraries from a CDN in your Hugo website, this post will walk you thru on how to do that.
+In the end you will be able to use HTML canvas to render things like a 3d rotating cube from your markdown file: --&gt;
 &lt;style&gt;
 p.canvasjs-label {
 text-align: center;
@@ -24,8 +25,9 @@ line-height: 1.3;
 &lt;/div&gt;
 &lt;script type="module" src="scripts/cube1.js"&gt;&lt;/script&gt;
 &lt;h3 id="hugo-shortcodes"&gt;Hugo Shortcodes&lt;/h3&gt;
-&lt;p&gt;This is possible using Hugo &lt;a href="https://gohugo.io/content-management/shortcodes/"&gt;shortcodes&lt;/a&gt;.
-Which is a way to add custom HTML elements to your website like image, video, and HTML canvas. The shortcode is a template invoked within markup, accepting any number of arguments.&lt;/p&gt;</description></item><item><title>Hugo TeX Support</title><link>https://mizerc.github.io/posts/hugo/tex-support/</link><pubDate>Thu, 02 Jan 2025 00:00:00 +0000</pubDate><guid>https://mizerc.github.io/posts/hugo/tex-support/</guid><description>&lt;p&gt;We can use the &lt;a href="https://katex.org/"&gt;KaTeX&lt;/a&gt; library to enable TeX support to your hugo website.
+&lt;p&gt;Adding support to a new HTML DOM in your Hugo site is possible using Hugo &lt;a href="https://gohugo.io/content-management/shortcodes/"&gt;shortcodes&lt;/a&gt;.
+Which is a way to add custom HTML elements to your website like image, video, and HTML canvas.
+The shortcode is a HTML template invoked within markup, accepting any number of arguments.&lt;/p&gt;</description></item><item><title>Hugo TeX Support</title><link>https://mizerc.github.io/posts/hugo/tex-support/</link><pubDate>Thu, 02 Jan 2025 00:00:00 +0000</pubDate><guid>https://mizerc.github.io/posts/hugo/tex-support/</guid><description>&lt;p&gt;We can use the &lt;a href="https://katex.org/"&gt;KaTeX&lt;/a&gt; library to enable TeX support to your hugo website.
 The library supports all major browsers.
 Which TeX we can express math formulas and science symbols with a clear and unambiguous way.&lt;/p&gt;
 &lt;p&gt;$$
