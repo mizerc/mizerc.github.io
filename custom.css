@@ -17,25 +17,87 @@
   /* support light/dark */
 }
 
-/* FONT */
+/* IMPORT HEADING FONT AND MAP IT TO myFont */
 @font-face {
-  font-family: myFont;
+  font-family: MYHEADINGFONT;
   src: url(./RobotoSlab-Regular.ttf);
 }
 
+/* IMPORT PARAGRAPH FONT */
+@font-face {
+  font-family: MYPARAGRAPHFONT;
+  src: url(./Geist-Regular.ttf);
+}
+
+/* @import url('https://fonts.googleapis.com/css2?family=Geist:ital,wght@0,100..900;1,100..900&family=Noto+Sans+Mono:wght@100..900&display=swap'); */
+
 /* @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"); */
 
+
+/* HEADING FONT */
 h1,
 h2,
 h3,
 h4,
-h5 {
-  font-family: myFont;
+h5,
+h6 {
+  font-family: MYHEADINGFONT;
+  font-weight: 400;
 }
 
-p {
-  font-family: "Arial";
-  line-height: 26px;
+/* HEADING COLOR */
+:root {
+  --paragraph-color: #050505;
+  --heading-1-color: #81170f;
+  --heading-2-color: #81170f;
+  --heading-3-color: #B42318;
+  --heading-4-color: #E76F51;
+  --heading-5-color: #D9467A;
+  --heading-6-color: #7C4D9E;
+}
+
+:root[data-theme="dark"] {
+  --paragraph-color: #e0e0e0;
+  --heading-1-color: #cd5a34;
+  --heading-2-color: #cd5a34;
+  --heading-3-color: #FF7849;
+  --heading-4-color: #FFB547;
+  --heading-5-color: #F06A9B;
+  --heading-6-color: #B58AD6;
+}
+
+.post-content h1 {
+  color: var(--heading-1-color);
+}
+
+.post-content h2 {
+  color: var(--heading-2-color);
+}
+
+.post-content h3 {
+  color: var(--heading-3-color);
+}
+
+.post-content h4 {
+  color: var(--heading-4-color);
+}
+
+.post-content h5 {
+  color: var(--heading-5-color);
+}
+
+.post-content h6 {
+  color: var(--heading-6-color);
+}
+
+/* PARAGRAPH FONT */
+.post-content p {
+  font-family: MYPARAGRAPHFONT;
+  /* font-family: "Geist"; */
+  /* font-family: "Noto Sans Mono"; */
+  /* font-family: "Verdana"; */
+  /* line-height: 26px; */
+  color: var(--paragraph-color);
 }
 
 /* a */
