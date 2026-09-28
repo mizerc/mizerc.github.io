@@ -1,26 +1,35 @@
-/* CODE HIGHLIGHT */
+/* CODE SYNTAX HIGHLIGHT */
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&display=swap");
+
 .post-content pre code,
 .post-content .highlight:not(table),
-.post-content .highlight table
- {
-    border-radius: 16px;
-    padding: 16px;
-    font-size: 16px;
-    font-family: 'Courier New', Courier, monospace;
-    background: unset !important;
-    background-color: var(--code-bg) !important; /* support light/dark */
-    color: var(--secondary) !important; /* support light/dark */
+.post-content .highlight table {
+  font-family: 'Fira Code', 'Courier New', Courier, monospace;
+  font-size: 16px;
+  letter-spacing: -1.5px;
+  font-weight: 400;
+  border-radius: 8px;
+  padding: 16px;
+  background: unset !important;
+  background-color: var(--code-bg) !important;
+  /* support light/dark */
+  color: var(--secondary) !important;
+  /* support light/dark */
 }
 
 /* FONT */
-
 @font-face {
   font-family: myFont;
   src: url(./RobotoSlab-Regular.ttf);
 }
+
 /* @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"); */
 
-h1,h2,h3,h4,h5 {
+h1,
+h2,
+h3,
+h4,
+h5 {
   font-family: myFont;
 }
 
