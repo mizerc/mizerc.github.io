@@ -33,3 +33,58 @@ code:not(.chroma *) {
 .post-content p {
   font-size: 1.1rem;
 }
+
+/* ###################################################### */
+
+/* HEADING AND PARAGRAPH COLOR */
+:root[data-theme="light"] {
+  --paragraph-color: #050505;
+  --heading-1-color: #0e0f0f;
+  --heading-2-color: #0e944a;
+  --heading-3-color: #6dad59;
+  --heading-4-color: #1d8bf8;
+  --heading-5-color: #92969B;
+  --heading-6-color: #A4A8AC;
+}
+
+:root[data-theme="dark"] {
+  --paragraph-color: #e0e0e0;
+  --heading-1-color: #cd5a34;
+  --heading-2-color: #cd5a34;
+  --heading-3-color: #FF7849;
+  --heading-4-color: #FFB547;
+  --heading-5-color: #F06A9B;
+  --heading-6-color: #B58AD6;
+}
+
+.post-content h1 {
+  color: var(--heading-1-color);
+  font-size: 1.8rem;
+}
+
+.post-content h2 {
+  color: var(--heading-2-color);
+  font-size: 1.5rem;
+}
+
+.post-content h3 {
+  color: var(--heading-3-color);
+  font-size: 1.2rem;
+}
+
+.post-content h4 {
+  color: var(--heading-4-color);
+  font-size: 1rem;
+}
+
+.post-content h5 {
+  color: var(--heading-5-color);
+  font-size: 0.9rem;
+}
+
+.post-content h6 {
+  color: var(--heading-6-color);
+  font-size: 0.7rem;
+}
+
+/* ###################################################### */
