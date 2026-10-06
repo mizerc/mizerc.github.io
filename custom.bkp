@@ -1,0 +1,59 @@
+
+
+/* ====================================== */
+
+
+/* CUSTOM CODE SYNTAX HIGHLIGHT STYLING */
+/* rgb(11, 11, 7)
+.post-content pre code,
+.post-content .highlight:not(table),
+.post-content .highlight table {
+  font-family: 'Fira Code', 'Courier New', Courier, monospace;
+  font-size: 16px;
+  letter-spacing: -1.5px;
+  font-weight: 400;
+  border-radius: 8px;
+  padding: 16px;
+  background: unset !important;
+  background-color: var(--code-bg) !important;
+  color: var(--secondary) !important;
+}
+*/
+
+
+
+
+
+/* IMPORT HEADING FONT AND MAP IT TO myFont */
+@font-face {
+  font-family: MYHEADINGFONT;
+  /* src: url(./RobotoSlab-Regular.ttf); */
+  src: url(./OpenSans_Condensed-Medium.ttf);
+}
+
+/* IMPORT PARAGRAPH FONT */
+@font-face {
+  font-family: MYPARAGRAPHFONT;
+  src: url(./Geist-Regular.ttf);
+}
+
+/* @import url('https://fonts.googleapis.com/css2?family=Geist:ital,wght@0,100..900;1,100..900&family=Noto+Sans+Mono:wght@100..900&display=swap'); */
+
+/* @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"); */
+
+
+/* HEADING FONT */
+/* h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  /* font-family: MYPARAGRAPHFONT; */
+/* font-family: MYHEADINGFONT; */
+/* font-weight: 400; */
+/* } */
+
+*/
+
+/* HEADING COLOR AND SIZE */
