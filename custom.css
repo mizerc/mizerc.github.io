@@ -94,6 +94,37 @@ code:not(.chroma *) {
 }
 
 /* ###################################################### */
+
+/* CSS FOR SHORTCODE DARKLIGHTFIGURE */
+
+/* <figure> */
+.darklightfigure {
+  max-width: 100%;
+  margin: 1rem 0;
+}
+
+.darklightfigure--center {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.darklightfigure--right {
+  margin-left: auto;
+}
+
+/* <img> */
+/* Apply to both light and dark variants */
+.darklightimg {
+  display: none;
+  width: 100%;
+  height: auto;
+}
+
+:root:not(.dark) .darklightimg_light { display: block; }
+
+:root.dark .darklightimg_dark { display: block; }
+
+/* ###################################################### */
 /* PHOTOS GALLERY: 3-COLUMN GRID */
 .gallery {
   display: grid;
